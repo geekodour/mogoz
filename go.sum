@@ -1,2 +1,4 @@
-github.com/adityatelange/hugo-PaperMod v0.0.0-20220624153009-9af128a8a638 h1:PGJb+GtnP160sAixalWhrMPfxnN8QN3k+X/99PT3kTc=
-github.com/adityatelange/hugo-PaperMod v0.0.0-20220624153009-9af128a8a638/go.mod h1:HCHxNMKYdGafUYjVV3ICiAqznZK2yH0iI53jqcDFDdQ=
+github.com/hugcis/hugo-astatine-theme v0.0.0-20220529125255-e90885db8785 h1:LmH/rC63fyp6KnKsINprvLw6+HT0zZHzZgLkgTpEeeA=
+github.com/hugcis/hugo-astatine-theme v0.0.0-20220529125255-e90885db8785/go.mod h1:gbOEGGwov71SFNmbUwE4TN2aHFzT3GdZK1Zo5zO9hA8=
+github.com/jethrokuan/cortex v0.0.0-20220130074009-ad9a963534e5 h1:c0lfEzi95Rf5Oghyt7l0Lm0zFJlJYguKCJc5yMY1rQc=
+github.com/jethrokuan/cortex v0.0.0-20220130074009-ad9a963534e5/go.mod h1:Tph6teGPxmgbake2+RqZkHvLFlOiJxK4UHhyMEuRLP4=

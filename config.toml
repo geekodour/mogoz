@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'mogoz'
 [module]
   [[module.imports]]
-    path = "github.com/adityatelange/hugo-PaperMod"
+    #path = "github.com/adityatelange/hugo-PaperMod"
+    #path = "github.com/hugcis/hugo-astatine-theme"
+    path = "github.com/jethrokuan/cortex"
 [markup.goldmark.renderer]
   unsafe = true
