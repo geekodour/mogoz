@@ -1,4 +1,4 @@
-baseURL = 'http://dumbestmf.org/'
+baseURL = 'https://mogoz.geekodour.org/'
 languageCode = 'en-us'
 title = 'mogoz'
 [module]

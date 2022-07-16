@@ -1,8 +1,8 @@
 +++
-title = "Search"
+title = "🔍"
 author = ["Hrishikesh Barman"]
-lastmod = 2020-05-29T21:44:03+08:00
-type = "search"
 draft = false
+type = "search"
 +++
 
+:ID:       61872322-ee3e-4641-bed6-1e7e24970fc7
