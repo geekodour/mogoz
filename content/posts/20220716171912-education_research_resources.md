@@ -18,6 +18,8 @@ tags
 -   [How to get kids to do chores: Does the Maya method work? (2018)](https://news.ycombinator.com/item?id=30887690)
 -   [From 1967-1977 the US government carried out the largest educational research project in history.](https://archive.is/ZtBX9#selection-2995.0-2995.97)
 -   [Surveying K-12 Computer Science Curriculum in 11 Countries](https://lobste.rs/s/2glukp/surveying_k_12_computer_science)
+-   [Colleges in India](http://archive.is/zzhaP)
+-   [Medical Education](http://archive.is/19ZNG)
 -   [Unlocking Career Potential – Entangled Solutions](https://www.entangled.solutions/portfolio/unlocking-career-potential/)
 -   [Ask HN: Something like Khan Academy but full curriculum for grade schoolers?](https://news.ycombinator.com/item?id=23793216)
 
