@@ -110,7 +110,6 @@ tags
 
 ## Projects {#projects}
 
--   [This Wikipedia of Algebraic Geometry Will Forever Be Incomplete](https://news.columbia.edu/news/stacks-project-johan-dejong)
 -   [Theory - Why Hexagons 1](https://libraryofbabel.info/theory.html)
 -   [LibraryBox](http://jasongriffey.net/librarybox/)
 -   [masterWiki](https://masterwiki.how/)

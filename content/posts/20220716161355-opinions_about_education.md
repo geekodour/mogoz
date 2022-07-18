@@ -59,6 +59,9 @@ Education System
 
 School
 : -   Schools fail at teaching people how to learn.
+    -   Microgrants and Scholarships
+    -   More focus on communication. After growing up, area that I neglected the most in school happened to be the most important. Think of a world people can communicate better. Build tools around this.
+    -   Contribution to Wikipedia or to broader human knowledge rather than stupid projects
     -   Motivation has to be something more concrete than "good grades"
     -   Schools tend to compress learning about a given subject into a limited time frame, then only revisit it in final exams. This is the wrong approach. contradicts with the idea of doing great work happens under pressure, maybe the wrong kind of pressure here.
     -   Third, learning occurs far better from trying to recall and apply information than from having it passively presented to you. eg. More tests = better? debatable. The standardized test has a place but they should not be the dominant culture of our education system.
