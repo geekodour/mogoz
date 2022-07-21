@@ -13,6 +13,7 @@ tags
 -   [OER Case Studies - Creative Commons](https://wiki.creativecommons.org/wiki/OER_Case_Studies)
 -   [How to move a 400-person hackathon online](https://www.juricho.me/posts/online-hackathon/)
 -   [Finding work you love 👩‍🚀 Transcend Newsletter XXVI](https://transcend.substack.com/p/finding-work-you-love-transcend-newsletter?s=r)
+-   [vedantu bad boi](https://archive.is/2022.06.14-123122/https://twitter.com/talk2anuradha/status/1536316795145310208?s=20&t=eTU4XfgQHM4xYBKr-Oopfg)
 -   [Learnable Programming](http://worrydream.com/LearnableProgramming/)
 -   [Alfred Twu - Rhena the House Makes New Friends](https://sites.google.com/view/alfredtwu/books/rhena-the-house-makes-new-friends)
 -   [How to get kids to do chores: Does the Maya method work? (2018)](https://news.ycombinator.com/item?id=30887690)
@@ -49,6 +50,7 @@ tags
 
 -   [Opportunities in Education - by Erik Torenberg](https://eriktorenberg.substack.com/p/opportunities-in-education?s=r)
 -   [Ask HN: Do economic drainage basins exist?](https://news.ycombinator.com/item?id=30725475)
+-   [The Great Indian Edtech Reckoning](https://daily.thesignal.co/p/the-great-indian-edtech-reckoning?s=r)
 
 
 ### Thoughts {#thoughts}
