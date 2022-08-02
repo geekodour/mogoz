@@ -90,6 +90,7 @@ tags
 -   [State of EdTech 2019-2020 - EdTech Digest](https://www.edtechdigest.com/lists/state-of-edtech-2019-2020/)
 -   [New Work: Learning to Love Learning](https://vimeo.com/328370243?embedded=true&source=video_title&owner=83381927) : A film by Marlen Klaws, Ariane Doehring and Finn Köhler.
 -   [What’s wrong with the Indian education system?](https://archive.is/okoVV) : Blogpost that I wrote when I was 19. I haven't re-read it because of the cringe but this is probably the anger that started all of this
+-   [Donation to Public School : fatFIRE](https://www.reddit.com/r/fatFIRE/comments/we0v7c/donation_to_public_school/)
 
 
 ## Communities {#communities}
