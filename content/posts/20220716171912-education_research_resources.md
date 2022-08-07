@@ -48,6 +48,7 @@ tags
 
 ### Meta {#meta}
 
+-   [Does Education Matter? Tests from Extensions of Schooling in 1919-22](https://news.ycombinator.com/item?id=32372712)
 -   [Opportunities in Education - by Erik Torenberg](https://eriktorenberg.substack.com/p/opportunities-in-education?s=r)
 -   [Ask HN: Do economic drainage basins exist?](https://news.ycombinator.com/item?id=30725475)
 -   [The Great Indian Edtech Reckoning](https://daily.thesignal.co/p/the-great-indian-edtech-reckoning?s=r)
@@ -82,6 +83,7 @@ tags
 
 ### Others {#others}
 
+-   [Libraries – how companies do not understand open spaces](https://news.ycombinator.com/item?id=32353067)
 -   [Kill Math: Notes](https://michaelnotebook.com/notes/kill_math/kill_math.html)
 -   [160k+ high school students will only graduate if a statistical model allows](http://positivelysemidefinite.com/2020/06/160k-students.html)
 -   [Mass collaboration between employers and universities](https://medium.com/emerge-edtech-insights/mass-collaboration-between-employers-and-universities-is-the-future-of-higher-education-part-1-ed840467bfd5)
@@ -108,6 +110,7 @@ tags
 
 ### Teaching {#teaching}
 
+-   [Yale Center for Emotional Intelligence](https://ycei.org/)
 -   [ACM SIGCSE](https://sigcse.org/)
 
 
