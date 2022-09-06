@@ -34,6 +34,7 @@ Analysis/Research
 
 Libraries
 : -   mesh tech+local libraries
+    -   _"Ask for the librarian or business center's support in helping you conduct specific research. They are trained in this and they are there to help you learn how to do this."_ - saw this as a reddit comment. Is this what librarians here in India do? I had no idea. It's so awesome.
     -   Unavailability of good books in India
 
 Organization

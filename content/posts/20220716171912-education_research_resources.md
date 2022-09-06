@@ -14,6 +14,7 @@ tags
 -   [How to move a 400-person hackathon online](https://www.juricho.me/posts/online-hackathon/)
 -   [Finding work you love 👩‍🚀 Transcend Newsletter XXVI](https://transcend.substack.com/p/finding-work-you-love-transcend-newsletter?s=r)
 -   [vedantu bad boi](https://archive.is/2022.06.14-123122/https://twitter.com/talk2anuradha/status/1536316795145310208?s=20&t=eTU4XfgQHM4xYBKr-Oopfg)
+-   [The Elite Overproduction Hypothesis - by Noah Smith](https://noahpinion.substack.com/p/the-elite-overproduction-hypothesis?r=13daw&s=r)
 -   [Learnable Programming](http://worrydream.com/LearnableProgramming/)
 -   [Alfred Twu - Rhena the House Makes New Friends](https://sites.google.com/view/alfredtwu/books/rhena-the-house-makes-new-friends)
 -   [How to get kids to do chores: Does the Maya method work? (2018)](https://news.ycombinator.com/item?id=30887690)
@@ -77,6 +78,7 @@ tags
 ### Teaching {#teaching}
 
 -   [discourse about what should be taught in schools](https://archive.is/jqe39)
+-   [Origins of India Textbook Culture](https://arnavbansal.com/textbook-culture)
 -   [Ways to Use Bloom's Taxonomy in the Classroom](https://www.teachthought.com/learning/ways-to-use-blooms-taxonomy-in-the-classroom/)
 -   [Teaching history](https://archive.is/x1vUN#selection-607.13-607.141)
 
