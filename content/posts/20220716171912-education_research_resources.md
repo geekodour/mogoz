@@ -58,6 +58,7 @@ tags
 ### Thoughts {#thoughts}
 
 -   [Education system in India is dead](https://archive.is/RKcZ2)
+-   [Countering the Achievement Society » IAI TV](https://iai.tv/articles/should-we-rediscover-education-as-leisure-auid-1109)
 -   [Not a fan of indian ed tech](https://archive.is/SZVlf)
 -   [It’s Time to Break Up the Ivy League Cartel](https://archive.is/kk0CY)
 -   [Why do so many textbooks have so much technical detail and so little enlightenment?](https://mathoverflow.net/questions/13089/why-do-so-many-textbooks-have-so-much-technical-detail-and-so-little-enlightenme)
@@ -119,7 +120,9 @@ tags
 ## Projects {#projects}
 
 -   [Theory - Why Hexagons 1](https://libraryofbabel.info/theory.html)
+-   [Books Unbanned | Brooklyn Public Library](https://www.bklynlibrary.org/books-unbanned)
 -   [LibraryBox](http://jasongriffey.net/librarybox/)
+-   [UPchieve: Free Online Tutoring and College Counseling](https://upchieve.org/)
 -   [masterWiki](https://masterwiki.how/)
 -   [The Learning Curve¶ - KernelCommunity](https://archive.is/dvpfd) : This is some web3 educational project. The [spec](https://www.kernel.community/en/guiding/free-learn/spec) is interesting. I probably would want to archive the whole site.
 
