@@ -12,6 +12,8 @@ tags
 
 -   [OER Case Studies - Creative Commons](https://wiki.creativecommons.org/wiki/OER_Case_Studies)
 -   [How to move a 400-person hackathon online](https://www.juricho.me/posts/online-hackathon/)
+-   [history from Paradox games](https://twitter.com/emollick/status/1578608723135975424)
+-   [Why kids are afraid to ask for help | Hacker News](https://news.ycombinator.com/item?id=32899644)
 -   [Finding work you love 👩‍🚀 Transcend Newsletter XXVI](https://transcend.substack.com/p/finding-work-you-love-transcend-newsletter?s=r)
 -   [vedantu bad boi](https://archive.is/2022.06.14-123122/https://twitter.com/talk2anuradha/status/1536316795145310208?s=20&t=eTU4XfgQHM4xYBKr-Oopfg)
 -   [The Elite Overproduction Hypothesis - by Noah Smith](https://noahpinion.substack.com/p/the-elite-overproduction-hypothesis?r=13daw&s=r)
@@ -33,12 +35,15 @@ tags
 -   [Online Learning History](https://archive.is/b5rBk)
 -   [OurBigBook.com](https://cirosantilli.com/ourbigbook-com) : Write free books to get famous website
 -   [Public Books Database - Public Books](https://www.publicbooks.org/public-books-database/)
+-   [The Learning Point](https://www.thelearningpoint.net/) : This has a good database of all schools and what they have from somewhere. Scrape it at the soonest.
 
 
 ## Wikipedia {#wikipedia}
 
 -   [Criticism of college and university rankings (North America)](https://en.wikipedia.org/wiki/Criticism_of_college_and_university_rankings_(North_America)#2007_movement)
 -   [Diploma mill](https://en.wikipedia.org/wiki/Diploma_mill)
+-   [Jessica Wade Makes Wikipedia bios For Unknown Women Scientists](https://www.today.com/parents/jessica-wade-wikipedia-women-scientists-rcna51628)
+-   [Wikiversity](https://en.wikiversity.org/wiki/Wikiversity:Main_Page)
 -   [John Amos Comenius](https://en.wikipedia.org/wiki/John_Amos_Comenius)
 -   [Open access - Wikipedia](https://en.wikipedia.org/wiki/Open_access)
     -   [ReScience/ReScience](https://github.com/ReScience/ReScience) : an example
@@ -59,6 +64,7 @@ tags
 
 -   [Education system in India is dead](https://archive.is/RKcZ2)
 -   [Countering the Achievement Society » IAI TV](https://iai.tv/articles/should-we-rediscover-education-as-leisure-auid-1109)
+-   [School vs. Wikipedia | Hacker News](https://news.ycombinator.com/item?id=33122705)
 -   [Not a fan of indian ed tech](https://archive.is/SZVlf)
 -   [It’s Time to Break Up the Ivy League Cartel](https://archive.is/kk0CY)
 -   [Why do so many textbooks have so much technical detail and so little enlightenment?](https://mathoverflow.net/questions/13089/why-do-so-many-textbooks-have-so-much-technical-detail-and-so-little-enlightenme)
@@ -87,6 +93,7 @@ tags
 ### Others {#others}
 
 -   [Libraries – how companies do not understand open spaces](https://news.ycombinator.com/item?id=32353067)
+-   [Garbage collectors open library with abandoned books | CNN](https://edition.cnn.com/2018/01/15/europe/garbage-collectors-open-library-with-abandoned-books)
 -   [Kill Math: Notes](https://michaelnotebook.com/notes/kill_math/kill_math.html)
 -   [160k+ high school students will only graduate if a statistical model allows](http://positivelysemidefinite.com/2020/06/160k-students.html)
 -   [Mass collaboration between employers and universities](https://medium.com/emerge-edtech-insights/mass-collaboration-between-employers-and-universities-is-the-future-of-higher-education-part-1-ed840467bfd5)
@@ -125,6 +132,7 @@ tags
 -   [UPchieve: Free Online Tutoring and College Counseling](https://upchieve.org/)
 -   [masterWiki](https://masterwiki.how/)
 -   [The Learning Curve¶ - KernelCommunity](https://archive.is/dvpfd) : This is some web3 educational project. The [spec](https://www.kernel.community/en/guiding/free-learn/spec) is interesting. I probably would want to archive the whole site.
+-   [Diksha Govt](https://diksha.gov.in/)
 
 
 ### Books {#books}
@@ -136,10 +144,11 @@ tags
 
 ## Organizations {#organizations}
 
-| Name                                         | Description                                                           |
-|----------------------------------------------|-----------------------------------------------------------------------|
-| [IMAGINARY](https://www.imaginary.org/about) | a non-profit organisation for the communication of modern mathematics |
-|                                              |                                                                       |
+| Name                                                                         | Description                                                                                                                                                         |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [IMAGINARY](https://www.imaginary.org/about)                                 | a non-profit organisation for the communication of modern mathematics                                                                                               |
+| [The Community Library Project](https://www.thecommunitylibraryproject.org/) | The Community Library Project believes all people should have access to books.                                                                                      |
+| [Free Libraries Network - FLN](https://www.fln.org.in/)                      | FLN brings together free libraries from India and South Asia that offer reading materials and programs, knowledge resources and information at zero membership fee. |
 
 
 ## People {#people}
