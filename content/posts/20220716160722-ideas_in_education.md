@@ -54,3 +54,9 @@ Camps and Houses
 -   Aspects: Curriculum objectives, syllabus, textbook, teaching/learning material, capacity of teacher, teacher education system, operations on the ground, block level education, state level management.
 -   Mediums: Magazines, books, digests, videos, podcasts, listening to other people, workshops, thinking, exploring your own mind, images, activities/realizations, animations, drama, music more.
 -   The gamut: private preschool, public elementary school, charter middle school, inner-city public middle-school, elite private boarding school, magnet public high-school. \*In India, this is different.
+
+
+## Picture dump {#picture-dump}
+
+![](/ox-hugo/20220716160722-ideas_in_education-1181389258.png)
+![](/ox-hugo/20220716160722-ideas_in_education-1356012394.png)

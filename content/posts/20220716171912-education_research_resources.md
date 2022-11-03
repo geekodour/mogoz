@@ -64,6 +64,8 @@ tags
 
 -   [Education system in India is dead](https://archive.is/RKcZ2)
 -   [Countering the Achievement Society » IAI TV](https://iai.tv/articles/should-we-rediscover-education-as-leisure-auid-1109)
+-   [Building complex reasoning skills online through open-ended activities | Khan...](https://early.khanacademy.org/open-ended/)
+-   [Science the Endless Frontier](https://www.nsf.gov/od/lpa/nsf50/vbush1945.htm#ch3.1)
 -   [School vs. Wikipedia | Hacker News](https://news.ycombinator.com/item?id=33122705)
 -   [Not a fan of indian ed tech](https://archive.is/SZVlf)
 -   [It’s Time to Break Up the Ivy League Cartel](https://archive.is/kk0CY)
@@ -132,6 +134,7 @@ tags
 -   [LibraryBox](http://jasongriffey.net/librarybox/)
 -   [UPchieve: Free Online Tutoring and College Counseling](https://upchieve.org/)
 -   [masterWiki](https://masterwiki.how/)
+-   [The Library Voice: Our Virtual Makerspace Is Open!](https://vanmeterlibraryvoice.blogspot.com/2020/07/our-virtual-makerspace-is-open.html)
 -   [The Learning Curve¶ - KernelCommunity](https://archive.is/dvpfd) : This is some web3 educational project. The [spec](https://www.kernel.community/en/guiding/free-learn/spec) is interesting. I probably would want to archive the whole site.
 -   [Diksha Govt](https://diksha.gov.in/)
 
@@ -140,6 +143,7 @@ tags
 
 -   [DIY Book Scanner](https://www.diybookscanner.org/)
 -   [OpenIntro](https://www.openintro.org/) : Publishing Done Right
+-   [Cambridge Digital Library ― University of Cambridge](https://cudl.lib.cam.ac.uk/)
 -   [OpenStax](https://openstax.org/) : We publish high-quality, peer-reviewed, openly licensed college textbooks.
 
 
