@@ -68,6 +68,8 @@ These rules are just opinions of internet strangers. They are not actually rules
 ### Client state {#client-state}
 
 -   `useState/useReducer` for local state, Zustand for shared.
+-   If you have a global state that doesn't update often, use can use `react context`.
+-   If I have a global state that updates often, then migrate to `RTK`.
 
 
 ### Server state {#server-state}

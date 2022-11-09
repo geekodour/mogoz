@@ -11,6 +11,7 @@ tags
 ## Case studies {#case-studies}
 
 -   [OER Case Studies - Creative Commons](https://wiki.creativecommons.org/wiki/OER_Case_Studies)
+-   [To Get Kids Into Science, Just Do It - WSJ](https://archive.ph/M7JzV)
 -   [How to move a 400-person hackathon online](https://www.juricho.me/posts/online-hackathon/)
 -   [history from Paradox games](https://twitter.com/emollick/status/1578608723135975424)
 -   [Why kids are afraid to ask for help | Hacker News](https://news.ycombinator.com/item?id=32899644)
@@ -133,6 +134,7 @@ tags
 -   [Poison Book Project - Winterthur Museum, Garden &amp; Library](http://wiki.winterthur.org/wiki/Poison_Book_Project)
 -   [LibraryBox](http://jasongriffey.net/librarybox/)
 -   [UPchieve: Free Online Tutoring and College Counseling](https://upchieve.org/)
+-   [Open Web Docs](https://openwebdocs.org/)
 -   [masterWiki](https://masterwiki.how/)
 -   [The Library Voice: Our Virtual Makerspace Is Open!](https://vanmeterlibraryvoice.blogspot.com/2020/07/our-virtual-makerspace-is-open.html)
 -   [The Learning Curve¶ - KernelCommunity](https://archive.is/dvpfd) : This is some web3 educational project. The [spec](https://www.kernel.community/en/guiding/free-learn/spec) is interesting. I probably would want to archive the whole site.
@@ -145,6 +147,7 @@ tags
 -   [OpenIntro](https://www.openintro.org/) : Publishing Done Right
 -   [Cambridge Digital Library ― University of Cambridge](https://cudl.lib.cam.ac.uk/)
 -   [OpenStax](https://openstax.org/) : We publish high-quality, peer-reviewed, openly licensed college textbooks.
+-   [LibraryThing | Catalog your books online](https://www.librarything.com/)
 
 
 ## Organizations {#organizations}
