@@ -58,6 +58,7 @@ tags
 -   [Does Education Matter? Tests from Extensions of Schooling in 1919-22](https://news.ycombinator.com/item?id=32372712)
 -   [Opportunities in Education - by Erik Torenberg](https://eriktorenberg.substack.com/p/opportunities-in-education?s=r)
 -   [Ask HN: Do economic drainage basins exist?](https://news.ycombinator.com/item?id=30725475)
+-   [Digital books wear out faster than physical books | Hacker News](https://news.ycombinator.com/item?id=33616593)
 -   [The Great Indian Edtech Reckoning](https://daily.thesignal.co/p/the-great-indian-edtech-reckoning?s=r)
 
 
@@ -137,12 +138,15 @@ tags
 -   [Open Web Docs](https://openwebdocs.org/)
 -   [masterWiki](https://masterwiki.how/)
 -   [The Library Voice: Our Virtual Makerspace Is Open!](https://vanmeterlibraryvoice.blogspot.com/2020/07/our-virtual-makerspace-is-open.html)
+-   [Charity Ratings and Donor Resources | Charity Navigator](https://www.charitynavigator.org/)
 -   [The Learning Curve¶ - KernelCommunity](https://archive.is/dvpfd) : This is some web3 educational project. The [spec](https://www.kernel.community/en/guiding/free-learn/spec) is interesting. I probably would want to archive the whole site.
 -   [Diksha Govt](https://diksha.gov.in/)
 
 
 ### Books {#books}
 
+-   [Where is all the book data? | Hacker News](https://news.ycombinator.com/item?id=33543570)
+-   [You are Crossref - Crossref](https://www.crossref.org/)
 -   [DIY Book Scanner](https://www.diybookscanner.org/)
 -   [OpenIntro](https://www.openintro.org/) : Publishing Done Right
 -   [Cambridge Digital Library ― University of Cambridge](https://cudl.lib.cam.ac.uk/)
