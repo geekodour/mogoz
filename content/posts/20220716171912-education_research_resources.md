@@ -88,6 +88,7 @@ tags
 
 ### Teaching {#teaching}
 
+-   [Ask HN: Anyone go through Montessori education until age 12 (end of grade 6)?...](https://news.ycombinator.com/item?id=33622295)
 -   [discourse about what should be taught in schools](https://archive.is/jqe39)
 -   [Origins of India Textbook Culture](https://arnavbansal.com/textbook-culture)
 -   [Ways to Use Bloom's Taxonomy in the Classroom](https://www.teachthought.com/learning/ways-to-use-blooms-taxonomy-in-the-classroom/)
