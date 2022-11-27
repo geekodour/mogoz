@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Computer Architecture]({{< relref "20221101201615-computer_architecture.md" >}}), [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}})
+: [Computer Architecture]({{< relref "20221101201615-computer_architecture.md" >}}), [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}}), [Concurrency]({{< relref "20221126204257-concurrency.md" >}})
 
 Multiprocessing is the use of two or more central processing units (CPUs) within a single computer system. Everyone gets that, I am always confused by the terminologies around multiple CPUs. So here are some common terms, some terms are outside the scope of multiprocessing but will put them here anyway:
 

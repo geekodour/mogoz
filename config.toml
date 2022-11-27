@@ -8,3 +8,6 @@ title = 'mogoz'
     path = "github.com/jethrokuan/cortex"
 [markup.goldmark.renderer]
   unsafe = true
+[security.exec]
+osEnv = ['.*']
+

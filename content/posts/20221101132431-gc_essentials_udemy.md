@@ -167,7 +167,9 @@ We know that our objects aswell as the garbage live in the Heap area.
 
 Two phases, **Mark** traces the live objects and **Sweep** reclaims the garbage. It uses the object header to store a `mark-bit`; if object is alive, this flag will be set.
 
-The mark phase marks the live objects and traverses the entire heap to find unmarked objects and adds them into the freelist. It's a \*non-moving\*(live objects are not relocated) collection algorithm, which is nice for languages exposing pointer semantics.
+The mark phase marks the live objects and traverses the entire heap from a `root` to find unmarked objects and adds them into the freelist. It's a **non-moving** (live objects are not relocated) collection algorithm, which is nice for languages exposing pointer semantics.
+
+This prevents circular references.
 
 Main Issue: Fragmentation, fixed by Mark compact and CopyingGC
 
@@ -186,4 +188,8 @@ This trades storage for speed and requires half of the heap to be reserved for t
 
 ### Ref.Count GC {#refcount-gc}
 
-It is a direct collector which is able to identify the garbage directly.
+-   This is the most naive garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object is still needed to determining if an object still has any other objects referencing it.
+-   An object is said to be "garbage", or collectible if there are zero references pointing to it.
+-   It is a direct collector which is able to identify the garbage directly.
+-   **Circular references are a common cause of memory leaks.**
+-   IE6 and IE7 are known to have reference-counting garbage collectors, which have caused memory leaks with circular references. **No modern engine uses reference-counting for garbage collection anymore.**
