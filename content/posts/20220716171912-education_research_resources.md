@@ -65,6 +65,7 @@ tags
 ### Thoughts {#thoughts}
 
 -   [Education system in India is dead](https://archive.is/RKcZ2)
+-   [The Child Is the Teacher: A Life of Maria Montessori | Hacker News](https://news.ycombinator.com/item?id=33913201)
 -   [Countering the Achievement Society » IAI TV](https://iai.tv/articles/should-we-rediscover-education-as-leisure-auid-1109)
 -   [Building complex reasoning skills online through open-ended activities | Khan...](https://early.khanacademy.org/open-ended/)
 -   [Science the Endless Frontier](https://www.nsf.gov/od/lpa/nsf50/vbush1945.htm#ch3.1)
@@ -133,6 +134,7 @@ tags
 
 -   [Theory - Why Hexagons 1](https://libraryofbabel.info/theory.html)
 -   [Books Unbanned | Brooklyn Public Library](https://www.bklynlibrary.org/books-unbanned)
+-   [Designed for Rural Living | Cornell Research](https://research.cornell.edu/news-features/designed-rural-living)
 -   [Poison Book Project - Winterthur Museum, Garden &amp; Library](http://wiki.winterthur.org/wiki/Poison_Book_Project)
 -   [LibraryBox](http://jasongriffey.net/librarybox/)
 -   [UPchieve: Free Online Tutoring and College Counseling](https://upchieve.org/)
@@ -163,6 +165,7 @@ tags
 | [The Community Library Project](https://www.thecommunitylibraryproject.org/)    | The Community Library Project believes all people should have access to books.                                                                                      |
 | [Free Libraries Network - FLN](https://www.fln.org.in/)                         | FLN brings together free libraries from India and South Asia that offer reading materials and programs, knowledge resources and information at zero membership fee. |
 | [Imagine Worldwide - The Future of Learning](https://www.imagineworldwide.org/) | an org that emad mentioned                                                                                                                                          |
+| [Openhouse Choose to be Better](https://openhouse.study/)                       | Open school for kids                                                                                                                                                |
 
 
 ## People {#people}
