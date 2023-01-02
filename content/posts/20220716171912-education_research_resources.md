@@ -134,8 +134,10 @@ tags
 
 -   [Theory - Why Hexagons 1](https://libraryofbabel.info/theory.html)
 -   [Books Unbanned | Brooklyn Public Library](https://www.bklynlibrary.org/books-unbanned)
+-   [Home - Research Guides at Library of Congress](https://guides.loc.gov/)
 -   [Designed for Rural Living | Cornell Research](https://research.cornell.edu/news-features/designed-rural-living)
 -   [Poison Book Project - Winterthur Museum, Garden &amp; Library](http://wiki.winterthur.org/wiki/Poison_Book_Project)
+-   [Public Policy India](https://publicpolicyindia.com/?s=35)
 -   [LibraryBox](http://jasongriffey.net/librarybox/)
 -   [UPchieve: Free Online Tutoring and College Counseling](https://upchieve.org/)
 -   [Open Web Docs](https://openwebdocs.org/)
