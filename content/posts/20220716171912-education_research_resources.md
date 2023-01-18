@@ -98,6 +98,7 @@ tags
 
 ### Others {#others}
 
+-   [Ask HN: Alternatives to Scratch for a blind child? | Hacker News](https://news.ycombinator.com/item?id=34229502)
 -   [Libraries – how companies do not understand open spaces](https://news.ycombinator.com/item?id=32353067)
 -   [Garbage collectors open library with abandoned books | CNN](https://edition.cnn.com/2018/01/15/europe/garbage-collectors-open-library-with-abandoned-books)
 -   [Kill Math: Notes](https://michaelnotebook.com/notes/kill_math/kill_math.html)
@@ -146,6 +147,7 @@ tags
 -   [Charity Ratings and Donor Resources | Charity Navigator](https://www.charitynavigator.org/)
 -   [The Learning Curve¶ - KernelCommunity](https://archive.is/dvpfd) : This is some web3 educational project. The [spec](https://www.kernel.community/en/guiding/free-learn/spec) is interesting. I probably would want to archive the whole site.
 -   [Diksha Govt](https://diksha.gov.in/)
+-   [Developh](https://developh.org/) by Chia Amisola of Figma
 
 
 ### Books {#books}
@@ -168,6 +170,7 @@ tags
 | [Free Libraries Network - FLN](https://www.fln.org.in/)                         | FLN brings together free libraries from India and South Asia that offer reading materials and programs, knowledge resources and information at zero membership fee. |
 | [Imagine Worldwide - The Future of Learning](https://www.imagineworldwide.org/) | an org that emad mentioned                                                                                                                                          |
 | [Openhouse Choose to be Better](https://openhouse.study/)                       | Open school for kids                                                                                                                                                |
+| [WRI INDIA](https://wri-india.org/)                                             | Making Big Ideas Happen                                                                                                                                             |
 
 
 ## People {#people}
