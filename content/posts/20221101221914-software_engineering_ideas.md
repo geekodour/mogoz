@@ -4,6 +4,9 @@ author = ["Hrishikesh Barman"]
 draft = false
 +++
 
+tags
+: [General Programming]({{< relref "20230122140847-general_programming.md" >}})
+
 > Some general development ideas/words/jargons that i come across. Most of them are just me reading its wikipedia page and writing whatever i understood here.
 
 
