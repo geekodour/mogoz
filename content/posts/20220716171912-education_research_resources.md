@@ -11,6 +11,7 @@ tags
 ## Case studies {#case-studies}
 
 -   [OER Case Studies - Creative Commons](https://wiki.creativecommons.org/wiki/OER_Case_Studies)
+-   [2023 Predictions for Edtech 🔮Newsletter #61](https://transcend.substack.com/p/2023predictions)
 -   [To Get Kids Into Science, Just Do It - WSJ](https://archive.ph/M7JzV)
 -   [How to move a 400-person hackathon online](https://www.juricho.me/posts/online-hackathon/)
 -   [history from Paradox games](https://twitter.com/emollick/status/1578608723135975424)
@@ -31,17 +32,22 @@ tags
 
 ## References {#references}
 
+-   [iterative.blog](https://arnavbansal.com/) : Couple blogs by Arnav(Replit guy)
 -   [Educational technology - EduTech Wiki](https://edutechwiki.unige.ch/en/Educational_technology)
 -   [Khan Academy Early Product Development and Long-term Research](https://early.khanacademy.org/)
 -   [Online Learning History](https://archive.is/b5rBk)
 -   [OurBigBook.com](https://cirosantilli.com/ourbigbook-com) : Write free books to get famous website
 -   [Public Books Database - Public Books](https://www.publicbooks.org/public-books-database/)
 -   [The Learning Point](https://www.thelearningpoint.net/) : This has a good database of all schools and what they have from somewhere. Scrape it at the soonest.
+-   [My dreams - ed](https://athenaleong.notion.site/athenaleong/My-Dreams-7042c7c7b70b4a2d924b9d40b08a5d2c)
+-   [Education Systems Course | RISE Programme](https://riseprogramme.org/tools/education-systems-course)
+-   [A Wealth of Teaching Resources - UCD Teaching &amp; Learning](https://www.ucd.ie/teaching/)
 
 
 ## Wikipedia {#wikipedia}
 
 -   [Criticism of college and university rankings (North America)](https://en.wikipedia.org/wiki/Criticism_of_college_and_university_rankings_(North_America)#2007_movement)
+-   [Shadow library - Wikipedia](https://en.wikipedia.org/wiki/Shadow_library)
 -   [Diploma mill](https://en.wikipedia.org/wiki/Diploma_mill)
 -   [Jessica Wade Makes Wikipedia bios For Unknown Women Scientists](https://www.today.com/parents/jessica-wade-wikipedia-women-scientists-rcna51628)
 -   [Wikiversity](https://en.wikiversity.org/wiki/Wikiversity:Main_Page)
@@ -171,6 +177,8 @@ tags
 | [Imagine Worldwide - The Future of Learning](https://www.imagineworldwide.org/) | an org that emad mentioned                                                                                                                                          |
 | [Openhouse Choose to be Better](https://openhouse.study/)                       | Open school for kids                                                                                                                                                |
 | [WRI INDIA](https://wri-india.org/)                                             | Making Big Ideas Happen                                                                                                                                             |
+| [Chalees Minute Foundation](https://www.chaleesmin.foundation/)                 | sm                                                                                                                                                                  |
+| [IgnusERG](https://ignus-erg.org/)                                              | Quality Education for the Marginalized                                                                                                                              |
 
 
 ## People {#people}
@@ -180,3 +188,33 @@ tags
 -   [SFX Math, LLC](https://www.scottfarrar.com/sfx/) , Scott Farrar(@farrarscott)
 -   [nick barr](https://www.nsbarr.com/)
 -   [Helena Jaramillo](http://hjaramillo.com/)
+
+
+## Open Science/Research/Access/Data etc {#open-science-research-access-data-etc}
+
+Lot of Open-X
+
+-   [OLS | OLS](https://openlifesci.org/) (Open Life Science)
+-   [Center for Open Science](https://www.cos.io/)
+-   [Welcome to Open Library | Open Library](https://openlibrary.org/)
+-   [News from the blog | Open Source Initiative](https://opensource.org/)
+-   [Welcome — The Turing Way](https://the-turing-way.netlify.app/welcome.html) 🌟
+-   [OpenStreetMap](https://www.openstreetmap.org/#map=4/21.84/82.79)
+-   [Home - OpenET](https://openetdata.org/)
+-   [Open Scholarship Knowledge Base | OER Commons](https://www.oercommons.org/hubs/OSKB)
+-   [OSF](https://osf.io/)
+-   [Creative Commons – Belgium](https://www.creativecommons.be/)
+-   [Home | Open Knowledge Foundation](https://okfn.org/)
+-   [About us - OpenStreetMap Belgium](https://openstreetmap.be/en/)
+-   [Open Access Belgium – Promoting Open Science](https://openaccess.be/)
+-   [Home | Open Knowledge Belgium](https://openknowledge.be/)
+-   [Open Summer of Code](https://osoc.be/)
+-   [Invest in Open Infrastructure](https://investinopen.org/)
+
+
+## Indian Org {#indian-org}
+
+-   [Ekstep - Resources](https://ekstep.org/resources.html)
+-   [Societal Platform - Enabling exponential social change](https://societalplatform.org/)
+-   [Free Social Science Tutorial - Societal Thinking: Pathway to exponential chan...](https://www.udemy.com/course/societal-thinking-pathway-to-exponential-change-part-1/)
+-   [Sunbird UseCases](https://www.sunbird.org/explore/sunbird-usecases)
