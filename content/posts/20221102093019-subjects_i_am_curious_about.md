@@ -11,6 +11,7 @@ Also see:  [Idea Monkeysphere | titles do not matter](https://geekodour.org/docs
 
 -   [Ontology](https://en.wikipedia.org/wiki/Ontology): The philosophical study of being.
 -   [Nondualism](https://en.wikipedia.org/wiki/Nondualism)
+-   [Anthology - Wikipedia](https://en.wikipedia.org/wiki/Anthology)
 -   [Extropianism](https://en.wikipedia.org/wiki/Extropianism)
 -   [Cybernetics](http://pespmc1.vub.ac.be/ASHBBOOK.html)
 -   Cartography

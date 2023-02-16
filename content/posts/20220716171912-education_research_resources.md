@@ -149,6 +149,7 @@ tags
 -   [UPchieve: Free Online Tutoring and College Counseling](https://upchieve.org/)
 -   [Open Web Docs](https://openwebdocs.org/)
 -   [masterWiki](https://masterwiki.how/)
+-   [Humanitarian OpenStreetMap Team | What We Do](https://www.hotosm.org/what-we-do) 🌟
 -   [The Library Voice: Our Virtual Makerspace Is Open!](https://vanmeterlibraryvoice.blogspot.com/2020/07/our-virtual-makerspace-is-open.html)
 -   [Charity Ratings and Donor Resources | Charity Navigator](https://www.charitynavigator.org/)
 -   [The Learning Curve¶ - KernelCommunity](https://archive.is/dvpfd) : This is some web3 educational project. The [spec](https://www.kernel.community/en/guiding/free-learn/spec) is interesting. I probably would want to archive the whole site.
@@ -195,6 +196,9 @@ tags
 Lot of Open-X
 
 -   [OLS | OLS](https://openlifesci.org/) (Open Life Science)
+-   [Open Scholarship Knowledge Base | OER Commons](https://www.oercommons.org/hubs/OSKB)
+-   [OSF](https://osf.io/)
+-   [Center for Open Science](https://www.cos.io/)
 -   [Center for Open Science](https://www.cos.io/)
 -   [Welcome to Open Library | Open Library](https://openlibrary.org/)
 -   [News from the blog | Open Source Initiative](https://opensource.org/)
