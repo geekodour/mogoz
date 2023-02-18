@@ -71,6 +71,7 @@ tags
 ### Thoughts {#thoughts}
 
 -   [Education system in India is dead](https://archive.is/RKcZ2)
+-   [We need programming mentors | Paperless](https://paperless.blog/we-need-programming-mentors)
 -   [The Child Is the Teacher: A Life of Maria Montessori | Hacker News](https://news.ycombinator.com/item?id=33913201)
 -   [Countering the Achievement Society » IAI TV](https://iai.tv/articles/should-we-rediscover-education-as-leisure-auid-1109)
 -   [Building complex reasoning skills online through open-ended activities | Khan...](https://early.khanacademy.org/open-ended/)
