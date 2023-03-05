@@ -109,6 +109,7 @@ Encoding of binary data in a sequence of printable characters.
     -   GRPC: 2016
     -   PB: 2001, Opensourced 2008
 -   Streaming protocol?
+-   [rkyv is faster than {bincode, capnp, cbor, flatbuffers, postcard, prost, serd...](https://david.kolo.ski/blog/rkyv-is-faster-than/)
 
 
 ## Binary protocols {#binary-protocols}
