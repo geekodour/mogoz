@@ -10,4 +10,7 @@ title = 'mogoz'
   unsafe = true
 [security.exec]
 osEnv = ['.*']
-
+[markup.tableOfContents]
+  endLevel = 4
+  ordered = false
+  startLevel = 2

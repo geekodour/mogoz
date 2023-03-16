@@ -56,9 +56,8 @@ tags
 
 ## Section 2 {#section-2}
 
--   IPv4 and IPv6
 
-<!--listend-->
+### IPv4 and IPv6 {#ipv4-and-ipv6}
 
 ```text
 2001:0db8:c9d2:0012:0000:0000:0000:0051
@@ -83,7 +82,7 @@ tags
     -   ntohl() all these are for 32 bit variant
 
 
-#### Data types used by the socket interface {#data-types-used-by-the-socket-interface}
+### Data types used by the socket interface {#data-types-used-by-the-socket-interface}
 
 -   a socket descriptor `int`
 -   addrinfo `struct` : Prepare the socket address structure.
@@ -98,7 +97,7 @@ tags
             -   `sockaddr_in` has `sin_addr` struct which has `s_addr` field which is a `uint32_t`
 
 
-#### IP Address related functions {#ip-address-related-functions}
+### IP Address related functions {#ip-address-related-functions}
 
 -   `inet_pton()` : converts an IP address in numbers and dots to `sin_addr`
 -   `inet_ntop()` : converts a `sin_addr` to printable IP address in numbers and dots

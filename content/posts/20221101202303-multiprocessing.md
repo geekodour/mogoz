@@ -7,6 +7,47 @@ draft = false
 tags
 : [Computer Architecture]({{< relref "20221101201615-computer_architecture.md" >}}), [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}}), [Concurrency]({{< relref "20221126204257-concurrency.md" >}})
 
+
+## vCPUs {#vcpus}
+
+You always have at least one core, one die and one package.
+
+| Name    | What                                                                                               |
+|---------|----------------------------------------------------------------------------------------------------|
+| Package | What you get when you buy a single processor. Contains one or more dies.                           |
+| Die     | Actual silicon. A die can contain any number of cores                                              |
+| Socket  | The physical connector linking the processor to the computer’s motherboard. There can be multiple. |
+| Core    | Independent execution unit that can run one program thread at a time in parallel with other cores. |
+| vCPU    | vCPUs are compute threads that process execution for running os/vm.                                |
+
+
+### vCPU calculation {#vcpu-calculation}
+
+-   `(# Sockets)` \* `(# Cores)` = `(# pCPU)` (Physical CPU)
+-   `(# pCPU)` \* `(2 Threads)` = `(# vCPU)` (Virtual CPU)
+
+<!--listend-->
+
+```text
+Thread(s) per core:  2
+Core(s) per socket:  4
+Socket(s):           1
+On-line CPU(s) list:   0-7 (8)
+
+pCPU = 1 * 4 = 4
+vCPU = 4*2 = 8
+```
+
+<div class="book-hint warning small-text">
+
+> **VMs and Hypervisors**
+>
+> Now the term vCPU is widely used in hypervisors etc. In those cases, most hypervisors will let you overprovision cores. That means, you could assign 1 vCPU per VM, but the hypervisors also allow you overcommit every vcpu if you think your workload could handle that.
+</div>
+
+
+## Older notes {#older-notes}
+
 Multiprocessing is the use of two or more central processing units (CPUs) within a single computer system. Everyone gets that, I am always confused by the terminologies around multiple CPUs. So here are some common terms, some terms are outside the scope of multiprocessing but will put them here anyway:
 
 First thing to understand is that there is a difference between a physical CPU and a logical CPU.
