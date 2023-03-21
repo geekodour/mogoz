@@ -5,13 +5,13 @@ draft = false
 +++
 
 tags
-: [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}})
+: [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}}), [Linux]({{< relref "20221101150211-linux.md" >}})
 
 Traditionally we had `ulimit` but problems with all that is that it's hard to verify if things are working as expected.
 
 ps uses `/proc`, how is `/proc` populated? kernel populates it from the address space of the process!
 
-The `ulmit` shell command is built around `setrlimit`
+The [ulimits]({{< relref "20230225145310-ulimits.md" >}}) shell command is built around `setrlimit`
 
 -   a program can change its own soft limit at any time by calling setrlimit
 -   need to read more on soft and hard limit
