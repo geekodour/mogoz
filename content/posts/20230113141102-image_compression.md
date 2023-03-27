@@ -41,6 +41,7 @@ tags
 -   [Maximally optimizing image loading for the web](https://www.industrialempathy.com/posts/image-optimizations/)
 -   [It’s High Time to Replace JPEG With a Next-Generation Image Codec](https://cloudinary.com/blog/time_for_next_gen_codecs_to_dethrone_jpeg)
 -   [TIL: The Best Way to Compress JPG Files with ImageMagick](https://dev.to/feldroy/til-strategies-for-compressing-jpg-files-with-imagemagick-5fn9)
+-   [Image Codec Comparison](https://giannirosato.com/blog/post/image-comparison/)
 
 
 ## Compressing GIFs {#compressing-gifs}

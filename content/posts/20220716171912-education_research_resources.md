@@ -13,6 +13,7 @@ tags
 -   [OER Case Studies - Creative Commons](https://wiki.creativecommons.org/wiki/OER_Case_Studies)
 -   [2023 Predictions for Edtech 🔮Newsletter #61](https://transcend.substack.com/p/2023predictions)
 -   [To Get Kids Into Science, Just Do It - WSJ](https://archive.ph/M7JzV)
+-   [More students are turning away from college and toward apprenticeships](https://news.ycombinator.com/item?id=35210421)
 -   [Improving Students’ Learning with Effective Learning Techniques | Hacker News](https://news.ycombinator.com/item?id=34983824)
 -   [How to move a 400-person hackathon online](https://www.juricho.me/posts/online-hackathon/)
 -   [history from Paradox games](https://twitter.com/emollick/status/1578608723135975424)
@@ -101,6 +102,7 @@ tags
 -   [discourse about what should be taught in schools](https://archive.is/jqe39)
 -   [Origins of India Textbook Culture](https://arnavbansal.com/textbook-culture)
 -   [Ways to Use Bloom's Taxonomy in the Classroom](https://www.teachthought.com/learning/ways-to-use-blooms-taxonomy-in-the-classroom/)
+-   [Blooms 2 sigma problem | Hacker News](https://news.ycombinator.com/item?id=34939421)
 -   [Teaching history](https://archive.is/x1vUN#selection-607.13-607.141)
 
 
@@ -164,6 +166,8 @@ tags
 
 -   [Where is all the book data? | Hacker News](https://news.ycombinator.com/item?id=33543570)
 -   [You are Crossref - Crossref](https://www.crossref.org/)
+-   [Book publishers won&amp;#x27;t stop until libraries are dead | Hacker News](https://news.ycombinator.com/item?id=35272708)
+-   [The Internet Archive&amp;#x27;s battle for libraries | Hacker News](https://news.ycombinator.com/item?id=35163640)
 -   [DIY Book Scanner](https://www.diybookscanner.org/)
 -   [OpenIntro](https://www.openintro.org/) : Publishing Done Right
 -   [Cambridge Digital Library ― University of Cambridge](https://cudl.lib.cam.ac.uk/)

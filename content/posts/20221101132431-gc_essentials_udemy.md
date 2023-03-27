@@ -8,30 +8,6 @@ tags
 : [Courses]({{< relref "20221101124038-courses.md" >}}), [Garbage collection]({{< relref "20221101213015-garbage_collection.md" >}})
 
 
-## Table of contents <span class="tag"><span class="TOC">TOC</span></span> {#table-of-contents}
-
--   [Allocation Types](#allocation-types)
-    -   [Static](#static)
-    -   [Stack](#stack)
-    -   [Heap](#heap)
--   [Object Header](#object-header)
--   [Memory Layout](#memory-layout)
-    -   [Stack](#stack-1)
-    -   [Heap](#heap-1)
--   [Mechanisms for Memory Allocation](#mechanisms-for-memory-allocation)
-    -   [Sequential(Bump)](#sequentialbump)
-    -   [Free list](#free-list)
--   [Garbage Collector](#garbage-collector)
-    -   [Approaches to GC](#approaches-to-gc)
-    -   [Garbage Types](#garbage-types)
-    -   [Collector Types](#collector-types)
--   [GC Algorithms](#gc-algorithms)
-    -   [MarkSweep](#marksweep)
-    -   [MarkCompact](#markcompact)
-    -   [Copying Collector/Sem-Space Collector](#copying-collectorsem-space-collector)
-    -   [Ref.Count GC](#refcount-gc)
-
-
 ## Allocation Types {#allocation-types}
 
 Two broad types, Static and Dynamic. (Stack and Heap are Dynamic allocations)
