@@ -1,0 +1,1 @@
+/home/geekodour/.emacs.d/.local/straight/repos/org-roam-ui/out/_next/static/6Q3_SCUKl8zGqWimdcq8f/_buildManifest.js
