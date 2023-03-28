@@ -1,6 +1,9 @@
 code {
   background: #fce19f;
 }
+pre code {
+  background: #272822;
+}
 .small-text {
   font-size: 0.8em;
 }
