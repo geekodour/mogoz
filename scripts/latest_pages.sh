@@ -9,7 +9,6 @@
 # - ./latest_pages.sh > filename.html
 #
 pushd ../content/posts > /dev/null || exit
-WIKI_URL="https://mogoz.geekodour.org/posts/"
 echo "<html>"
 echo "<head>"
 echo '<link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">'
@@ -19,7 +18,7 @@ echo "pages: $(ls | wc -l)"
 echo "<table>"
 echo "<tr><th>Last Modified</th><th>File</th></tr>"
 git ls-tree -r --name-only HEAD | while read -r filename; do
-  printf "<tr><td>%s</td><td><a href='%s' target='_blank' rel='noreferrer noopener'>%s</a></td></tr>\n" "$(git log -1 --format="%cs" $filename)" "$WIKI_URL${filename:0:-3}" "${filename:15:-3}"
+  printf "<tr><td>%s</td><td><a href='%s' target='_blank' rel='noreferrer noopener'>%s</a></td></tr>\n" "$(git log -1 --format="%cs" $filename)" "/posts/${filename:0:-3}" "${filename:15:-3}"
 done | sort -r
 echo "</table>"
 echo "</body>"
