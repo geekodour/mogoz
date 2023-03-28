@@ -1,7 +1,6 @@
 .DEFAULT_GOAL := help
 
-
-.PHONY: gen-latest-notes # Clean garbage
+.PHONY: gen-latest-notes # Generate HTML file w pages sorted by last updated
 gen-latest-notes:
 	pushd scripts/ && ./latest_pages.sh > ../static/latest/index.html && popd
 
