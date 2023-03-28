@@ -1,1 +1,1 @@
-/home/geekodour/.emacs.d/.local/straight/repos/org-roam-ui/out/_next/static/6Q3_SCUKl8zGqWimdcq8f/_ssgManifest.js
+self.__SSG_MANIFEST=new Set,self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB();
