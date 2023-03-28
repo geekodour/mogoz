@@ -8,6 +8,6 @@ I'm [Hrishikesh](<https://www.geekodour.org/>), and you've chanced upon my [brai
 
 While I do maintain copious notes on various topics, this is not a blog, and neither is it meant for public reading. I use this site mostly to revise my notes and search through them when I’m on my phone.
 
-I also haven't made good entry-points to my brain yet, but you can start hopping around by going to the [full index](/posts/).
+I also haven't made good entry-points to my brain yet, but you can start hopping around by going to the [full index](/posts/) or the [latest page](/latest).
 
 Have fun!
