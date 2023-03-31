@@ -50,10 +50,10 @@ A datastructure used to maintain the state of each object for the allocator/coll
 
 ## Memory Layout {#memory-layout}
 
-The VAS of a process consist of stack, heap, code, data, arguments etc.
+Also see [Virtual Memory]({{< relref "20221101214011-virtual_memory.md" >}})
 
 
-### Stack {#stack-1}
+### Stack {#stack}
 
 {{< figure src="/ox-hugo/stackframe1.png" >}}
 
@@ -64,13 +64,13 @@ credit: eli's [blog](https://eli.thegreenplace.net/2011/02/04/where-the-top-of-t
 > `rbp` and `rsp` are just the 64-bit equivalents to the 32-bit [`ebp`](https://practicalmalwareanalysis.com/2012/04/03/all-about-ebp/) and `esp` variables.
 
 
-### Heap {#heap-1}
+### Heap {#heap}
 
 Similar to the stack pointer(`esp`) the top of the heap is called the **program break**. Moving the **program break** `up` allocates memory and moving it `down` deallocates memory.
 
 > Writing to higher addresses than the program break will result in segfaults for ovious reasons.
 
-We have a syscall to do this, `brk` and `sbrk=(wrapper around =brk` that allows a increment rather than direct address unlike `brk`), when we are using `brk` it gives us new memory based on the page size(see obj header diagram above)
+We have a syscall to do this, `brk` and `sbrk` (wrapper around `brk` that allows a increment rather than direct address unlike `brk`), when we are using `brk` it gives us new memory based on the page size(see obj header diagram above)
 
 Another syscall relevant here is `mmap`, it allows your program to allocate more memeory aswell but gives you more options than just to bump up/down the **program break**.
 
@@ -97,6 +97,16 @@ Does not try reuse any of the existing free blocks of memory, just keep bumping 
 Maintains list like data structuire of data structures of free blocks it reuses the freed blocks of memory. There are several ways the search mechanism for free blocks can be done: FirstFit, NextFit, BestFit, Segregate Fit(probably the best so far)
 
 -   **Example Collectors**: Mark Sweep, Manual Memory Management, Ref. Count GC
+-   FirstFit
+    -   First block that is large enough to satisfy the request is allocated.
+-   NextFit
+    -   Search starts from the last block that was allocated
+    -   Looks for the next block that is large enough to satisfy the request.
+-   BestFit
+    -   The block that is closest in size to the requested size is allocated.
+-   Segregate Fit
+    -   Free blocks are divided into several lists according to their sizes
+    -   Search starts from the list of blocks that are closest in size to the requested size.
 
 
 ## Garbage Collector {#garbage-collector}
@@ -114,9 +124,25 @@ Terms that comeup often when talking about GC, mutator, collector, allocator. Th
 
 > The primary reason of having different approaches is to minimize GC pause, such as running the collector concurrently.
 
--   Stop the World (STW) : All the threads in the mutator are blocked
--   Concurrent
--   Incremental
+-   Different approaches to garbage collection can be used with different types of garbage collectors.
+-   Choice of approach and collector depends on the specific requirements of the system, such as the size of the heap, the performance requirements, and the complexity of the program.
+-   Eg. STW + mark-and-sweep, concurrent or incremental + generational garbage collector.
+
+
+#### Stop the World (STW) {#stop-the-world--stw}
+
+All the threads in the mutator(user program) are blocked during collection. i.e GC Pause
+
+
+#### Incremental {#incremental}
+
+-   Divides the garbage collection process into smaller, incremental steps.
+-   GC examines a portion of the heap in each step and then pauses the mutator before moving on to the next portion.
+
+
+#### Concurrent {#concurrent}
+
+-   Collection and freeing memory occurs while the mutator is still running.
 
 
 ### Garbage Types {#garbage-types}
@@ -168,4 +194,20 @@ This trades storage for speed and requires half of the heap to be reserved for t
 -   An object is said to be "garbage", or collectible if there are zero references pointing to it.
 -   It is a direct collector which is able to identify the garbage directly.
 -   **Circular references are a common cause of memory leaks.**
--   IE6 and IE7 are known to have reference-counting garbage collectors, which have caused memory leaks with circular references. **No modern engine uses reference-counting for garbage collection anymore.**
+-   IE6 and IE7 are known to have reference-counting garbage collectors, which have caused memory leaks with circular references. **No modern browser engine uses reference-counting for garbage collection anymore.** but programming languages do.
+
+
+## Examples by Language {#examples-by-language}
+
+| Language | GC Algorithm                       |
+|----------|------------------------------------|
+| Java     | STW Mark-and-Sweep                 |
+| C#       | STW Mark-and-Sweep                 |
+| Python   | Reference Counting, Mark-and-Sweep |
+| Ruby     | Mark-and-Sweep                     |
+| JS       | Mark-and-Sweep                     |
+| Go       | Concurrent Mark-and-Sweep          |
+| Kotlin   | SWT Mark-and-Sweep                 |
+| Swift    | Auto Ref Counting                  |
+| PHP      | Ref. Count, Mark and Sweep         |
+| C++      | Manual Memory Management, No GC    |

@@ -108,6 +108,8 @@ Taccess = 9 ms + 4 ms + 0.02 ms // taking average practical numbers.
 
 But modern disks give us a more useful/simpler abstraction to the `(cylinder/surface/track/sector)` gemeotry. It presents the disk to the cpu as a sequence of `logical blocks`, where each block is a multiple of a sector size. The mapping between **logical blocks** and **physical sectors** are maintained by firmware device called `disk controller`
 
+[Rotational Latency](https://en.wikipedia.org/wiki/Hard_disk_drive_performance_characteristics#Rotational_latency): Time waiting for the first bit of target sector to pass under `r/w head`. Delay waiting for the rotation of the disk to bring the required(eg. requested by cpu) disk sector under the `r/w head` is the **Seek time**.
+
 
 ### Steps of seeking something from disk {#steps-of-seeking-something-from-disk}
 
@@ -205,6 +207,15 @@ int main (void)
              2,300      L1-dcache-load-misses     #    0.04% of all L1-dcache hits    ( +-  1.06% )
 
           0.003421 +- 0.000215 seconds time elapsed  ( +-  6.30% )
+```
+
+-   [Stride of an array](https://en.wikipedia.org/wiki/Stride_of_an_array) : The stride determines the distance between two elements, which will be greater than or equal to the `size` of the element. Sometimes sequential access is also called `stride-1 pattern=/=stride-unit pattern`.
+
+{{< figure src="/ox-hugo/stride-padding.png" >}}
+
+```text
+[a,b,c,d] // say elements are `int64`; here stride is 4bytes if there is no padding.
+[a,b,c,d] // say elements are some `struct`; here stride is size of the structs; having padding will change the stride.
 ```
 
 

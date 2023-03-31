@@ -3,6 +3,7 @@ code {
 }
 pre code {
   background: #272822;
+  color: #fff;
 }
 .small-text {
   font-size: 0.8em;
