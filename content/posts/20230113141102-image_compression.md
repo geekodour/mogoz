@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [System Design]({{< relref "20230113141133-system_design.md" >}})
+: [System Design]({{< relref "20230113141133-system_design.md" >}}), [Compression]({{< relref "20230406044437-compression.md" >}})
 
 
 ## Image compression/optimization {#image-compression-optimization}

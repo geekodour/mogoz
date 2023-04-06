@@ -5,14 +5,15 @@ draft = false
 +++
 
 tags
-: [System Design]({{< relref "20230113141133-system_design.md" >}}), [Systems]({{< relref "20221101150250-systems.md" >}})
+: [System Design]({{< relref "20230113141133-system_design.md" >}}), [Systems]({{< relref "20221101150250-systems.md" >}}), [Codec]({{< relref "20230221191655-codec.md" >}})
 
-> The descition are itself vague so don't get too pedanctic and this is for personal ref.
+> The description are itself vague so don't get too pedantic and this is for personal ref.
 
 
 ## Data serialization {#data-serialization}
 
--   Data serialization refers to the process of translating data structures or object state(from memory) into a different format capable of being stored (such as a memory buffer or file), or transmitted and reconstructed at a different point.
+Data serialization refers to the process of translating data structures or object state(from memory) into a different format capable of being stored (in-memory or file), or transmitted and reconstructed at a different point.
+
 -   Uses
     -   Storing Data into Databases or on Hard Drives
     -   Transferring Data through the Wires
@@ -42,27 +43,22 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 -   Text format examples: XML, JSON, YAML, ...
 
 
-### Usecase: File formats {#usecase-file-formats}
+### Usecase {#usecase}
+
+
+#### File formats {#file-formats}
 
 -   File formats can be implemented using data serilization formats. Eg. Apache Parquet is implemented using the Apache Thrift framework.
 -   Good summary: [Designing File Formats](https://www.fadden.com/tech/file-formats.html)
 
 
-### Usecase: Network Transmission {#usecase-network-transmission}
+#### Network Transmission {#network-transmission}
 
 -   Example: [Yet another custom binary protocol library implementation](http://www.andrescottwilson.com/yet-another-custom-binary-protocol-library-implementation/)
--   We need to design a `protocl` and we need to design a `protocol handler`
--   **Difference between `Binary protocol` and `text protocol` :**
-    -   Is **not** about how binary blobs are encoded.
-    -   Is about whether the protocol is oriented around `data structures` or around `text strings`. Eg. HTTP is a text protocol, even though when it sends a jpeg image, it just sends the raw bytes, not a text encoding of it.
-    -   Binary protocols
-        -   Will always be more space efficient than text protocols.
-        -   Examples: RTP, TCP, IP, TLS, SSH.
-    -   Text protocols
-        -   Examples: SMTP, HTTP, SIP.
+-   We need to design a `protocol` and we need to design a `protocol handler`
 
 
-### Usecase: RPC {#usecase-rpc}
+#### RPC {#rpc}
 
 <div class="book-hint warning small-text">
 
@@ -90,7 +86,7 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 Serialization is a specific instance of encoding.
 
 
-### Binary to Text {#binary-to-text}
+### Binary to Text (Eg. Base64) {#binary-to-text--eg-dot-base64}
 
 Encoding of binary data in a sequence of printable characters.
 
@@ -98,21 +94,26 @@ Encoding of binary data in a sequence of printable characters.
 -   [Binary to text encoding -- state of the art and missed opportunities | Lobsters](https://lobste.rs/s/swkp6b/binary_text_encoding_state_art_missed)
 
 
-## Some Jargon {#some-jargon}
+## Binary formats {#binary-formats}
 
--   Compression
--   proprietary binary format
-    -   there are libraries which help in wiriting binary formats: <https://ryan-rsm-mckenzie.github.io/binary_io/>
--   Encoding
--   Text and Binary
--   GRPC and PB
-    -   GRPC: 2016
-    -   PB: 2001, Opensourced 2008
--   Streaming protocol?
 -   [rkyv is faster than {bincode, capnp, cbor, flatbuffers, postcard, prost, serd...](https://david.kolo.ski/blog/rkyv-is-faster-than/)
+-   [binary_io](https://ryan-rsm-mckenzie.github.io/binary_io/) : Not a data serialization library but a library to help write binary formats
 
 
-## Binary protocols {#binary-protocols}
+## Binary and Text Protocol {#binary-and-text-protocol}
+
+-   Is **not** about how binary blobs are encoded. (They're always binary for networking)
+-   Is about whether the protocol is oriented around `data structures` or around `text strings`. Is it supposed to be readable by humans or by machines is the question to ask.
+-   Eg. HTTP is a text protocol, even though when it sends a jpeg image, it just sends the raw bytes, not a text encoding of it.
 
 
-## Text protocols {#text-protocols}
+### Binary protocols {#binary-protocols}
+
+-   Will always be more space efficient than text protocols.
+-   Examples: RTP, TCP, IP, TLS, SSH, MQTT.
+-   [Visual Programming with Elixir: Learning to Write Binary Parsers](https://hansonkd.medium.com/building-beautiful-binary-parsers-in-elixir-1bd7f865bf17)
+
+
+### Text protocols {#text-protocols}
+
+-   Examples: SMTP, HTTP, SIP.

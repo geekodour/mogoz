@@ -8,62 +8,115 @@ tags
 : [Computer Memory]({{< relref "20221101203327-computer_memory.md" >}}), [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}})
 
 
-## Others {#others}
+## Intro {#intro}
 
--   Compilers use a technique called escape analysis to determine if something can be allocated on the stack or must be placed on the heap.
--   Heap fragmentation can have a substantial impact on the CPU
--   It turns out that for modern operating systems, sweeping (freeing memory) is a very fast operation, so the GC time for Go's mark-and-sweep GC is largely dominated by the mark component and not sweeping time.
+Terms that comeup often when talking about GC, mutator, collector, allocator. The Allocator and the collector need to kind of agree on how both will handle things Eg. For Marksweep collector to be at use, we need to be using freelist allocation.
 
+{{< figure src="/ox-hugo/mca_cycle.png" >}}
 
-## Parallel, incremental and concurrent {#parallel-incremental-and-concurrent}
-
--   parallel GC is also blocking STW collector, that runs using several threads, each thread handles its own heap part. Special care should be taken as every datastructure can be handled in parallel.
--   incremental GC is also blocking STW, but it can be interrupted by the Mutator before the end of the gc pause.
--   concurrent/almost concurrent collectors, these can run concurrently with the mutator but use some kind of gc barrier for sync and even though at some times it will need to gc pause aswell.
+-   **Mutator**: Shows how and where things should be allocated by the allocator.
+-   **Allocator**: `memalloc`, handles dynamic memory alloc, returns pouinter
+-   **Collector**: GC, reclaims memory and preserves mutator view.
 
 
-### Approaches to garbage collection {#approaches-to-garbage-collection}
+### Approaches to GC {#approaches-to-gc}
 
--   STW : Mutator is completely blocked and usually **single** collector thread.
--   Concurrent
--   Incremental
+> The primary reason of having different approaches is to minimize GC pause, such as running the collector concurrently.
+
+-   Different approaches to garbage collection can be used with different types of garbage collectors.
+-   Choice of approach and collector depends on the specific requirements of the system, such as the size of the heap, the performance requirements, and the complexity of the program.
+-   Eg. STW + mark-and-sweep, concurrent or incremental + generational garbage collector.
 
 
-## Go's Garbage collection {#gos-garbage-collection}
+#### Stop the World (STW) {#stop-the-world--stw}
 
-> As of this writing, the latest is `Go1.14`, but some of these ideas are old. More importantly, take all of these with a big grain of salt because it keeps evolving!
+All the threads in the mutator(user program) are blocked during collection. i.e GC Pause
 
-There's some layering here:
 
--   Go-level memory metrics exposed by [runtime.MemStats](https://golang.org/pkg/runtime/#MemStats)
--   OS level memory use matters because it influences things like how much real memory your program needs and how likely it is to be killed by the OS in a low-memory situation, but there has always been a disconnect between OS level information and Go level information.
+#### Incremental {#incremental}
 
----
+-   Divides the garbage collection process into smaller, incremental steps.
+-   GC examines a portion of the heap in each step and then pauses the mutator before moving on to the next portion.
 
--   Since v1.5, Go has incorporated a `concurrent mark-and-sweep` GC.
--   As of version 1.12, the Go programming language uses a non-generational concurrent tri-color mark and sweep collector.
+
+#### Concurrent {#concurrent}
+
+-   Collection and freeing memory occurs while the mutator is still running.
+
+
+### Garbage Types {#garbage-types}
+
+We know that our objects aswell as the garbage live in the Heap area.
+
+-   **Semantic Garbage**: Alive but unused objects. Eg. non-invalidated cache, bugs in the program such as a variable that is in the program but is unused.
+-   **Syntactic Garbage**: Data that cannot be reached by our code. GC **only** works on these kind of garbages.
+
+
+### Collector Types {#collector-types}
+
+-   **Tracing**: Scans the heap to search for live objects and treat everything else as garbage. It starts its analysis from the `root`, in a `STW` collector, trace happens during GC pause.
+-   **Direct**: No explicit GC pause is there, it is deeply integrated with the mutator such as maintaing a list of references to an object to directly collect when needed.
+
+
+## GC Algorithms {#gc-algorithms}
+
+-   **Tracing Collectors**: MarkSweep, MarkCompact, CopyingGC
+-   **Direct Collectors**: Ref Count
+
+
+### MarkSweep {#marksweep}
+
+Two phases, **Mark** traces the live objects and **Sweep** reclaims the garbage. It uses the object header to store a `mark-bit`; if object is alive, this flag will be set.
+
+The mark phase marks the live objects and traverses the entire heap from a `root` to find unmarked objects and adds them into the freelist. It's a **non-moving** (live objects are not relocated) collection algorithm, which is nice for languages exposing pointer semantics.
+
+This prevents circular references.
+
+Main Issue: Fragmentation, fixed by Mark compact and CopyingGC
+
+
+### MarkCompact {#markcompact}
+
+Has better cache locality and faster memory allocation and has two phases, **Marking Phase**, similar to Mark phase in MarkSweep but this store additional info in the object header for relocation.
+
+The **Compacting Phase** has again a lot of algorithms like 2 fingers, The lisp2(most used),Threaded and Onepass.
+
+
+### Copying Collector/Sem-Space Collector {#copying-collectorsem-space-collector}
+
+This trades storage for speed and requires half of the heap to be reserved for the collector! It's sometimes referred to as the CopyingGC
+
+
+### Ref.Count GC {#refcount-gc}
+
+-   This is the most naive garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object is still needed to determining if an object still has any other objects referencing it.
+-   An object is said to be "garbage", or collectible if there are zero references pointing to it.
+-   It is a direct collector which is able to identify the garbage directly.
+-   **Circular references are a common cause of memory leaks.**
+-   IE6 and IE7 are known to have reference-counting garbage collectors, which have caused memory leaks with circular references. **No modern browser engine uses reference-counting for garbage collection anymore.** but programming languages do.
+
+
+## GC for different languages {#gc-for-different-languages}
+
+| Language | GC Algorithm                       |
+|----------|------------------------------------|
+| Java     | STW Mark-and-Sweep                 |
+| C#       | STW Mark-and-Sweep                 |
+| Python   | Reference Counting, Mark-and-Sweep |
+| Ruby     | Mark-and-Sweep                     |
+| JS       | Mark-and-Sweep                     |
+| Go       | Concurrent Mark-and-Sweep          |
+| Kotlin   | SWT Mark-and-Sweep                 |
+| Swift    | Auto Ref Counting                  |
+| PHP      | Ref. Count, Mark and Sweep         |
+| C++      | Manual Memory Management, No GC    |
+
+
+### Golang (Outdated) {#golang--outdated}
+
+-   v1.5: A concurrent mark-and-sweep GC.
+-   v1.12: A non-generational concurrent tri-color mark and sweep collector.
 -   This was originally based on tcmalloc, but has diverged quite a bit.
--   tcmalloc is a memory allocator that's optimized for high concurrency situations. The tc in tcmalloc stands for thread cache.
--   Like most modern allocators, tcmalloc is page-oriented, meaning that the internal unit of measure is usually pages rather than bytes.
 -   The Go GC uses a pacer to determine when to trigger the next GC cycle.
--   Go's default pacer will try to trigger a GC cycle every time the heap size doubles., The 2x value comes from a variable GOGC the runtime uses to set the trigger ratio.
--   `src/runtime/malloc.go` : This was originally based on tcmalloc, but has diverged quite a bit now.
-
-<https://www.jamesgolick.com/2013/5/19/how-tcmalloc-works.html#footnote1>
-
-<https://github.com/golang/go/blob/master/src/runtime/malloc.go>
-
-<https://utcc.utoronto.ca/~cks/space/blog/programming/GoProgramMemoryUse> (some practical ideas on arena etc.)
-
--   <https://news.ycombinator.com/item?id=23214535> MMU gang wars
-
-
-### memory man {#memory-man}
-
-Turns out that Go organizes memory in spans, which are contiguous regions of memory of 8K or larger. There are 3 types of Spans:
-
--   1.  idle -- span, that has no objects and can be released back to the OS, or reused for heap allocation, or reused for stack memory.
-
--   2.  in use -- span, that has atleast one heap object and may have space for more.
-
--   3.  stack -- span, which is used for goroutine stack. This span can live either in stack or in heap, but not in both.
+-   Go's default pacer will try to trigger a GC cycle every time the heap size doubles.
+    -   The 2x value comes from a variable `GOGC` the runtime uses to set the trigger ratio.

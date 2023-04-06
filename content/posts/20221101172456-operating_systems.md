@@ -12,7 +12,7 @@ It's basically a special layer of software that provides application software ac
 {{< figure src="/ox-hugo/SCI_Linux.png" >}}
 
 
-## Jargons/Rabbit Holes (Unread) {#jargonsrabbit-holes-unread}
+## Jargons/Rabbit Holes (Unread) {#jargons-rabbit-holes--unread}
 
 Read links will be removed and added somewhere else where they fit better.
 
@@ -28,10 +28,3 @@ Read links will be removed and added somewhere else where they fit better.
 -   [Timestamp Counter(TSC)](https://en.wikipedia.org/wiki/Time_Stamp_Counter) vs NTP
 -   Logical Clocks: combination of internal and external clocks.
 -   <https://www.cs.swarthmore.edu/~newhall/unixhelp/gdb_pthreads.php>
-
-
-## Links {#links}
-
--   [Linux Versions](https://en.wikipedia.org/wiki/Linux_kernel_version_history)
--   [Human Redable Summary of Each Kernel Release 😸](https://kernelnewbies.org/LinuxVersions)
--   [understanding thread stack sizes and how alpine is different](https://ariadne.space/2021/06/25/understanding-thread-stack-sizes-and-how-alpine-is-different/)

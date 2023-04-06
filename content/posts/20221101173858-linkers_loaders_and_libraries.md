@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Systems]({{< relref "20221101150250-systems.md" >}})
+: [Systems]({{< relref "20221101150250-systems.md" >}}), [elf]({{< relref "20221101175420-elf.md" >}})
 
 
 ## C compilation process {#c-compilation-process}
@@ -401,6 +401,7 @@ Shared libraries have many names - shared libraries, shared objects, dynamic sha
 
 Links:
 
+-   [memory - Loading of shared libraries and RAM usage - Unix &amp; Linux Stack Exchange](https://unix.stackexchange.com/questions/116327/loading-of-shared-libraries-and-ram-usage)
 -   [How to Write Shared Libraries](https://software.intel.com/sites/default/files/m/a/1/e/dsohowto.pdf) by [Ulrich Drepper](https://de.wikipedia.org/wiki/Ulrich_Drepper)(ex glibc maintainer)
 
 

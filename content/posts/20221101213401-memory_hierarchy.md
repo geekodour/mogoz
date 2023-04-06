@@ -111,21 +111,33 @@ But modern disks give us a more useful/simpler abstraction to the `(cylinder/sur
 [Rotational Latency](https://en.wikipedia.org/wiki/Hard_disk_drive_performance_characteristics#Rotational_latency): Time waiting for the first bit of target sector to pass under `r/w head`. Delay waiting for the rotation of the disk to bring the required(eg. requested by cpu) disk sector under the `r/w head` is the **Seek time**.
 
 
-### Steps of seeking something from disk {#steps-of-seeking-something-from-disk}
-
--   CPU initiates **disk read** by sending a (`logical block no.`, `memory address`,=command that disk controller understands=) through `bus interface` -&gt; `I/O bridge` -&gt; `I/O bus` -&gt; `disk controller`
--   `disk controller` executes the command and uses `DMA` to send that data over to memory.
--   Once the transfer is done `disk controller` sends an [interrupt](/docs/notes/study/os/interrupts) informing that transfer was done.
-
-
 ## SSDs {#ssds}
 
 > Data are r/w in units of `page`
 
+<!--quoteend-->
+
+<div class="warning small-text">
+
+>
+>
+> **IMPORTANT NOTE**
+>
+> -   Don't confuse the terms of block, sector, page
+> -   Block means something else for filesystem, and something else in SSD architecture
+> -   Page is [Virtual Memory]({{< relref "20221101214011-virtual_memory.md" >}}) thing, page in SSD architecture is different
+> -   Similarly, sector is a term related to [Block device]({{< relref "20230314123832-unix_files.md#block-device" >}}), which is not used w SSDs but used in HDD architecture.
+>
+> Carefully understand the context of the term. They are not the same.
+</div>
+
+-   `~3.2GB/s` is coming close to the upper bounds of a typical solid state drive
 -   SSDs have something called the `flash translation layer` which serves the same purpose as the `disk controller` in HDDs.
--   Instead of `(surface/track/sector)`, SSDs use `blocks/pages=(=pages` live inside `blocks`); these are different from the virtual memory pages and the `logical blocks` abstraction idea mentioned above.
+-   Instead of `(surface/track/sector)`, SSDs use `blocks/pages` (`pages` live inside `blocks`); these are different from the virtual memory pages.
+    ![](/ox-hugo/20221101213401-memory_hierarchy-2121172869.png)
 -   Interestingly `pages` can only be written once its `block` has been erased; This makes `writes` in SSDs pretty complicated.
--   We can do small writes on ssds but small writes on SSDs can kill them aswell. So it's good idea to batch things in memory before writing to ssd.
+    ![](/ox-hugo/20221101213401-memory_hierarchy-939381754.png)
+-   We can do small writes on ssds but small writes on SSDs can kill them aswell. So it's good idea to batch things in memory before writing to ssd. (See Write Amplification)
 
 > -   `Seq. access` faster than `random access`.
 > -   Random `writes` are slower due to the reason mentioned above. Earlier the `r/w` access gaps were much larger, today we don't need to really worry about it that much. They are almost the same due to optimizations.
