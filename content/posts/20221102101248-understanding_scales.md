@@ -39,7 +39,7 @@ One thing that ate my head initially was that some people use `.` [as decimal se
 
 ## bandwidth, latency and throughput {#bandwidth-latency-and-throughput}
 
-Layman explanation don't () me; You live in Guwahati and wish to send `200TiB` of pirated ebooks to your friend in Delhi, out of may options here are two:
+Layman explanation don't ?? (????) me; You live in Guwahati and wish to send `200TiB` of pirated ebooks to your friend in Delhi, out of may options here are two:
 
 -   Send it via mailpost (`High Bandwidth`, `High Latency`)
 -   Send it via IP Network/Internet (`Low Bandwidth`, `Low Latency`)

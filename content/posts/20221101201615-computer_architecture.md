@@ -10,7 +10,7 @@ tags
 Computer architecture is the combination of microarchitecture and instruction set architecture.
 
 
-## Jargons/Rabbit Holes (Unread) {#jargonsrabbit-holes-unread}
+## Jargons/Rabbit Holes (Unread) {#jargons-rabbit-holes--unread}
 
 Read links will be removed and added somewhere else where they fit better.
 
