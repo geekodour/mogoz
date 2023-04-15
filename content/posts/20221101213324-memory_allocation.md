@@ -102,6 +102,23 @@ A data structure used to maintain the state of each object for the allocator/col
 -   [Jane Street Tech Blog - Memory allocator showdown](https://blog.janestreet.com/memory-allocator-showdown/)
 
 
+## Memory Fragmentation {#memory-fragmentation}
+
+
+### Internal {#internal}
+
+Waste of space by allocating more memory than what was requested by the user (which is what the buddy allocator does).
+
+
+### External {#external}
+
+-   When the free space does not contain large contiguous regions
+-   Even though the allocator might have plenty of free space, it cannot handle large allocation requests because it does not have adequately large free contiguous spaces.
+-   Extreme of external fragmentation is having the even bytes allocated and the odd bytes free. Although the allocator has half its space available, it can only allocate 1 byte regions.
+-   Maintaining a free list helps here
+-   [Temeraire: Hugepage-Aware Allocator | tcmalloc](https://google.github.io/tcmalloc/temeraire.html)
+
+
 ## malloc {#malloc}
 
 

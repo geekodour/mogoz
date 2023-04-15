@@ -200,6 +200,47 @@ Binary files are just sequence of bytes in a file instead of text files. They ca
 [When speaking casually](https://www.reddit.com/r/linux/comments/56mc2d/the_101_of_elf_binaries_on_linux_understanding/d8l38rv/) we sometimes mix binaries and executables, they are not the same. Not all binaries are executables. eg. Object code are binaries but they are not executables, on the other hand a directory can be an executable. ELF can be used both for executables and non-executable binaries. To confuse this even more, some references use the terms /relocatable object file/(for object files) and /executable object file/(for executables obtained from relocatable object file).
 
 
+## About Linkers {#about-linkers}
+
+The linker merges together all sections of the same type included in the input object files into a single section and assigns an initial address to it. For instance, the `.text` sections of all object files are merged together into a single `.text` section, which by default contains all of the code in the program.
+
+
+### Linker Types {#linker-types}
+
+
+#### Link Editor {#link-editor}
+
+-   [ld(1): GNU linker - Linux man page](https://linux.die.net/man/1/ld)
+
+
+#### Static Linker {#static-linker}
+
+-   [Scripts (LD)](http://sourceware.org/binutils/docs/ld/Scripts.html)
+-   You can provide a custom script
+-   Link editor may provide a script for static linking
+
+
+#### Dynamic Linker {#dynamic-linker}
+
+-   [Drew on Dynamic Linking](https://drewdevault.com/dynlib.html)
+-   [ld-linux.so(8): dynamic linker/loader - Linux man page](https://linux.die.net/man/8/ld-linux.so)
+-   It itself is statically linked `ldd $(which ld.so)` and works a bit like `#!/bin/sh` in scripts.
+
+<!--list-separator-->
+
+-  How?
+
+    -   It [mmap]({{< relref "20230405022848-mmap.md" >}})s the executable files, and any shared libraries it needs, using the `MAP_PRIVATE` flag.
+    -   It can perform the dynamic linking fixups to pages allowing the executable's calls out to the shared library. (Uses `mprotect()`)
+    -   Dynamic linker will ignore [LD_PRELOAD](http://www.goldsborough.me/c/low-level/kernel/2016/08/29/16-48-53-the_-ld_preload-_trick/) if `ruid != euid`
+
+
+### Linker Objective {#linker-objective}
+
+-   Symbol Resolution
+-   Symbol Relocation
+
+
 ## Symbols {#symbols}
 
 When you write a program in any language above direct machine code, you give symbolic names to functions and data and the compiler turns these things into code. At the machine level, they are known only by their address (offset within the file) and their size. But we need some way to refer to these, `Symbols`.
@@ -366,40 +407,6 @@ When assembler generates an obj module, it does not know where the code and data
 -   Not only shared objects but also dynamic (non-static) executables may have dynamic relocations.
 
 
-### Linker and Symbols {#linker-and-symbols}
-
-The linker merges together all sections of the same type included in the input object files into a single section and assigns an initial address to it. For instance, the `.text` sections of all object files are merged together into a single `.text` section, which by default contains all of the code in the program.
-
-
-#### Linker Types {#linker-types}
-
-<!--list-separator-->
-
--  Link Editor
-
-    -   [ld(1): GNU linker - Linux man page](https://linux.die.net/man/1/ld)
-
-<!--list-separator-->
-
--  Static Linker
-
-    -   [Scripts (LD)](http://sourceware.org/binutils/docs/ld/Scripts.html)
-    -   You can provide a custom script
-    -   Link editor may provide a script for static linking
-
-<!--list-separator-->
-
--  Dynamic Linker
-
-    -   [ld-linux.so(8): dynamic linker/loader - Linux man page](https://linux.die.net/man/8/ld-linux.so)
-
-
-#### Linker Objective {#linker-objective}
-
--   Symbol Resolution
--   Symbol Relocation
-
-
 ## Libraries {#libraries}
 
 -   When writing programs we need some way to package commonly used functions, for this we need libraries.
@@ -489,6 +496,7 @@ $ cat /usr/lib/libm.so.6
 -   Each program can use any number of shared libraries, and there's simply no way to know in advance where any given shared library will be loaded in the process's virtual memory. There are two well known ways to resolve this
 -   [Load-time relocation](https://eli.thegreenplace.net/2011/08/25/load-time-relocation-of-shared-libraries/#id14) : x86-64 no longer supports load time relocation for shared objects, it'll still work on i386. This will cause the program linker to generate a lot of relocation information, and cause the dynamic linker to do a lot of processing at runtime.  ❌
 -   [Position Independent Code (PIC)](https://eli.thegreenplace.net/2011/11/03/position-independent-code-pic-in-shared-libraries/) ✅
+-   Most shared libraries are compiled as Position Independent Code (PIC)
 
 
 #### More info on shared libs {#more-info-on-shared-libs}
@@ -759,7 +767,6 @@ $ ld -verbose | rg -i text-segment
 -   [X86 psABI](https://github.com/hjl-tools/x86-psABI/wiki/X86-psABI)
 -   [Building And Using Static And Shared "C" Libraries](http://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html#libraries)
 -   [various mechanisms to protect against buffer overflow exploits.](https://www.win.tue.nl/~aeb/linux/hh/protection.html)
--   [Drew on Dynamic Linking](https://drewdevault.com/dynlib.html)
 -   [Traditional Unix Toolchain](https://bsdimp.blogspot.com/2020/07/traditional-unix-toolchains.html?m=1)
 -   <https://begriffs.com/posts/2021-07-04-shared-libraries.html?hn=2>
 -   <https://seenaburns.com/building-c-programs/>
