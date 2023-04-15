@@ -8,6 +8,18 @@ tags
 : [Computer Architecture]({{< relref "20221101201615-computer_architecture.md" >}}), [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}}), [Concurrency]({{< relref "20221126204257-concurrency.md" >}})
 
 
+## VAS for different architectures {#vas-for-different-architectures}
+
+{{< figure src="/ox-hugo/20221101202303-multiprocessing-1361409453.png" >}}
+
+-   IA-32/x86_32/x86/i386
+    -   \\(2^{32}\\) ~= 4GB (32 bit address size)
+    -   [32 bit machines can still support more ram.(PAE)](https://en.wikipedia.org/wiki/Physical_Address_Extension)
+-   x86_64/amd64
+    -   \\(2^{64}\\) ~= 16EB (48 bit addresses)
+    -   [Why do x86-64 systems have only a 48 bit virtual address space?](https://stackoverflow.com/questions/6716946/why-do-x86-64-systems-have-only-a-48-bit-virtual-address-space)
+
+
 ## vCPUs {#vcpus}
 
 You always have at least one core, one die and one package.

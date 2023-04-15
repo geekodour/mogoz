@@ -10,6 +10,8 @@ tags
 
 ## What are the steps {#what-are-the-steps}
 
+{{< figure src="/ox-hugo/20230408190056-machine_learning-98191752.png" >}}
+
 
 ### Feature transformation {#feature-transformation}
 
@@ -20,6 +22,11 @@ tags
 
 
 ### Weight training {#weight-training}
+
+-   Aim for High throughput
+-   If you're going to do quantization, you'll do quantization aware training if needed
+-   The real point of using GPUs is often to form minibatches during training.
+-   training is doing forward + backward + applying gradients,
 
 
 ### Serialize the weights {#serialize-the-weights}
@@ -32,11 +39,22 @@ tags
 
 #### Quantization {#quantization}
 
--   Model quantization is a technique used to reduce the size and improve performance by decreasing precision of weights.
--   before quantization you should look into distillation
--   quantized weights with per-layer float scaling factor is common approach.
--   INT8
--   INT4
+-   You can quantize for performance/power consumption/size, [all of many](https://pytorch.org/blog/quantization-in-practice/) by decreasing precision of weights.
+-   OpenVino is a [nice tool](https://docs.openvino.ai/latest/home.html) to do quantization for Intel CPUs
+-   [Knowledge distillation](https://en.wikipedia.org/wiki/Knowledge_distillation)
+
+<!--list-separator-->
+
+-  Resources
+
+    -   [What Is int8 Quantization and Why Is It Popular for Deep Neural Networks?](https://www.mathworks.com/company/newsletters/articles/what-is-int8-quantization-and-why-is-it-popular-for-deep-neural-networks.html)
+    -   [Quantization | Papers With Code](https://paperswithcode.com/paper/quantization-and-training-of-neural-networks)
+    -   <https://inst.eecs.berkeley.edu/~ee290-2/sp20/assets/labs/lab1.pdf>
+    -   [TensorFlow model optimization  |  TensorFlow Model Optimization](https://www.tensorflow.org/model_optimization/guide)
+    -   [Post-training quantization  |  TensorFlow Lite](https://www.tensorflow.org/lite/performance/post_training_quantization)
+    -   [8-bit Matrix Multiplication for transformers at scale using transformers, accelerate and bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration)
+    -   [Quantization](https://huggingface.co/docs/optimum/concept_guides/quantization)
+    -   [Quantization for Neural Networks - Lei Mao's Log Book](https://leimao.github.io/article/Neural-Networks-Quantization/)
 
 
 ### Ship the weights {#ship-the-weights}
@@ -44,6 +62,17 @@ tags
 
 ### Inference {#inference}
 
+There are several inference engines to choose from.
+![](/ox-hugo/20230408190056-machine_learning-1005953129.png)
+
+-   There are also cloud providers which offer GPU for inference. Eg. GenesisCloud, Paperspace, Big ones like AWS Inferentia.
+-   CPU is often faster for inference except on very huge models like CNNs or I guess big Transformers.
+-   inference is only doing forward pass
+-   Sometimes inference may require GPU
+-   a GPU is good if you have a lot of compute intensity  for inference
+-   Now you are calling your model to do the inference on those inputs. If the model is running on CPU, then data goes directly from RAM to CPU, eval happens on the cpu, and output is saved back to the RAM and sent as response.
+    -   If you are running your model on GPU, then the inputs are first copied from the RAM to the GPU memory, and then passed from the GPU memory to the GPU compute unit for processing, the output is saved to GPU memory, and then copied back the the RAM to be sent as response, So you have two extra copy steps
+-   Aim for low latency
 -   Can be a web service.
 -   "inference endpoint" which is basically an HTTP API that you can send requests to and get back responses.
 -   or just use it in some way
@@ -52,6 +81,11 @@ tags
 -   Really depends on the mode.
 -   For big models(60B+), interference is possible w Threadripper builds with &gt; 256GB RAM + some assortment of 2x-4x GPUs. **BUT it'll be stupid slow**, probably MINUTES per token.
 -   GLM-130B runs on 4x 3090, uses INT4.
+
+
+### Deploying {#deploying}
+
+-   tensorflow serving
 
 
 ### Continuous learning {#continuous-learning}
@@ -110,15 +144,20 @@ Application-Specific Integrated Circuits (ASICs) are custom-designed chips that 
 
 ## Models {#models}
 
-
-### Text {#text}
-
 -   GPT-J
 -   gpt-turbo and FLAN-T5-XXL
 -   Roberta
 -   LLAMA or Standford Alpaca
+-   <https://github.com/openvinotoolkit/openvino_notebooks>
 
 
 ## Resources {#resources}
 
 -   [GPT-2 Neural Network Poetry · Gwern.net](https://gwern.net/gpt-2#fn3)
+
+
+## Terms I keep hearing {#terms-i-keep-hearing}
+
+-   dropout regularization in a deep neural network
+-   activations
+-   weights
