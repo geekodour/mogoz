@@ -1,10 +1,14 @@
-.DEFAULT_GOAL := help
+.PHONY: export # Export org-md and org-html files
+export: export-org
+
+.PHONY: export-org
+export-org:
+	@echo "export-org starting"
+	@emacsclient -e '(cf/hugo-export-all "$(HOME)/notes/org/roam")'
+	@echo "export-org finished"
 
 .PHONY: gen-latest-notes # Generate HTML file w pages sorted by last updated
 gen-latest-notes:
 	pushd scripts/ && ./latest_pages.sh > ../static/latest/index.html && popd
 
-.PHONY: help # Generate list of targets with descriptions
-# source: https://github.com/jeffsp/makefile_help/blob/master/Makefile
-help:
-	@grep '^.PHONY: .* #' Makefile | sed 's/\.PHONY: \(.*\) # \(.*\)/\1;;;\2/' | column -t -s ";;;"
+include $(HOME)/infra/workshop/common/Makefile.common
