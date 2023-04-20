@@ -142,6 +142,8 @@ But modern disks give us a more useful/simpler abstraction to the `(cylinder/sur
 > -   `Seq. access` faster than `random access`.
 > -   Random `writes` are slower due to the reason mentioned above. Earlier the `r/w` access gaps were much larger, today we don't need to really worry about it that much. They are almost the same due to optimizations.
 
+-   [SSD as Long Term Storage Testing – HTWingNut Tech Blog](https://htwingnut.com/2022/09/11/ssd-as-long-term-storage-testing/)
+
 
 ## What happened in 2003? {#what-happened-in-2003}
 

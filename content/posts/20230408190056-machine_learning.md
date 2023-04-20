@@ -47,6 +47,7 @@ tags
 
 -  Resources
 
+    -   [Basic math related to computation and memory usage for transformers](https://news.ycombinator.com/item?id=35631546)  🌟
     -   [What Is int8 Quantization and Why Is It Popular for Deep Neural Networks?](https://www.mathworks.com/company/newsletters/articles/what-is-int8-quantization-and-why-is-it-popular-for-deep-neural-networks.html)
     -   [Quantization | Papers With Code](https://paperswithcode.com/paper/quantization-and-training-of-neural-networks)
     -   <https://inst.eecs.berkeley.edu/~ee290-2/sp20/assets/labs/lab1.pdf>

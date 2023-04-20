@@ -11,3 +11,8 @@ While I do maintain copious notes on various topics, this is not a blog, and nei
 I also haven't made good entry-points to my brain yet, but you can start hopping around by going to the [full index](/posts/) or the [latest page](/latest).
 
 Have fun!
+
+
+## Improvements {#improvements}
+
+-   [ ] I have a few(more than a few) tables in this wiki and it's getting hard to manage them as org-mode tables, It'll be nice to have all of them into a sqlite store and then query the db inside org-files and create the tables. This way management will have a nice interface and I will not have to worry about formatting etc. I might be able to do it with existing packages if not, will have to write one.

@@ -98,6 +98,7 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 > How to
 >
 > -   [custom binary protocol library implementation](http://www.andrescottwilson.com/yet-another-custom-binary-protocol-library-implementation/)
+> -   [Visual Programming with Elixir: Learning to Write Binary Parsers](https://hansonkd.medium.com/building-beautiful-binary-parsers-in-elixir-1bd7f865bf17)
 </div>
 
 -   When we design a `protocol`, we need to design a `protocol handler`

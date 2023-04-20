@@ -165,8 +165,10 @@ tags
 ### Books {#books}
 
 -   [Where is all the book data? | Hacker News](https://news.ycombinator.com/item?id=33543570)
+-   [Bookshop.org survives and thrives in Amazon’s world | Hacker News](https://news.ycombinator.com/item?id=35534069)
 -   [You are Crossref - Crossref](https://www.crossref.org/)
 -   [Book publishers won&amp;#x27;t stop until libraries are dead | Hacker News](https://news.ycombinator.com/item?id=35272708)
+-   [An Unstandardized, Decentralized Carnival Fire: How Rare Books Are Cataloged ...](https://news.ycombinator.com/item?id=35363467)
 -   [The Internet Archive&amp;#x27;s battle for libraries | Hacker News](https://news.ycombinator.com/item?id=35163640)
 -   [DIY Book Scanner](https://www.diybookscanner.org/)
 -   [OpenIntro](https://www.openintro.org/) : Publishing Done Right
@@ -187,6 +189,7 @@ tags
 | [WRI INDIA](https://wri-india.org/)                                             | Making Big Ideas Happen                                                                                                                                             |
 | [Chalees Minute Foundation](https://www.chaleesmin.foundation/)                 | sm                                                                                                                                                                  |
 | [IgnusERG](https://ignus-erg.org/)                                              | Quality Education for the Marginalized                                                                                                                              |
+| [Indic Digital Archive Foundation](https://indicarchive.org/)                   |                                                                                                                                                                     |
 
 
 ## People {#people}

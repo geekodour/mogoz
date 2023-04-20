@@ -86,3 +86,23 @@ ch := make(chan int)
 -   <https://github.com/plagioriginal/concurrency-in-go>
 -   [Share memory by communicating · The Ethically-Trained Programmer](https://blog.carlmjohnson.net/post/share-memory-by-communicating/)
 -   [Internals of Go Channels. Inner workings of Go channels | by Shubham Agrawal ...](https://shubhagr.medium.com/internals-of-go-channels-cf5eb15858fc)
+
+
+## Links on goroutines {#links-on-goroutines}
+
+-   <https://povilasv.me/go-memory-management/>
+-   <https://www.reddit.com/r/golang/comments/1efjs0/how_does_gos_gc_interact_with_virtual_memory/>
+-   <https://deepu.tech/memory-management-in-golang/>
+-   <https://blog.cloudflare.com/how-stacks-are-handled-in-go/>
+-   <https://matklad.github.io/2021/03/12/goroutines-are-not-significantly-smaller-than-threads.html>
+-   <https://www.reddit.com/r/golang/comments/117a4x7/how_can_goroutines_be_more_scalable_than_kernel/>
+-   <https://www.youtube.com/watch?v=KBZlN0izeiY&t=536s>
+-   <https://news.ycombinator.com/item?id=25997506>
+-   <https://www.reddit.com/r/golang/comments/tifbow/50_million_virtual_threads_massive_virtual/>
+-   <https://www.reddit.com/r/golang/comments/cgkg66/releasing_memory_in_goroutine_stacks/>
+-   <https://www.reddit.com/r/golang/comments/10320aq/do_goroutines_typically_run_ontop_of_operating/>
+-   <https://katherine.cox-buday.com/concurrency-in-go/>
+-   <https://www.reddit.com/r/golang/comments/yww0t7/why_a_goroutine_is_not_a_thread_but_a_green/>
+-   <https://news.ycombinator.com/item?id=26461765>
+-   <https://news.ycombinator.com/item?id=26440334>
+-   <https://eklitzke.org/goroutines-nonblocking-io-and-memory-usage>

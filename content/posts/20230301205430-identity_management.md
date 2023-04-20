@@ -52,6 +52,7 @@ There are opensource and prioperty Products
 -   You also need to use their template and plugin system (so Java for Keycloak)
 -   Can't use a different OAuth2 provider because well - you use Keycloak
 -   Needs to be selfhosted
+-   [Keycloak with PostgreSQL on Kubernetes | Hacker News](https://news.ycombinator.com/item?id=35515873)
 
 
 ### Auth0 {#auth0}
