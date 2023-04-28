@@ -131,3 +131,9 @@ tags
 ### Recursively Enumerable Languages {#recursively-enumerable-languages}
 
 -   Turning machines : It can tell us what can be computed by computation and what cannot be.
+
+
+## Resources {#resources}
+
+-   [Python is not context free](http://trevorjim.com/python-is-not-context-free/)
+-   Good summary: <https://www.reddit.com/r/compsci/comments/aqdlpy/what_are_some_real_applications_of_the_chomsky/eggu89g/>

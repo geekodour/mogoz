@@ -266,10 +266,13 @@ You can read the FAQ before reading anything or after reading everything or anyt
 
 -   A `language` is the formal realization of a `problem`.
 -   `languages` are defined by set of `strings`
+-   Each `string` in the `language` encodes some `instance` of the `problem`
 -   `strings` are defined by sequence of `symbols`
 -   Set of `symbols` is defined by the `alphabet`
 -   Eg. \\(\\{0,1\\}\*\\) is the set of all binary sequences of any length.
 -   Determining if the answer for an input to a decision problem is "yes" is equivalent to determining whether an encoding of that input over an alphabet is in the corresponding language.
+-   A `string` is in a `language` iff the answer to the `instance` is "yes"
+-   each `string` is the input
 
 
 ### Categorization {#categorization}
