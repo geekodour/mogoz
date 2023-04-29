@@ -45,6 +45,7 @@ These are used to store firmware programs(BIOS, network card firmware, I/O devic
 -   Electrically erasable programmable read-only memory
 -   Can be erased, written and read in blocks (or pages) which are generally much smaller than the entire device.
 -   Flash Memory was invented based on EEPROM in 1980.
+-   This is the pre-cursor to NAND, which is used for USB drives and SSDs nowadays.
 
 
 ### NVRAM {#nvram}

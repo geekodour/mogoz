@@ -8,20 +8,6 @@ tags
 : [Book]({{< relref "20220728201439-book.md" >}}),[Math]({{< relref "20221101134840-math.md" >}})
 
 
-## Table of contents <span class="tag"><span class="TOC">TOC</span></span> {#table-of-contents}
-
--   [Chapter 1: Statistics!](#chapter-1-statistics)
-    -   [Sample](#sample)
-    -   [Statistics](#statistics)
-    -   [Good and bad samples](#good-and-bad-samples)
-    -   [Quantitative and Qualitative](#quantitative-and-qualitative)
-    -   [Errors](#errors)
-    -   [Variables](#variables)
-    -   [Gathering data](#gathering-data)
-    -   [Basics of designing experiments](#basics-of-designing-experiments)
-    -   [Rounding Numbers](#rounding-numbers)
-
-
 ## Chapter 1: Statistics! {#chapter-1-statistics}
 
 Some basic definitions, this chapter is not really math heavy but drives home the fact that if you get the samples wrong, you're fucked. The exercises in this chapter were easy so didn't put the effort to document that, also this book has solutions to all problems.

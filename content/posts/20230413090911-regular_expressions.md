@@ -85,3 +85,27 @@ We get 2 definitions of `regular languages` from these 2 events.
 ### Flavors {#flavors}
 
 -   PCRE
+
+
+## Learning Resources {#learning-resources}
+
+
+### Tutorials {#tutorials}
+
+-   [A Visual Guide to Regular Expression](https://amitness.com/regex/)
+-   [Python Tutorial: re Module - How to Write and Match Regular Expressions (Regex) - YouTube](https://www.youtube.com/watch?v=K8L6KVGG-7o)
+-   [Emacs: basics of regular expressions (regexp) - YouTube](https://www.youtube.com/watch?v=TxYGHjKBMUg)
+-   <https://github.com/ziishaned/learn-regex>
+-   [My most useful RegExp trick — surma.dev](https://dassur.ma/things/regexp-quote/)
+-   [Python 3.11: possessive quantifiers and atomic grouping added to re module](https://learnbyexample.github.io/python-regex-possessive-quantifier/)
+-   [Building regex.help](https://maciej.gryka.net/building-regex-help)
+
+
+### Tools {#tools}
+
+-   <https://github.com/aloisdg/awesome-regex>
+-   <https://regex101.com/>
+-   <https://regexr.com/>
+-   <https://regexone.com/>
+-   <https://projects.lukehaas.me/regexhub/>
+-   <https://remram44.github.io/regex-cheatsheet/regex.html>
