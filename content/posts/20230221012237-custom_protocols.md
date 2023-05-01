@@ -147,3 +147,4 @@ REST is not at all an RPC framework, it is an architectural style for constructi
 -   REST can be implemented without HTTP, a home-grown binary substitute can be use and you can still be restful.
 -   You can deploy a RESTful service over ordinary email exchange for instance.
 -   But using HTTP has benefits, such as you'll have HTTPs caching infrastructure at your disposal.
+-   [A detailed comparison of REST and gRPC | Hacker News](https://news.ycombinator.com/item?id=35711196)

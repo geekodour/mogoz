@@ -158,6 +158,7 @@ tags
 -   [The Library Voice: Our Virtual Makerspace Is Open!](https://vanmeterlibraryvoice.blogspot.com/2020/07/our-virtual-makerspace-is-open.html)
 -   [Charity Ratings and Donor Resources | Charity Navigator](https://www.charitynavigator.org/)
 -   [The Learning Curve¶ - KernelCommunity](https://archive.is/dvpfd) : This is some web3 educational project. The [spec](https://www.kernel.community/en/guiding/free-learn/spec) is interesting. I probably would want to archive the whole site.
+-   [Internet in a Box | Hacker News](https://news.ycombinator.com/item?id=35750165)
 -   [Diksha Govt](https://diksha.gov.in/)
 -   [Developh](https://developh.org/) by Chia Amisola of Figma
 
@@ -166,6 +167,7 @@ tags
 
 -   [Where is all the book data? | Hacker News](https://news.ycombinator.com/item?id=33543570)
 -   [Bookshop.org survives and thrives in Amazon’s world | Hacker News](https://news.ycombinator.com/item?id=35534069)
+-   [A visual book recommender | Hacker News](https://news.ycombinator.com/item?id=35726559)
 -   [You are Crossref - Crossref](https://www.crossref.org/)
 -   [Book publishers won&amp;#x27;t stop until libraries are dead | Hacker News](https://news.ycombinator.com/item?id=35272708)
 -   [An Unstandardized, Decentralized Carnival Fire: How Rare Books Are Cataloged ...](https://news.ycombinator.com/item?id=35363467)

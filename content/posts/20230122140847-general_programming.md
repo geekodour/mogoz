@@ -8,7 +8,10 @@ tags
 : [Design Patterns]({{< relref "20221125204047-design_patterns.md" >}})
 
 
-## Some notes from Well rounded engineer {#some-notes-from-well-rounded-engineer}
+## Opinions {#opinions}
+
+
+### What a well rounded engineer should know {#what-a-well-rounded-engineer-should-know}
 
 Source: [The Well Rounded Engineer - Speaker Deck](https://speakerdeck.com/swanandp/the-well-rounded-engineer?slide=126)
 
@@ -39,7 +42,7 @@ Source: [The Well Rounded Engineer - Speaker Deck](https://speakerdeck.com/swana
     -   Understand master method to analyse recursive solutions
 
 
-## Systems Engineering {#systems-engineering}
+### Systems Engineering {#systems-engineering}
 
 -   Be explicit about what you are building
 -   Be explicit about how you are building it
