@@ -5,23 +5,15 @@ draft = false
 +++
 
 tags
-: [System Design]({{< relref "20230113141133-system_design.md" >}}), [Compression]({{< relref "20230406044437-compression.md" >}})
+: [System Design]({{< relref "20230113141133-system_design.md" >}}), [Compression]({{< relref "20230406044437-compression.md" >}}), [Web Animation]({{< relref "20221109214315-web_animation.md" >}}), [Web Development]({{< relref "20221108105344-web_development.md" >}}), [Codec]({{< relref "20230221191655-codec.md" >}}), [Custom Protocols]({{< relref "20230221012237-custom_protocols.md" >}})
+
+
+## Understanding images {#understanding-images}
+
+{{< figure src="/ox-hugo/image_codecs.png" >}}
 
 
 ## Image compression/optimization {#image-compression-optimization}
-
-
-### Tools {#tools}
-
--   [GitHub - wanadev/pyguetzli: Python bindings for Google's Guetzli](https://github.com/wanadev/pyguetzli)
--   [Memory problems with MozJPEG and Pillow](https://blog.avirtualhome.com/memory-problems-with-jpg-files-and-pillow/)
--   [Python libraries to compress &amp; resize images fast](https://uploadcare.com/blog/image-optimization-python/)
--   [GitHub - discord/lilliput: Resize images and animated GIFs in Go](https://github.com/discord/lilliput)
--   <https://www.npmjs.com/package/sharp>
--   <https://tinypng.com/>
--   [GitHub - toy/image_optim: Optimize images using multiple utilities](https://github.com/toy/image_optim)
--   [GitHub - jarun/imgp: Fast batch image resizer and rotator](https://github.com/jarun/imgp)
--   <https://developers.google.com/speed/webp/docs/cwebp> (already installed in arch somehow)
 
 
 ### General {#general}
@@ -42,6 +34,19 @@ tags
 -   [It’s High Time to Replace JPEG With a Next-Generation Image Codec](https://cloudinary.com/blog/time_for_next_gen_codecs_to_dethrone_jpeg)
 -   [TIL: The Best Way to Compress JPG Files with ImageMagick](https://dev.to/feldroy/til-strategies-for-compressing-jpg-files-with-imagemagick-5fn9)
 -   [Image Codec Comparison](https://giannirosato.com/blog/post/image-comparison/)
+
+
+### Tools {#tools}
+
+-   [GitHub - wanadev/pyguetzli: Python bindings for Google's Guetzli](https://github.com/wanadev/pyguetzli)
+-   [Memory problems with MozJPEG and Pillow](https://blog.avirtualhome.com/memory-problems-with-jpg-files-and-pillow/)
+-   [Python libraries to compress &amp; resize images fast](https://uploadcare.com/blog/image-optimization-python/)
+-   [GitHub - discord/lilliput: Resize images and animated GIFs in Go](https://github.com/discord/lilliput)
+-   <https://www.npmjs.com/package/sharp>
+-   <https://tinypng.com/>
+-   [GitHub - toy/image_optim: Optimize images using multiple utilities](https://github.com/toy/image_optim)
+-   [GitHub - jarun/imgp: Fast batch image resizer and rotator](https://github.com/jarun/imgp)
+-   <https://developers.google.com/speed/webp/docs/cwebp> (already installed in arch somehow)
 
 
 ## Compressing GIFs {#compressing-gifs}
