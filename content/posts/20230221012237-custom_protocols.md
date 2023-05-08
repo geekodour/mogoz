@@ -28,6 +28,13 @@ Encoding of binary data in a sequence of printable characters.
 This is what computers do anyway.
 
 
+### Fun experiments {#fun-experiments}
+
+-   [keith-turner/ecoji](https://github.com/keith-turner/ecoji)
+-   <https://goshify.tny.im/>
+-   <https://github.com/alcor/itty-bitty>
+
+
 ## Data serialization {#data-serialization}
 
 Data serialization refers to the process of translating data structures or object state(from memory) into a different format capable of being stored (in-memory or file), or transmitted and reconstructed at a different point.

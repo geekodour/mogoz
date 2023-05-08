@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Automata Theory]({{< relref "20230421132238-automata_theory.md" >}}), [Algorithms]({{< relref "20230205172402-algorithms.md" >}})
+: [Automata Theory]({{< relref "20230421132238-automata_theory.md" >}}), [Algorithms]({{< relref "20230205172402-algorithms.md" >}}), [Computation and Computer Theory]({{< relref "20221101221439-computation_and_computer_theory.md" >}})
 
 > I don't think I've been more confused in my entire fucking life.
 >
@@ -23,7 +23,10 @@ This page covers what [this wikipedia](https://en.wikipedia.org/wiki/Computation
 
 ## Some History {#some-history}
 
-See </ox-hugo/history_of_complexity_theory.pdf>
+-   See
+    -   </ox-hugo/history_of_complexity_theory.pdf>
+    -   [if-then-else/if-then-else.md at master · e-n-f/if-then-else · GitHub](https://github.com/e-n-f/if-then-else/blob/master/if-then-else.md)
+    -   [A repo that keeps track of the history of logic. It chronicles the eminent personalities, schools of thought, ideas of each epoch.](https://github.com/prathyvsh/history-of-logic)
 
 
 ### 1837 {#1837}

@@ -112,6 +112,7 @@ These are image formats used in medical imaging to store and transmit medical im
 -   Type: Vector
 -   Supported compression: Lossless (Deflate based on Huffman and LZ77)
 -   On the web, they can be styled with CSS and controlled w JS
+-   [Pocket Guide to Writing SVG](https://svgpocketguide.com/)
 
 
 ### WebP {#webp}

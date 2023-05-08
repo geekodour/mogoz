@@ -14,6 +14,13 @@ tags
 -   [CS107 Guide to x86-64](https://web.stanford.edu/class/cs107/guide/x86-64.html)
 
 
+## Ghidra alternatives/helpers {#ghidra-alternatives-helpers}
+
+-   <https://github.com/angr/angr>
+-   <https://github.com/radareorg/radare2>
+-   <https://github.com/wader/fq>
+
+
 ## Some reddit comment {#some-reddit-comment}
 
 [NSA Ghidra software reverse engineering framework | Hacker News](https://news.ycombinator.com/item?id=35324380)
