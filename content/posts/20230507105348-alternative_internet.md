@@ -64,9 +64,11 @@ These systems usually have common things to deal with
 
 ## Things on the internet that make the internet {#things-on-the-internet-that-make-the-internet}
 
-{{< figure src="/ox-hugo/20230507105348-alternative_internet-585557407.png" >}}
+![](/ox-hugo/20230507105348-alternative_internet-585557407.png)
+![](/ox-hugo/20230507105348-alternative_internet-468539994.png)
 
 -   See this: [alternative-internet-dump](https://github.com/redecentralize/alternative-internet)
+-   See: [Ecosystem Overview](https://gitlab.com/bluesky-community1/decentralized-ecosystem/-/blob/master/README.md)
 -   This is obviously not exhaustive.
 -   These things are complimentary to other things on the internet. Like a centralized/distributed/decentralized/human/social/ai system could make use of them or not.
 
@@ -153,6 +155,9 @@ Even when things are not federated, by the nature what these things are we can a
 
 ### RSS {#rss}
 
+
+#### Learn more {#learn-more}
+
 -   [Use RSS for privacy and efficiency {rsapkf/www}](https://rsapkf.org/weblog/q2z)
 -   [What RSS Gets Right](https://www.charlieharrington.com/unexpected-useless-and-urgent)
 -   [Making RSS more visible again with a /feeds page](https://marcus.io/blog/making-rss-more-visible-again-with-slash-feeds)
@@ -164,6 +169,17 @@ Even when things are not federated, by the nature what these things are we can a
 -   [This is the year of the RSS reader? | Hacker News](https://news.ycombinator.com/item?id=34105572)
 -   [Making RSS prominent again](https://rubenerd.com/making-rss-prominent-again/)
 -   [“RSS” feed without separate XML? | Lobsters](https://lobste.rs/s/d5nlru/rss_feed_without_separate_xml)
+
+
+#### Tools {#tools}
+
+-   [GitHub - RSS-Bridge/rss-bridge: The RSS feed for websites missing it](https://github.com/RSS-Bridge/rss-bridge)
+-   [GitHub - DIYgod/RSSHub: 🍰 Everything is RSSible](https://github.com/DIYgod/RSSHub)
+-   [GitHub - umputun/rss2twitter: publish rss updates to twitter](https://github.com/umputun/rss2twitter)
+-   [Miniflux - Minimalist and Opinionated Feed Reader](https://miniflux.app/)
+-   [Tiny Tiny RSS](https://tt-rss.org/)
+-   [FreshRSS, a free, self-hostable feeds aggregator](https://freshrss.org/)
+-   [GitHub - stringer-rss/stringer: A self-hosted, anti-social RSS reader.](https://github.com/stringer-rss/stringer)
 
 
 ### HTTP alternatives {#http-alternatives}

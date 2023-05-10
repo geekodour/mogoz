@@ -98,6 +98,8 @@ Picture clearly shows that PIDs just don't get created inside the container, it'
     -   netfilter FW rules
     -   `socket port no space`
     -   unix domain sockets
+-   More info
+    -   [Restricting network access using Linux Network Namespaces - sigma star gmbh](https://blog.sigma-star.at/post/2023/05/sandbox-netns/)
 
 
 ### User `CLONE_NEWUSER` (2013) {#user-clone-newuser--2013}

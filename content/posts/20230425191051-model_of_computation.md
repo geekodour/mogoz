@@ -44,3 +44,8 @@ tags
 
 ![](/ox-hugo/20230425191051-model_of_computation-160710576.png)
 ![](/ox-hugo/20230425191051-model_of_computation-826555586.png)
+
+
+## Petri Nets {#petri-nets}
+
+-   [Petri Net Theory and the Modeling of Systems | Lobsters](https://lobste.rs/s/djsjg0/petri_net_theory_modeling_systems)

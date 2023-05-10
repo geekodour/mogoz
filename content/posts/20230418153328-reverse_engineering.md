@@ -12,6 +12,7 @@ tags
 
 -   [Even if you can&amp;#x27;t write assembly, you can read disassembly | Hacker News](https://news.ycombinator.com/item?id=35435811)
 -   [CS107 Guide to x86-64](https://web.stanford.edu/class/cs107/guide/x86-64.html)
+-   [Unity Hacking 101: Hacking with Reflection](https://www.mayer.cool/writings/Unity-Hacking-101-Hacking-with-Reflection/)
 
 
 ## Ghidra alternatives/helpers {#ghidra-alternatives-helpers}

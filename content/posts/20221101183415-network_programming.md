@@ -34,6 +34,64 @@ tags
 -   [TCP congestion control - Wikipedia](https://en.wikipedia.org/wiki/TCP_congestion_control#TCP_Tahoe_and_Reno)
 
 
+### Ports {#ports}
+
+
+#### Meta {#meta}
+
+-   there is no such thing as a port being open or closed. Ports aren't real.
+-   They are just a two byte label in a network packet that tell both the router and client what to do with it.
+
+
+#### Open ports {#open-ports}
+
+-   In both TCP and UDP, source and destination ports are of 16bit (2byte)
+-   Max number of open ports in an IP is 2<sup>16</sup> = 65536 =&gt; 65535
+-   If a computer gets another IP assigned to it, in that case it gets another 65535 ports.
+-   So the no. of open ports a computer can have = `no. of ip * 65535`
+
+
+#### Listening ports {#listening-ports}
+
+-   If you connect to some port which is listening, you don't consume the remote port. (In case of [Web Server]({{< relref "20230310200327-web_server.md" >}}) there's additional things that happen)
+    -   It remains open for others and also for you.
+    -   Each connection you make, makes a `4-tuple` combination and when you make a connection to `sever_ip:80`
+        -   connection1: `your_local_ip:random_port1`
+        -   connection2: `your_local_ip:random_port2`
+        -   See this in action w `ss -tpn`
+
+
+### TCP and UDP {#tcp-and-udp}
+
+
+#### TCP {#tcp}
+
+{{< figure src="/ox-hugo/20221101183415-network_programming-1265933912.png" >}}
+
+-   Connection: `4-tuple{s_ip, s_port, d_ip, d_port}`
+
+<!--list-separator-->
+
+-  Resources
+
+    -   [When TCP sockets refuse to die](https://blog.cloudflare.com/when-tcp-sockets-refuse-to-die/)
+    -   [Making connections with TCP and Sockets for Workers](https://blog.cloudflare.com/introducing-socket-workers/)
+
+
+#### UDP {#udp}
+
+-   Connected sockets: `4-tuple{s_ip, s_port, d_ip, d_port}`
+    -   Mostly used for outgoing flows
+-   Unconnected sockets: `2-tuple{bind_ip, bind_port}`
+    -   Mostly used for inbound server-side stuff
+
+<!--list-separator-->
+
+-  Resources
+
+    -   [Everything you ever wanted to know about UDP sockets but were afraid to ask](https://blog.cloudflare.com/everything-you-ever-wanted-to-know-about-udp-sockets-but-were-afraid-to-ask-part-1/)
+
+
 ## Different types of sockets {#different-types-of-sockets}
 
 
@@ -117,71 +175,24 @@ tags
             -   `sockaddr_in` has `sin_addr` struct which has `s_addr` field which is a `uint32_t`
 
 
-## Bidirectional socket {#bidirectional-socket}
+## tun/tab/linux {#tun-tab-linux}
+
+-   <https://www.kernel.org/doc/Documentation/networking/tuntap.txt>
+-   [TUN/TAP - Wikipedia](https://en.wikipedia.org/wiki/TUN/TAP)
+-   [Tun/Tap interface tutorial « \\1](https://backreference.org/2010/03/26/tuntap-interface-tutorial/)
+
+
+## Use-cases {#use-cases}
+
+
+### Bidirectional socket {#bidirectional-socket}
 
 -   [What's the read logic when I call recvfrom()](https://stackoverflow.com/questions/65269499/whats-the-read-logic-when-i-call-recvfrom-function-in-c-c)
 -   [Maintaining a bidirectional UDP connection](https://stackoverflow.com/questions/15794271/maintaining-a-bidirectional-udp-connection)
 -   [The SO_REUSEPORT socket option {LWN.net}](https://lwn.net/Articles/542629/) (Diff applications, listen on the same socket)
 
 
-## Ports {#ports}
+### Network Programming for Games {#network-programming-for-games}
 
-
-### Meta {#meta}
-
--   there is no such thing as a port being open or closed. Ports aren't real.
--   They are just a two byte label in a network packet that tell both the router and client what to do with it.
-
-
-### Open ports {#open-ports}
-
--   In both TCP and UDP, source and destination ports are of 16bit (2byte)
--   Max number of open ports in an IP is 2<sup>16</sup> = 65536 =&gt; 65535
--   If a computer gets another IP assigned to it, in that case it gets another 65535 ports.
--   So the no. of open ports a computer can have = `no. of ip * 65535`
-
-
-### Listening ports {#listening-ports}
-
--   If you connect to some port which is listening, you don't consume the remote port. (In case of [Web Server]({{< relref "20230310200327-web_server.md" >}}) there's additional things that happen)
-    -   It remains open for others and also for you.
-    -   Each connection you make, makes a `4-tuple` combination and when you make a connection to `sever_ip:80`
-        -   connection1: `your_local_ip:random_port1`
-        -   connection2: `your_local_ip:random_port2`
-        -   See this in action w `ss -tpn`
-
-
-## TCP and UDP {#tcp-and-udp}
-
-
-### TCP {#tcp}
-
-{{< figure src="/ox-hugo/20221101183415-network_programming-1265933912.png" >}}
-
--   Connection: `4-tuple{s_ip, s_port, d_ip, d_port}`
-
-
-#### Resources {#resources}
-
--   [When TCP sockets refuse to die](https://blog.cloudflare.com/when-tcp-sockets-refuse-to-die/)
--   [Making connections with TCP and Sockets for Workers](https://blog.cloudflare.com/introducing-socket-workers/)
-
-
-### UDP {#udp}
-
--   Connected sockets: `4-tuple{s_ip, s_port, d_ip, d_port}`
-    -   Mostly used for outgoing flows
--   Unconnected sockets: `2-tuple{bind_ip, bind_port}`
-    -   Mostly used for inbound server-side stuff
-
-
-#### Resources {#resources}
-
--   [Everything you ever wanted to know about UDP sockets but were afraid to ask](https://blog.cloudflare.com/everything-you-ever-wanted-to-know-about-udp-sockets-but-were-afraid-to-ask-part-1/)
-
-
-## tun/tab/linux {#tun-tab-linux}
-
--   <https://www.kernel.org/doc/Documentation/networking/tuntap.txt>
--   [TUN/TAP - Wikipedia](https://en.wikipedia.org/wiki/TUN/TAP)
--   [Tun/Tap interface tutorial « \\1](https://backreference.org/2010/03/26/tuntap-interface-tutorial/)
+-   <https://github.com/ValveSoftware/GameNetworkingSockets>
+-   [networkprotocol/netcode](https://github.com/networkprotocol/netcode)
