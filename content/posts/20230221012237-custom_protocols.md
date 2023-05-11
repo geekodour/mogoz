@@ -56,6 +56,7 @@ Data serialization refers to the process of translating data structures or objec
 > How to
 >
 > -   [Designing File Formats](https://www.fadden.com/tech/file-formats.html)
+> -   [Binary formats and protocols: LTV is better than TLV | Lobsters](https://lobste.rs/s/lfbey9/binary_formats_protocols_ltv_is_better)
 > -   [Visual Programming with Elixir: Learning to Write Binary Parsers](https://hansonkd.medium.com/building-beautiful-binary-parsers-in-elixir-1bd7f865bf17)
 > -   [binary_io](https://ryan-rsm-mckenzie.github.io/binary_io/) : Not a data serialization library but a library to help write binary formats
 > -   [bincode](https://github.com/bincode-org/bincode)
