@@ -77,17 +77,17 @@ Main Issue: Fragmentation, fixed by Mark compact and CopyingGC
 
 ### MarkCompact {#markcompact}
 
-Has better cache locality and faster memory allocation and has two phases, **Marking Phase**, similar to Mark phase in MarkSweep but this store additional info in the object header for relocation.
+Has better cache locality and faster memory allocation and has two phases, **Marking Phase**, similar to Mark phase in MarkSweep but this store additional info in the object header for relocation. i.e It's a moving GC.
 
 The **Compacting Phase** has again a lot of algorithms like 2 fingers, The lisp2(most used),Threaded and Onepass.
 
 
-### Copying Collector/Sem-Space Collector {#copying-collectorsem-space-collector}
+### Copying Collector/Sem-Space Collector {#copying-collector-sem-space-collector}
 
 This trades storage for speed and requires half of the heap to be reserved for the collector! It's sometimes referred to as the CopyingGC
 
 
-### Ref.Count GC {#refcount-gc}
+### Ref.Count GC {#ref-dot-count-gc}
 
 -   This is the most naive garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object is still needed to determining if an object still has any other objects referencing it.
 -   An object is said to be "garbage", or collectible if there are zero references pointing to it.

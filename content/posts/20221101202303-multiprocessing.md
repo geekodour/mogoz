@@ -12,12 +12,16 @@ tags
 
 {{< figure src="/ox-hugo/20221101202303-multiprocessing-1361409453.png" >}}
 
+-   `32/64/48` address space, each bit can be `1` or `0`, hence \\(2^{no. of address bits}\\). See [Permutations &amp; Combinations]({{< relref "20230513203749-permutations_combinations.md" >}}).
 -   IA-32/x86_32/x86/i386
     -   \\(2^{32}\\) ~= 4GB (32 bit address size)
     -   [32 bit machines can still support more ram.(PAE)](https://en.wikipedia.org/wiki/Physical_Address_Extension)
 -   x86_64/amd64
-    -   \\(2^{64}\\) ~= 16EB (48 bit addresses)
+    -   \\(2^{64}\\) ~= 18EB (64 bit addresses)
+    -   \\(2^{48}^{}\\) ~= 16EB (48 bit addresses)
+    -   For our use tho, we get only 128TB. Which is not "only" tbf.
     -   [Why do x86-64 systems have only a 48 bit virtual address space?](https://stackoverflow.com/questions/6716946/why-do-x86-64-systems-have-only-a-48-bit-virtual-address-space)
+    -   <https://www.kernel.org/doc/Documentation/x86/x86_64/mm.txt>
 
 
 ## vCPUs {#vcpus}

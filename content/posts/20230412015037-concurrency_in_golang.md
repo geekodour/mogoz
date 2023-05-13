@@ -11,6 +11,7 @@ tags
 ## Goroutines {#goroutines}
 
 -   Execute tasks independently.
+-   Go runtime creates OS threads. The Go scheduler schedules goroutines on top of these OS threads.
 
 
 ## goroutine-safe ? {#goroutine-safe}
@@ -90,19 +91,20 @@ ch := make(chan int)
 
 ## Links on goroutines {#links-on-goroutines}
 
--   <https://povilasv.me/go-memory-management/>
--   <https://www.reddit.com/r/golang/comments/1efjs0/how_does_gos_gc_interact_with_virtual_memory/>
--   <https://deepu.tech/memory-management-in-golang/>
--   <https://blog.cloudflare.com/how-stacks-are-handled-in-go/>
--   <https://matklad.github.io/2021/03/12/goroutines-are-not-significantly-smaller-than-threads.html>
--   <https://www.reddit.com/r/golang/comments/117a4x7/how_can_goroutines_be_more_scalable_than_kernel/>
--   <https://www.youtube.com/watch?v=KBZlN0izeiY&t=536s>
--   <https://news.ycombinator.com/item?id=25997506>
--   <https://www.reddit.com/r/golang/comments/tifbow/50_million_virtual_threads_massive_virtual/>
--   <https://www.reddit.com/r/golang/comments/cgkg66/releasing_memory_in_goroutine_stacks/>
--   <https://www.reddit.com/r/golang/comments/10320aq/do_goroutines_typically_run_ontop_of_operating/>
--   <https://katherine.cox-buday.com/concurrency-in-go/>
--   <https://www.reddit.com/r/golang/comments/yww0t7/why_a_goroutine_is_not_a_thread_but_a_green/>
--   <https://news.ycombinator.com/item?id=26461765>
--   <https://news.ycombinator.com/item?id=26440334>
--   <https://eklitzke.org/goroutines-nonblocking-io-and-memory-usage>
+-   [Dmitry Vyukov — Go scheduler: Implementing language with lightweight concurre...](https://www.youtube.com/watch?v=-K11rY57K7k)
+-   [Goroutines Are Not Significantly Smaller Than Threads | Hacker News](https://news.ycombinator.com/item?id=26461765)
+-   [Goroutines are not significantly lighter than threads | Hacker News](https://news.ycombinator.com/item?id=26440334)
+-   [Goroutines, Nonblocking I/O, And Memory Usage](https://eklitzke.org/goroutines-nonblocking-io-and-memory-usage)
+-   [Go Memory Management – Povilas Versockas](https://povilasv.me/go-memory-management/)
+-   [🚀 Visualizing memory management in Golang | Technorage](https://deepu.tech/memory-management-in-golang/)
+-   [How Stacks are Handled in Go](https://blog.cloudflare.com/how-stacks-are-handled-in-go/)
+-   [Goroutines Are Not Significantly Smaller Than Threads](https://matklad.github.io/2021/03/12/goroutines-are-not-significantly-smaller-than-threads.html)
+-   [Katherine Cox-Buday](https://katherine.cox-buday.com/concurrency-in-go/)
+-   [GopherCon 2017: Kavya Joshi - Understanding Channels - YouTube](https://www.youtube.com/watch?v=KBZlN0izeiY&t=536s)
+-   [Go 1.16 will make system calls through Libc on OpenBSD | Hacker News](https://news.ycombinator.com/item?id=25997506)
+-   [Reddit - Dive into anything](https://www.reddit.com/r/golang/comments/117a4x7/how_can_goroutines_be_more_scalable_than_kernel/)
+-   [Reddit - Dive into anything](https://www.reddit.com/r/golang/comments/tifbow/50_million_virtual_threads_massive_virtual/)
+-   [Reddit - Dive into anything](https://www.reddit.com/r/golang/comments/1efjs0/how_does_gos_gc_interact_with_virtual_memory/)
+-   [Reddit - Dive into anything](https://www.reddit.com/r/golang/comments/cgkg66/releasing_memory_in_goroutine_stacks/)
+-   [Reddit - Dive into anything](https://www.reddit.com/r/golang/comments/10320aq/do_goroutines_typically_run_ontop_of_operating/)
+-   [Reddit - Dive into anything](https://www.reddit.com/r/golang/comments/yww0t7/why_a_goroutine_is_not_a_thread_but_a_green/)

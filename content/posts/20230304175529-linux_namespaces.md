@@ -172,8 +172,8 @@ In this case,
 
 ### Cgroup `CLONE_NEWCGROUP` (2016) {#cgroup-clone-newcgroup--2016}
 
--   Before we understand [cgroups]({{< relref "20230304201630-cgroups.md" >}}) NS, we need to understand what cgroups are.
--   Certain path names that appear in certain proc files are being virtualized
+-   The cgroup ns only provides an isolated view of the cgroup tree to the isolated process so that any system level info is not leaked to it.
+-   All the actual grouping and resource management stuff done by core and controllers of [cgroups]({{< relref "20230304201630-cgroups.md" >}})
 
 
 ### Time `CLONE_NEWTIME` (2020) {#time-clone-newtime--2020}
