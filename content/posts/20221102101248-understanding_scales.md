@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Economics]({{< relref "20221102101303-economics.md" >}}) , [Math]({{< relref "20221101134840-math.md" >}})
+: [Economics]({{< relref "20221102101303-economics.md" >}}) , [Math]({{< relref "20221101134840-math.md" >}}), [Logarithm]({{< relref "20221101154748-logarithm.md" >}})
 
 > I always get confused [by scales](https://en.wikipedia.org/wiki/Scale), so i note them here for future ref of scales i come across often.
 >
