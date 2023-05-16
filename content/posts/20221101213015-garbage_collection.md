@@ -93,6 +93,7 @@ This trades storage for speed and requires half of the heap to be reserved for t
 -   An object is said to be "garbage", or collectible if there are zero references pointing to it.
 -   It is a direct collector which is able to identify the garbage directly.
 -   **Circular references are a common cause of memory leaks.**
+    -   Eg. `A.friend` and `B.friend` reference each other, but `A` and `B` are not referenced by `root`. Ref. counting algo will think they're still used. Therefore, memory leaks baby.
 -   IE6 and IE7 are known to have reference-counting garbage collectors, which have caused memory leaks with circular references. **No modern browser engine uses reference-counting for garbage collection anymore.** but programming languages do.
 
 

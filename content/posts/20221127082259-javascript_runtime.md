@@ -30,16 +30,23 @@ When your code is executed:
 -   Run to completion: whenever a function runs, it cannot be preempted and will run entirely before any other code runs (and can modify data the function manipulates). This differs from C, for instance, where if a function runs in a thread, it may be stopped at any point by the runtime system to run some other code in another thread.
 
 
+### Task vs Microtask {#task-vs-microtask}
+
+-   [Using microtasks in JavaScript with queueMicrotask() - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
+
+
 ### Task/Callback/Event Queue {#task-callback-event-queue}
 
 every time you add a callback (ex. via the setTimeout or the AJAX APIs), it is added to this queue
 
 
-### Job Queue {#job-queue}
+### Job Queue/Microtask queue {#job-queue-microtask-queue}
 
--   This queue is reserved for promise’s thens
+-   Promise initialize and resolve are synchronous
+-   microtasks queue is reserved for promise’s `.then(s)`
 -   It is a prioritized queue
-    -   execute this code later (= asynchronously), but as soon as possible! (= before the next Event Loop tick)
+    -   Execute this code later (= asynchronously)
+    -   But as soon as possible! (= before the next Event Loop tick, it's flushed before next event loop tick)
 
 
 ### Event loop {#event-loop}
