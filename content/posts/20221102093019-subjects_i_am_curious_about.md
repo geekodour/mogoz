@@ -14,4 +14,6 @@ Also see:  [Idea Monkeysphere | titles do not matter](https://geekodour.org/docs
 -   [Anthology - Wikipedia](https://en.wikipedia.org/wiki/Anthology)
 -   [Extropianism](https://en.wikipedia.org/wiki/Extropianism)
 -   [Cybernetics](http://pespmc1.vub.ac.be/ASHBBOOK.html)
+    -   [Nick Land-Meltdown](http://www.ccru.net/swarm1/1_melt.htm)
+    -   [Cybernetic Culture Research Unit - Wikipedia](https://en.wikipedia.org/wiki/Cybernetic_Culture_Research_Unit)
 -   Cartography
