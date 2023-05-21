@@ -184,6 +184,11 @@ An **order of magnitude** is an approximate [position on a **logarithmic scale.*
 
 ## Inclusive and Exclusive {#inclusive-and-exclusive}
 
+-   [ : Inclusive. Includes itself.
+-   ( : Exclusive. Excludes itself.
+
+<!--listend-->
+
 ```text
 (0, 5) = 1, 2, 3, 4
 (0, 5] = 1, 2, 3, 4, 5

@@ -8,6 +8,20 @@ tags
 : [Design Patterns]({{< relref "20221125204047-design_patterns.md" >}})
 
 
+## Pragmatic {#pragmatic}
+
+
+### Invariants {#invariants}
+
+<div class="warning small-text">
+
+> An invariant is any logical rule that must be obeyed throughout the execution of your program that can be communicated to a human, but not to your compiler.
+</div>
+
+-   Invariants are bad. Every invariant of this kind that you remove from your code is an improvement, because it lowers the cognitive load of working with it.
+-   See [What are invariants](https://softwareengineering.stackexchange.com/questions/32727/what-are-invariants-how-can-they-be-used-and-have-you-ever-used-it-in-your-pro)
+
+
 ## Opinions {#opinions}
 
 
