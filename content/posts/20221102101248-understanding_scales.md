@@ -179,8 +179,6 @@ Logarithmic growth is the inverse of exponential growth and is very slow. Basica
 
 An **order of magnitude** is an approximate [position on a **logarithmic scale.**](https://psychology.wikia.org/wiki/Order_of_magnitude). Eg. \\(4\times10^6\\) has a common logarithm of `~6.602`; Its order of magnitude is `6`.
 
----
-
 
 ## Inclusive and Exclusive {#inclusive-and-exclusive}
 
@@ -196,4 +194,7 @@ An **order of magnitude** is an approximate [position on a **logarithmic scale.*
 [0, 5] = 0, 1, 2, 3, 4, 5
 ```
 
----
+
+## Napkin numbers {#napkin-numbers}
+
+-   13.2ns is a couple hundred cycles

@@ -77,5 +77,6 @@ tags
 #### LL(1) Grammars (Un-ambiguous) {#ll--1--grammars--un-ambiguous}
 
 -   (L)eftmost derivation, (L)eft-to-right scan, (1) symbol of lookahead
--   Most [Programming Languages]({{< relref "20221101220306-programming_languages.md" >}}) have `LL(1)` grammars, they are never `ambiguous`. (They need to be)
+-   Most [Programming Languages]({{< relref "20221101220306-programming_languages.md" >}}) have `LL(1)` grammars, they are never `ambiguous`. (They need to be unambiguous for what they do)
 -   Such CFG can be converted into [Pushdown Automata (PDA)]({{< relref "20230422123752-pushdown_automata.md" >}})
+-   [Resilient LL Parsing Tutorial](https://matklad.github.io/2023/05/21/resilient-ll-parsing-tutorial.html)

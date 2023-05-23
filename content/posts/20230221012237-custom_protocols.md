@@ -92,7 +92,7 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 
 #### Binary formats {#binary-formats}
 
--   BSON, MessagePack, Protocol Buffers, Thrift, Avro, ...
+-   BSON, MessagePack, [Protocol Buffers]({{< relref "20230522131118-protocol_buffers.md" >}}), Thrift, Avro, ...
 
 
 #### Text formats {#text-formats}
@@ -127,6 +127,21 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 -   Examples: SMTP, HTTP, SIP.
 
 
+### Binary vs Text protocols {#binary-vs-text-protocols}
+
+Not strict def. but general idea.
+
+-   How a computer parses JSON:
+    -   You're kind of like advancing one rune at a time
+    -   And kind of maintaining some look back, looking for a bunch of object delimiters
+    -   Keeping state for how deeply nested in this object you are etc.
+    -   complicated, stateful process.
+-   How a computer parses Binary data:
+    -   It'll say, hey, the next field coming up is a string, and it's 70 bytes long.
+    -   Then the parser just like grabs the next 70 bytes
+    -   Interprets them as a string in memory and is done.
+
+
 ## RPC {#rpc}
 
 -   [X] Data Serialization Formats
@@ -139,7 +154,7 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 ### gRPC {#grpc}
 
 -   GRPC(2016) is a RPC framework
--   PB/Protocol Buffers(2001) is a data serialization format.
+-   PB/[Protocol Buffers]({{< relref "20230522131118-protocol_buffers.md" >}})(2001) is a data serialization format.
 
 
 #### What about GRPC? {#what-about-grpc}
