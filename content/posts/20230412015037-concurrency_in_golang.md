@@ -100,7 +100,8 @@ tags
 
 ### Go GC {#go-gc}
 
-See [Garbage collection]({{< relref "20221101213015-garbage_collection.md" >}})
+-   See [GopherCon 2022: Madhav Jivrajani - Control Theory and Concurrent GC](https://www.youtube.com/watch?v=We-8RSk4eZA)
+-   See [Garbage collection]({{< relref "20221101213015-garbage_collection.md" >}})
 
 
 ## Concurrency in go, what are my options/primitives? {#concurrency-in-go-what-are-my-options-primitives}

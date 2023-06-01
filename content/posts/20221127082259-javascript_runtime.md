@@ -10,6 +10,8 @@ tags
 
 ## Runtime {#runtime}
 
+-   Watch [Jake Archibald on the web browser event loop, setTimeout, micro tasks, requestAnimationFrame, ... - YouTube](https://www.youtube.com/watch?v=cCOL7MC4Pl0) again
+
 > The Javascript Runtime can only do one thing at a time because it is single threaded. This means The UI updates and interactions are handled in the same main thread.
 
 {{< figure src="/ox-hugo/20221126085225-javascript-1697497250.png" >}}

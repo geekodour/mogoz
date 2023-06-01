@@ -192,6 +192,7 @@ Even when things are not federated, by the nature what these things are we can a
 -   [Contributing to Gemini ecosystem](https://pitr.ca/2021-05-29-gemini-ecosystem)
 -   [Plaintext HTTP in a Modern World - joshua stein](https://jcs.org/2021/01/06/plaintext)
 -   [What is this Gemini thing anyway, and why am I excited about it?](https://drewdevault.com/2020/11/01/What-is-Gemini-anyway.html)
+-   [The Gemini protocol seen by this HTTP client person | Lobsters](https://lobste.rs/s/au6bcu/gemini_protocol_seen_by_this_http_client)
 -   <https://github.com/makew0rld/amfora>
 -   <https://github.com/mbrubeck/agate>
 -   [Using Hugo to Launch a Gemini Capsule | Brain Baking](https://brainbaking.com/post/2021/04/using-hugo-to-launch-a-gemini-capsule/)

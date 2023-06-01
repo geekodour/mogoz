@@ -166,8 +166,10 @@ tags
 ### Books {#books}
 
 -   [Where is all the book data? | Hacker News](https://news.ycombinator.com/item?id=33543570)
+-   [New Taschen book on the history of the computer | Hacker News](https://news.ycombinator.com/item?id=36104432)
 -   [Bookshop.org survives and thrives in Amazon’s world | Hacker News](https://news.ycombinator.com/item?id=35534069)
 -   [A visual book recommender | Hacker News](https://news.ycombinator.com/item?id=35726559)
+-   [About Dolly Parton’s Imagination Library | Hacker News](https://news.ycombinator.com/item?id=36100992)
 -   [You are Crossref - Crossref](https://www.crossref.org/)
 -   [Book publishers won&amp;#x27;t stop until libraries are dead | Hacker News](https://news.ycombinator.com/item?id=35272708)
 -   [Foundations of a Tiny Directory](https://www.kickscondor.com/foundations-of-a-tiny-directory/)
@@ -194,6 +196,7 @@ tags
 | [Chalees Minute Foundation](https://www.chaleesmin.foundation/)                 | sm                                                                                                                                                                  |
 | [IgnusERG](https://ignus-erg.org/)                                              | Quality Education for the Marginalized                                                                                                                              |
 | [Indic Digital Archive Foundation](https://indicarchive.org/)                   |                                                                                                                                                                     |
+| [CivicDataLab Data, Tech, Design, Social Science](https://civicdatalab.in/)     |                                                                                                                                                                     |
 
 
 ## People {#people}
@@ -210,6 +213,7 @@ tags
 Lot of Open-X
 
 -   [OLS | OLS](https://openlifesci.org/) (Open Life Science)
+-   [Open Data Day, 2021. The Open Data journey. - Apoorv Anand](https://behindbars.netlify.app/docs/open-data-day-2021/)
 -   [Open Scholarship Knowledge Base | OER Commons](https://www.oercommons.org/hubs/OSKB)
 -   [OSF](https://osf.io/)
 -   [Center for Open Science](https://www.cos.io/)
