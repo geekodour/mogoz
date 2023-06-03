@@ -182,6 +182,11 @@ Even when things are not federated, by the nature what these things are we can a
 -   [GitHub - stringer-rss/stringer: A self-hosted, anti-social RSS reader.](https://github.com/stringer-rss/stringer)
 
 
+### Usenet {#usenet}
+
+-   [Usenet over NNCP | Hacker News](https://news.ycombinator.com/item?id=36157287)
+
+
 ### HTTP alternatives {#http-alternatives}
 
 
