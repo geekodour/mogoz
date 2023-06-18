@@ -5,14 +5,7 @@ draft = false
 +++
 
 tags
-: [Custom Protocols]({{< relref "20230221012237-custom_protocols.md" >}}), [API Design]({{< relref "20230302195820-api_design.md" >}})
-
-
-## OpenAPI {#openapi}
-
--   New name of Swagger is OpenAPI
--   It includes most of JSON schema (data struct part)
--   Network API part is different. (TODO)
+: [Custom Protocols]({{< relref "20230221012237-custom_protocols.md" >}}), [API Design]({{< relref "20230302195820-api_design.md" >}}), [OpenAPI]({{< relref "20230605124017-openapi_ecosystem.md" >}})
 
 
 ## What? {#what}

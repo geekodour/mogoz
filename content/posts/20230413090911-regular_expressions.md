@@ -92,6 +92,8 @@ We get 2 definitions of `regular languages` from these 2 events.
 
 ### Tutorials {#tutorials}
 
+-   [Why you really can parse HTML (and anything else) with regular expressions – Neil Madden](https://neilmadden.blog/2019/02/24/why-you-really-can-parse-html-and-anything-else-with-regular-expressions/) 🌟
+-   [Regular expression Denial of Service - ReDoS](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS)
 -   [A Visual Guide to Regular Expression](https://amitness.com/regex/)
 -   [Python Tutorial: re Module - How to Write and Match Regular Expressions (Regex) - YouTube](https://www.youtube.com/watch?v=K8L6KVGG-7o)
 -   [Emacs: basics of regular expressions (regexp) - YouTube](https://www.youtube.com/watch?v=TxYGHjKBMUg)

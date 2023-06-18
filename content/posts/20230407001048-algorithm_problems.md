@@ -12,6 +12,8 @@ tags
 
 ## Problems {#problems}
 
+-   [Google Code Jam Archive](https://zibada.guru/gcj/)
+
 
 ### Prob Dump {#prob-dump}
 

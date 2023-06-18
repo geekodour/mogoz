@@ -13,17 +13,6 @@ tags
 ## Go concurrency tips {#go-concurrency-tips}
 
 
-### Control {#control}
-
--   Always close channels from sending side.
--   Good to pass a channel as a parameter. (You have control over the channel)
-
-
-### Handling multiple channels {#handling-multiple-channels}
-
--   `select`, this is similar to unix `select(2)`, hence the name. It's often used inside an infinite loop (say, in a consumer) to grab data from any available channel.
-
-
 ### Detecting data races {#detecting-data-races}
 
 -   If two goroutines try to modify a shared variable, we have a race condition.
@@ -166,6 +155,14 @@ Some general guidelines
 -   Channel is a queue(FIFO) with a lock. It's goroutine safe.
 -   Multiple writers/readers can use a single channel without a mutex/lock safely.
 -   When we get a channel, we essentially get a `pointer` to the `channel`.
+-   Good to pass a channel as a parameter. (You have control over the channel)
+-   Closing channels
+    -   Closing channels is not necessary, only necessary if the reciver must know about it. Eg `range` on the channel.
+    -   Always close channels from sending side.
+-   Multiple channels
+    -   `select`, this is similar to unix `select(2)`, hence the name.
+    -   It's often used inside an infinite loop (say, in a consumer) to grab data from any available channel.
+    -   chooses one at random if multiple are ready.
 
 
 ### Implementation {#implementation}
@@ -179,26 +176,50 @@ Some general guidelines
 
 ```go
 ch := make(chan int)
+ch := make(chan int, 0) // same as above
 ```
 
 {{< figure src="/ox-hugo/20230412015037-concurrency_in_golang-1427803735.png" >}}
+
+-   Combines communication w synchronization
 
 
 ### Buffered (Asynchronous) {#buffered--asynchronous}
 
 ```go
 ch := make(chan int, 3)
+// ch := make(chan int, x>0)
 ```
 
 {{< figure src="/ox-hugo/20230412015037-concurrency_in_golang-394322227.png" >}}
 
 -   Don't use buffer channels unless you're sure you need to
+-   Can be used as a semaphor, eg. limit throughput in a webserver
 -   if we want the producer to be able to make more than one piece of Work at a time, then we may consider buffered
+
+
+### Blocking in buffered and unbuffered {#blocking-in-buffered-and-unbuffered}
+
+```go
+func main() {
+    ch := make(chan int, 1)
+    ch <- 32 // if unbuf, things will not move post this! deadlock.
+	// ch <- 88 // this will block an buf(1) ch! (channel full)
+    <-ch     // if unbuf, this must be called from another goroutine
+    fmt.Println("Hello, 世界")
+}
+```
+
+-   Buffered
+    -   S: Until the receiver has received the value
+    -   R: Blocks if nothing to receive
+-   Unbuffered
+    -   S: Blocks when the buffer is full, something must recieve now.
+    -   R: Blocks if empty buffer
 
 
 ### Questions &amp; Resources {#questions-and-resources}
 
--   What is this: `ch := make(chan int, 0)`
 -   [The Behavior Of Channels](https://www.ardanlabs.com/blog/2017/10/the-behavior-of-channels.html)
 -   [Share memory by communicating · The Ethically-Trained Programmer](https://blog.carlmjohnson.net/post/share-memory-by-communicating/)
 -   [Internals of Go Channels. Inner workings of Go channels](https://shubhagr.medium.com/internals-of-go-channels-cf5eb15858fc)

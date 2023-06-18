@@ -13,14 +13,10 @@ tags
 > -   \\(10^{13}\\)mts from wherever you're reading this from, [you could see the entire solarsystem infront of your eyes](https://www.youtube.com/watch?v=0fKBhvDjuy0)
 > -   [Orders of magnitude (numbers)](https://en.wikipedia.org/wiki/Orders_of_magnitude_(numbers))
 
----
-
 
 ## Decimal Separator {#decimal-separator}
 
 One thing that ate my head initially was that some people use `.` [as decimal separator. why bro?](https://en.wikipedia.org/wiki/Decimal_separator)
-
----
 
 
 ## million, billion, lakh, cr {#million-billion-lakh-cr}
@@ -60,12 +56,33 @@ It'll take a lot of time for your friend to download `200TiB` of data with the I
 -   8bits = 1byte \\(\implies\\) 500KB = 4000Kb = 4Mb
 -   12Mbps connection = 1.5MBps (network uses bps)
 
----
-
 > The reason you choose one scale over another when graphing is to reveal detail that might otherwise be hidden by the nature of the data you're looking at.
 
 
+### Signed &amp; Unsigned integers {#signed-and-unsigned-integers}
+
+There are arch dependent integer types such as `int`, `uint` these pick the length based on arch. Eg. on 64bit systems, `int` will be `int64`, `uint` will be `uint64`
+
+
+#### Signed integers {#signed-integers}
+
+-   int8: -1&lt;&lt;2<sup>3</sup>-1 to 1&lt;&lt;(2<sup>3</sup>-1)-1 : -128 to 127
+-   int16: -1&lt;&lt;2<sup>4</sup>-1 to 1&lt;&lt;(2<sup>4</sup>-1)-1 : -32768 to 32767
+-   int32: -1&lt;&lt;2<sup>5</sup>-1 to 1&lt;&lt;(2<sup>5</sup>-1)-1 : -2147483648 to 2147483647
+-   int64: -1&lt;&lt;2<sup>6</sup>-1 to 1&lt;&lt;(2<sup>6</sup>-1)-1 : -9223372036854775808 to 9223372036854775807
+
+
+#### Unsigned integers {#unsigned-integers}
+
+-   uint8: 0 to 1&lt;&lt;2<sup>3</sup>-1 : 0 to 255
+-   uint16: 0 to 1&lt;&lt;2<sup>4</sup>-1 : 0 to 65535
+-   uint32: 0 to 1&lt;&lt;2<sup>5</sup>-1 : 0 to 4294967295
+-   uint64: 0 to 1&lt;&lt;2<sup>6</sup>-1 : 0 to 18446744073709551615
+
+
 ## Log scales {#log-scales}
+
+See [Logarithm]({{< relref "20221101154748-logarithm.md" >}})
 
 > {{< figure src="/ox-hugo/logscale.png" >}}
 >

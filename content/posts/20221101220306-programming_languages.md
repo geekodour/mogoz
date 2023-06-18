@@ -4,12 +4,16 @@ author = ["Hrishikesh Barman"]
 draft = false
 +++
 
+tags
+: [Parsers]({{< relref "20230511160225-parsers.md" >}})
+
+
 ## How they are made? {#how-they-are-made}
 
--   C, FORTRAN, Java, Pascal, Lisp, Forth, Ada, Python, Ruby, Go, etc.: none of these languages are context-sensitive. None are context-free either. Programming languages are compilcated
+-   C, FORTRAN, Java, Pascal, Lisp, Forth, Ada, Python, Ruby, Go, etc.: none of these languages are context-sensitive. None are context-free either. Programming languages are complicated
 -   Modern languages typically are defined in multiple levels
-    -   L1: Defining the lexical structure, using something like regular expressions
-    -   L2: Defining context-free grammar or close to it
+    -   L1: Defining the lexical structure, using something like [Regular Expressions]({{< relref "20230413090911-regular_expressions.md" >}})
+    -   L2: Defining [Context Free Grammar (CFG)]({{< relref "20230422102551-context_free_grammar_cfg.md" >}}) or close to it
     -   L3: Uses arbitrary code to finish the parse.
 -   This has proven to be a robust way to design languages which both humans and compilers understand.
 
@@ -23,7 +27,7 @@ draft = false
 
 -   `Flex` is a lexer generator
 -   `Lexing` : Turning a stream of characters into a stream of abstract `tokens`
--   It lets you provide a regex for each type of token in your language, and it will write a lexer for you
+-   It lets you provide a [Regex]({{< relref "20230413090911-regular_expressions.md" >}}) for each type of token in your language, and it will write a lexer for you
 
 
 #### Parsing {#parsing}
@@ -32,6 +36,13 @@ draft = false
 -   `Parsing`: Collecting `tokens` into their `productions`
 -   Lets you specify a `grammar` that groups `tokens` together into various logical pieces. Eg. Order of operations, groups statements properly as intended by the programmer.
 -   Usually that grammar is given in something like [BNF]({{< relref "20230422075825-bnf.md" >}})
+
+
+### LLVM {#llvm}
+
+-   How it helps?
+    -   Writing two backends for two different architectures would be a lot of work and then lots of platform specific optimizations therefore llvm is the present and seems to be the future for the foreseeable future as well.
+    -   See MLIR
 
 
 ## Paradigms {#paradigms}

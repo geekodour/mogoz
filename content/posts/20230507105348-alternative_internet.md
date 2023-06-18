@@ -185,6 +185,7 @@ Even when things are not federated, by the nature what these things are we can a
 ### Usenet {#usenet}
 
 -   [Usenet over NNCP | Hacker News](https://news.ycombinator.com/item?id=36157287)
+-   [Why did Usenet fail? | Hacker News](https://news.ycombinator.com/item?id=36194941)
 
 
 ### HTTP alternatives {#http-alternatives}
@@ -233,3 +234,6 @@ Even when things are not federated, by the nature what these things are we can a
 
 
 ### Billion other things {#billion-other-things}
+
+-   [Dripline: Check the specs: final thoughts on p2p options | Hypha Worker Co-operative](https://hypha.coop/dripline/p2p-primer-part-4/)
+-   [The “smolnet”, build for friends and friends of friends | Hacker News](https://news.ycombinator.com/item?id=36292078)
