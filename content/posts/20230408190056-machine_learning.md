@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Algorithms]({{< relref "20230205172402-algorithms.md" >}}), [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}})
+: [Algorithms]({{< relref "20230205172402-algorithms.md" >}}), [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [GPGPU]({{< relref "20230408051445-gpgpu.md" >}})
 
 
 ## What are the steps {#what-are-the-steps}
@@ -162,3 +162,8 @@ Application-Specific Integrated Circuits (ASICs) are custom-designed chips that 
 -   dropout regularization in a deep neural network
 -   activations
 -   weights
+
+
+## Training LLMs {#training-llms}
+
+{{< figure src="/ox-hugo/20230408190056-machine_learning-488154042.png" >}}

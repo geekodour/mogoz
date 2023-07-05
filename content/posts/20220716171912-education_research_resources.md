@@ -10,6 +10,7 @@ tags
 
 ## Case studies {#case-studies}
 
+-   [Education in India - nandeshwar.info](https://archive.ph/bfrDs)
 -   [OER Case Studies - Creative Commons](https://wiki.creativecommons.org/wiki/OER_Case_Studies)
 -   [2023 Predictions for Edtech 🔮Newsletter #61](https://transcend.substack.com/p/2023predictions)
 -   [To Get Kids Into Science, Just Do It - WSJ](https://archive.ph/M7JzV)

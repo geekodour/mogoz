@@ -63,13 +63,15 @@ tags
 ### Declarative {#declarative}
 
 -   A Function
+-   Expressions. Usually no statements or commands.
 -   "what to do, not how to do it."
--   Functional programming is a subset of declarative programming
+-   [Functional Programming]({{< relref "20221125204135-functional_programming.md" >}}) is a subset of declarative programming
 -   Declarative programming is to program on a higher level of abstraction than imperative programming. Neither is better or worse, but both have their places.
 
 
 ### Imperative {#imperative}
 
--   A procedure
--   "How to do it, not what to do
+-   Statements and Commands
+-   A procedure. Causes side effects, mutates state.
+-   How to do it, not what to do
 -   Procedural programming is a subset of imperative programming.

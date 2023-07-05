@@ -24,6 +24,12 @@ PB is 2 things
 -   PB can be compared to JSON Schema in this regard. Except it supports more stuff than JS native types in JSON API in JSON schema. JSON schema also has all the parent schema and linking stuff, ig PB doesn't have all that. More self sufficient types.
 
 
+## Versioning {#versioning}
+
+-   Real-world practice has also shown that quite often, fields that originally seemed to be "required" turn out to be optional over time,
+-   In a [Distributed System]({{< relref "20221102130004-distributed_systems.md" >}}), you cannot update both sides of a protocol simultaneously. So incremental versioning that PB has helps.
+
+
 ## Using {#using}
 
 -   You can use pb to send and accept json (Using it for APIs)

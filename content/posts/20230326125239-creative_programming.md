@@ -75,7 +75,7 @@ These are usually lightweight. And you can use things like tauri/electron to pac
 -   Phaser
     -   One of the more popular ones
     -   This used to use PIXI.js ealier but now has its own rendering shit going on
--   Others: [Kontra.js](https://straker.github.io/kontra/getting-started) | [Ct.js](https://ctjs.rocks/) | [Kaboom](https://kaboomjs.com/) | [excalibur](https://excaliburjs.com//)
+-   Others: [Kontra.js](https://straker.github.io/kontra/getting-started) | [Ct.js](https://ctjs.rocks/) | [Kaboom](https://kaboomjs.com/) | [excalibur](https://excaliburjs.com//)0
 
 
 ### Additional tooling {#additional-tooling}

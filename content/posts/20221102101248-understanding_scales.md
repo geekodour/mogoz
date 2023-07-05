@@ -214,4 +214,15 @@ An **order of magnitude** is an approximate [position on a **logarithmic scale.*
 
 ## Napkin numbers {#napkin-numbers}
 
+
+### CPU {#cpu}
+
 -   13.2ns is a couple hundred cycles
+
+
+### Locks {#locks}
+
+-   Laptop can Lock &amp; unlock 61570760 times a second.
+-   Laptop can count to 2 billion in 1 second.
+-   So locks are expensive. This is second order reason why [parallel]({{< relref "20221126204257-concurrency.md" >}}) is able to do shit faster.
+-   When we hit Amdahl's law, need to check how split up the problem into spaces that don't require synchronization/serialisation.

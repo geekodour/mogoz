@@ -62,6 +62,7 @@ tags
     -   A globally federated cluster of trusted identity servers verify and replicate the mappings.
 -   They now have a P2P implementation too: [Introducing P2P Matrix](https://matrix.org/blog/2020/06/02/introducing-p-2-p-matrix)
 -   [FAQ | Matrix.org](https://matrix.org/faq/#what-is-the-difference-between-matrix-and-xmpp)
+-   [What happens when a Matrix server disappears?](https://blog.erethon.com/blog/2023/06/21/what-happens-when-a-matrix-server-disappears/)
 
 
 #### Usage {#usage}

@@ -157,7 +157,7 @@ Some general guidelines
 -   When we get a channel, we essentially get a `pointer` to the `channel`.
 -   Good to pass a channel as a parameter. (You have control over the channel)
 -   Closing channels
-    -   Closing channels is not necessary, only necessary if the reciver must know about it. Eg `range` on the channel.
+    -   Closing channels is not necessary, only necessary if the receiver must know about it. Eg `range` on the channel.
     -   Always close channels from sending side.
 -   Multiple channels
     -   `select`, this is similar to unix `select(2)`, hence the name.
@@ -214,11 +214,11 @@ func main() {
     -   S: Until the receiver has received the value
     -   R: Blocks if nothing to receive
 -   Unbuffered
-    -   S: Blocks when the buffer is full, something must recieve now.
+    -   S: Blocks when the buffer is full, something must receive now.
     -   R: Blocks if empty buffer
 
 
-### Questions &amp; Resources {#questions-and-resources}
+### Resources {#resources}
 
 -   [The Behavior Of Channels](https://www.ardanlabs.com/blog/2017/10/the-behavior-of-channels.html)
 -   [Share memory by communicating · The Ethically-Trained Programmer](https://blog.carlmjohnson.net/post/share-memory-by-communicating/)

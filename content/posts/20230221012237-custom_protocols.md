@@ -10,6 +10,31 @@ tags
 > The description are itself vague so don't get too pedantic and this is for personal ref.
 
 
+## FAQ {#faq}
+
+
+### Why Little Endian useful? {#why-little-endian-useful}
+
+-   It helps CPU increase length of numbers easily.
+    ```text
+    44 33 22 11 (little end, int32)
+    44 33 22 11 00 00 00 00 (little end, int64)
+    ```
+-   You can't do this shit w big endian, it'll change the number.
+-   This is mostly useful at the compiler/cpu level but not so much useful at the protocol level.
+
+
+### What's the deal with variable-length encoding? {#what-s-the-deal-with-variable-length-encoding}
+
+-   Main idea: small numbers should take up less space than big numbers.
+-   There are different schemes for doing so. [Golang]({{< relref "20221101220915-golang.md" >}})'s `binary` package does the same what [Protocol Buffers]({{< relref "20230522131118-protocol_buffers.md" >}}) does.
+
+
+### More resources {#more-resources}
+
+-   <https://phoboslab.org/log/2021/12/qoi-specification>
+
+
 ## Encoding {#encoding}
 
 Serialization is a specific instance of encoding. How serialization relates to the term "encoding" is slightly vague.
