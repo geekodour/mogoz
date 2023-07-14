@@ -10,9 +10,11 @@ tags
 > This page contains problems and algorithms that I've not explored yet but plan to when I get time
 
 
-## Problems {#problems}
+## Resources {#resources}
 
 -   [Google Code Jam Archive](https://zibada.guru/gcj/)
+-   [GitHub - cp-algorithms/cp-algorithms](https://github.com/cp-algorithms/cp-algorithms)
+-   [Algorithms and Data Structures Cheatsheet](https://algs4.cs.princeton.edu/cheatsheet/)
 
 
 ### Prob Dump {#prob-dump}
@@ -36,17 +38,6 @@ tags
     -   [Do you actually need a vector database? | Ethan Rosenthal](https://www.ethanrosenthal.com/2023/04/10/nn-vs-ann/)
 -   Bin packing
     -   [python - 2D Bin Packing Algorithm Implementation - Code Review Stack Exchange](https://codereview.stackexchange.com/questions/173493/2d-bin-packing-algorithm-implementation)
-
-
-### Sorting {#sorting}
-
-
-#### Comparison {#comparison}
-
--   Selection sort
-    -   Heapsort : Good to understand before Quicksort
--   Insertion sort
-    -   Insertion sort : For scenarios where they need to merge 2 lists together
 
 
 ### Algo Dump {#algo-dump}

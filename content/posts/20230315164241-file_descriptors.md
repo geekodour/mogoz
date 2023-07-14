@@ -98,7 +98,8 @@ ino:    7
 
 #### Per process FD table {#per-process-fd-table}
 
--   This is a tangible thing
+This is a tangible thing
+
 -   Multiple FDs in the same process referring to the same OFD. (`man 2 dup`)
 -   Multiple processes w their own FDs referring to the same OFD. (`man 2 fork`)
     -   If parent and child now start writing to the fd, the kernel will handle the synchronization
