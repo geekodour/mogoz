@@ -8,6 +8,16 @@ tags
 : [Algorithms]({{< relref "20230205172402-algorithms.md" >}}), [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [GPGPU]({{< relref "20230408051445-gpgpu.md" >}})
 
 
+## FAQ {#faq}
+
+
+### Keras vs Pytorch vs TF {#keras-vs-pytorch-vs-tf}
+
+-   Keras is high level framework and has less boilerplate so easy to understand etc. It earlier only largely supported TF but [now supports pytorch](https://keras.io/keras_core/announcement/)
+-   Pytorch is good for training and dev but is hard to put to prod.
+-   TF is pytorch alternative.
+
+
 ## What are the steps {#what-are-the-steps}
 
 {{< figure src="/ox-hugo/20230408190056-machine_learning-98191752.png" >}}
@@ -29,18 +39,69 @@ tags
 -   training is doing forward + backward + applying gradients,
 
 
+#### Training laws {#training-laws}
+
+-   [Chinchilla data-optimal scaling laws: In plain English](https://lifearchitect.ai/chinchilla/)
+-   [chinchilla reddit discussion](https://www.reddit.com/r/singularity/comments/wcsa8g/chinchillas_wild_implications_scaling_laws/)
+-   Multiple epochs can give us better results, but this helps us know if we even need to do another eval.
+-   `training data : model parameter count` ratio for a certain budget
+-   How much training data should I ideally use for a model of X size?
+-   Ratio: `20:1` , Eg. `20bn training tokens:1bn parameter` parameters, on `1 epoch`
+
+
 ### Serialize the weights {#serialize-the-weights}
 
--   Can be JSON, Pickle, Protobuf etc.
+
+#### Model and Weights {#model-and-weights}
+
+-   Not necessary to save the model and weights separately.
+-   Many serialization formats and frameworks provide options to save the model and its weights together in a single file.
+-   We can save separately if needed.
+-   In pytorch, state_dict contains all this stuff
+
+
+#### Serialization Formats {#serialization-formats}
+
+-   JSON, HDF5(Keras), SavedModel(TF, uses [Protocol Buffers]({{< relref "20230522131118-protocol_buffers.md" >}}))  ONNX, pth(Pytorch objects as pickle), safetensors, ckpt(TF), ggml etc.
+-   Some [formats are more dangerous than others](https://www.reddit.com/r/LocalLLaMA/comments/13t2b67/security_psa_huggingface_models_are_code_not_just/). safetensors and ggml nice.
+-   Most of the time these can be converted into one another etc.
+-   ckpt, pth, pickle can contain malicious code
+-   `pth, pt` are same, usually not recommended to use `pth` cuz [pth falls in sys.](https://docs.python.org/3.8/library/site.html) so use `pt`.
+-   pytorch has `torch.jit.save()` and `torch.save()`, the first one saved in a way that the model can be loaded by c++ for inference etc. while the later saves in [Python]({{< relref "20221231140207-python.md" >}}) pickle, which is useful for prototyping, researching, and training.
+
+
+#### ONNX vs safetensors {#onnx-vs-safetensors}
+
+-   These are for different usecases. Inference and Storage.
+-   There's some [compatibility issues](https://github.com/onnx/onnx/issues/5406) with ONNX ecosystem and safetensors
+
+<!--list-separator-->
+
+-  ONNX (framework interoperability, inference)
+
+    -   ONNX is designed to allow framework interoperability. This is a [protobuf]({{< relref "20230522131118-protocol_buffers.md" >}}) file.
+
+<!--list-separator-->
+
+-  safetensors
+
+    -   Format for storing tensors safely (as opposed to pickle) and that is still fast (zero-copy).
 
 
 ### Optimize weights {#optimize-weights}
 
 
+#### ONNX {#onnx}
+
+-   ONNX is a format where on how we can store pretrained model but it also provides a runtime which can run quantized model.
+-   See [Convert Transformers to ONNX with Hugging Face Optimum](https://huggingface.co/blog/convert-transformers-to-onnx)
+-   There is also TFLite runtime which support ONNX models.
+
+
 #### Quantization {#quantization}
 
 -   You can quantize for performance/power consumption/size, [all of many](https://pytorch.org/blog/quantization-in-practice/) by decreasing precision of weights.
--   OpenVino is a [nice tool](https://docs.openvino.ai/latest/home.html) to do quantization for Intel CPUs
+-   [OpenVino](https://github.com/openvinotoolkit/openvino_notebooks) is a [nice tool](https://docs.openvino.ai/latest/home.html) to do quantization for Intel CPUs
 -   [Knowledge distillation](https://en.wikipedia.org/wiki/Knowledge_distillation)
 
 <!--list-separator-->
@@ -56,6 +117,11 @@ tags
     -   [8-bit Matrix Multiplication for transformers at scale using transformers, accelerate and bitsandbytes](https://huggingface.co/blog/hf-bitsandbytes-integration)
     -   [Quantization](https://huggingface.co/docs/optimum/concept_guides/quantization)
     -   [Quantization for Neural Networks - Lei Mao's Log Book](https://leimao.github.io/article/Neural-Networks-Quantization/)
+
+
+#### Other stuff {#other-stuff}
+
+-   Pruning, distillation
 
 
 ### Ship the weights {#ship-the-weights}
@@ -86,7 +152,8 @@ There are several inference engines to choose from.
 
 ### Deploying {#deploying}
 
--   tensorflow serving
+-   tensorflow serving (with ONNX, you can train with pytorch and infer w TF)
+-   Nvidia Titron (There's also openAI titron that's different)
 
 
 ### Continuous learning {#continuous-learning}
@@ -149,12 +216,6 @@ Application-Specific Integrated Circuits (ASICs) are custom-designed chips that 
 -   gpt-turbo and FLAN-T5-XXL
 -   Roberta
 -   LLAMA or Standford Alpaca
--   <https://github.com/openvinotoolkit/openvino_notebooks>
-
-
-## Resources {#resources}
-
--   [GPT-2 Neural Network Poetry · Gwern.net](https://gwern.net/gpt-2#fn3)
 
 
 ## Terms I keep hearing {#terms-i-keep-hearing}
@@ -167,3 +228,19 @@ Application-Specific Integrated Circuits (ASICs) are custom-designed chips that 
 ## Training LLMs {#training-llms}
 
 {{< figure src="/ox-hugo/20230408190056-machine_learning-488154042.png" >}}
+
+
+## Resources {#resources}
+
+-   [GPT-2 Neural Network Poetry · Gwern.net](https://gwern.net/gpt-2#fn3)
+
+
+### Explainable AI {#explainable-ai}
+
+-   <https://github.com/slundberg/shap>
+-   <https://github.com/marcotcr/lime>
+-   <https://github.com/interpretml/interpret/>
+-   <https://github.com/slundberg/shap>
+-   <https://github.com/MAIF/shapash>
+-   <https://github.com/pytorch/captum>
+-   <https://github.com/Trusted-AI/AIX360>
