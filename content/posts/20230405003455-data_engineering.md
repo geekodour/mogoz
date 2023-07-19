@@ -31,6 +31,8 @@ tags
 
 ## Information retrieval {#information-retrieval}
 
+-   See [GitHub - kuutsav/information-retrieval: Neural information retrieval / semantic-search / Bi-Encoders](https://github.com/kuutsav/information-retrieval)
+
 
 ### Forward Index {#forward-index}
 

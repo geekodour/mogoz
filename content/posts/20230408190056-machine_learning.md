@@ -18,9 +18,17 @@ tags
 -   TF is pytorch alternative.
 
 
+### Classical ML vs DL {#classical-ml-vs-dl}
+
+-   See [Why Tree-Based Models Beat Deep Learning on Tabular Data](https://medium.com/geekculture/why-tree-based-models-beat-deep-learning-on-tabular-data-fcad692b1456)
+-   The combination can be very useful sometimes, for example for transfer learning for working with low resource datasets/problems. Use a deep neural network to go from high dimensionality data to a compact fixed length vector. Basically doing feature extraction. This network is increasingly trained on large amounts of unlabeled data, using self-supervision. Then use simple classical model like a linear model, Random Forest or k-nearest-neighbors to make model for specialized task of interest, using a much smaller labeled dataset. This is relevant for many task around sound, image, multi-variate timeseries. Probably also NLP (not my field).
+
+
 ## What are the steps {#what-are-the-steps}
 
 {{< figure src="/ox-hugo/20230408190056-machine_learning-98191752.png" >}}
+
+-   <https://github.com/florist-notes/linux_d/blob/main/sysdesign/MLOPS.MD>
 
 
 ### Feature transformation {#feature-transformation}
@@ -37,6 +45,11 @@ tags
 -   If you're going to do quantization, you'll do quantization aware training if needed
 -   The real point of using GPUs is often to form minibatches during training.
 -   training is doing forward + backward + applying gradients,
+
+
+#### Traininig steps {#traininig-steps}
+
+-   Split data into train and validation sets or something.
 
 
 #### Training laws {#training-laws}
@@ -80,12 +93,21 @@ tags
 -  ONNX (framework interoperability, inference)
 
     -   ONNX is designed to allow framework interoperability. This is a [protobuf]({{< relref "20230522131118-protocol_buffers.md" >}}) file.
+    -   ONNX consumes a .onnx file, which is a definition of the network and weights.
+    -   GGML instead just consumes the weights, and defines the network in code. GGML less bloated than onnx.
 
 <!--list-separator-->
 
 -  safetensors
 
     -   Format for storing tensors safely (as opposed to pickle) and that is still fast (zero-copy).
+
+
+#### Components of sharing a model {#components-of-sharing-a-model}
+
+-   Model (checkpoints) : The main deal
+-   Weights: This sometimes comes w the model file, sometimes separately
+-   Tokenizer : The algorithm to use for tokenization that the model will understand
 
 
 ### Optimize weights {#optimize-weights}
@@ -100,9 +122,10 @@ tags
 
 #### Quantization {#quantization}
 
--   You can quantize for performance/power consumption/size, [all of many](https://pytorch.org/blog/quantization-in-practice/) by decreasing precision of weights.
+-   Model quantization is a method of reducing the size of a trained model while maintaining accuracy.
+-   You can quantize for performance/power consumption/size weight sizes etc., [all of many](https://pytorch.org/blog/quantization-in-practice/) by decreasing precision of weights.
+-   There are various quantization schemes, some may use more memory etc. Eg. llma.cpp has different quantization methods like q4_2, q4_3, q5_0, q5_1 etc. Then there's also [GPTQ for 4bit quantization.](https://github.com/qwopqwop200/GPTQ-for-LLaMa)
 -   [OpenVino](https://github.com/openvinotoolkit/openvino_notebooks) is a [nice tool](https://docs.openvino.ai/latest/home.html) to do quantization for Intel CPUs
--   [Knowledge distillation](https://en.wikipedia.org/wiki/Knowledge_distillation)
 
 <!--list-separator-->
 
@@ -121,7 +144,8 @@ tags
 
 #### Other stuff {#other-stuff}
 
--   Pruning, distillation
+-   Pruning
+-   [distillation](https://en.wikipedia.org/wiki/Knowledge_distillation) (Eg. Alpaca(small model) is distillation of gpt3.5(big model))
 
 
 ### Ship the weights {#ship-the-weights}
@@ -154,6 +178,21 @@ There are several inference engines to choose from.
 
 -   tensorflow serving (with ONNX, you can train with pytorch and infer w TF)
 -   Nvidia Titron (There's also openAI titron that's different)
+
+
+#### Web based {#web-based}
+
+-   [WebAssembly]({{< relref "20230510200213-webassembly.md" >}}) GGML: [whisper example](https://github.com/ggerganov/whisper.cpp/tree/master/examples/talk.wasm), doesn't use webgpu. wasm+cpu
+-   WebGPT
+    -   POC, uses vanilla JS to make use of WebGPU to run a basic [GPT](https://github.com/0hq/WebGPT)
+    -   [[2112.09332] WebGPT: Browser-assisted question-answering with human feedback](https://arxiv.org/abs/2112.09332)
+-   TVM based
+    -   [TVM](https://tvm.apache.org/) is used to compile the GPU-side code to WebGPU
+    -   Emscripten is used to compile the CPU-side code to WebAssembly.
+    -   Examples
+        -   <https://github.com/mlc-ai/web-llm>
+        -   <https://github.com/mlc-ai/mlc-llm>
+        -   <https://github.com/mlc-ai/web-stable-diffusion>
 
 
 ### Continuous learning {#continuous-learning}
