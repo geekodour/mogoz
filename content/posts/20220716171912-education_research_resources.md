@@ -39,6 +39,7 @@ tags
 -   [Educational technology - EduTech Wiki](https://edutechwiki.unige.ch/en/Educational_technology)
 -   [Khan Academy Early Product Development and Long-term Research](https://early.khanacademy.org/)
 -   [Online Learning History](https://archive.is/b5rBk)
+-   [Ashoka_Grant_Database - Google Sheets](https://docs.google.com/spreadsheets/d/1DjAhH08ID-THZ_iy0AFYMqSko0sB38xnGAPvFeC68EM/edit#gid=2001132321)
 -   [OurBigBook.com](https://cirosantilli.com/ourbigbook-com) : Write free books to get famous website
 -   [Public Books Database - Public Books](https://www.publicbooks.org/public-books-database/)
 -   [The Learning Point](https://www.thelearningpoint.net/) : This has a good database of all schools and what they have from somewhere. Scrape it at the soonest.
@@ -145,8 +146,11 @@ tags
 
 ## Projects {#projects}
 
+-   [The Learning Scientists](https://www.learningscientists.org/)
+-   [Library Freedom](https://libraryfreedom.org/)
 -   [Theory - Why Hexagons 1](https://libraryofbabel.info/theory.html)
 -   [Books Unbanned | Brooklyn Public Library](https://www.bklynlibrary.org/books-unbanned)
+-   [Public Pedagogies Institute | Interconnecting public, learning and research](https://www.publicpedagogies.org/)
 -   [Home - Research Guides at Library of Congress](https://guides.loc.gov/)
 -   [Designed for Rural Living | Cornell Research](https://research.cornell.edu/news-features/designed-rural-living)
 -   [Poison Book Project - Winterthur Museum, Garden &amp; Library](http://wiki.winterthur.org/wiki/Poison_Book_Project)
@@ -166,8 +170,10 @@ tags
 
 ### Books {#books}
 
+-   [“The most beautiful of all printed books,” the Kelmscott Chaucer | Hacker News](https://news.ycombinator.com/item?id=37008093)
 -   [Where is all the book data? | Hacker News](https://news.ycombinator.com/item?id=33543570)
 -   [New Taschen book on the history of the computer | Hacker News](https://news.ycombinator.com/item?id=36104432)
+-   [Why early modern books are so beautiful | Hacker News](https://news.ycombinator.com/item?id=36988039)
 -   [Bookshop.org survives and thrives in Amazon’s world | Hacker News](https://news.ycombinator.com/item?id=35534069)
 -   [The 1970s librarians who revolutionised the challenge of search | Aeon Essays](https://aeon.co/essays/the-1970s-librarians-who-revolutionised-the-challenge-of-search)
 -   [A visual book recommender | Hacker News](https://news.ycombinator.com/item?id=35726559)

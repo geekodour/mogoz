@@ -237,4 +237,5 @@ Even when things are not federated, by the nature what these things are we can a
 
 -   [Dripline: Check the specs: final thoughts on p2p options | Hypha Worker Co-operative](https://hypha.coop/dripline/p2p-primer-part-4/)
 -   [The “smolnet”, build for friends and friends of friends | Hacker News](https://news.ycombinator.com/item?id=36292078)
+-   [Client-side proxies – a better way to individualise the Internet? (2000) | Hacker News](https://news.ycombinator.com/item?id=36824165)
 -   [The problem with federated web apps | Lobsters](https://lobste.rs/s/w2m7pr/problem_with_federated_web_apps)

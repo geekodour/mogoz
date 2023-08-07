@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [General Programming]({{< relref "20230122140847-general_programming.md" >}}), [Web Animation]({{< relref "20221109214315-web_animation.md" >}})
+: [General Programming]({{< relref "20230122140847-general_programming.md" >}}), [Web Animation]({{< relref "20221109214315-web_animation.md" >}}), [Human Computer Interaction ( HCI )]({{< relref "20230806231355-human_computer_interaction_hci.md" >}})
 
 
 ## Tool list {#tool-list}
