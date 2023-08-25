@@ -74,6 +74,7 @@ Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability
 
 ### PACELC {#pacelc}
 
+-   Partitioned, Availability, Consistency Else Latency, Consistency
 -   PACELC is a more nuanced than CAP for thinking about this stuff
 -   Definition
     -   If there is a partition (P)
@@ -87,6 +88,7 @@ Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability
 
 ### CALM {#calm}
 
+-   `Consistency As Logical Monotonicity`
 -   Provide a way to reason through the behavior of systems under eventual consistency
 -   Provide a path to data structures with behavior that's easier to reason about than last-writer-wins
 

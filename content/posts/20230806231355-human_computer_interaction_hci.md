@@ -15,3 +15,11 @@ tags
 
 -   <https://twitter.com/geoffreylitt/status/1682427305442902016>
     -   Geoffery Litt: What if, instead of making an app for you, an LLM could make you an **app construction kit**?
+
+
+## Interesting orgs/companies doing cool stuff {#interesting-orgs-companies-doing-cool-stuff}
+
+-   [Val Town](https://www.val.town/)
+-   [Folk Computer](http://folk.computer/)
+-   [Granola](https://www.granola.so/)
+-   [MadSci](https://www.madsci.io/)

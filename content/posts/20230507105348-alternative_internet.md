@@ -160,6 +160,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 -   [Use RSS for privacy and efficiency {rsapkf/www}](https://rsapkf.org/weblog/q2z)
 -   [What RSS Gets Right](https://www.charlieharrington.com/unexpected-useless-and-urgent)
+-   [Why your blog still needs RSS | Hacker News](https://news.ycombinator.com/item?id=37175192)
 -   [Making RSS more visible again with a /feeds page](https://marcus.io/blog/making-rss-more-visible-again-with-slash-feeds)
 -   [RSS: The Original Federated Social Network Protocol](https://battlepenguin.com/tech/rss-the-original-federated-social-network-protocol/)
 -   [Investing in RSS](https://timkadlec.com/remembers/2023-02-23-investing-in-rss/)
@@ -193,6 +194,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Gemini {#gemini}
 
+-   [Bye, Gemini | Hacker News](https://news.ycombinator.com/item?id=37049064)
 -   [Gemini is Useless](https://alex.flounder.online/gemlog/2021-01-08-useless.gmi)
 -   [Why Gemini is not my favorite internet protocol](https://gerikson.com/blog/comm/Why-u-no-gemini.html)
 -   [Contributing to Gemini ecosystem](https://pitr.ca/2021-05-29-gemini-ecosystem)
@@ -236,6 +238,8 @@ Even when things are not federated, by the nature what these things are we can a
 ### Billion other things {#billion-other-things}
 
 -   [Dripline: Check the specs: final thoughts on p2p options | Hypha Worker Co-operative](https://hypha.coop/dripline/p2p-primer-part-4/)
+-   [The first messenger without user IDs | Hacker News](https://news.ycombinator.com/item?id=37105477)
+-   [P2panda: P2P protocol for secure, energy-efficient local-first web applications | Hacker News](https://news.ycombinator.com/item?id=37212462)
 -   [The “smolnet”, build for friends and friends of friends | Hacker News](https://news.ycombinator.com/item?id=36292078)
 -   [Client-side proxies – a better way to individualise the Internet? (2000) | Hacker News](https://news.ycombinator.com/item?id=36824165)
 -   [The problem with federated web apps | Lobsters](https://lobste.rs/s/w2m7pr/problem_with_federated_web_apps)

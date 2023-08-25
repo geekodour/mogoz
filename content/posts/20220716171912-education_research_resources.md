@@ -12,6 +12,7 @@ tags
 
 -   [Education in India - nandeshwar.info](https://archive.ph/bfrDs)
 -   [OER Case Studies - Creative Commons](https://wiki.creativecommons.org/wiki/OER_Case_Studies)
+-   [Maybe the problem is that Harvard exists | Hacker News](https://news.ycombinator.com/item?id=37076968)
 -   [2023 Predictions for Edtech 🔮Newsletter #61](https://transcend.substack.com/p/2023predictions)
 -   [To Get Kids Into Science, Just Do It - WSJ](https://archive.ph/M7JzV)
 -   [More students are turning away from college and toward apprenticeships](https://news.ycombinator.com/item?id=35210421)
@@ -205,6 +206,7 @@ tags
 | [IgnusERG](https://ignus-erg.org/)                                              | Quality Education for the Marginalized                                                                                                                              |
 | [Indic Digital Archive Foundation](https://indicarchive.org/)                   |                                                                                                                                                                     |
 | [CivicDataLab Data, Tech, Design, Social Science](https://civicdatalab.in/)     |                                                                                                                                                                     |
+| [About — LETS Studio](https://www.letsstudio.org/about)                         |                                                                                                                                                                     |
 
 
 ## People {#people}
