@@ -8,4 +8,4 @@ build:
 update:
 	./update.sh
 
-include $(HOME)/infra/workshop/common/Makefile.common
+include Makefile.common

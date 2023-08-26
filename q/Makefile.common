@@ -1,0 +1,13 @@
+# Usage
+# 1. Place this repository(workshop) under $HOME
+# 2. Include this Makefile in your Makefile
+# 3. Eg. include $(HOME)/infra/workshop/common/Makefile.common
+
+.DEFAULT_GOAL := help
+# source: https://github.com/jeffsp/makefile_help/blob/master/Makefile
+.PHONY: help # Generate list of targets with descriptions
+help:
+	@echo "Target descriptions"
+	@echo "NOTE: Targets with no description are not listed"
+	@echo
+	@grep '^.PHONY: .* #' Makefile | sed 's/\.PHONY: \(.*\) # \(.*\)/\1;;;\2/' | column -t -s ";;;"
