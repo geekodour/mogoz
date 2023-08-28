@@ -11,7 +11,7 @@
 pushd ../content/posts > /dev/null || exit
 echo "<html>"
 echo "<head>"
-echo '<link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">'
+# echo '<link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">'
 echo "</head>"
 echo "<body>"
 echo "pages: $(ls | wc -l)"
