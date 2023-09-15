@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [peer-to-peer]({{< relref "20221101184751-peer_to_peer.md" >}}), [Archival]({{< relref "20230115032923-archival.md" >}}), [NAT]({{< relref "20221101190313-nat.md" >}}), [Internet]({{< relref "20221101190707-internet.md" >}}), [File Sharing]({{< relref "20230419105440-file_sharing.md" >}})
+: [peer-to-peer]({{< relref "20221101184751-peer_to_peer.md" >}}), [Archival]({{< relref "20230115032923-archival.md" >}}), [NAT]({{< relref "20221101190313-nat.md" >}}), [Internet]({{< relref "20221101190707-internet.md" >}}), [File Sharing]({{< relref "20230419105440-file_sharing.md" >}}), [Human Computer Interaction ( HCI )]({{< relref "20230806231355-human_computer_interaction_hci.md" >}})
 
 
 ## Structure {#structure}
@@ -239,7 +239,9 @@ Even when things are not federated, by the nature what these things are we can a
 
 -   [Dripline: Check the specs: final thoughts on p2p options | Hypha Worker Co-operative](https://hypha.coop/dripline/p2p-primer-part-4/)
 -   [The first messenger without user IDs | Hacker News](https://news.ycombinator.com/item?id=37105477)
+-   [A few notes on Veilid](https://thomask.sdf.org/blog/2023/08/15/a-few-notes-on-veilid.html)
 -   [P2panda: P2P protocol for secure, energy-efficient local-first web applications | Hacker News](https://news.ycombinator.com/item?id=37212462)
 -   [The “smolnet”, build for friends and friends of friends | Hacker News](https://news.ycombinator.com/item?id=36292078)
 -   [Client-side proxies – a better way to individualise the Internet? (2000) | Hacker News](https://news.ycombinator.com/item?id=36824165)
+-   [Remembering Molly, one of the greats - The History of the Web](https://thehistoryoftheweb.com/remembering-molly-one-of-the-greats/)
 -   [The problem with federated web apps | Lobsters](https://lobste.rs/s/w2m7pr/problem_with_federated_web_apps)

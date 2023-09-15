@@ -29,6 +29,7 @@ tags
 ### Meta {#meta}
 
 -   CAP and PACELC help us know what things we need to be aware of when designing a system, but they’re less helpful in actually designing that system.
+-   [CALM]({{< relref "20230909165220-calm.md" >}}) provide a way to reason through the behavior of systems under eventual consistency.
 
 
 ### CAP {#cap}
@@ -88,9 +89,7 @@ Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability
 
 ### CALM {#calm}
 
--   `Consistency As Logical Monotonicity`
--   Provide a way to reason through the behavior of systems under eventual consistency
--   Provide a path to data structures with behavior that's easier to reason about than last-writer-wins
+-   See [CALM]({{< relref "20230909165220-calm.md" >}})
 
 
 ## Synchronization {#synchronization}

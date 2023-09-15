@@ -131,6 +131,7 @@ tags
 
 -  Resources
 
+    -   [8-bit Methods for Efficient Deep Learning -- Tim Dettmers (University of Washington) - YouTube](https://www.youtube.com/watch?v=2ETNONas068) 🌟
     -   [Basic math related to computation and memory usage for transformers](https://news.ycombinator.com/item?id=35631546)  🌟
     -   [What Is int8 Quantization and Why Is It Popular for Deep Neural Networks?](https://www.mathworks.com/company/newsletters/articles/what-is-int8-quantization-and-why-is-it-popular-for-deep-neural-networks.html)
     -   [Quantization | Papers With Code](https://paperswithcode.com/paper/quantization-and-training-of-neural-networks)

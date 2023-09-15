@@ -150,3 +150,4 @@ Can inject JS/CSS or both
 ## Links {#links}
 
 -   [Prepare your Firefox desktop extension for the upcoming Android release | Mozilla Add-ons Community Blog](https://blog.mozilla.org/addons/2023/08/10/prepare-your-firefox-desktop-extension-for-the-upcoming-android-release/)
+-   [GitHub - fregante/webext-content-scripts: Utility functions to inject content scripts from a WebExtension](https://github.com/fregante/webext-content-scripts)

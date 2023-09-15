@@ -14,12 +14,47 @@ tags
 ### Ideas/Concepts {#ideas-concepts}
 
 -   <https://twitter.com/geoffreylitt/status/1682427305442902016>
-    -   Geoffery Litt: What if, instead of making an app for you, an LLM could make you an **app construction kit**?
+-   Geoffery Litt: What if, instead of making an app for you, an LLM could make you an **app construction kit**?
 
 
-## Interesting orgs/companies doing cool stuff {#interesting-orgs-companies-doing-cool-stuff}
+## Current Research {#current-research}
+
+
+### Spatial Canvas {#spatial-canvas}
+
+{{< figure src="/ox-hugo/20230806231355-human_computer_interaction_hci-1466513474.png" >}}
+
+
+### n-dimensional computing {#n-dimensional-computing}
+
+
+### collaborative &amp; malleable software {#collaborative-and-malleable-software}
+
+
+### Future of Coding {#future-of-coding}
+
+
+### AR {#ar}
+
+
+### VR {#vr}
+
+
+## People {#people}
+
+
+## Org/Companies {#org-companies}
+
+
+### Companies {#companies}
 
 -   [Val Town](https://www.val.town/)
--   [Folk Computer](http://folk.computer/)
 -   [Granola](https://www.granola.so/)
--   [MadSci](https://www.madsci.io/)
+-   LiquidTexts
+
+
+### Labs {#labs}
+
+-   [Folk Computer](http://folk.computer/)
+-   Inkandswitch (both hci and local first)
+-   Dynamicland

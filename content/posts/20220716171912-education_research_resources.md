@@ -53,6 +53,7 @@ tags
 
 -   [Criticism of college and university rankings (North America)](https://en.wikipedia.org/wiki/Criticism_of_college_and_university_rankings_(North_America)#2007_movement)
 -   [Shadow library - Wikipedia](https://en.wikipedia.org/wiki/Shadow_library)
+-   [Waldorf education - Wikipedia](https://en.wikipedia.org/wiki/Waldorf_education)
 -   [Diploma mill](https://en.wikipedia.org/wiki/Diploma_mill)
 -   [Jessica Wade Makes Wikipedia bios For Unknown Women Scientists](https://www.today.com/parents/jessica-wade-wikipedia-women-scientists-rcna51628)
 -   [Wikiversity](https://en.wikiversity.org/wiki/Wikiversity:Main_Page)
@@ -156,6 +157,7 @@ tags
 -   [Designed for Rural Living | Cornell Research](https://research.cornell.edu/news-features/designed-rural-living)
 -   [Poison Book Project - Winterthur Museum, Garden &amp; Library](http://wiki.winterthur.org/wiki/Poison_Book_Project)
 -   [Public Policy India](https://publicpolicyindia.com/?s=35)
+-   [Library of Short Stories - Read Classic Short Stories Online](https://www.libraryofshortstories.com/)
 -   [LibraryBox](http://jasongriffey.net/librarybox/)
 -   [Internet in a Box | Hacker News](https://news.ycombinator.com/item?id=35750165)
 -   [UPchieve: Free Online Tutoring and College Counseling](https://upchieve.org/)
