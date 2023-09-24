@@ -36,6 +36,11 @@ tags
 
 ## Grammars to Alphabet {#grammars-to-alphabet}
 
+> Although there are an infinite number of different things that can be said, or
+> written down in a particular language, it is still possible to process and
+> understand all of them with a finite number of re-write rules. The name given to
+> a set of re-write rules is a **grammar**
+
 -   `Grammars` are defined by `Languages`
 -   `Languages` are defined by set of `Strings`
 -   `Strings` are defined by sequence of `Symbols`

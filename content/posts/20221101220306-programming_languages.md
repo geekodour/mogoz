@@ -45,7 +45,17 @@ tags
     -   See MLIR
 
 
+### Grammar? {#grammar}
+
+-   See [Chomsky Hierarchy]({{< relref "20230421154510-chomsky_hierarchy.md" >}})
+-   For reading in the `user input` we need to write a `grammar` which `describes` the `language`.
+    -   Use the `grammar` to validate `user input`.
+    -   Use the `grammar` to build a structured internal representation(understand, evaluate, compute etc)
+
+
 ## Paradigms {#paradigms}
+
+{{< figure src="/ox-hugo/20221101220306-programming_languages-651648906.png" >}}
 
 > Difference between [function and a procedure](http://amzotti.github.io/programming%20paradigms/2015/02/13/what-is-the-difference-between-procedural-function-imperative-and-declarative-programming-paradigms/)
 >
@@ -75,3 +85,10 @@ tags
 -   A procedure. Causes side effects, mutates state.
 -   How to do it, not what to do
 -   Procedural programming is a subset of imperative programming.
+
+
+## Terms {#terms}
+
+-   Statically Typed: Detects type errors at compile time; if a type error is detected, the language won’t allow execution of the program.
+-   Type Safety: A type-safe language limits which kinds of operations can be performed on which kinds of data.
+    -   Some languages, like Python and Racket, are type-safe but dynamically typed. That is, type errors are caught only at run time. Other languages, like C and C++, are statically typed but not type safe: they check for some type errors, but don’t guarantee the absence of all type errors. That is, there’s no guarantee that a type error won’t occur at run time. And still other languages, like Java, use a combination of static and dynamic typing to achieve type safety.

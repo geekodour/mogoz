@@ -185,6 +185,7 @@ tags
 -   [Book publishers won&amp;#x27;t stop until libraries are dead | Hacker News](https://news.ycombinator.com/item?id=35272708)
 -   [Foundations of a Tiny Directory](https://www.kickscondor.com/foundations-of-a-tiny-directory/)
 -   [An Unstandardized, Decentralized Carnival Fire: How Rare Books Are Cataloged ...](https://news.ycombinator.com/item?id=35363467)
+-   [The Libraries of Louvain](https://www.libraryhistorybuff.com/louvain.htm)
 -   [The Internet Archive&amp;#x27;s battle for libraries | Hacker News](https://news.ycombinator.com/item?id=35163640)
 -   [DIY Book Scanner](https://www.diybookscanner.org/)
 -   [OpenIntro](https://www.openintro.org/) : Publishing Done Right
