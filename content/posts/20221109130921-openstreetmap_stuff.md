@@ -22,6 +22,7 @@ So basically there are thing called editors for OSM.
 ## Map software {#map-software}
 
 -   [Organic Maps: Offline Hike, Bike, Trails and Navigation](https://organicmaps.app/)
+-   [Organic Maps: An open-source maps app that doesn't suck | Hacker News](https://news.ycombinator.com/item?id=37592712)
 
 
 ## Micromapping {#micromapping}

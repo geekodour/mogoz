@@ -33,6 +33,7 @@ tags
 ### More resources {#more-resources}
 
 -   <https://phoboslab.org/log/2021/12/qoi-specification>
+-   <https://rachelbythebay.com/w/2023/09/19/badlib/>
 
 
 ## Encoding {#encoding}
