@@ -101,6 +101,7 @@ We get 2 definitions of `regular languages` from these 2 events.
 -   [My most useful RegExp trick — surma.dev](https://dassur.ma/things/regexp-quote/)
 -   [Python 3.11: possessive quantifiers and atomic grouping added to re module](https://learnbyexample.github.io/python-regex-possessive-quantifier/)
 -   [Building regex.help](https://maciej.gryka.net/building-regex-help)
+-   <https://javascript.info/regular-expressions>
 
 
 ### Tools {#tools}
@@ -111,3 +112,76 @@ We get 2 definitions of `regular languages` from these 2 events.
 -   <https://regexone.com/>
 -   <https://projects.lukehaas.me/regexhub/>
 -   <https://remram44.github.io/regex-cheatsheet/regex.html>
+
+
+## Practical Concepts {#practical-concepts}
+
+
+### Greedy and Lazy {#greedy-and-lazy}
+
+
+#### Greedy {#greedy}
+
+```js
+let regexp = /".+"/g;
+
+let str = 'a "witch" and her "broom" is one';
+
+alert( str.match(regexp) ); // "witch" and her "broom"
+```
+
+<!--list-separator-->
+
+-  What happens?
+
+    -   For every position in the string
+        -   Try to match the pattern at that position.
+        -   If there’s no match, go to the next position.
+        -   If we found the match for the `current part of the pattern` then we try to find a match for the `next part of the pattern`
+            -   Eg. in `".*"` , `"` will be first part, `.*` will be second and so on
+        -   If we reach the end of the string(no more characters!) and we find no match, we `backtrack`.
+        -   We keep backtracking till we find a match for the entire regex pattern.
+            -   Eg. In `'a "witch" and her "broom" is one'` , the engine first goes till end of the string because of `.+` but then `backtrack` till it finds the ending `"` in end of `broom"`
+
+
+#### Lazy {#lazy}
+
+-   `?`
+    -   Usually `?` is a quantifier by itself (zero or one)
+    -   If added after another quantifier (or even itself): It switches the matching mode from `greedy` to `lazy`
+    -   Eg. `.*?`, `.+?` lazy search for `.*` and `.+`
+
+<!--list-separator-->
+
+-  What happens?
+
+    -   For every position in the string
+        -   Try to match the pattern at that position.
+        -   If there’s no match go to the next position.
+        -   If we found the match for the `current part of the pattern` then we try to find a match for the `next part of the pattern`
+            -   Eg. in `".*?"` , `"` will be first part, `.*?` will be second and so on
+        -   **DIFFERENCE:** Now, because `.*?` is lazy, engine try to match the part after `.*?` which is `"` . If it doesn't find, it'll just match with `.*`
+            -   This is the nature of the lazy, it'll try to end the match as soon as possible.
+        -   If we reach the end of the string(no more characters!) and we find no match, we `backtrack`.
+        -   We keep backtracking till we find a match for the entire regex pattern.
+            -   Eg. In `'a "witch" and her "broom" is one'` , the engine first goes till end of the string because of `.+` but then `backtrack` till it finds the ending `"` in end of `broom"`
+
+
+### Lookaround {#lookaround}
+
+-   Lookaround = Lookahead + Lookbehind
+-   This allow you to match some something but also tell the engine to make sure that this and that should be before and after what I want to match, if they are there then only it'll be a match
+
+
+#### Look ahead {#look-ahead}
+
+-   (?=) : Postitive
+-   (?!) : Negative
+
+
+#### Look behind {#look-behind}
+
+When you want to negate certain characters in a string, you can use character class but when you want to negate more than one character in a particular sequence, you need to use negative look ahead
+
+-   (?&lt;=) : Postitive
+-   (?&lt;!) : Negative
