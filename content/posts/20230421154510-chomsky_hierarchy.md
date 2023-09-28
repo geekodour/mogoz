@@ -7,8 +7,14 @@ draft = false
 tags
 : [Regular Expressions]({{< relref "20230413090911-regular_expressions.md" >}}), [Automata Theory]({{< relref "20230421132238-automata_theory.md" >}})
 
+The Chomsky hierarchy is descriptive. It simply allows us to broadly categorize grammars based on their capabilities.
 
-## The Hierarchy {#the-hierarchy}
+
+## The Hierarchy of Grammars (Generative Grammars) {#the-hierarchy-of-grammars--generative-grammars}
+
+-   The hierarchy allows us to broadly classify grammars based on their productive power.
+-   They have increasingly strict production rules and can therefore express fewer formal languages.
+-   Type 2 and Type 3 are popular
 
 ![](/ox-hugo/20230413090911-regular_expressions-2035335085.png)
 ![](/ox-hugo/20230421154510-chomsky_hierarchy-1981082395.png)
@@ -16,62 +22,29 @@ tags
 
 ### Type 0 (Recursively Enumerable) {#type-0--recursively-enumerable}
 
+-   AKA Unrestricted grammar
+
 
 ### Type 1 (Context Sensitive) {#type-1--context-sensitive}
 
 -   all context-free languages are also context-sensitive languages, but some languages are neither context-sensitive nor context-free.
 -   context-sensitivity is often not resolved in the parsing phase but in later phases
+-   Writing context-sensitive grammars is very difficult for people to do without spending a lot of time and effort on it. The CFGs, though technically inaccurate, often give us enough to work with that they can be useful.
+-   Most languages [are actually context sensitive](http://trevorjim.com/python-is-not-context-free/)
 
 
 ### Type 2 (Context Free) {#type-2--context-free}
 
 -   Used to parse programming languages
--   The classic example people is x \* y; in C, which is either multiplication or a variable declaration, depending on whether x is a type or a value. This proves that C cannot be a context-free language.
+-   The classic example people is `x * y;` in C, which is either multiplication or a variable declaration, depending on whether x is a type or a value. This proves that C cannot be a context-free language. i.e there exists context that's not encoded in the text already.
+-   CFGs are not nearly powerful enough to describe natural language because natural languages are ungainly and complex.
+-   `X-bar theory` is essentially the application of CFGs to language modeling
 
 
 ### Type 3 (Regular Languages) {#type-3--regular-languages}
 
--   It's not idea to parse programming languages(Type 2) with regular expression hence.
-
-
-## Grammars to Alphabet {#grammars-to-alphabet}
-
-> Although there are an infinite number of different things that can be said, or
-> written down in a particular language, it is still possible to process and
-> understand all of them with a finite number of re-write rules. The name given to
-> a set of re-write rules is a **grammar**
-
--   `Grammars` are defined by `Languages`
--   `Languages` are defined by set of `Strings`
--   `Strings` are defined by sequence of `Symbols`
--   Set of `Symbols` is defined by the `Alphabet`
-
-
-### Grammar {#grammar}
-
--   Whenever we put restriction on a language, we create a grammar
-    ![](/ox-hugo/20230421154510-chomsky_hierarchy-4440614.png)
-
-
-### Language {#language}
-
--   A set of strings accepted by an automaton `A` is the language for `A`
--   Eg. If `A` accepts `s-o` and `s-o-o`, then set of these 2 strings represent the language for `A`
--   Denoted by `L(A)`
--   Different types of Automatons accept different languages
--   They can be finite or infinite sets
--   Personal Note: `L(Alphabet)` , `L(Automaton)` seem like the same thing.
-
-
-### String {#string}
-
--   Eg. In C, `"O"` is `string`, while `'0'` is a character/symbol.
-
-
-### Alphabet {#alphabet}
-
--   Finite set of symbols
--   Eg. ASCII, Unicode, `{0,1}`, `{a,b,c}`, set of signals used by some communication protocol
+-   It's not ideal to parse programming languages(Type 2) with regular expression hence.
+-   Things that [Regular Expressions]({{< relref "20230413090911-regular_expressions.md" >}}) can parse (?)
 
 
 ## Languages classes {#languages-classes}
@@ -138,7 +111,46 @@ tags
 -   Turning machines : It can tell us what can be computed by computation and what cannot be.
 
 
+## Grammars to Alphabet {#grammars-to-alphabet}
+
+> Although there are an infinite number of different things that can be said, or
+> written down in a particular language, it is still possible to process and
+> understand all of them with a finite number of re-write rules. The name given to
+> a set of re-write rules is a **grammar**
+
+-   `Grammars` are defined by `Languages`
+-   `Languages` are defined by set of `Strings`
+-   `Strings` are defined by sequence of `Symbols`
+-   Set of `Symbols` is defined by the `Alphabet`
+
+
+### Grammar {#grammar}
+
+-   Whenever we put restriction on a language, we create a grammar
+    ![](/ox-hugo/20230421154510-chomsky_hierarchy-4440614.png)
+
+
+### Language {#language}
+
+-   A set of strings accepted by an automaton `A` is the language for `A`
+-   Eg. If `A` accepts `s-o` and `s-o-o`, then set of these 2 strings represent the language for `A`
+-   Denoted by `L(A)`
+-   Different types of Automatons accept different languages
+-   They can be finite or infinite sets
+-   Personal Note: `L(Alphabet)` , `L(Automaton)` seem like the same thing.
+
+
+### String {#string}
+
+-   Eg. In C, `"O"` is `string`, while `'0'` is a character/symbol.
+
+
+### Alphabet {#alphabet}
+
+-   Finite set of symbols
+-   Eg. ASCII, Unicode, `{0,1}`, `{a,b,c}`, set of signals used by some communication protocol
+
+
 ## Resources {#resources}
 
--   [Python is not context free](http://trevorjim.com/python-is-not-context-free/)
 -   Good summary: <https://www.reddit.com/r/compsci/comments/aqdlpy/what_are_some_real_applications_of_the_chomsky/eggu89g/>
