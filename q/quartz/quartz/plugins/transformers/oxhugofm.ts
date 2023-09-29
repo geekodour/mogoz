@@ -37,10 +37,9 @@ const blockLatexRegex = new RegExp(
   /(?:\\begin{equation}|\\\\\(|\\\\\[)([\s\S]*?)(?:\\\\\]|\\\\\)|\\end{equation})/,
   "g",
 )
-// (?<=(\$|\$\$)[\s\S]*) -> Positive lookbehind for $ or $$
-// \\_ -> Matches \_
-// (?=[\s\S]*(?:\1)) Positive lookahead for $ or $$ if matched
-const escapedUnderscoreRegex = new RegExp(/(?<=(\$|\$\$)[\s\S]*)\\_(?=[\s\S]*(?:\1))/, "g")
+// \$\$[\s\S]*?\$\$ -> Matches block equations
+// \$.*?\$ -> Matches inline equations
+const quartzLatexRegex = new RegExp(/\$\$[\s\S]*?\$\$|\$.*?\$/, "g")
 
 /**
  * ox-hugo is an org exporter backend that exports org files to hugo-compatible
@@ -97,8 +96,10 @@ export const OxHugoFlavouredMarkdown: QuartzTransformerPlugin<Partial<Options> |
           const [eqn] = capture
           return `$$${eqn}$$`
         })
-        src = src.replaceAll(escapedUnderscoreRegex, () => {
-          return `_`
+
+        // ox-hugo escapes _ as \_
+        src = src.replaceAll(quartzLatexRegex, (value) => {
+          return value.replaceAll("\\_", "_")
         })
       }
       return src
