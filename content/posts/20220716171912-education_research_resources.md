@@ -176,6 +176,7 @@ tags
 -   [“The most beautiful of all printed books,” the Kelmscott Chaucer | Hacker News](https://news.ycombinator.com/item?id=37008093)
 -   [Where is all the book data? | Hacker News](https://news.ycombinator.com/item?id=33543570)
 -   [New Taschen book on the history of the computer | Hacker News](https://news.ycombinator.com/item?id=36104432)
+-   [Universities have disinvested from their presses just as much as their libraries | Hacker News](https://news.ycombinator.com/item?id=37692335)
 -   [Why early modern books are so beautiful | Hacker News](https://news.ycombinator.com/item?id=36988039)
 -   [Bookshop.org survives and thrives in Amazon’s world | Hacker News](https://news.ycombinator.com/item?id=35534069)
 -   [The 1970s librarians who revolutionised the challenge of search | Aeon Essays](https://aeon.co/essays/the-1970s-librarians-who-revolutionised-the-challenge-of-search)

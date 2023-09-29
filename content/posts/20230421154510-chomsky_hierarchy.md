@@ -37,6 +37,7 @@ The Chomsky hierarchy is descriptive. It simply allows us to broadly categorize 
 
 -   Used to parse programming languages
 -   The classic example people is `x * y;` in C, which is either multiplication or a variable declaration, depending on whether x is a type or a value. This proves that C cannot be a context-free language. i.e there exists context that's not encoded in the text already.
+    -   Solution to this is [Lexer hack](https://en.wikipedia.org/wiki/Lexer_hack) , giving access to some kind of symbol table to the lexer
 -   CFGs are not nearly powerful enough to describe natural language because natural languages are ungainly and complex.
 -   `X-bar theory` is essentially the application of CFGs to language modeling
 

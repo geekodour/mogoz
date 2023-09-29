@@ -265,14 +265,14 @@ You can read the FAQ before reading anything or after reading everything or anyt
 
 #### Language {#language}
 
-> \\(L={w∣w\\) is the encoding of an input \\(y\\) to problem \\(X\\), and the answer to input \\(y\\) for problem \\(X\\) is "Yes" }
+> \\((L={w∣w}\\) is the encoding of an input \\(y\\) to problem \\(X\\), and the answer to input \\(y\\) for problem \\(X\\) is "Yes" }
 
 -   A `language` is the formal realization of a `problem`.
 -   `languages` are defined by set of `strings`
 -   Each `string` in the `language` encodes some `instance` of the `problem`
 -   `strings` are defined by sequence of `symbols`
 -   Set of `symbols` is defined by the `alphabet`
--   Eg. \\(\\{0,1\\}\*\\) is the set of all binary sequences of any length.
+-   Eg. \\(({0,1}\*\\) is the set of all binary sequences of any length.
 -   Determining if the answer for an input to a decision problem is "yes" is equivalent to determining whether an encoding of that input over an alphabet is in the corresponding language.
 -   A `string` is in a `language` iff the answer to the `instance` is "yes"
 -   each `string` is the input
@@ -351,6 +351,7 @@ Different computational problems have different complexity classes.
 
 -   Contains decision problems
 -   **Definition 1**: Problems that can be `verified` in polynomial time but **may** take super-polynomial time to `solve` using a DTM.
+    -   Eg. easy to check/verify if a key works, but finding(solve) the right key could take a very long time
 -   **Definition 2**: If you had a NTM, this problem are also `solvable` in polynomial time. `solvable` here means getting an `YES`
 -   Other names: NPTIME, Non-deterministic polynomial class
 
