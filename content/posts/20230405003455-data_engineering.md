@@ -19,6 +19,27 @@ tags
 -   Used for unstructured data/big data
 
 
+### Data warehouse {#data-warehouse}
+
+-   Exists because we have different sources
+    -   OLTP source of truth database, but you also have SaaS products, events, logging exhaust, and honestly probably some other OLTP databases
+-   Warehouse provides value because it brings together data that otherwise could not be jointly queried.
+-   Traditionally used for analytical, but usecases for operational queries are also there
+
+
+#### Analytical {#analytical}
+
+-   Designed to grind through reams of historical data and efficiently produce periodic reports.
+
+
+#### Operational {#operational}
+
+{{< figure src="/ox-hugo/20230405003455-data_engineering-1333840662.png" >}}
+
+-   Designed to ingested data continually and make it immediately available to query
+-   This is not a popular thing yet but [Materialize is trying to do something around it.](https://materialize.com/blog/operational-data-warehouse/) It uses some Streaming technology.
+
+
 ## Technologies {#technologies}
 
 
@@ -27,6 +48,12 @@ tags
 {{< figure src="/ox-hugo/20230405003455-data_engineering-993265666.png" >}}
 
 -   An alternative to MapReduce but better
+
+
+### Parquet {#parquet}
+
+-   TODO need to read more
+-   Data format [that allows querying](https://github.com/duckdb/duckdb/blob/6c7c9805fdf1604039ebed47d233ea55cabb4b2c/test/sql/copy/parquet/test_parquet_remote.test#L28)
 
 
 ## Information retrieval {#information-retrieval}

@@ -50,6 +50,24 @@ I like how Kyle Mathews [describes local first software](https://bricolage.io/so
 -   Query-based sync to partially replicate
 
 
+## Basics {#basics}
+
+-   Instead of always assuming that the server is the authortative source, we assumed that the user's local device is the authoritative source of information
+-   The default consistency mode is eventual consistency
+    -   This means that state and compute can naturally exist at the edge
+    -   Only brought to the "center" when there is a need for strong consistency
+
+
+### Challenges {#challenges}
+
+From [Why SQLite? Why Now? 🐇 - Tantamanlands](https://tantaman.com/2022-08-23-why-sqlite-why-now.html#enabling-the-relational-model-for-more-use-cases)
+
+-   How much data can you store locally?
+-   How do you signal to the user that their local set of data could be incomplete from the perspective of other peers?
+-   How do we bless certain peers (or servers) as authoritative sources of certain sets of information?
+-   What CRDTs are right for which use cases?
+
+
 ## Approaches {#approaches}
 
 
@@ -83,20 +101,24 @@ I like how Kyle Mathews [describes local first software](https://bricolage.io/so
 
 ### Replicated Database {#replicated-database}
 
--   Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replicate to a client side db such as [sqlite]({{< relref "20230702184501-sqlite.md" >}})
+Write to your database while offline. I can write to mine while offline. We can then both come online and merge our databases together, without conflict. See [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
 
 
-#### Projects {#projects}
+#### Postgres-SQlite {#postgres-sqlite}
 
--   Postgres-SQlite
-    -   [ElectricSQL](https://electric-sql.com/) (write back)
-    -   [powersync](https://www.powersync.co/) (white back)
-    -   [sqledge](https://github.com/zknill/sqledge) (readonly? from the creators of [ably](https://ably.com/spaces))
--   Only [sqlite]({{< relref "20230702184501-sqlite.md" >}})
-    -   [Vulcan](https://vlcn.io/)
-        -   <https://github.com/vlcn-io/cr-sqlite>
-        -   [Trying out cr-sqlite on macOS | Simon Willison’s TILs](https://til.simonwillison.net/sqlite/cr-sqlite-macos)
-    -   <https://github.com/orbitinghail/sqlsync>
+Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replicate to a client side db such as [sqlite]({{< relref "20230702184501-sqlite.md" >}})
+
+-   [ElectricSQL](https://electric-sql.com/) (write back)
+-   [powersync](https://www.powersync.co/) (white back)
+-   [sqledge](https://news.ycombinator.com/item?id=37063238) (readonly? from the creators of [ably](https://ably.com/spaces))
+
+
+#### sqlite - sqlite {#sqlite-sqlite}
+
+-   [cr-sqlite](https://github.com/vlcn-io/cr-sqlite)
+    -   [Trying out cr-sqlite on macOS | Simon Willison’s TILs](https://til.simonwillison.net/sqlite/cr-sqlite-macos)
+-   <https://github.com/orbitinghail/sqlsync>
+-   [Mycelial](https://www.mycelial.com/platform)
 
 
 ## War stories {#war-stories}
@@ -113,3 +135,4 @@ I like how Kyle Mathews [describes local first software](https://bricolage.io/so
 
 -   [Local-First Web Development](https://localfirstweb.dev/)
 -   [Alternatives - ElectricSQL](https://archive.is/dAfxh)
+-   [pazguille/offline-first](https://github.com/pazguille/offline-first)

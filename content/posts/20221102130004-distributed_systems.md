@@ -13,6 +13,18 @@ tags
 -   [Foundational distributed systems papers](https://muratbuffalo.blogspot.com/2021/02/foundational-distributed-systems-papers.html?m=1) : O' double G
 
 
+## What/Intro {#what-intro}
+
+A "distributed system" is simply a system that splits a problem over multiple machines, solving it in a way that is better, more efficient, possible etc than a single machine.
+
+
+### Use of the distribution {#use-of-the-distribution}
+
+Use of the distribution provided by distributed system
+
+-   Can be used to [provide fault tolerance and high-availability](https://news.ycombinator.com/item?id=32540234)
+
+
 ## Meta {#meta}
 
 
@@ -75,7 +87,7 @@ Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability
 
 ### PACELC {#pacelc}
 
--   Partitioned, Availability, Consistency Else Latency, Consistency
+-   Partitioned(Availability, Consistency) Else (Latency, Consistency)
 -   PACELC is a more nuanced than CAP for thinking about this stuff
 -   Definition
     -   If there is a partition (P)
@@ -103,3 +115,39 @@ Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability
     -   It can abort the transaction if no one responds.
 -   Participants can show the new state after the leader announces the commit decision.
     -   They delete the staged state if the leader aborts the transaction.
+
+
+## Replication {#replication}
+
+-   See [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
+
+
+## Notes from LK class {#notes-from-lk-class}
+
+
+### Class 1 {#class-1}
+
+-   Dist sys
+    -   Running on several nodes, connected y network
+    -   Characterized by partial failures
+    -   System w partial failure + Unbounded latency
+-   Partial Failures
+    -   Eg. Cloud computing vs HPC
+        -   Cloud: Work around partial failures
+        -   HPC: Treat partial failures as total failure. Uses check-pointing.
+-   Byzantine Faults
+    -   If you send a request to another node and don't receive a response, it's **impossible** to know why. (without a global knowledge system)
+    -   Eg.
+        -   There could be issues in M1 -&gt; M2
+            -   Network issues
+            -   Queue congestion
+            -   M1 breaking
+        -   There could be issues in M2 -&gt; M1
+            -   M2 Lying
+            -   Cosmic rays
+    -   Solution
+        -   These do not address all kinds of uncertainties
+        -   Timeouts and Retries
+            -   Issue with timeouts is that it will not work well when the message causes a side effect. Eg. increment some counter
+        -   Predict Max delay
+            -   Eg. from M1-&gt;M2 =2d+r (if d is time for M1-M2 and r is processing time)

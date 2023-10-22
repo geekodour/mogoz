@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Creative Programming]({{< relref "20230326125239-creative_programming.md" >}}), [Education Research Resources]({{< relref "20220716171912-education_research_resources.md" >}}), [General Programming]({{< relref "20230122140847-general_programming.md" >}}), [Learning How to learn]({{< relref "20220625142317-learning_how_to_learn.md" >}}), [Alternative Internet]({{< relref "20230507105348-alternative_internet.md" >}})
+: [Creative Programming]({{< relref "20230326125239-creative_programming.md" >}}), [Education Research Resources]({{< relref "20220716171912-education_research_resources.md" >}}), [General Programming]({{< relref "20230122140847-general_programming.md" >}}), [Learning How to learn]({{< relref "20220625142317-learning_how_to_learn.md" >}}), [Alternative Internet]({{< relref "20230507105348-alternative_internet.md" >}}), [Representing Time and Date]({{< relref "20231019125530-representing_time_and_date.md" >}})
 
 
 ## Resources {#resources}

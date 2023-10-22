@@ -227,6 +227,7 @@ Even when things are not federated, by the nature what these things are we can a
 ### Offline &amp; Low-tech web {#offline-and-low-tech-web}
 
 -   <https://github.com/Antharia/awesome-lowtech>
+-   [Kristall Small Internet Browser - Kristall Small-Internet Browser](https://kristall.random-projects.net/)
 
 
 ### Darkweb {#darkweb}

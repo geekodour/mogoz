@@ -20,6 +20,7 @@ tags
 
 -   Invariants are bad. Every invariant of this kind that you remove from your code is an improvement, because it lowers the cognitive load of working with it.
 -   See [What are invariants](https://softwareengineering.stackexchange.com/questions/32727/what-are-invariants-how-can-they-be-used-and-have-you-ever-used-it-in-your-pro)
+-   [What is an Invariant?](https://matklad.github.io/2023/10/06/what-is-an-invariant.html)
 
 
 ## Opinions {#opinions}

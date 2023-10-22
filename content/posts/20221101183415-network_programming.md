@@ -125,6 +125,7 @@ tags
 
 ### Unix sockets {#unix-sockets}
 
+-   **Unix sockets are faster than TCP sockets over loopback**
 -   path names on a local node (Unix sockets)
 -   Unix domain sockets use the file system as their address name space.
 -   Processes reference Unix domain sockets as file system inodes
