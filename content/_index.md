@@ -16,3 +16,6 @@ Have fun!
 ## Improvements {#improvements}
 
 -   [ ] I have a few(more than a few) tables in this wiki and it's getting hard to manage them as org-mode tables, It'll be nice to have all of them into a sqlite store and then query the db inside org-files and create the tables. This way management will have a nice interface and I will not have to worry about formatting etc. I might be able to do it with existing packages if not, will have to write one.
+-   [ ] It's safe to say attaching PDFs is not possible yet plus it's not properly organized etc. (We need a PDF dump kind of thing to which we can link to, i think i have some similar idea listed in ideas.org or something)
+-   [ ] Linking tldraw files, currently it's a pain-point to have to export/import stuff.
+-   [ ] Creating anki card is nice with [this](https://github.com/s-kostyaev/ellama/pull/10) but it can be improved. This can also be extended to do semantic search over the wiki.

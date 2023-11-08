@@ -80,3 +80,8 @@ tags
 -   [Federation Architecture Overview - Bluesky](https://blueskyweb.xyz/blog/5-5-2023-federation-architecture) (2023)
 -   [A Self-Authenticating Social Protocol - Bluesky](https://blueskyweb.xyz/blog/3-6-2022-a-self-authenticating-social-protocol) (2022)
 -   [FAQ | AT Protocol](https://atproto.com/guides/faq)
+
+
+## Resources {#resources}
+
+-   [Beyond Mastodon and Bluesky: Toward a Protocol-Agnostic Federation | Lobsters](https://lobste.rs/s/6ck6of/beyond_mastodon_bluesky_toward_protocol)

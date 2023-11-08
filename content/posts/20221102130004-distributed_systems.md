@@ -151,3 +151,11 @@ Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability
             -   Issue with timeouts is that it will not work well when the message causes a side effect. Eg. increment some counter
         -   Predict Max delay
             -   Eg. from M1-&gt;M2 =2d+r (if d is time for M1-M2 and r is processing time)
+
+
+## Others {#others}
+
+
+### Paxos {#paxos}
+
+{{< figure src="/ox-hugo/20221102130004-distributed_systems-866307772.png" >}}

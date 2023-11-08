@@ -227,6 +227,7 @@ func main() {
 
 ## More resources {#more-resources}
 
+-   [Synchronization Constructs in the Go Standard Library | Lobsters](https://lobste.rs/s/tccc6h/synchronization_constructs_go_standard) 🌟
 -   [Go Memory Management – Povilas Versockas](https://povilasv.me/go-memory-management/)
 -   [Visualizing memory management in Golang | Technorage](https://deepu.tech/memory-management-in-golang/)
 -   <https://github.com/plagioriginal/concurrency-in-go>

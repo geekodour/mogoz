@@ -147,6 +147,14 @@ Can inject JS/CSS or both
 -  programatically via background script using WebExtAPI
 
 
+## FAQ {#faq}
+
+
+### [WebAssembly]({{< relref "20230510200213-webassembly.md" >}}) and ManifestV3 {#webassembly--20230510200213-webassembly-dot-md--and-manifestv3}
+
+-   See [Sample: Using WASM in Manifest V3 · Issue #775 · GoogleChrome/chrome-extensions-samples · GitHub](https://github.com/GoogleChrome/chrome-extensions-samples/issues/775#issuecomment-1492023661)
+
+
 ## Links {#links}
 
 -   [Prepare your Firefox desktop extension for the upcoming Android release | Mozilla Add-ons Community Blog](https://blog.mozilla.org/addons/2023/08/10/prepare-your-firefox-desktop-extension-for-the-upcoming-android-release/)

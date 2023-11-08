@@ -37,6 +37,11 @@ Two things to make composition easier
 The Abstraction Principle says to avoid requiring something to be stated more than once; instead, factor out the recurring pattern. Higher-order functions enable such refactoring, because they allow us to factor out functions and parameterize functions on other functions.
 
 
+## Links {#links}
+
+-   <https://www.reddit.com/r/programming/comments/17obifa/monads_for_the_rest_of_us/?context=3>
+
+
 ## Internet comments {#internet-comments}
 
 -   Unlike imperative programming, functional programming is not a series of “steps” where you just exit when you are done, returning some value. It is instead a mathematical expression.

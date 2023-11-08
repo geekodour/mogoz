@@ -7,6 +7,10 @@ draft = false
 tags
 : [Parsers]({{< relref "20230511160225-parsers.md" >}})
 
+> Thus a language definition implies a model of the machine on which programs in the language will run. If a real machine conforms well to the model, then an implementation on that machine is likely to be efficient and easily written; if not, the implementation will be painful to provide and costly to use.
+>
+> Via "Portability of C Programs and the Unix System", S.C. Johnson and D.M. Ritchie
+
 
 ## How they are made? {#how-they-are-made}
 
@@ -40,9 +44,7 @@ tags
 
 ### LLVM {#llvm}
 
--   How it helps?
-    -   Writing two backends for two different architectures would be a lot of work and then lots of platform specific optimizations therefore llvm is the present and seems to be the future for the foreseeable future as well.
-    -   See MLIR
+See [LLVM]({{< relref "20231101205118-llvm.md" >}})
 
 
 ### Grammar? {#grammar}
@@ -92,3 +94,8 @@ tags
 -   Statically Typed: Detects type errors at compile time; if a type error is detected, the language won’t allow execution of the program.
 -   Type Safety: A type-safe language limits which kinds of operations can be performed on which kinds of data.
     -   Some languages, like Python and Racket, are type-safe but dynamically typed. That is, type errors are caught only at run time. Other languages, like C and C++, are statically typed but not type safe: they check for some type errors, but don’t guarantee the absence of all type errors. That is, there’s no guarantee that a type error won’t occur at run time. And still other languages, like Java, use a combination of static and dynamic typing to achieve type safety.
+
+
+## Links {#links}
+
+-   [One Div Zero: A Brief, Incomplete, and Mostly Wrong History of Programming Languages](https://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html)

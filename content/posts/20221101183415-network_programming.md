@@ -89,6 +89,8 @@ tags
 
 -  Resources
 
+    -   [A small warning about UDP based protocols | Hacker News](https://news.ycombinator.com/item?id=38046448)
+        -   UDP protocols prone to amplification attacks
     -   [Everything you ever wanted to know about UDP sockets but were afraid to ask](https://blog.cloudflare.com/everything-you-ever-wanted-to-know-about-udp-sockets-but-were-afraid-to-ask-part-1/)
 
 

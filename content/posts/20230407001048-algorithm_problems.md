@@ -32,12 +32,19 @@ tags
 
 ### Optimization {#optimization}
 
--   Nearest neighbor algorithms
-    -   [ANN-Benchmarks](http://ann-benchmarks.com/)
-    -   [Indexes that do not fit in RAM · facebookresearch/faiss Wiki · GitHub](https://github.com/facebookresearch/faiss/wiki/Indexes-that-do-not-fit-in-RAM)
-    -   [Do you actually need a vector database? | Ethan Rosenthal](https://www.ethanrosenthal.com/2023/04/10/nn-vs-ann/)
--   Bin packing
-    -   [python - 2D Bin Packing Algorithm Implementation - Code Review Stack Exchange](https://codereview.stackexchange.com/questions/173493/2d-bin-packing-algorithm-implementation)
+
+#### Nearest neighbor algorithms (NNA) {#nearest-neighbor-algorithms--nna}
+
+-   [ANN-Benchmarks](http://ann-benchmarks.com/)
+-   [Indexes that do not fit in RAM · facebookresearch/faiss Wiki · GitHub](https://github.com/facebookresearch/faiss/wiki/Indexes-that-do-not-fit-in-RAM)
+-   [Do you actually need a vector database? | Ethan Rosenthal](https://www.ethanrosenthal.com/2023/04/10/nn-vs-ann/)
+
+
+#### Bin packing {#bin-packing}
+
+-   [python - 2D Bin Packing Algorithm Implementation - Code Review Stack Exchange](https://codereview.stackexchange.com/questions/173493/2d-bin-packing-algorithm-implementation)
+-   <https://skusavvy.com/bin-packing-preview>
+-   [Spectral Packing - Inkbit 3D](https://inkbit3d.com/packing/)
 
 
 ### Algo Dump {#algo-dump}

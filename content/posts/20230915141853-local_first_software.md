@@ -40,9 +40,17 @@ I like how Kyle Mathews [describes local first software](https://bricolage.io/so
 
 ### Distributed state machine {#distributed-state-machine}
 
+-   See [Signals and Threads | State Machine Replication, and Why You Should Care](https://signalsandthreads.com/state-machine-replication-and-why-you-should-care/)
 -   Towards "Handle writes that need an authoritative server"
 -   By emulating API request/response patterns through: A distributed state machine running on a replicated object.
 -   i.e we write interactions w external services in a way so that requests/responses have the same multiplayer, offline, real-time sync properties as the rest of the app.
+-   This synchronization can be at the application, network or other levels of the stack
+
+
+#### 2 Primary idea that makes synchronization easy {#2-primary-idea-that-makes-synchronization-easy}
+
+-   **A reliable, ordered message stream**: Every machine in the system sees the messages in the same order.
+-   **A fully-deterministic compute environment**: Given the same inputs always result in the same outputs
 
 
 ### Partially replication {#partially-replication}

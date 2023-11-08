@@ -12,6 +12,7 @@ tags
 
 -   [Education in India - nandeshwar.info](https://archive.ph/bfrDs)
 -   [OER Case Studies - Creative Commons](https://wiki.creativecommons.org/wiki/OER_Case_Studies)
+-   [Home schooling's rise from fringe to fastest-growing form of education | Hacker News](https://news.ycombinator.com/item?id=38085417)
 -   [Maybe the problem is that Harvard exists | Hacker News](https://news.ycombinator.com/item?id=37076968)
 -   [2023 Predictions for Edtech 🔮Newsletter #61](https://transcend.substack.com/p/2023predictions)
 -   [A misunderstanding about education that cost Mark Zuckerberg $100M | Hacker News](https://news.ycombinator.com/item?id=37863616)

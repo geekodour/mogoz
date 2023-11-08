@@ -54,6 +54,7 @@ tags
 
 -   TODO need to read more
 -   Data format [that allows querying](https://github.com/duckdb/duckdb/blob/6c7c9805fdf1604039ebed47d233ea55cabb4b2c/test/sql/copy/parquet/test_parquet_remote.test#L28)
+-   Grafana Tempo switched from [Protocol Buffers]({{< relref "20230522131118-protocol_buffers.md" >}}) storage format to Apache Parquet last year.
 
 
 ## Information retrieval {#information-retrieval}

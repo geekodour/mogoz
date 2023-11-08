@@ -101,7 +101,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Refback {#refback}
 
--   Usage of the HTTP referrer header to discover incoming links.
+-   Usage of the [HTTP]({{< relref "20230222161545-http.md" >}}) referrer header to discover incoming links.
 
 
 #### Webmentions {#webmentions}

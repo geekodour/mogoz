@@ -15,6 +15,8 @@ tags
 
 ## Statistics info {#statistics-info}
 
+-   See [Statistics]({{< relref "20231017200424-statistics.md" >}})
+
 
 ### Histograms {#histograms}
 

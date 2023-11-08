@@ -11,3 +11,8 @@ tags
 This is interesting to me, notations and ways to represent date and time
 
 There's something called metric time
+
+
+## Resources {#resources}
+
+-   [This is what the year actually looks like (2018) | Hacker News](https://news.ycombinator.com/item?id=37926239)
