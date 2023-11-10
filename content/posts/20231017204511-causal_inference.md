@@ -14,7 +14,7 @@ tags
 ### "correlation does not implies causation" meme {#correlation-does-not-implies-causation-meme}
 
 -   "correlation does not implies causation" : Yes, commonly said
--   But causation also does not imply correlation too
+-   But causation also does not imply correlation too. There can be hidden variables.
 
 
 ### What are associations? {#what-are-associations}
@@ -36,7 +36,7 @@ tags
 #### Causal Prediction {#causal-prediction}
 
 -   Different from normal prediction
--   Knowing the cause
+-   Predicting the effect
     -   Being able to `predict the consequences` of an `intervention`.
     -   Eg. `Movement of the trees` and `wind` are statically `associated`. But nothing in the data tells you that `wind` causes the trees to move.
 -   What if I do this?

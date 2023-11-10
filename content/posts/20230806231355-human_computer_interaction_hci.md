@@ -16,15 +16,21 @@ tags
 {{< figure src="/ox-hugo/20230806231355-human_computer_interaction_hci-1466513474.png" >}}
 
 
-#### Example tools {#example-tools}
+#### Brainstorming tools {#brainstorming-tools}
 
--   Brainstorming
-    -   [Muse — dive into big ideas](https://museapp.com/)
-    -   [Kosmik • For All Mindkind](https://www.kosmik.app/)
-    -   [Granola](https://www.granola.so/)
--   Sense Making
-    -   [LiquidText](https://www.liquidtext.net/liquidtextadeeperdive)
-    -   [elicit](https://elicit.com/)
+-   [Muse — dive into big ideas](https://museapp.com/)
+-   [Kosmik • For All Mindkind](https://www.kosmik.app/)
+-   [Granola](https://www.granola.so/)
+-   [Fermat - Build &amp; use your own AI tools](https://fermat.app/)
+-   Arc Browser Easle thing
+-   Tldraw??
+
+
+#### Sense-making tools {#sense-making-tools}
+
+-   These also fall under tools of thought??
+-   [LiquidText](https://www.liquidtext.net/liquidtextadeeperdive)
+-   [elicit](https://elicit.com/)
 
 
 ### n-dimensional computing {#n-dimensional-computing}
@@ -35,10 +41,18 @@ tags
 -   [Replace textual code](https://twitter.com/qualmist/status/1722027807239438523) with domain-specific direct-manipulation interfaces. See [Engraft](https://engraft.dev/)
 
 
+### Personal computing {#personal-computing}
+
+-   [LN 000: The Lab Notes](https://alexanderobenauer.com/labnotes/000/) : Alexander Obenauer
+-   [The decline of computers as a general-purpose technology (2021) | Hacker News](https://news.ycombinator.com/item?id=37970572)
+
+
 ### AR {#ar}
 
 
 ### VR {#vr}
+
+-   [4D Gaussian Splatting for Real-Time Dynamic Scene Rendering | Hacker News](https://news.ycombinator.com/item?id=37905601)
 
 
 ### Playful software {#playful-software}
@@ -47,9 +61,6 @@ tags
     -   Playful software != video games. I mean tinkerable, whimsical, playful consumer software: creative software, social networks, dating apps, messengers
     -   Play that's not segregated from ordinary life
     -   Tinkerability, accessibility, low cost, easy to make mistakes — fun
-
-
-### Collaborative software {#collaborative-software}
 
 
 ### Malleable software {#malleable-software}
@@ -69,14 +80,74 @@ tags
 
 -   See [Primary tool-chest](https://geekodour.org/docs/tools/primary_toolchest/#creative-programming-and-hci) (Creative prog &amp; HCI section)
 -   [Spellburst: A Node-based Interface for Exploratory Creative Coding with Natural Language Prompts](https://arxiv.org/abs/2308.03921)
+-   [Nutshell: make expandable, embeddable explanations](https://ncase.me/nutshell/)
 -   Issues
     -   User of the explanation might not hit all the useful points of the explanation (maybe X-Y-Z-T was an important path to follow but got missed)
     -   Cost in development and in design
 
 
+#### Live Programming {#live-programming}
+
+-   [LIVE 2023 - The Ninth Workshop on Live Programming - SPLASH 2023](https://2023.splashcon.org/home/live-2023)
+
+
+#### Learnable programming {#learnable-programming}
+
+-   [Learnable Programming (2012) | Hacker News](https://news.ycombinator.com/item?id=37746918)
+
+
+### Collaborative software {#collaborative-software}
+
+-   See [Chapter 1 | Chatting with Glue](https://a9.io/glue-comic/) by maxkriegers
+
+
+#### Collaborative Knowledge systems {#collaborative-knowledge-systems}
+
+<!--list-separator-->
+
+-  Thoughts from from [azlenelza](https://twitter.com/azlenelza/status/1269696508804268032)
+
+    -   Enable people to collectively learn and build knowledge as a group?
+    -   System that goes beyond forums and linear discussion threads, with highlights and summarization to distill key ideas
+        ![](/ox-hugo/20230806231355-human_computer_interaction_hci-856162.png)
+        ![](/ox-hugo/20230806231355-human_computer_interaction_hci-516320407.png)
+    -   Think about
+        -   Teaching peers as an individual helps to identify gaps and deepen your own knowledge of a topic
+        -   Teaching future learners as a group perhaps helps identify gaps and deepen collective knowledge
+
+<!--list-separator-->
+
+-  Other projects
+
+    -   [Higher Fidelity Systems for Online Discussion - YouTube](https://www.youtube.com/watch?v=LqAhQBDiwd0)
+    -   [Deliberatorium - Wikipedia](https://en.m.wikipedia.org/wiki/Deliberatorium)
+    -   [Golden.com](https://golden.com/home)
+
+
+### Local first software {#local-first-software}
+
+-   See [Local First Software (LoFi)]({{< relref "20230915141853-local_first_software.md" >}})
+-   [PLF 2023 - Programming Local-first Software - SPLASH 2023](https://2023.splashcon.org/home/plf-2023)
+-   [{SPLASH'23} Room VI (Oct 24th) - YouTube](https://www.youtube.com/watch?v=M8RRZakZgiI)
+
+
 ### Tools of thought and Memory {#tools-of-thought-and-memory}
 
 -   [How can we develop transformative tools for thought?](https://numinous.productions/ttft/)
+-   [Literary Machines - Wikipedia](https://en.wikipedia.org/wiki/Literary_Machines)
+
+
+#### Information organization (2nd brain stuff) {#information-organization--2nd-brain-stuff}
+
+-   [mymind is the extension for your mind.](https://mymind.com/)
+-   obsidian/roam/ org-roam
+-   [Digital Scholar](https://digitalscholar.org/) (Zotero etc.)
+
+
+#### Knowledge Extraction {#knowledge-extraction}
+
+-   [Ask HN: Extracting Knowledge Graphs from LLMs | Hacker News](https://news.ycombinator.com/item?id=37884541)
+-   [yoheinakajima/instagraph](https://github.com/yoheinakajima/instagraph#features-)
 
 
 ### Notations {#notations}
@@ -86,12 +157,28 @@ tags
 -   [Lindenmayer Systems | Hacker News](https://news.ycombinator.com/item?id=38024405)
 -   [GitHub - prathyvsh/notation: Repo to track the evolution of notation in arts and sciences](https://github.com/prathyvsh/notation)
 -   [GitHub - k-qy/notation: Collection of quotes on notation design &amp; how it affects thought.](https://github.com/k-qy/notation)
+-   [GitHub - christianvoigt/argdown: a simple syntax for complex argumentation](https://github.com/christianvoigt/argdown)
+
+
+#### PAINT (Programming Abstractions and Interactive Notations, Tools, and Environments) {#paint--programming-abstractions-and-interactive-notations-tools-and-environments}
+
+-   [PAINT 2023 - SPLASH 2023](https://2023.splashcon.org/home/paint-2023)
 
 
 ### Visualizing Data {#visualizing-data}
 
 -   See [Data Visualization]({{< relref "20230504114958-data_visualization.md" >}})
 -   ["Supporting Data Journalism through Compilers for Visual Inputs" by Parker Zi...](https://www.youtube.com/watch?v=MQnVmEw6ISQ)
+
+
+### End user development/programming {#end-user-development-programming}
+
+-   This is more of an idea, giving the ability to extend the system in someway. Eg. plugins etc. But also being able to programatically interact with it etc.
+-   [End-user development - Wikipedia](https://en.wikipedia.org/wiki/End-user_development)
+-   output-directed programming environment
+    -   [cartokit](https://twitter.com/parker_ziegler/status/1718998694748713463): Style maps (See [Geography]({{< relref "20221109130937-geography.md" >}}))
+-   Voice directed programming
+    -   [Cursorless is alien magic from the future - Xe Iaso](https://xeiaso.net/notes/cursorless-alien-magic/)
 
 
 ## Resources {#resources}

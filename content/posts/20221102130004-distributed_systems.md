@@ -137,6 +137,7 @@ Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability
         -   HPC: Treat partial failures as total failure. Uses check-pointing.
 -   Byzantine Faults
     -   If you send a request to another node and don't receive a response, it's **impossible** to know why. (without a global knowledge system)
+    -   Byzantine faults can be seen as a subset of partial failures
     -   Eg.
         -   There could be issues in M1 -&gt; M2
             -   Network issues

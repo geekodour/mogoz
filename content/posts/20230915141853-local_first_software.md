@@ -102,14 +102,15 @@ From [Why SQLite? Why Now? 🐇 - Tantamanlands](https://tantaman.com/2022-08-23
 #### Projects {#projects}
 
 -   OSS
-    -   Yjs, Automerge
+    -   Yjs, [Automerge](https://automerge.org/)(updated!)
+        -   Automerge: Add a few lines of code to your react app, and you get sync across devices + local persistence!
     -   [jazz](https://jazz.tools/) (Replicated data structure)
 -   Services: Liveblocks, Partykit, Triplit, Ditto etc.
 
 
 ### Replicated Database {#replicated-database}
 
-Write to your database while offline. I can write to mine while offline. We can then both come online and merge our databases together, without conflict. See [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
+Write to your database while offline. I can write to mine while offline. We can then both come online and merge our databases together, without conflict. See [Data Replication]({{< relref "20231021151742-data_replication.md" >}}). Also see [Riffle Systems](https://riffle.systems/)
 
 
 #### Postgres-SQlite {#postgres-sqlite}
@@ -139,8 +140,15 @@ Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replica
 -   For mutating data we have a simple transaction system that you wrap around models to update them. It records and sends the mutations and makes sure that outstanding mutations are replayed over model changes locally.
 
 
+### Others {#others}
+
+-   Offline support just kinda happened for free. Once I added a service worker to serve the app code offline, Automerge can just persist writes to local IndexedDB and then sync when network is back again, not a big deal. Classic local-first win
+
+
 ## Links and Resources {#links-and-resources}
 
 -   [Local-First Web Development](https://localfirstweb.dev/)
 -   [Alternatives - ElectricSQL](https://archive.is/dAfxh)
 -   [pazguille/offline-first](https://github.com/pazguille/offline-first)
+-   <https://braid.org/> (wg)
+    -   See <https://braid.org/meeting-2>
