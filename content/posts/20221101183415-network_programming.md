@@ -39,7 +39,7 @@ tags
 
 #### Meta {#meta}
 
--   there is no such thing as a port being open or closed. Ports aren't real.
+-   There is no such thing as a port being open or closed. Ports aren't real.
 -   They are just a two byte label in a network packet that tell both the router and client what to do with it.
 
 

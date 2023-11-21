@@ -22,11 +22,11 @@ Also see:  [Idea Monkeysphere | titles do not matter](https://geekodour.org/docs
 
 ## Where I see myself working (Sept'23) {#where-i-see-myself-working--sept-23}
 
-Combination of the following:
-
--   [Local First Software]({{< relref "20230915141853-local_first_software.md" >}})
--   [peer-to-peer]({{< relref "20221101184751-peer_to_peer.md" >}})
--   [Human Computer Interaction ( HCI )]({{< relref "20230806231355-human_computer_interaction_hci.md" >}}) and Tools of thought
--   [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}) and [Data Visualization]({{< relref "20230504114958-data_visualization.md" >}})
--   [Education Research Resources]({{< relref "20220716171912-education_research_resources.md" >}}) and [Archival]({{< relref "20230115032923-archival.md" >}}) and [Open Source LLMs]({{< relref "20230719050449-open_source_llms.md" >}})
--   Shipping shit
+-   Specialization
+    -   [Local First Software]({{< relref "20230915141853-local_first_software.md" >}}) , [crdt]({{< relref "20230607045339-crdt.md" >}}), [Custom Protocols]({{< relref "20230221012237-custom_protocols.md" >}})
+-   General Shipping/Experimentation (in big volumes)
+    -   [peer-to-peer]({{< relref "20221101184751-peer_to_peer.md" >}})
+    -   [Human Computer Interaction ( HCI )]({{< relref "20230806231355-human_computer_interaction_hci.md" >}}) and Tools of thought
+    -   [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}) and [Data Visualization]({{< relref "20230504114958-data_visualization.md" >}})
+-   Big projects
+    -   [Education Research Resources]({{< relref "20220716171912-education_research_resources.md" >}}) and [Archival]({{< relref "20230115032923-archival.md" >}}) and [Open Source LLMs]({{< relref "20230719050449-open_source_llms.md" >}})

@@ -10,7 +10,8 @@ tags
 
 ## Structure {#structure}
 
-{{< figure src="/ox-hugo/20230507105348-alternative_internet-1117137053.png" >}}
+![](/ox-hugo/20230507105348-alternative_internet-1896295369.png)
+![](/ox-hugo/20230507105348-alternative_internet-1117137053.png)
 
 -   Calling [a network “decentralized” only defines it by what it is not](https://scribe.rip/decentralized-web/decentralized-social-networks-e5a7a2603f53)
     -   It is not dependent on a single set of servers run by one company.
@@ -159,6 +160,7 @@ Even when things are not federated, by the nature what these things are we can a
 #### Learn more {#learn-more}
 
 -   [Use RSS for privacy and efficiency {rsapkf/www}](https://rsapkf.org/weblog/q2z)
+-   [RSS can be used to distribute all sorts of information | Hacker News](https://news.ycombinator.com/item?id=38343385)
 -   [What RSS Gets Right](https://www.charlieharrington.com/unexpected-useless-and-urgent)
 -   [Why your blog still needs RSS | Hacker News](https://news.ycombinator.com/item?id=37175192)
 -   [Making RSS more visible again with a /feeds page](https://marcus.io/blog/making-rss-more-visible-again-with-slash-feeds)
@@ -245,4 +247,5 @@ Even when things are not federated, by the nature what these things are we can a
 -   [The “smolnet”, build for friends and friends of friends | Hacker News](https://news.ycombinator.com/item?id=36292078)
 -   [Client-side proxies – a better way to individualise the Internet? (2000) | Hacker News](https://news.ycombinator.com/item?id=36824165)
 -   [Remembering Molly, one of the greats - The History of the Web](https://thehistoryoftheweb.com/remembering-molly-one-of-the-greats/)
+-   <https://hyperlink.academy/>
 -   [The problem with federated web apps | Lobsters](https://lobste.rs/s/w2m7pr/problem_with_federated_web_apps)

@@ -143,9 +143,23 @@ These are image formats used in medical imaging to store and transmit medical im
 -   [Python libraries to compress &amp; resize images fast — Uploadcare Blog](https://uploadcare.com/blog/image-optimization-python/)
 -   [sharp - npm](https://www.npmjs.com/package/sharp)
 -   [cwebp  |  WebP  |  Google Developers](https://developers.google.com/speed/webp/docs/cwebp)
+-   <https://github.com/shssoichiro/oxipng>
 -   <https://github.com/toy/image_optim>
 -   <https://github.com/jarun/imgp>
 -   <https://github.com/wanadev/pyguetzli>
+
+
+### Image diff comparison tools {#image-diff-comparison-tools}
+
+-   [Comparing -- ImageMagick Examples](https://www.imagemagick.org/Usage/compare/) : og, also creates diff animations?
+-   [simonw/image-diff: CLI tool for comparing images](https://github.com/simonw/image-diff) : python
+-   [nicolashahn/diffimg](https://github.com/nicolashahn/diffimg) : python
+-   [jhnc/findimagedupes](https://github.com/jhnc/findimagedupes) : perl
+-   [rivo/duplo](https://github.com/rivo/duplo) : Go
+-   [murooka/go-diff-image](https://github.com/murooka/go-diff-image) : Also see [bokuweb/lcs-image-diff-rs](https://github.com/bokuweb/lcs-image-diff-rs)
+-   [idealo/imagededup](https://github.com/idealo/imagededup) : Python (Maybe good for learning)
+    -   Also see [Reverse image search using perceptual hashes](https://www.aadhav.me/posts/reverse-image-search)
+-   [google/butteraugli](https://github.com/google/butteraugli) : More to do quality comparison. (More of a research tool)
 
 
 ### GIF {#gif}

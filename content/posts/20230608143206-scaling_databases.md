@@ -17,6 +17,8 @@ tags
 | Horizontal | One that uses row-partitioning(more talked about)               | row-partitioning                              | Scale out(shard)  |
 | Vertical   | One that uses column-partitioning(usually application specific) | column-partitioning, similar to normalization | Scale up(beef up) |
 
+-   Eg. Figma had to pick between horizontal [sharding vs vertical partitioning](https://www.figma.com/blog/how-figma-scaled-to-multiple-databases/)
+
 
 ## Scaling {#scaling}
 

@@ -38,7 +38,7 @@ tags
 
 ### Future of Coding {#future-of-coding}
 
--   [Replace textual code](https://twitter.com/qualmist/status/1722027807239438523) with domain-specific direct-manipulation interfaces. See [Engraft](https://engraft.dev/)
+-   [Replace textual code](https://twitter.com/qualmist/status/1722027807239438523) with domain-specific direct-manipulation interfaces. See [Engraft](https://engraft.dev/), [Engraft (Talk recording, UIST 2023) - YouTube](https://www.youtube.com/watch?v=7SrZDJDSSCo)
 
 
 ### Personal computing {#personal-computing}

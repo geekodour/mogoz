@@ -193,6 +193,7 @@ tags
 -   [The Libraries of Louvain](https://www.libraryhistorybuff.com/louvain.htm)
 -   [The Internet Archive&amp;#x27;s battle for libraries | Hacker News](https://news.ycombinator.com/item?id=35163640)
 -   [DIY Book Scanner](https://www.diybookscanner.org/)
+-   [The open-stack library: a futuristic technology from the 18th century | Hacker News](https://news.ycombinator.com/item?id=38189720)
 -   [OpenIntro](https://www.openintro.org/) : Publishing Done Right
 -   [In U.S., Library Visits Outpaced Trips to Movies in 2019](https://news.gallup.com/poll/284009/library-visits-outpaced-trips-movies-2019.aspx)
 -   [Cambridge Digital Library ― University of Cambridge](https://cudl.lib.cam.ac.uk/)

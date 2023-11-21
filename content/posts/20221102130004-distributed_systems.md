@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [System Design]({{< relref "20230113141133-system_design.md" >}}), [Systems]({{< relref "20221101150250-systems.md" >}}), [Inter Process Communication]({{< relref "20221101173527-ipc.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Concurrency]({{< relref "20221126204257-concurrency.md" >}})
+: [System Design]({{< relref "20230113141133-system_design.md" >}}), [Systems]({{< relref "20221101150250-systems.md" >}}), [Inter Process Communication]({{< relref "20221101173527-ipc.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Concurrency]({{< relref "20221126204257-concurrency.md" >}}), [CALM]({{< relref "20230909165220-calm.md" >}})
 
 
 ## Important links {#important-links}
@@ -30,9 +30,7 @@ Use of the distribution provided by distributed system
 
 ### Eventual Consistency {#eventual-consistency}
 
--   Dynamo paper discusses why eventual consistency is OK
-    -   Also: [Eventually consistent | Communications of the ACM](https://dl.acm.org/doi/10.1145/1435417.1435432)
-    -   Also: [Rethinking Eventual Consistency - Microsoft Research](https://www.microsoft.com/en-us/research/publication/rethinking-eventual-consistency/)
+See [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >}})
 
 
 ## Thinking frameworks {#thinking-frameworks}
@@ -41,22 +39,29 @@ Use of the distribution provided by distributed system
 ### Meta {#meta}
 
 -   CAP and PACELC help us know what things we need to be aware of when designing a system, but they’re less helpful in actually designing that system.
--   [CALM]({{< relref "20230909165220-calm.md" >}}) provide a way to reason through the behavior of systems under eventual consistency.
+-   [CALM]({{< relref "20230909165220-calm.md" >}}) provide a way to reason through the behavior of systems under [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >}})
 
 
 ### CAP {#cap}
 
-![](/ox-hugo/20221102130004-distributed_systems-21358776.png)
-Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability and (P)artition tolerance.
+{{< figure src="/ox-hugo/20221102130004-distributed_systems-21358776.png" >}}
+
+-   Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability and (P)artition tolerance.
+-   When talking about CAP we have to make a difference between
+    -   The original CAP Conjecture
+    -   The subsequent [CAP Theorem](https://www.cl.cam.ac.uk/research/dtg/archived/files/publications/public/mk428/cap-critique.pdf)
 
 
 #### The pillars {#the-pillars}
 
 -   Consistency
     -   Requires that there’s a total ordering of events where each operation looks as if it were completed instantaneously.
+    -   Linearizability is what the CAP Theorem calls Consistency. (See [Concurrency Consistency Models]({{< relref "20231113121413-concurrency_consistency_models.md" >}}))
 -   Availability
     -   All requests eventually return a successful response eventually.
     -   There’s no bound on how long a process can wait.
+    -   Brewer: If a given consumer of the data can always reach **some** replica
+    -   Gilbert &amp; Lynch: If a given consumer of the data can always reach **any** replica
 -   Partition Tolerance
     -   Some subset of nodes in the system is incapable of communicating with another subset of nodes.
     -   All messages are lost.
@@ -75,6 +80,7 @@ Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability
 
 -  CA
 
+    -   Partition, `P` WILL ALWAYAS BE THERE
     -   You can't really be `CA`, Even though CAP says we can only choose 2, in real world though we can't really ignore partition tolerance because network [can always fail.](https://codahale.com/you-cant-sacrifice-partition-tolerance/)
     -   So since `P` is not optional in reality, systems make tradeoff between `C` and `A`. i.e Improve Consistency but weaken Availability and vice-versa.
 
@@ -154,9 +160,12 @@ Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability
             -   Eg. from M1-&gt;M2 =2d+r (if d is time for M1-M2 and r is processing time)
 
 
-## Others {#others}
+## Designing Distributed Systems {#designing-distributed-systems}
 
-
-### Paxos {#paxos}
-
-{{< figure src="/ox-hugo/20221102130004-distributed_systems-866307772.png" >}}
+-   A correct distributed program achieves (nontrivial) distributed property `X`
+-   Some tricky questions before we start coding:
+    -   Is X even attainable?
+        -   Cheapest protocol that gets me X?
+    -   Can I use something existing, or do I invent a new one
+    -   How should | implement it?
+-   We depend on the different entities participating in the distributed system on having some local **knowledge**
