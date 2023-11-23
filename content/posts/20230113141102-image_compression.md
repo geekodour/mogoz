@@ -153,6 +153,7 @@ These are image formats used in medical imaging to store and transmit medical im
 
 -   [Comparing -- ImageMagick Examples](https://www.imagemagick.org/Usage/compare/) : og, also creates diff animations?
 -   [simonw/image-diff: CLI tool for comparing images](https://github.com/simonw/image-diff) : python
+-   [dmtrKovalenko/odiff](https://github.com/dmtrKovalenko/odiff): The fastest pixel-by-pixel image visual diff
 -   [nicolashahn/diffimg](https://github.com/nicolashahn/diffimg) : python
 -   [jhnc/findimagedupes](https://github.com/jhnc/findimagedupes) : perl
 -   [rivo/duplo](https://github.com/rivo/duplo) : Go
