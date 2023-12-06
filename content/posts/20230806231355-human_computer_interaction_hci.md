@@ -155,6 +155,7 @@ tags
 -   [Representing Time and Date]({{< relref "20231019125530-representing_time_and_date.md" >}})
 -   [Notational Programming for Notebook Environments](https://dl.acm.org/doi/abs/10.1145/3526113.3545619)
 -   [Lindenmayer Systems | Hacker News](https://news.ycombinator.com/item?id=38024405)
+    -   [Lindenmayer systems - log_coffee!](https://vsekar.me/blog/log_coffee/chapter_0.html#lindenmayer-systems)
 -   [GitHub - prathyvsh/notation: Repo to track the evolution of notation in arts and sciences](https://github.com/prathyvsh/notation)
 -   [GitHub - k-qy/notation: Collection of quotes on notation design &amp; how it affects thought.](https://github.com/k-qy/notation)
 -   [GitHub - christianvoigt/argdown: a simple syntax for complex argumentation](https://github.com/christianvoigt/argdown)

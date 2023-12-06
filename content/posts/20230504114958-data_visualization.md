@@ -119,3 +119,8 @@ Pie charts are very hard to use, maybe just use them when you have fewer categor
         -   Renderer : Paints the sprite container into our `canvas`
         -   Game Loop / Request-Animation-Frame(RAF) loop
             -   Specify duration for tween and call RAF
+
+
+## Other links {#other-links}
+
+-   [How to pick more beautiful colors for your data visualizations (2020)](https://news.ycombinator.com/item?id=38482486)

@@ -119,7 +119,7 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 
 #### Binary formats {#binary-formats}
 
--   BSON, MessagePack, [Protocol Buffers]({{< relref "20230522131118-protocol_buffers.md" >}}), Thrift, Avro, ..., <https://cbor.io/>
+-   BSON, MessagePack, [Protocol Buffers]({{< relref "20230522131118-protocol_buffers.md" >}}), Thrift, Parquet(column based), Avro(row based), ..., <https://cbor.io/>
 
 
 #### Text formats {#text-formats}

@@ -248,4 +248,5 @@ Even when things are not federated, by the nature what these things are we can a
 -   [Client-side proxies – a better way to individualise the Internet? (2000) | Hacker News](https://news.ycombinator.com/item?id=36824165)
 -   [Remembering Molly, one of the greats - The History of the Web](https://thehistoryoftheweb.com/remembering-molly-one-of-the-greats/)
 -   <https://hyperlink.academy/>
+-   [The Small Website Discoverability Crisis (2021) | Hacker News](https://news.ycombinator.com/item?id=38276951)
 -   [The problem with federated web apps | Lobsters](https://lobste.rs/s/w2m7pr/problem_with_federated_web_apps)

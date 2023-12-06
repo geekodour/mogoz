@@ -110,6 +110,19 @@ See [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >
 -   See [CALM]({{< relref "20230909165220-calm.md" >}})
 
 
+### Hellerstein's inequality {#hellerstein-s-inequality}
+
+![](/ox-hugo/20221102130004-distributed_systems-264773258.png)
+![](/ox-hugo/20221102130004-distributed_systems-172090201.png)
+![](/ox-hugo/20221102130004-distributed_systems-1420368844.png)
+![](/ox-hugo/20221102130004-distributed_systems-1839879694.png)
+
+-   Useful in cases when sql queries remain the same but in the backend you can keep on fine tuning stuff like add indexes and what not. But this way of developing applications is much more useful in cloud applications where the environment changes all the time.
+-   Distributed language requirements
+    -   Something unthinkable: Need to represent time-varying state
+    -   Something unpredictable: Need to represent uncertainty (i.e. nondeterminism in ordering and failure)
+
+
 ## Synchronization {#synchronization}
 
 

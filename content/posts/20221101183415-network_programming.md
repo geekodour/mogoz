@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Networking]({{< relref "20221101143905-networking.md" >}}), [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}}), [Subnetting]({{< relref "20230309094219-subnetting.md" >}})
+: [Networking]({{< relref "20221101143905-networking.md" >}}), [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}}), [Subnetting]({{< relref "20230309094219-subnetting.md" >}}), [TCP&amp;UDP]({{< relref "20231206115227-tcp_udp.md" >}})
 
 
 ## Building blocks {#building-blocks}
@@ -19,8 +19,14 @@ tags
 
 ### Socket {#socket}
 
--   socket() return the socket descriptor and we can use **send()** and **recv()** socket calls to communicate through it.
--   You can even use **read()** and **write()** but **send()** and **recv()** gives more control.
+Means different things
+
+-   Kernel: Endpoint of communication
+-   Application
+    -   socket() return the `socket descriptor` and we can use **send()** and **recv()** socket calls to communicate through it.
+    -   You can even use **read()** and **write()** but **send()** and **recv()** gives more control.
+    -   Client and Server communicate via reading/writing to `socket descriptors`
+-   [Disk I/O]({{< relref "20230402013722-disk_i_o.md" >}}) and Socket I/O differs in how we `open` the socket descriptor.
 
 
 ### OSI model {#osi-model}
@@ -63,35 +69,7 @@ tags
 
 ### TCP and UDP {#tcp-and-udp}
 
-
-#### TCP {#tcp}
-
-{{< figure src="/ox-hugo/20221101183415-network_programming-1265933912.png" >}}
-
--   Connection: `4-tuple{s_ip, s_port, d_ip, d_port}`
-
-<!--list-separator-->
-
--  Resources
-
-    -   [When TCP sockets refuse to die](https://blog.cloudflare.com/when-tcp-sockets-refuse-to-die/)
-    -   [Making connections with TCP and Sockets for Workers](https://blog.cloudflare.com/introducing-socket-workers/)
-
-
-#### UDP {#udp}
-
--   Connected sockets: `4-tuple{s_ip, s_port, d_ip, d_port}`
-    -   Mostly used for outgoing flows
--   Unconnected sockets: `2-tuple{bind_ip, bind_port}`
-    -   Mostly used for inbound server-side stuff
-
-<!--list-separator-->
-
--  Resources
-
-    -   [A small warning about UDP based protocols | Hacker News](https://news.ycombinator.com/item?id=38046448)
-        -   UDP protocols prone to amplification attacks
-    -   [Everything you ever wanted to know about UDP sockets but were afraid to ask](https://blog.cloudflare.com/everything-you-ever-wanted-to-know-about-udp-sockets-but-were-afraid-to-ask-part-1/)
+See [TCP&amp;UDP]({{< relref "20231206115227-tcp_udp.md" >}})
 
 
 ## Different types of sockets {#different-types-of-sockets}
@@ -182,7 +160,7 @@ tags
 
 -   <https://www.kernel.org/doc/Documentation/networking/tuntap.txt>
 -   [TUN/TAP - Wikipedia](https://en.wikipedia.org/wiki/TUN/TAP)
--   [Tun/Tap interface tutorial « \\1](https://backreference.org/2010/03/26/tuntap-interface-tutorial/)
+-   [Tun/Tap interface tutorial](https://backreference.org/2010/03/26/tuntap-interface-tutorial/)
 
 
 ## Use-cases {#use-cases}

@@ -117,8 +117,9 @@ Write to your database while offline. I can write to mine while offline. We can 
 
 Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replicate to a client side db such as [sqlite]({{< relref "20230702184501-sqlite.md" >}})
 
--   [ElectricSQL](https://electric-sql.com/) (write back)
--   [powersync](https://www.powersync.co/) (white back)
+-   [ElectricSQL](https://electric-sql.com/) (write back,  partial replication)
+-   [powersync](https://www.powersync.co/) (write back,  partial replication)
+    -   PowerSync supports syncing from multiple databases.
 -   [sqledge](https://news.ycombinator.com/item?id=37063238) (readonly? from the creators of [ably](https://ably.com/spaces))
 
 
@@ -127,6 +128,9 @@ Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replica
 -   [cr-sqlite](https://github.com/vlcn-io/cr-sqlite)
     -   [Trying out cr-sqlite on macOS | Simon Willison’s TILs](https://til.simonwillison.net/sqlite/cr-sqlite-macos)
 -   <https://github.com/orbitinghail/sqlsync>
+    -   Only supports full db sync (no partial replication)
+    -   Sync engine is simpler
+    -   Provides a custom storage layer to SQLite that keeps everything in sync.
 -   [Mycelial](https://www.mycelial.com/platform)
 
 
