@@ -250,3 +250,4 @@ Even when things are not federated, by the nature what these things are we can a
 -   <https://hyperlink.academy/>
 -   [The Small Website Discoverability Crisis (2021) | Hacker News](https://news.ycombinator.com/item?id=38276951)
 -   [The problem with federated web apps | Lobsters](https://lobste.rs/s/w2m7pr/problem_with_federated_web_apps)
+-   [Browsing the Eastern Side of the Personal Web | Hacker News](https://news.ycombinator.com/item?id=38534153)

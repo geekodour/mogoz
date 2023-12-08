@@ -61,7 +61,7 @@ tags
     -   Failover
 
 
-### Adding and removing {#adding-and-removing}
+### Adding and removing data {#adding-and-removing-data}
 
 {{< figure src="/ox-hugo/20231021151742-data_replication-1611841254.png" >}}
 

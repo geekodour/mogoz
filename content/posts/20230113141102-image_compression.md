@@ -92,6 +92,7 @@ These are image formats used in medical imaging to store and transmit medical im
 -   Supported compression: Lossless
 -   Can dance but doesn't have to.
 -   Has a low max number of colors (transparency is supported)
+-   [How Hackerman would create an image just by typing 0 and 1 – deep dive into G...](https://news.ycombinator.com/item?id=38529143)
 
 
 ### PNG {#png}

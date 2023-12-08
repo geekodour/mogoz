@@ -86,7 +86,7 @@ Following two phases for each [transaction]({{< relref "20231113145513-database_
 
 -   Once the transaction is complete
 -   Release all locks (shrink)
--   No more locks can be acquired
+-   No more locks can be acquired in this phase, only release
 
 
 ### Issues {#issues}
@@ -110,7 +110,7 @@ Following two phases for each [transaction]({{< relref "20231113145513-database_
     -   There can me multiple transaction coordinators; There can be multiple transaction from one transaction coordinator
 -   `Participants`
     -   Does not make any\* decision (Really depends on the situation)
-    -   Just waits on instructions from the TC. Will Block if it doesn't recieve instructions from TC.
+    -   Just waits on instructions from the TC. Will Block if it doesn't receive instructions from TC.
 
 
 ### Phases {#phases}

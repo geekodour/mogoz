@@ -117,12 +117,6 @@ Generally LLMs are trained on 1 eval (epoch)
 -   Reinforcement learning from human feedback
 
 
-### Readings {#readings}
-
--   [Illustrating Reinforcement Learning from Human Feedback (RLHF)](https://huggingface.co/blog/rlhf)
--   [How RLHF Works (And How Things May Go Wrong)](https://www.assemblyai.com/blog/how-rlhf-preference-model-tuning-works-and-how-things-may-go-wrong/)
-
-
 ## GPT in production {#gpt-in-production}
 
 
@@ -180,8 +174,3 @@ Train a model on how to respond, so you don’t have to specify that in your pro
 
 -   The cost of LLMOps is in inference.
 -   Input tokens can be processed in parallel, output is sequential
-
-
-## OSS LLMS {#oss-llms}
-
-See [Open Source LLMs]({{< relref "20230719050449-open_source_llms.md" >}})

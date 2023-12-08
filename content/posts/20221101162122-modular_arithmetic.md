@@ -16,6 +16,7 @@ tags
 ## What? {#what}
 
 -   All integers can be expressed as 0, 1 or 2, or in modulo 3
+    -   Expressing integers in terms of their remainder when divided by 3
 -   Clock is modulo 12
 
 
