@@ -162,6 +162,7 @@ Even when things are not federated, by the nature what these things are we can a
 -   [Use RSS for privacy and efficiency {rsapkf/www}](https://rsapkf.org/weblog/q2z)
 -   [RSS can be used to distribute all sorts of information | Hacker News](https://news.ycombinator.com/item?id=38343385)
 -   [What RSS Gets Right](https://www.charlieharrington.com/unexpected-useless-and-urgent)
+-   [Please, expose your RSS | Hacker News](https://news.ycombinator.com/item?id=38595855)
 -   [Why your blog still needs RSS | Hacker News](https://news.ycombinator.com/item?id=37175192)
 -   [Making RSS more visible again with a /feeds page](https://marcus.io/blog/making-rss-more-visible-again-with-slash-feeds)
 -   [RSS: The Original Federated Social Network Protocol](https://battlepenguin.com/tech/rss-the-original-federated-social-network-protocol/)

@@ -28,3 +28,6 @@ tags
 -   Dagster
 -   [windmill](https://www.windmill.dev/)
 -   airflow
+-   [GitHub - cschleiden/go-workflows: Embedded durable workflows for Golang similar to DTFx/Cadence/Temporal](https://github.com/cschleiden/go-workflows)
+-   <https://brandur.org/river>
+-   <https://temporal.io/>

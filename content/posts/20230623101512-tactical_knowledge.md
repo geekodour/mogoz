@@ -28,3 +28,4 @@ tags
     -   [Custom domain on a multi-tenant SAAS app : laravel](https://www.reddit.com/r/laravel/comments/pk7pq8/custom_domain_on_a_multitenant_saas_app/)
     -   [dns - How do I enable custom domains for my users? - Stack Overflow](https://stackoverflow.com/questions/35092287/how-do-i-enable-custom-domains-for-my-users)
     -   [How do you allow users to add a custom domain?](https://www.indiehackers.com/post/how-do-you-allow-users-to-add-a-custom-domain-ba3fbcc35a)
+    -   [From ALB to Caddy - Our Wandering Path to Supporting Thousands of Domain Names](https://fusionauth.io/blog/unlimited-domains-fusionauth)

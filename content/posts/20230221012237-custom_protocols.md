@@ -47,6 +47,8 @@ Encoding of binary data in a sequence of printable characters.
 
 -   [Binary-to-text encoding - Wikipedia](https://en.wikipedia.org/wiki/Binary-to-text_encoding)
 -   [Binary to text encoding -- state of the art and missed opportunities | Lobsters](https://lobste.rs/s/swkp6b/binary_text_encoding_state_art_missed)
+-   [Base32 Encoding Explained | ptrchm](https://ptrchm.com/posts/base32-explained/)
+-   [GitHub - qntm/base2048: Binary encoding optimised for Twitter](https://github.com/qntm/base2048)
 
 
 ### Text to Binary {#text-to-binary}
@@ -85,6 +87,7 @@ Data serialization refers to the process of translating data structures or objec
 > -   [Binary formats and protocols: LTV is better than TLV | Lobsters](https://lobste.rs/s/lfbey9/binary_formats_protocols_ltv_is_better)
 > -   [Visual Programming with Elixir: Learning to Write Binary Parsers](https://hansonkd.medium.com/building-beautiful-binary-parsers-in-elixir-1bd7f865bf17)
 > -   [Zip – How not to design a file format (2021)](https://news.ycombinator.com/item?id=37897444)
+> -   [carlmjohnson/lich: A port of Wolf Rentzsch's Lich binary file format](https://github.com/carlmjohnson/lich)
 > -   [binary_io](https://ryan-rsm-mckenzie.github.io/binary_io/) : Not a data serialization library but a library to help write binary formats
 > -   [bincode](https://github.com/bincode-org/bincode)
 </div>

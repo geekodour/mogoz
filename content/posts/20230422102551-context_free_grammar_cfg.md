@@ -172,7 +172,7 @@ See [Parsers]({{< relref "20230511160225-parsers.md" >}})
 
 #### infix to postfix {#infix-to-postfix}
 
--   Shunting Yard Algo by God
+-   [Shunting Yard](https://www.reedbeta.com/blog/the-shunting-yard-algorithm/) Algo by God
 
 
 ## Subsets {#subsets}

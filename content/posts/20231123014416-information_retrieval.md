@@ -58,3 +58,12 @@ You can decompose a "search engine" into multiple big components
 -   Query engine
     -   Translating user inputs into returning the most "relevant" pages
     -   See [Query Engines]({{< relref "20231113151855-query_engines.md" >}})
+
+
+## Semantic Search Resources {#semantic-search-resources}
+
+-   [Spotify-Inspired: Elevating Meilisearch with Hybrid Search and Rust](https://blog.kerollmops.com/spotify-inspired-elevating-meilisearch-with-hybrid-search-and-rust)
+-   <https://github.com/josephrmartinez/recipe-dataset/blob/main/tutorial.md>
+
+
+## <span class="org-todo todo TODO">TODO</span> Full Text Search (FTS) {#full-text-search--fts}
