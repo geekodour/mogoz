@@ -151,7 +151,12 @@ CREATE TABLE tree (
 -   `REFERENCES` : Specify column(s) from `parent table`
 
 
-#### <span class="org-todo todo TODO">TODO</span> Junction tables {#junction-tables}
+#### Junction tables {#junction-tables}
+
+-   [Why exactly area many-to-many relationships bad database design?](https://www.reddit.com/r/Database/comments/al8rop/why_exactly_area_manytomany_relationships_bad/)
+-   [Should I store additional data in SQL join/junction table?](https://stackoverflow.com/questions/38403191/should-i-store-additional-data-in-sql-join-junction-table)
+-   [Where should linking tables be stored?](https://softwareengineering.stackexchange.com/questions/437742/where-should-linking-tables-be-stored)
+-   [What benefit does a junction table provide](https://softwareengineering.stackexchange.com/questions/426533/what-benefit-does-a-junction-table-provide-over-adding-an-additional-field-with)
 
 
 ### Others keys {#others-keys}

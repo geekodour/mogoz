@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [API Design]({{< relref "20230302195820-api_design.md" >}})
+: [API Design]({{< relref "20230302195820-api_design.md" >}}), [Custom Protocols]({{< relref "20230221012237-custom_protocols.md" >}})
 
 
 ## FAQ {#faq}
@@ -131,10 +131,11 @@ Open API is about describing the API, if you want to structure the API responses
 ### GraphQL {#graphql}
 
 
+### Goa {#goa}
+
+-   <https://github.com/goadesign/goa>
+
+
 ### Protocol Buffers {#protocol-buffers}
 
--   `gRPC -> gRPC gateway -> swagger`
--   Instead of gatewaym you could also use [grpc-web](https://github.com/grpc/grpc-web) or buf [connect](https://github.com/bufbuild/connect-go)
--   Basically, the single source of truth is defined in protobuf(schema).
--   It provides automatic documentation, client/server stub generation
 -   See [Protocol Buffers]({{< relref "20230522131118-protocol_buffers.md" >}})

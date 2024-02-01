@@ -205,7 +205,7 @@ NOTE: This is just for my understanding
     {{< figure src="/ox-hugo/20230405003455-data_engineering-1722946962.png" >}}
 
     -   Hierarchically: `File > row group(s) > Column(s) > 1 column chunk > page(s)`
-    -   Uses the [record shredding and assembly algorithm](https://github.com/julienledem/redelm/wiki/The-striping-and-assembly-algorithms-from-the-Dremel-paper) described in the Dremel paper.
+    -   Uses the [record shredding and assembly algorithm](https://github.com/julienledem/redelm/wiki/The-striping-and-assembly-algorithms-from-the-Dremel-paper) described in the Dremel paper to convert nested schema to columns.
     -   Data is stored in batches("row groups")
     -   Row Group = Batch = column(s)
     -   Each column can contain compressed data and metadata

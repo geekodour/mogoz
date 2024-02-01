@@ -34,9 +34,11 @@ tags
 -   Need to find a balance for "how many bins"
 
 
-### Bar chart vs Histogram {#bar-chart-vs-histogram}
+#### Bar chart vs Histogram {#bar-chart-vs-histogram}
 
--   Bar chart is for categorical data (no space between the bars)
+{{< figure src="/ox-hugo/20230504114958-data_visualization-1967426202.png" >}}
+
+-   Bar chart is for categorical data (space between the bars)
 
 
 ### Pie charts {#pie-charts}

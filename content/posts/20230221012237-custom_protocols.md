@@ -185,6 +185,7 @@ Not strict def. but general idea.
 
 -   GRPC(2016) is a RPC framework
 -   PB/[Protocol Buffers]({{< relref "20230522131118-protocol_buffers.md" >}})(2001) is a data serialization format.
+-   See [grpc, protocol buffers and friends]({{< relref "20240122204747-grpc_protocol_buffers_and_friends.md" >}})
 
 
 #### What about GRPC? {#what-about-grpc}
@@ -199,6 +200,8 @@ REST is not at all an RPC framework, it is an architectural style for constructi
 
 {{< figure src="/ox-hugo/20230221012237-custom_protocols-950531753.png" >}}
 
+-   See [REST / RESTful / REpresentational State Transfer]({{< relref "20230302195820-api_design.md#rest-restful-representational-state-transfer" >}})
+-   With a PRC system peculiarities of serialization (like, say, JSON’s lack of 64-bit numbers) are a non-issue
 -   REST can be implemented without HTTP, a home-grown binary substitute can be use and you can still be restful.
 -   You can deploy a RESTful service over ordinary email exchange for instance.
 -   But using HTTP has benefits, such as you'll have HTTPs caching infrastructure at your disposal.

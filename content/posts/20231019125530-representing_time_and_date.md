@@ -16,6 +16,7 @@ There's something called metric time
 ## Resources {#resources}
 
 -   [This is what the year actually looks like (2018) | Hacker News](https://news.ycombinator.com/item?id=37926239)
+-   [Deciyear Calendar | Hacker News](https://news.ycombinator.com/item?id=38639415)
 
 
 ## Date, Time and Timezone {#date-time-and-timezone}

@@ -159,6 +159,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Learn more {#learn-more}
 
+-   [Reclaiming the Web with a Personal Reader](https://olano.dev/2023-12-12-reclaiming-the-web-with-a-personal-reader/)
 -   [Use RSS for privacy and efficiency {rsapkf/www}](https://rsapkf.org/weblog/q2z)
 -   [RSS can be used to distribute all sorts of information | Hacker News](https://news.ycombinator.com/item?id=38343385)
 -   [What RSS Gets Right](https://www.charlieharrington.com/unexpected-useless-and-urgent)
