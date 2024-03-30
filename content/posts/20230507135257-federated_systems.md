@@ -48,6 +48,7 @@ tags
 -   Mastodon
 -   <https://github.com/linkeddata/dokieli>
 -   <https://github.com/forgefed/forgefed>
+-   [Gitlab's ActivityPub architecture blueprint | Hacker News](https://news.ycombinator.com/item?id=39201453)
 
 
 ### Matrix {#matrix}
@@ -76,6 +77,7 @@ tags
 
 -   Primarily the base for Bluesky
 -   A network that aims to enables global long-term public conversations at scale.
+-   [How Does BlueSky Work?](https://steveklabnik.com/writing/how-does-bluesky-work)
 -   [First impressions of Bluesky's AT Protocol](https://educatedguesswork.org/posts/atproto-firstlook/)
 -   [Federation Architecture Overview - Bluesky](https://blueskyweb.xyz/blog/5-5-2023-federation-architecture) (2023)
 -   [A Self-Authenticating Social Protocol - Bluesky](https://blueskyweb.xyz/blog/3-6-2022-a-self-authenticating-social-protocol) (2022)

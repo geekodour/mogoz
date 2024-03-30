@@ -91,3 +91,4 @@ You can decompose a "search engine" into multiple big components: `Gather, Searc
 ## Resources {#resources}
 
 -   [Build a search engine, not a vector DB | Hacker News](https://news.ycombinator.com/item?id=38703943)
+-   [Meilisearch Expands Search Power with Arroy's Filtered Disk ANN](https://blog.kerollmops.com/meilisearch-expands-search-power-with-arroy-s-filtered-disk-ann)

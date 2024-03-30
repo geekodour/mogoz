@@ -74,6 +74,7 @@ CREATE TABLE example (
 
 ### Foreign {#foreign}
 
+-   Often recommended as a must-have for enforcing referential integrity checks in your database.
 -   Optional constraint: `UNIQUE`
 -   Optional constraint: `NOT NULL`
 -   A foreign key must reference(parent) columns that either are a primary key or form a unique constraint.

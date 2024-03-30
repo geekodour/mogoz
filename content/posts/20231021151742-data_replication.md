@@ -187,5 +187,6 @@ Log-based incremental replication copies data based on the database binary log f
 -   <https://www.reddit.com/r/PostgreSQL/comments/10qn58p/logical_replication_in_postgresql/>
 -   <https://medium.com/@piyushbhangale1995/logical-replication-in-postgresql-c448e4b3eb95>
 -   <https://www.reddit.com/r/PostgreSQL/comments/14g0vls/framework_for_achieving_postgresql_multimaster/>
+-   <https://medium.com/@atakanserbes/understanding-database-replication-a-practical-overview-dbe23344acc7>
 -   <https://www.enterprisedb.com/>
 -   [Follower Reads](https://martinfowler.com/articles/patterns-of-distributed-systems/follower-reads.html)

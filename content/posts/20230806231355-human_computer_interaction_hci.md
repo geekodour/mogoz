@@ -152,6 +152,7 @@ tags
 
 ### Notations {#notations}
 
+-   [The Origins of the Generic Mapping Tools | Hacker News](https://news.ycombinator.com/item?id=39786124)
 -   [Representing Time and Date]({{< relref "20231019125530-representing_time_and_date.md" >}})
 -   [Notational Programming for Notebook Environments](https://dl.acm.org/doi/abs/10.1145/3526113.3545619)
 -   [Lindenmayer Systems | Hacker News](https://news.ycombinator.com/item?id=38024405)

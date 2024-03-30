@@ -21,14 +21,46 @@ There's something called metric time
 
 ## Date, Time and Timezone {#date-time-and-timezone}
 
--   [ISO 8601: the better date format | Blog | Kirby Kevinson](https://kirby.kevinson.org/blog/iso-8601-the-better-date-format/)
--   [Designing a REST API: Unix time vs ISO-8601](https://nickb.dev/blog/designing-a-rest-api-unix-time-vs-iso-8601/)
--   [Storing UTC is not a silver bullet (2019) | Lobsters](https://lobste.rs/s/5suewc/storing_utc_is_not_silver_bullet_2019)
--   [You (probably) don't need DateTime · Scorpil](https://scorpil.com/post/you-dont-need-datetime/)
--   [Time on Unix](https://venam.nixers.net/blog/unix/2020/05/02/time-on-unix.html)
--   [Time is an illusion, Unix time doubly so](https://www.netmeister.org/blog/epoch.html)
--   [You might as well timestamp it |&gt; Changelog](https://changelog.com/posts/you-might-as-well-timestamp-it)
--   [Falsehoods programmers believe about time zones](https://www.zainrizvi.io/blog/falsehoods-programmers-believe-about-time-zones/)
--   [Wesley Aptekar-Cassels | Timezone Bullshit](https://blog.wesleyac.com/posts/timezone-bullshit)
--   [Ian Mallett - Reference: Time Standards Page](https://geometrian.com/programming/reference/timestds/index.php)
--   [Storing UTC is not a silver bullet | Jon Skeet's coding blog](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
+
+### Meta {#meta}
+
+-   `data` : Doesn't have a time component but what actual point-in-time it is really is determined by the reader of the data(where they live)
+-   `date/time` : Same as date. The correct time is determined by what timezone your location is assigned to.
+    -   `date/time` by itself doesn't seem
+
+
+#### What to go with? {#what-to-go-with}
+
+|                  | point-in-time data        | interop btwn systems | different systems ops | sortable |
+|------------------|---------------------------|----------------------|-----------------------|----------|
+| unix timestamp   | YES                       | YES                  | YES                   | YES      |
+| date time w tz   | YES + tz origin data      | No, needs logic      | YES                   | YES      |
+| date time w/o tz | No, represent social time |                      |                       |          |
+
+
+#### Which timezone to pick? (If you picked `date time w tz`) {#which-timezone-to-pick--if-you-picked-date-time-w-tz}
+
+-   If you just want `date` and don't want time component, UTC+000 seems like a way to go.
+-   If you need to know the original timezone of the event, then store it with the original timezone.
+-   Unless you have a reason to store something in a local timezone, UTC is the right choice, but no choice is perfect.
+-   If using pg, use:
+    -   `date`
+    -   `time`
+    -   `timestamp {without|with} time zone`
+        -   `timestamp without time zone` essentially [falls into UTC](https://stackoverflow.com/questions/5876218/difference-between-timestamps-with-without-time-zone-in-postgresql)
+    -   AVOID `time with timezone`
+    -   See <https://gist.github.com/henryivesjones/ebd653acbf61cb408380a49659e2be97>
+
+
+### Resources {#resources}
+
+-   [ ] [ISO 8601: the better date format | Blog | Kirby Kevinson](https://kirby.kevinson.org/blog/iso-8601-the-better-date-format/)
+-   [ ] [Designing a REST API: Unix time vs ISO-8601](https://nickb.dev/blog/designing-a-rest-api-unix-time-vs-iso-8601/)
+-   [ ] [Time on Unix](https://venam.nixers.net/blog/unix/2020/05/02/time-on-unix.html)
+-   [ ] [Time is an illusion, Unix time doubly so](https://www.netmeister.org/blog/epoch.html)
+-   [ ] [Ian Mallett - Reference: Time Standards Page](https://geometrian.com/programming/reference/timestds/index.php)
+-   [X] [You might as well timestamp it |&gt; Changelog](https://changelog.com/posts/you-might-as-well-timestamp-it)
+-   [ ] [Falsehoods programmers believe about time zones](https://www.zainrizvi.io/blog/falsehoods-programmers-believe-about-time-zones/)
+-   [-] [Wesley Aptekar-Cassels | Timezone Bullshit](https://blog.wesleyac.com/posts/timezone-bullshit)
+-   [-] [Storing UTC is not a silver bullet (2019) | Lobsters](https://lobste.rs/s/5suewc/storing_utc_is_not_silver_bullet_2019)
+-   [X] [You (probably) don't need DateTime · Scorpil](https://scorpil.com/post/you-dont-need-datetime/)

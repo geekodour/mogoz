@@ -134,6 +134,13 @@ Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replica
 -   [Mycelial](https://www.mycelial.com/platform)
 
 
+### Examples / Uncategorized {#examples-uncategorized}
+
+These are basically approaches that i've yet to go through and categorize further
+
+-   [ServerFree Architecture: run the "backend code" and the DB (SQLite) in the browser | Lobsters](https://lobste.rs/s/yn7pbi/serverfree_architecture_run_backend)
+
+
 ## War stories {#war-stories}
 
 

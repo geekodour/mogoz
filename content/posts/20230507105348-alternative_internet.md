@@ -30,6 +30,7 @@ tags
 
 ## Decentralized {#decentralized}
 
+-   [Centralization, Decentralization, and Internet Standards | Hacker News](https://news.ycombinator.com/item?id=38814367)
 -   These systems usually have common things to deal with
     -   Identity
     -   Key management
@@ -70,6 +71,7 @@ tags
 
 -   See this: [alternative-internet-dump](https://github.com/redecentralize/alternative-internet)
 -   See: [Ecosystem Overview](https://gitlab.com/bluesky-community1/decentralized-ecosystem/-/blob/master/README.md)
+    -   [Bluesky and the AT Protocol: Usable Decentralized Social Media | Lobsters](https://lobste.rs/s/maefew/bluesky_at_protocol_usable)
 -   This is obviously not exhaustive.
 -   These things are complimentary to other things on the internet. Like a centralized/distributed/decentralized/human/social/ai system could make use of them or not.
 
@@ -86,6 +88,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 ### Fidverse {#fidverse}
 
+-   [Where is all of the fediverse? | Lobsters](https://lobste.rs/s/kzl90v/where_is_all_fediverse)
 -   Fediverse is about software implementations and services being able to talk to each other.
 -   This is not a replacement of the idea of indieweb, these can compliment each other.
 -   At the moment, anything that supports activitypub is in the fidverse. If you have a mastodon account you're in fidverse.
@@ -115,6 +118,7 @@ Even when things are not federated, by the nature what these things are we can a
 -   [Receiving Blog Replies from anywhere on the Web](https://www.yusuf.fyi/posts/receiving-blog-replies-from-anywhere)
 -   [Adding Webmentions to My Static Hugo Site · Ana Ulin](https://anaulin.org/blog/adding-webmentions/)
 -   <https://webmention.rocks/>
+-   <https://webmention.app/about>
 -   <https://github.com/zerok/webmentiond>
 -   <https://webmention.io/>
 -   <https://webmention.net/>
@@ -143,6 +147,8 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Links {#links}
 
+-   [Let's make the indie web easier | Hacker News](https://news.ycombinator.com/item?id=38935286)
+-   [Make the indie web easier | Lobsters](https://lobste.rs/s/rqqqx6/make_indie_web_easier)
 -   [Standardizing the Social Web • Aaron Parecki](https://aaronparecki.com/2016/06/22/1/osbridge)
 -   [Removing Support For The IndieWeb - Kev Quirk](https://kevquirk.com/removing-support-for-the-indieweb/) lol
 -   <https://indieweb.org/>
@@ -242,6 +248,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 ### Billion other things {#billion-other-things}
 
+-   <https://github.com/mwmbl/mwmbl> (See [Information Retrieval]({{< relref "20231123014416-information_retrieval.md" >}}))
 -   [Dripline: Check the specs: final thoughts on p2p options | Hypha Worker Co-operative](https://hypha.coop/dripline/p2p-primer-part-4/)
 -   [The first messenger without user IDs | Hacker News](https://news.ycombinator.com/item?id=37105477)
 -   [A few notes on Veilid](https://thomask.sdf.org/blog/2023/08/15/a-few-notes-on-veilid.html)

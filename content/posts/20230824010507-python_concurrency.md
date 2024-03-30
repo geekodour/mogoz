@@ -78,6 +78,8 @@ print("yoyo")
 ### Vectorization {#vectorization}
 
 -   See [The limits of Python vectorization as a performance technique](https://pythonspeed.com/articles/vectorization-python-alternatives/)
+-   [SIMD in Pure Python | Blog](https://www.da.vidbuchanan.co.uk/blog/python-swar.html)
+    -   [From slow to SIMD: A Go optimization story](https://sourcegraph.com/blog/slow-to-simd)
 -   In order for vectorization to work, you need low-level machine code both driving the loop over your data, and running the actual operation. Switching back to Python loops and functionality loses that speed.
 
 

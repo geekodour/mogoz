@@ -85,6 +85,8 @@ We get 2 definitions of `regular languages` from these 2 events.
 ### Flavors {#flavors}
 
 -   PCRE
+-   [Javascript]({{< relref "20221126085225-javascript.md" >}})'s regex in certain cases the engine is stateful
+    -   See [javascript - Why does a RegExp with global flag give wrong results?](https://stackoverflow.com/questions/1520800/why-does-a-regexp-with-global-flag-give-wrong-results)
 
 
 ## Learning Resources {#learning-resources}
