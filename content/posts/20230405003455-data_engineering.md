@@ -371,6 +371,7 @@ Open table formats such as delta or iceberg were developed to serve the big data
 | Hevodata     | NO      | NO            | YES         |
 
 -   Cloud offerings usually have [orchestration]({{< relref "20231025103420-queues_and_scheduling.md" >}}) built in, so need not worry about that.
+-   Lot of Meltano extractors/loaders are airbyte wrappers
 
 
 #### Singer spec based {#singer-spec-based}
@@ -409,6 +410,15 @@ Open table formats such as delta or iceberg were developed to serve the big data
 -   Fivetran is an ELT tool and a direct competitor to Stitch
 
 
+#### DltHub {#dlthub}
+
+-   `dlt` is new kid in town
+-   When using with dagster, a \`dlt\` pipeline would be a dagster asset
+-   You can use singer taps with dlt, but it makes for a bad experience.
+-   dlt is upstream of dbt, dlt loads data, dbt transforms it.
+-   But they're sort of leaning of gpt for some reason, I don't understand why
+
+
 ### DBT (T, Transform) {#dbt--t-transform}
 
 {{< figure src="/ox-hugo/20230405003455-data_engineering-1796721536.png" >}}
@@ -421,6 +431,10 @@ Open table formats such as delta or iceberg were developed to serve the big data
     -   Model : source
     -   Controller : ephemeral model
     -   View : materialized (view, table, incremental) model
+-   DBT Gotchas
+    -   The filename in the `models/` directory is the `table name` that the select statement will write to
+    -   Currently only works with `.yml` files, not `.yaml`
+    -   DBT [is not](https://stackoverflow.com/questions/63002171/can-dbt-connect-to-different-databases-in-the-same-project) a EL/Ingestion tool, the `source` and `target` need to be in the same `database`. i.e, You can't transform data from [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) to [DuckDB]({{< relref "20231123234702-duckdb.md" >}}), you'd have to do the loading/ingestion step separately and then in whichever DB preferable, you do the transformation. After the transformation is done, we can decide where to store the transformed data, i.e the `target`
 
 
 ## Processing Types {#processing-types}

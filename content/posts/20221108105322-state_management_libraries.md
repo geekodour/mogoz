@@ -10,6 +10,21 @@ tags
 I was sort of collecting resources for my study on react and friends because of few projects I'll be building with react. Turns out it's a circus. Too many of them.
 
 
+## Meta {#meta}
+
+
+### Too many schemas! {#too-many-schemas}
+
+{{< figure src="/ox-hugo/20221108105322-state_management_libraries-17312374.png" >}}
+
+With this approach, if you eg. have to update a new field in the frontend you'll need to change schema at multiple levels.
+
+
+#### With [Local First Software (LoFi)]({{< relref "20230915141853-local_first_software.md" >}}) this can change {#with-local-first-software--lofi----20230915141853-local-first-software-dot-md--this-can-change}
+
+{{< figure src="/ox-hugo/20221108105322-state_management_libraries-1462671061.png" >}}
+
+
 ## Understanding state management for react {#understanding-state-management-for-react}
 
 

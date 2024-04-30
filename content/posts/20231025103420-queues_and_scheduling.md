@@ -23,7 +23,10 @@ tags
     > Neither is inherently better and there's other approaches with yet different tradeoffs.
 
 
-## Tools {#tools}
+## Data Pipeline orchestration tooling landscape {#data-pipeline-orchestration-tooling-landscape}
+
+
+### Tools {#tools}
 
 -   Dagster
 -   [windmill](https://www.windmill.dev/)
@@ -31,3 +34,8 @@ tags
 -   [GitHub - cschleiden/go-workflows: Embedded durable workflows for Golang similar to DTFx/Cadence/Temporal](https://github.com/cschleiden/go-workflows)
 -   <https://brandur.org/river>
 -   <https://temporal.io/>
+
+
+### Dagster {#dagster}
+
+-   dagster's approach using asset orchestration trumps the classic task-based orchestration that airflow uses

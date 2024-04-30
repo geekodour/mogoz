@@ -26,8 +26,9 @@ Also see:  [Idea Monkeysphere | titles do not matter](https://geekodour.org/docs
     -   [Local First Software]({{< relref "20230915141853-local_first_software.md" >}}) , [crdt]({{< relref "20230607045339-crdt.md" >}}), [Custom Protocols]({{< relref "20230221012237-custom_protocols.md" >}})
 -   General Shipping/Experimentation (in big volumes)
     -   [peer-to-peer]({{< relref "20221101184751-peer_to_peer.md" >}})
-    -   [Human Computer Interaction ( HCI )]({{< relref "20230806231355-human_computer_interaction_hci.md" >}}) and Tools of thought
-    -   [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}) and [Data Visualization]({{< relref "20230504114958-data_visualization.md" >}}), Maps and [Geography]({{< relref "20221109130937-geography.md" >}})
-    -   smol electronics &amp; embedded stuff
+    -   [Human Computer Interaction ( HCI )]({{< relref "20230806231355-human_computer_interaction_hci.md" >}}) and Tools of thought and [Creative Programming]({{< relref "20230326125239-creative_programming.md" >}})
+    -   [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}) and [Data Visualization]({{< relref "20230504114958-data_visualization.md" >}}), [Mapping Ecosystem]({{< relref "20240430065223-mapping_ecosystem.md" >}}) and [Geography]({{< relref "20221109130937-geography.md" >}})
+    -   smol electronics, modeling, simulation &amp; embedded stuff etc.(Roadmap: <https://github.com/sjpiper145/MakerSkillTree/tree/main>)
 -   Big projects
     -   [Education Research Resources]({{< relref "20220716171912-education_research_resources.md" >}}) and [Archival]({{< relref "20230115032923-archival.md" >}}) and [Open Source LLMs]({{< relref "20230719050449-open_source_llms.md" >}})
+    -   [Digital Humanities?](https://carleton.ca/dighum/community-dh-postdoc/)

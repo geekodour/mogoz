@@ -24,6 +24,12 @@ tags
 ## Raft {#raft}
 
 
+### Leader selection {#leader-selection}
+
+-   The protocol doesn't require a quorum (majority) for a leader election vote to pass, it can function on 2 servers.
+-   When the 3rd one returns, it will see it's raft log is out of date and will synchronise back up and start working again. During that phase it will not make itself a candidate for leader election
+
+
 ## Resources {#resources}
 
 -   [When Does Consistency Require Coordination? | Peter Bailis](http://www.bailis.org/blog/when-does-consistency-require-coordination/)
