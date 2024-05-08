@@ -18,7 +18,7 @@ tags
     -   Locking mechanism implemented within a single database instance to achieve `Strict Serializability`
 -   `2PC`
     -   Solves for atomicity
-    -   2 phase commit is an algorithm for implementing distributed transaction across multiple database instances to ensure all nodes either commit or abort the transaction.
+    -   2 phase commit is an algorithm for implementing distributed transaction([Database Transactions]({{< relref "20231113145513-database_transactions.md" >}})) across multiple database instances to ensure all nodes either commit or abort the transaction.
 
 
 ### Paxos/Raft/Consensus/Replication Protocols vs 2PC {#paxos-raft-consensus-replication-protocols-vs-2pc}

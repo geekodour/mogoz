@@ -76,6 +76,7 @@ This is done differently for different DBs, following is [PostgreSQL]({{< relref
 ## Distributed Transactions {#distributed-transactions}
 
 -   See [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
+-   See [Using Atomic Transactions to Power an Idempotent API](https://brandur.org/http-transactions#create-user)
 -   See [CAP]({{< relref "20221102130004-distributed_systems.md#cap" >}})
 -   This is `Atomicity v/s Partial Failures`
 -   `Transaction Protocol = Concurrency Control(CC) + Atomic Commit Protocol`
@@ -111,3 +112,11 @@ This is done differently for different DBs, following is [PostgreSQL]({{< relref
 -   [How to process distributed transaction within postgresql? - Stack Overflow](https://stackoverflow.com/questions/21109362/how-to-process-distributed-transaction-within-postgresql)
 -   [Distributed transaction on PostgreSQL - Stack Overflow](https://stackoverflow.com/questions/65830457/distributed-transaction-on-postgresql)
 -   [Atomic Commit of Distributed Transactions - PostgreSQL wiki](https://wiki.postgresql.org/wiki/Atomic_Commit_of_Distributed_Transactions)
+
+
+### Long running transactions (Saga) {#long-running-transactions--saga}
+
+-   See [Microservices]({{< relref "20230210012034-microservices.md" >}})
+-   It operates differently comparerd to ACID but achieves similar things at business levels applied correctly
+-   [Long-running transaction - Wikipedia](https://en.wikipedia.org/wiki/Long-running_transaction)
+-   [Pattern: Saga](https://microservices.io/patterns/data/saga.html)

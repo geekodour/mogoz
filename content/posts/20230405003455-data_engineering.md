@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Caches]({{< relref "20221101214226-caches.md" >}})
+: [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Caches]({{< relref "20221101214226-caches.md" >}}), [Database Transactions]({{< relref "20231113145513-database_transactions.md" >}})
 
 {{< figure src="/ox-hugo/data_eng_landscape.jpg" >}}
 
@@ -19,7 +19,7 @@ NOTE: This is just for my understanding
 
 -   Storage Layer: S3, Parquet, Other file types
 -   Transaction Layer: Open table formats, eg. Delta Lake
--   Semantic Layer
+-   Semantic Layer : Cube (This is new kid, an enhancement)
 
 
 ### File listing problem in Data lakes {#file-listing-problem-in-data-lakes}
@@ -119,6 +119,17 @@ NOTE: This is just for my understanding
 ### General recommendations {#general-recommendations}
 
 -   Data processing engines don’t perform well when reading datasets with many small files. You typically want files that are between 64 MB and 1 GB. You don’t want tiny 1 KB files that require excessive I/O overhead.
+
+
+### What's the evolution like? {#what-s-the-evolution-like}
+
+-   <https://blog.twingdata.com/p/the-evolution-of-a-data-stack>
+
+
+## Data pipeline {#data-pipeline}
+
+Point of data pipeline is to generate/maintain data assets (Tables/Files/ML models etc)
+![](/ox-hugo/20230405003455-data_engineering-1854298562.png)
 
 
 ## Data Warehouse and Data Lake {#data-warehouse-and-data-lake}
@@ -277,47 +288,7 @@ Open table formats such as delta or iceberg were developed to serve the big data
 
 -  How
 
-    {{< figure src="/ox-hugo/20230405003455-data_engineering-1276164824.png" >}}
-
-    -   Earlier this was only available to be used via Spark based APIs. But with `delta-rs`, this changes and we can access delta lake with other APIs.
-    -   [DuckDB]({{< relref "20231123234702-duckdb.md" >}}) with pyarrow
-        -   [milicevica23/dbt-duckdb-delta-plugin-demo](https://github.com/milicevica23/dbt-duckdb-delta-plugin-demo)
-        -   [Native Support for Deltalake · duckdb/duckdb · Discussion #4463 · GitHub](https://github.com/duckdb/duckdb/discussions/4463)
-        -   [Build a poor man’s data lake from scratch with DuckDB | Dagster Blog](https://dagster.io/blog/duckdb-data-lake)
-        -   Uses `delta-rs`, an of the Delta Lake protocol in Rust, featuring Python bindings.
-    -   Polars
-        -   Polars Delta Lake connector depends on `delta-rs`
-        -   [Goodbye Spark. Hello Polars + Delta Lake. - by Daniel Beach](https://dataengineeringcentral.substack.com/p/goodbye-spark-hello-polars-delta)
-        -   [Reading Delta Lake Tables into Polars DataFrames | Delta Lake](https://delta.io/blog/2022-12-22-reading-delta-lake-tables-polars-dataframe/)
-        -   [Building a poor man's data lake: Exploring Polars and Delta Lake](https://www.edgarbahilo.com/poor-mans-data-lake-with-polars-deltalake/)
-        -   [pola-rs/polars#11039 Add \`sink_delta\` to write delta table](https://github.com/pola-rs/polars/issues/11039) (Streaming Write Support not Yet)
-    -   [Kafka]({{< relref "20230210012126-kafka.md" >}})
-        -   [delta-io/kafka-delta-ingest](https://github.com/delta-io/kafka-delta-ingest)
-
-<!--list-separator-->
-
-- <span class="org-todo todo TODO">TODO</span>  Merging in Delta
-
-    -   [New features in the Python deltalake 0.12.0 release | Delta Lake](https://delta.io/blog/2023-10-22-delta-rs-python-v0.12.0/)
-    -   [Delta Lake Merge | Delta Lake](https://delta.io/blog/2023-02-14-delta-lake-merge/)
-    -   [pola-rs/polars#11983 Support merge operation for Delta tables](https://github.com/pola-rs/polars/issues/11983)
-    -   [pola-rs/polars#12392 feat(python): \`merge\` w/o pyarrow ](https://github.com/pola-rs/polars/pull/12392)
-    -   [Implement merge command · Issue #850 · delta-io/delta-rs · GitHub](https://github.com/delta-io/delta-rs/issues/850)
-    -   [Support merge (upsert) in Python · Issue #1357 · delta-io/delta-rs · GitHub](https://github.com/delta-io/delta-rs/issues/1357)
-
-    <!--list-separator-->
-
-    -  MERGE INTO
-
-        -   You have some JOIN between one or more columns between two Delta tables. If there is a match then UPDATE, otherwise if there is NO match then INSERT.
-        -   MERGE INTO is slow on big datasets. Think about compaction and access patterns if this happens.
-        -   Having partitioning and using it in the query can help.
-
-    <!--list-separator-->
-
-    -  Merging vs Append
-
-        -   Append: When you know there are no duplicates
+    See [More on Delta Table / Delta Lake]({{< relref "20240503221840-more_on_delta_table_delta_lake.md" >}})
 
 
 ### Dataframe libraries {#dataframe-libraries}
@@ -357,6 +328,9 @@ Open table formats such as delta or iceberg were developed to serve the big data
     -   `targets`: For loading data into different destinations
 -   Issue with Singer is tap/target quality. The spec itself is fine, but the tap/targets written by the community need to be more standardized.
 -   Singer is also a CLI tool??
+
+
+#### <span class="org-todo todo TODO">TODO</span> Reverse ETL? {#reverse-etl}
 
 
 ### Data Pipeline Frameworks (for EL, Extract and Load) {#data-pipeline-frameworks--for-el-extract-and-load}
@@ -419,22 +393,35 @@ Open table formats such as delta or iceberg were developed to serve the big data
 -   But they're sort of leaning of gpt for some reason, I don't understand why
 
 
-### DBT (T, Transform) {#dbt--t-transform}
+### Data Transformation Frameworks {#data-transformation-frameworks}
 
-{{< figure src="/ox-hugo/20230405003455-data_engineering-1796721536.png" >}}
 
--   Working isolated on a database server was complicated. A solution was introduced with dbt.
--   Writing, versioning, testing, deploying, monitoring all that complicated SQL is very challenging. This is what DBT is good for. DBT doesn't replace SQL, it simply augments it by allowing you templatize, modularize, figure out all the inter-dependencies, etc.
--   Why DBT? You would generally use dbt as a transform framework for the same reason you'd use Ruby on Rails or Django etc as a web framework
--   [The unreasonable effectiveness of dbt](https://dbt.picturatechnica.com)
--   Analogy (with MVC, See [Design Patterns]({{< relref "20221125204047-design_patterns.md" >}}))
-    -   Model : source
-    -   Controller : ephemeral model
-    -   View : materialized (view, table, incremental) model
--   DBT Gotchas
-    -   The filename in the `models/` directory is the `table name` that the select statement will write to
-    -   Currently only works with `.yml` files, not `.yaml`
-    -   DBT [is not](https://stackoverflow.com/questions/63002171/can-dbt-connect-to-different-databases-in-the-same-project) a EL/Ingestion tool, the `source` and `target` need to be in the same `database`. i.e, You can't transform data from [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) to [DuckDB]({{< relref "20231123234702-duckdb.md" >}}), you'd have to do the loading/ingestion step separately and then in whichever DB preferable, you do the transformation. After the transformation is done, we can decide where to store the transformed data, i.e the `target`
+#### Examples {#examples}
+
+<!--list-separator-->
+
+-  DBT (T, Transform)
+
+    {{< figure src="/ox-hugo/20230405003455-data_engineering-1796721536.png" >}}
+
+    -   Working isolated on a database server was complicated. A solution was introduced with dbt.
+    -   Writing, versioning, testing, deploying, monitoring all that complicated SQL is very challenging. This is what DBT is good for. DBT doesn't replace SQL, it simply augments it by allowing you templatize, modularize, figure out all the inter-dependencies, etc.
+    -   Why DBT? You would generally use dbt as a transform framework for the same reason you'd use Ruby on Rails or Django etc as a web framework
+    -   [The unreasonable effectiveness of dbt](https://dbt.picturatechnica.com)
+    -   Analogy (with MVC, See [Design Patterns]({{< relref "20221125204047-design_patterns.md" >}}))
+        -   Model : source
+        -   Controller : ephemeral model
+        -   View : materialized (view, table, incremental) model
+    -   DBT Gotchas
+        -   The filename in the `models/` directory is the `table name` that the select statement will write to
+        -   Currently only works with `.yml` files, not `.yaml`
+        -   DBT [is not](https://stackoverflow.com/questions/63002171/can-dbt-connect-to-different-databases-in-the-same-project) a EL/Ingestion tool, the `source` and `target` need to be in the same `database`. i.e, You can't transform data from [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) to [DuckDB]({{< relref "20231123234702-duckdb.md" >}}), you'd have to do the loading/ingestion step separately and then in whichever DB preferable, you do the transformation. After the transformation is done, we can decide where to store the transformed data, i.e the `target`
+
+<!--list-separator-->
+
+-  SQLMesh
+
+    -   [GitHub - TobikoData/sqlmesh](https://github.com/TobikoData/sqlmesh) : Better alternative to DBT??
 
 
 ## Processing Types {#processing-types}
@@ -447,7 +434,14 @@ Open table formats such as delta or iceberg were developed to serve the big data
 
 ### Stream processing {#stream-processing}
 
+-   **Streaming use cases are defined by the consumption SLA of the data, not the production.** 🌟
 -   This can mean different things for different people, eg. for some ingestion pipeline, streaming might just means anything ingesting more often than every ten minutes.
+
+
+#### Architecture examples {#architecture-examples}
+
+-   [Lambda](https://en.wikipedia.org/wiki/Lambda_architecture): Here we merge real-time and historical data together
+-   [Kappa](https://pradeepl.com/blog/kappa-architecture/): If you don’t need a lot of historical data, and only need streaming data.
 
 
 #### Streaming Databases {#streaming-databases}
@@ -455,6 +449,17 @@ Open table formats such as delta or iceberg were developed to serve the big data
 -   [Apache Flink and RisingWave](https://risingwave.com/blog/the-preview-of-stream-processing-performance-report-apache-flink-and-risingwave-comparison/)
 -   [RisingWave, the Rust-Written Open-Source Streaming Database Released Version 1.1](https://www.reddit.com/r/rust/comments/15xd03y/risingwave_the_rustwritten_opensource_streaming/)
 -   [Rethinking Stream Processing and Streaming Databases](https://www.reddit.com/r/apachekafka/comments/10x684l/rethinking_stream_processing_and_streaming/) (Good background)
+
+
+### Update patterns {#update-patterns}
+
+See <https://docs.delta.io/2.0.2/delta-update.html#-write-change-data-into-a-delta-table>
+
+
+#### CDC {#cdc}
+
+
+#### SCD Type2 {#scd-type2}
 
 
 ## Related Topics {#related-topics}
