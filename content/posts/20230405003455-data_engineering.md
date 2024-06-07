@@ -296,6 +296,8 @@ Open table formats such as delta or iceberg were developed to serve the big data
 
 #### Polars {#polars}
 
+More on [Polars]({{< relref "20240510084554-polars.md" >}})
+
 -   Polars can inter-operate with other data processing libraries, including PyArrow. (Note pyarrow and arrow itself are different and polars plays well with both)
 -   Polars [merely uses arrow2 as its in-memory representation](https://news.ycombinator.com/item?id=26454585) of data. Similar to how pandas uses `numpy`. But on top of arrow2, polars implements efficient algorithms for JOINS, GROUPBY, PIVOTs, MELTs, QUERY OPTIMIZATION, etc.
 -   You can convert data between Polars dataframes and other formats, such as Pandas dataframes or Arrow tables
@@ -330,7 +332,9 @@ Open table formats such as delta or iceberg were developed to serve the big data
 -   Singer is also a CLI tool??
 
 
-#### <span class="org-todo todo TODO">TODO</span> Reverse ETL? {#reverse-etl}
+#### Reverse ETL? (confirm?) {#reverse-etl--confirm}
+
+-   This is basically creating operational/transactional database records from analytical db
 
 
 ### Data Pipeline Frameworks (for EL, Extract and Load) {#data-pipeline-frameworks--for-el-extract-and-load}
@@ -429,6 +433,7 @@ Open table formats such as delta or iceberg were developed to serve the big data
 
 ### Batch processing {#batch-processing}
 
+-   See [Batch Processing Patterns]({{< relref "20240606113829-batch_processing_patterns.md" >}})
 -   Ingesting data that's run daily and dumping into a bucket can be a batch operation
 
 
@@ -441,6 +446,7 @@ Open table formats such as delta or iceberg were developed to serve the big data
 #### Architecture examples {#architecture-examples}
 
 -   [Lambda](https://en.wikipedia.org/wiki/Lambda_architecture): Here we merge real-time and historical data together
+    -   [How to create near real-time models with just dbt + SQL - Archive - dbt Community Forum](https://discourse.getdbt.com/t/how-to-create-near-real-time-models-with-just-dbt-sql/1457)
 -   [Kappa](https://pradeepl.com/blog/kappa-architecture/): If you don’t need a lot of historical data, and only need streaming data.
 
 
@@ -454,6 +460,7 @@ Open table formats such as delta or iceberg were developed to serve the big data
 ### Update patterns {#update-patterns}
 
 See <https://docs.delta.io/2.0.2/delta-update.html#-write-change-data-into-a-delta-table>
+See [Batch Processing Patterns]({{< relref "20240606113829-batch_processing_patterns.md" >}})
 
 
 #### CDC {#cdc}
@@ -481,6 +488,40 @@ See [Information Retrieval]({{< relref "20231123014416-information_retrieval.md"
 #### Cold start {#cold-start}
 
 -   If cache crashes, all high traffic goes to db and db can crash again, so we need some way to warm up the cache beforehand
+
+
+## <span class="org-todo todo TODO">TODO</span> Layered architecture {#layered-architecture}
+
+> There is no one fits all architecture that makes sense for all situations. In fact it is mostly the opposite. The role of an architect is to know how to pick and choose patterns/technologies/methodologies to best solve a problem. The worst architects know one way of doing things and force it into every situation.
+>
+> The medallion architecture is one way to architect a data flow. Sometimes 3 stages is good. Sometimes you just need one. Maybe some complicated ones need 5. Also the stages don't necessarily need to be physically separate. A silver layer consisting only of views is perfectly valid.
+>
+> And for the love of money don’t call the layers bronze, silver and gold. I’ve moaned before about it, it is meaningless to users/engineers… like calling 1, 2 and 3. Give the layers meaning to what you intend to use them for. Raw, validated, conformed, enriched, curated, aggregated … people will know exactly what that layer means just by the name.
+>
+> -   Reddit users
+
+
+### Medallion architecture {#medallion-architecture}
+
+-   `bronze/raw/staging/landing`
+    -   for data you have little to no control over, like data imported from external sources
+    -   We may or may not retain these
+-   `silver/intermediate/transform`
+    -   your main work area, the bulk of tables go to this layer, little to no guarantee about forward/backward compatibility with external systems
+    -   Minimal conversion to [Delta Table]({{< relref "20240503221840-more_on_delta_table_delta_lake.md" >}}). Minimal or no typing. Append only, may add columns for source file metadata or date or batch job id to rows. Will grnerally be 1/5th size of raw
+-   `gold/final`
+    -   data that you expose to external system: optimized for queries, strict schema compatibility, etc
+
+
+### How many layers to have? {#how-many-layers-to-have}
+
+-   Sometimes you might just need `bronze` -&gt; `gold`, sometimes the problem might demand something more than these 3 layers etc.
+
+
+### What format should data be in each layer? {#what-format-should-data-be-in-each-layer}
+
+-   The format could be anything, typical convention is raw will have parquet/json etc. Silver will have something like delta table etc, and gold will be some fast query db etc.
+-   But all of these 3 could be the same too. Eg. all of the 3 could be different postgres tables, all 3 could be delta lake tables.
 
 
 ## Links {#links}

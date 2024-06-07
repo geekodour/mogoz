@@ -11,6 +11,16 @@ tags
 ## FAQ {#faq}
 
 
+### How does Delta table related to batch/stream processing {#how-does-delta-table-related-to-batch-stream-processing}
+
+Every table in a Delta Lake is a batch and streaming sink.
+
+
+### What's the [Consistency Model]({{< relref "20231113121413-concurrency_consistency_models.md" >}}) ? {#what-s-the-consistency-model--20231113121413-concurrency-consistency-models-dot-md}
+
+Serializable
+
+
 ### Delta Lake and Streaming {#delta-lake-and-streaming}
 
 -   Some people are using it as a <https://github.com/delta-io/delta-rs/issues/413>
@@ -30,6 +40,11 @@ Delta-rs can read a delta table and create a pyarrow table in memory, which you 
 -   Versioning
 -   Delta tables always return the most up-to-date information, so there is no need to call REFRESH TABLE [manually after changes](https://docs.databricks.com/en/delta/best-practices.html#differences-between-delta-lake-and-parquet-on-apache-spark).
     -   See if we have this gurantee with `delta-rs`
+
+
+### Partitioning on a column in which we change values! {#partitioning-on-a-column-in-which-we-change-values}
+
+-   [sql - How to partition Delta lake table by Year where I have date in my Delta...](https://stackoverflow.com/questions/75157827/how-to-partition-delta-lake-table-by-year-where-i-have-date-in-my-delta-table)
 
 
 ## Delta Table/Lake usage {#delta-table-lake-usage}
