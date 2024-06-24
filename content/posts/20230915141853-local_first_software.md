@@ -15,6 +15,8 @@ I like how Kyle Mathews [describes local first software](https://bricolage.io/so
 >
 > Did people have to be online to collaborate online? Or could they work offline and collaborate peer-to-peer?
 
+-   nice ecosystem review: [GitHub - arn4v/offline-first: A list of projects in the offline-first storage, sync &amp; realtime collaboration/multiplayer space.​](https://github.com/arn4v/offline-first)
+
 
 ## Related Ideas {#related-ideas}
 
@@ -147,6 +149,7 @@ These are basically approaches that i've yet to go through and categorize furthe
 ### HN Comment 1 {#hn-comment-1}
 
 -   Initially we tried to use IndexDB to give us more of the local-first features by caching between loads, but it was more hassle than it was worth.
+    -   <https://gist.github.com/nolanlawson/dc80e449079c2bc33170>
 -   Instead we settled on live queries using Hasrua (we were a very early user / paying customer). We preload all the data that the user is going to need on app boot and then selectively load large chunks as they open their projects. These are then keeping mobx models up to date.
 -   For mutating data we have a simple transaction system that you wrap around models to update them. It records and sends the mutations and makes sure that outstanding mutations are replayed over model changes locally.
 

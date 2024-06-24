@@ -126,6 +126,28 @@ NOTE: This is just for my understanding
 -   <https://blog.twingdata.com/p/the-evolution-of-a-data-stack>
 
 
+### Data cleaning tools {#data-cleaning-tools}
+
+-   This is a slight enhancement
+-   You can always do data cleaning using the standard library methods of the language you're using. (Eg. using optional chaining / coalesing etc)
+-   But there are certain libraries/processes which can maybe make the data cleaning processes simpler/easier to write and maintain/extend etc.
+-   These tools can be especially useful when the response object is not guaranteed to be the exact same and you need some verification around that X,Y,Z field exists etc etc.
+-   In `R`, you have tools such as: [A Grammar of Data Manipulation • dplyr](https://dplyr.tidyverse.org/)
+-   In [Javascript]({{< relref "20221126085225-javascript.md" >}}), you have [tidyjs](https://github.com/pbeshai/tidy?) but it suffers [issues](https://github.com/pbeshai/tidy/issues/73), even loadsh can help a bit i guess but at that point just use optional chaining maybe
+    -   Now for this I thought we can use [effect/schema](https://github.com/Effect-TS/effect/tree/main/packages/schema) or zod for that matter and split it into 2 steps as [mentioned here](https://stackoverflow.com/questions/74809136/parsing-and-flattening-complex-json-with-pydantic):
+        -   The first model should capture the "raw" data more or less in the schema you expect from the API.
+        -   The second model should then reflect your own desired data schema.
+        -   This 2 step process helps debug the pipeline if ever needed. Applies to other validator in other languages like pydantic(python) aswell.
+-   But for this job, I'd personally prefer python+pydantic. Goes good together.
+    -   Some resources
+        -   [Pydantic is all you need: Jason Liu - YouTube](https://www.youtube.com/watch?v=yj-wSRJwrrc) ([Missing - Instructor](https://python.useinstructor.com/concepts/maybe/), Maybe Pattern)
+        -   [Better Data Extraction Using Pydantic and OpenAI Function Calls](https://wandb.ai/jxnlco/function-calls/reports/Better-Data-Extraction-Using-Pydantic-and-OpenAI-Function-Calls--Vmlldzo0ODU4OTA3)
+    -   Some other tools
+        -   <https://glom.readthedocs.io/en/latest/index.html>
+        -   <https://github.com/pytoolz/toolz/>
+-   Another thing handle data cleaning at the application level if possible and [not at the db level](https://stackoverflow.com/questions/72397616/how-to-enforce-the-shape-of-a-json-jsonb-in-postgres). You should always enforce proper constraints if its structured data but most of the data might be unstrutured and we might want to store it in JSONB columns etc.
+
+
 ## Data pipeline {#data-pipeline}
 
 Point of data pipeline is to generate/maintain data assets (Tables/Files/ML models etc)

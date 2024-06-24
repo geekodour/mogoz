@@ -99,18 +99,18 @@ This trades storage for speed and requires half of the heap to be reserved for t
 
 ## GC for different languages {#gc-for-different-languages}
 
-| Language | GC Algorithm                       |
-|----------|------------------------------------|
-| Java     | STW Mark-and-Sweep                 |
-| C#       | STW Mark-and-Sweep                 |
-| Python   | Reference Counting, Mark-and-Sweep |
-| Ruby     | Mark-and-Sweep                     |
-| JS       | Mark-and-Sweep                     |
-| Go       | Concurrent Mark-and-Sweep          |
-| Kotlin   | SWT Mark-and-Sweep                 |
-| Swift    | Auto Ref Counting                  |
-| PHP      | Ref. Count, Mark and Sweep         |
-| C++      | Manual Memory Management, No GC    |
+| Language | GC Algorithm                                       |
+|----------|----------------------------------------------------|
+| Java     | STW Mark-and-Sweep                                 |
+| C#       | STW Mark-and-Sweep                                 |
+| Python   | Reference Counting, Mark-and-Sweep, (Generational) |
+| Ruby     | Mark-and-Sweep                                     |
+| JS       | Mark-and-Sweep                                     |
+| Go       | Concurrent Mark-and-Sweep                          |
+| Kotlin   | SWT Mark-and-Sweep                                 |
+| Swift    | Auto Ref Counting                                  |
+| PHP      | Ref. Count, Mark and Sweep                         |
+| C++      | Manual Memory Management, No GC                    |
 
 
 ### Golang (Outdated) {#golang--outdated}
