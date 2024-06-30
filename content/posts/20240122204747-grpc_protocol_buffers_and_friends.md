@@ -80,6 +80,7 @@ These are complete different RPC protocols, all based on [Protocol Buffers]({{< 
 -   gRPC implements structured RPCs
 -   Hard requirement on [HTTP/2]({{< relref "20230222161545-http.md#http-2" >}})
 -   Dependency on `grpc-go` runtime (generated code and the runtime library are tightly linked)
+-   [gRPC: The Bad Parts | Hacker News](https://news.ycombinator.com/item?id=40798740)
 
 
 #### twirp (2018) {#twirp--2018}
@@ -133,6 +134,6 @@ Can be considered a mix of twirp+grpc but taking only the good parts. Has QoL im
 
 ## <span class="org-todo todo TODO">TODO</span> Schema compatibility {#schema-compatibility}
 
--   <https://yokota.blog/2021/03/29/understanding-json-schema-compatibility/>
+-   [Understanding JSON Schema Compatibility – Robert Yokota](https://yokota.blog/2021/03/29/understanding-json-schema-compatibility/)
 -   <https://archive.is/20220530062503/https://stevenheidel.medium.com/backward-vs-forward-compatibility-9c03c3db15c9>
--   <https://martin.kleppmann.com/2012/12/05/schema-evolution-in-avro-protocol-buffers-thrift.html>
+-   [Schema evolution in Avro, Protocol Buffers and Thrift — Martin Kleppmann’s blog](https://martin.kleppmann.com/2012/12/05/schema-evolution-in-avro-protocol-buffers-thrift.html)

@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Algorithms]({{< relref "20230205172402-algorithms.md" >}}), [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [GPGPU]({{< relref "20230408051445-gpgpu.md" >}})
+: [Algorithms]({{< relref "20230205172402-algorithms.md" >}}), [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [GPGPU]({{< relref "20230408051445-gpgpu.md" >}}), [Computer vision]({{< relref "20240629114811-object_detection.md" >}})
 
 
 ## FAQ {#faq}

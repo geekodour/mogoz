@@ -30,6 +30,7 @@ tags
 
 ## Decentralized {#decentralized}
 
+-   [The Meaning of Decentralization. “Decentralization” is one of the words… | by Vitalik Buterin | Medium](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274)
 -   [Centralization, Decentralization, and Internet Standards | Hacker News](https://news.ycombinator.com/item?id=38814367)
 -   These systems usually have common things to deal with
     -   Identity
@@ -184,6 +185,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Tools {#tools}
 
+-   [Zoomer Tries RSS: In Praise of Yarr - tudor’s website](https://tudorr.ro/blog/zoomer-tries-rss/)
 -   [GitHub - RSS-Bridge/rss-bridge: The RSS feed for websites missing it](https://github.com/RSS-Bridge/rss-bridge)
 -   [GitHub - DIYgod/RSSHub: 🍰 Everything is RSSible](https://github.com/DIYgod/RSSHub)
 -   [GitHub - umputun/rss2twitter: publish rss updates to twitter](https://github.com/umputun/rss2twitter)

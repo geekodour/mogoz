@@ -49,7 +49,14 @@ There's something called metric time
     -   `timestamp {without|with} time zone`
         -   `timestamp without time zone` essentially [falls into UTC](https://stackoverflow.com/questions/5876218/difference-between-timestamps-with-without-time-zone-in-postgresql)
     -   AVOID `time with timezone`
-    -   See <https://gist.github.com/henryivesjones/ebd653acbf61cb408380a49659e2be97>
+        -   See <https://gist.github.com/henryivesjones/ebd653acbf61cb408380a49659e2be97>
+
+
+#### More on unix timestamp (from some article) {#more-on-unix-timestamp--from-some-article}
+
+-   Common misconception is that Unix time can’t be used to represent dates before January 1st, 1970.
+    -   It is timezone agnostoc works across timezones
+-   Unlike Unix timestamp, there is no such thing as a universal DateTime format. Each programming language or tool relies on its own internal logic and implementation details for this data type. For the purpose of this article, we’ll categorize DateTime as an embedded calendar-aware and timezone-aware module, capable of handling the complexity of modern time-keeping systems.
 
 
 ### Resources {#resources}
@@ -59,8 +66,8 @@ There's something called metric time
 -   [ ] [Time on Unix](https://venam.nixers.net/blog/unix/2020/05/02/time-on-unix.html)
 -   [ ] [Time is an illusion, Unix time doubly so](https://www.netmeister.org/blog/epoch.html)
 -   [ ] [Ian Mallett - Reference: Time Standards Page](https://geometrian.com/programming/reference/timestds/index.php)
--   [X] [You might as well timestamp it |&gt; Changelog](https://changelog.com/posts/you-might-as-well-timestamp-it)
 -   [ ] [Falsehoods programmers believe about time zones](https://www.zainrizvi.io/blog/falsehoods-programmers-believe-about-time-zones/)
 -   [-] [Wesley Aptekar-Cassels | Timezone Bullshit](https://blog.wesleyac.com/posts/timezone-bullshit)
 -   [-] [Storing UTC is not a silver bullet (2019) | Lobsters](https://lobste.rs/s/5suewc/storing_utc_is_not_silver_bullet_2019)
+-   [X] [You might as well timestamp it |&gt; Changelog](https://changelog.com/posts/you-might-as-well-timestamp-it)
 -   [X] [You (probably) don't need DateTime · Scorpil](https://scorpil.com/post/you-dont-need-datetime/)

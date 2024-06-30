@@ -81,3 +81,9 @@ These are usually lightweight. And you can use things like tauri/electron to pac
 ### Additional tooling {#additional-tooling}
 
 -   [gltfpack](https://meshoptimizer.org/gltf/) : gltfpack is a tool that can automatically optimize glTF files
+
+
+### Live programming {#live-programming}
+
+-   <https://strudel.cc/>
+-   <https://glicol.org/>
