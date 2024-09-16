@@ -79,6 +79,7 @@ These are complete different RPC protocols, all based on [Protocol Buffers]({{< 
 -   Lacks interoperability with the rest of the Go ecosystem.
 -   gRPC implements structured RPCs
 -   Hard requirement on [HTTP/2]({{< relref "20230222161545-http.md#http-2" >}})
+    -   [gRPC Over HTTP/3 | Lobsters](https://lobste.rs/s/ong3n1/grpc_over_http_3)
 -   Dependency on `grpc-go` runtime (generated code and the runtime library are tightly linked)
 -   [gRPC: The Bad Parts | Hacker News](https://news.ycombinator.com/item?id=40798740)
 

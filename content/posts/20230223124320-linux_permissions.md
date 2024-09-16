@@ -62,6 +62,8 @@ There are 3 additional permission/mode/flag bits
 
 #### setuid and setgid bits {#setuid-and-setgid-bits}
 
+> Different from [subuid and subgid subordinate(uids/gids)]({{< relref "20230218104617-containers.md#subuid-and-subgid-subordinate--uids-gids" >}})
+
 -   These 2 permission bits cause programs to **be executed with different privileges** than those of the person who ran them.
 -   They allow admin to permit **trusted privileged programs** to be run by unprivileged users.
 
@@ -89,6 +91,14 @@ There are 3 additional permission/mode/flag bits
     -   Executable w `setgid` bit enabled runs as the program's group (GID).
     -   The setgid bit does have meaning in a directory
     -   Eg. `xterm(1)`
+
+<!--list-separator-->
+
+-  `sudo / su / gosu / chroot`
+
+    -   setuid and setgid are related to popular linux tools `sudo` and `su` and the newer `gosu`
+    -   `gosu` is used more in [Container]({{< relref "20230218104617-containers.md" >}}) land
+        -   core use case for gosu is to step down from root to a non-privileged user during container startup.
 
 
 ### Directories {#directories}

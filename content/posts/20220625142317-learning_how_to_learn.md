@@ -63,3 +63,9 @@ Habits
 
 memory
 : -   Create meaningful groups and abbreviations.
+
+
+## Resources {#resources}
+
+-   [Learning about distributed systems: where to start?](https://muratbuffalo.blogspot.com/2020/06/learning-about-distributed-systems.html)
+-   [Learning a technical subject](https://muratbuffalo.blogspot.com/2021/12/learning-technical-subject.html)

@@ -1,5 +1,5 @@
 +++
-title = "Language Bindings"
+title = "Language Bindings (FFI)"
 author = ["Hrishikesh Barman"]
 draft = false
 +++
@@ -11,6 +11,7 @@ tags
 ## Study links {#study-links}
 
 -   [Foreign function interface - Wikipedia](https://en.wikipedia.org/wiki/Foreign_function_interface)
+-   [Crossing the impossible FFI boundary, and my gradual descent into madness | Hacker News](https://news.ycombinator.com/item?id=40706467)
 -   [Language binding - Wikipedia](https://en.wikipedia.org/wiki/Language_binding)
 -   [SWIG - Wikipedia](https://en.wikipedia.org/wiki/SWIG)
 -   Python

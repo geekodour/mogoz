@@ -27,6 +27,20 @@ tags
 ## FAQ {#faq}
 
 
+### Setting up auth for golang webapp {#setting-up-auth-for-golang-webapp}
+
+-   See [Identity Management]({{< relref "20230301205430-identity_management.md" >}})
+-   My current pref. is Ory Katros, Supabase(with HTTPOnlyCookies to store the [JWT]({{< relref "20230301214248-jwt.md" >}})), Pocketbase based on convinience and featuers needed
+    -   Supabase and pocketbase gives me the nice UI which is super nice for prototyping
+        -   Supabase when using [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}), Pocketbase when using [sqlite]({{< relref "20230702184501-sqlite.md" >}})
+    -   Ory doesn't have the UI offering in the open source version but seems like the one to go with if we need anything more than supabase/pocketbase
+    -   We can roll our custom one but since I don't want to do much backend stuff esp things other ppl have done better, better to avoid it as i really most of the time need the whole suite of things, eg. password reset, confirmation email all of which becomes real complicated if done manually
+-   For API auth, things can be different the following comment has decent suggetion
+    ![](/ox-hugo/20221109172102-web_authentication-784196282.png)
+-   There's also something called the phantom token approach which i dont think i need really
+    -   [Securing APIs with The Phantom Token Approach | Curity](https://curity.io/resources/learn/phantom-token-pattern/)
+
+
 ### Where to store auth/session token? {#where-to-store-auth-session-token}
 
 -   See [Identity Management]({{< relref "20230301205430-identity_management.md" >}}) and [API Design]({{< relref "20230302195820-api_design.md" >}})

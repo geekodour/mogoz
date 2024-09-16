@@ -19,10 +19,10 @@ tags
 -   SLO / TTLs
 
 
-### Scheduling senarios {#scheduling-senarios}
+### Scheduling scenarios {#scheduling-scenarios}
 
 
-#### Overcapacity {#overcapacity}
+#### Over-capacity {#over-capacity}
 
 The fixed priority systems the article talks about trade off optimal "capacity" utilization for understandable failure dynamics in the overcapacity case. When you're over capacity, the messages that don't go through are the messages with the lowest priority. It's a nice property and simple to implement.
 
@@ -76,7 +76,7 @@ See [Task Queue]({{< relref "20230404163634-task_queue.md" >}}) and [Message Que
 -   Mixed usecase (Inspired by Airflow and Temporal but more opinionated)
     -   The goal of Windmill is to bring the benefits of those workflow engines in a more accessible package
 -   Rely on the ACID properties of [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) to achieve persistence and transactionality of the workflow's state.
--   Idempotence: Assumption to be an at-least-once workflow engine
+-   Idempotence: Assumption to be an `at-least-once` workflow engine
     -   In exceptionally rare events of an infrastructure crash (shutdown, network split, etc): recover automatically but it is up to the application developer to implement idempotency in parts where it is critical
 
 
@@ -182,3 +182,17 @@ See [Task Queue]({{< relref "20230404163634-task_queue.md" >}}) and [Message Que
     > They’re pretty much all designed for a data engineering team to manage many individual pipelines that are external from your application code, whereas temporal is designed to be a system that manages workflow complexity for code that (more often) runs in your application.
     >
     > -   jtmarmon
+
+
+## Orchestration Theory {#orchestration-theory}
+
+See [Nomad]({{< relref "20240407004157-nomad.md" >}}), see [Kubernetes]({{< relref "20221102125748-kubernetes.md" >}}), see [Operating Systems]({{< relref "20221101172456-operating_systems.md" >}})
+
+
+### Resources {#resources}
+
+-   [Carving The Scheduler Out Of Our Orchestrator · The Fly Blog](https://fly.io/blog/carving-the-scheduler-out-of-our-orchestrator/)
+    -   [Get In Losers\*, We're Getting Off Nomad - Fresh Produce - Fly.io](https://community.fly.io/t/get-in-losers-were-getting-off-nomad/12914)
+    -   [Sunsetting Nomad - Fresh Produce - Fly.io](https://community.fly.io/t/sunsetting-nomad/15389)
+    -   [The Party Must Go on - Resume Pods After Spot Instance Shut Down - Muvaffak Onuş, QA Wolf - YouTube](https://www.youtube.com/watch?v=c2MbSM9-7Xs)
+-   [If You Wish to Truly Understand Frappe's Scheduler, You Must First Invent the Universe | Lobsters](https://lobste.rs/s/i3ox7c/if_you_wish_truly_understand_frappe_s)

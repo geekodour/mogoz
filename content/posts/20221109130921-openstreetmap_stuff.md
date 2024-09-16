@@ -22,6 +22,12 @@ So basically there are thing called editors for OSM.
 ## Community {#community}
 
 -   <https://en.osm.town/@openstreetmap/111120663721969898>
+-   [Organizing OpenStreetMap mapping parties | Hacker News](https://news.ycombinator.com/item?id=40009997)
+
+
+## Politics &amp; Tea {#politics-and-tea}
+
+-   [The current state of map design in OpenStreetMap | Hacker News](https://news.ycombinator.com/item?id=40084927)
 
 
 ## Map software {#map-software}

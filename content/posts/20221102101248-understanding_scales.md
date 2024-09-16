@@ -12,6 +12,7 @@ tags
 > -   [This video](https://www.youtube.com/watch?v=qSOVBiEotaw) nicely shows how rich Jeff Bezos is doe.
 > -   \\(10^{13}\\)mts from wherever you're reading this from, [you could see the entire solarsystem infront of your eyes](https://www.youtube.com/watch?v=0fKBhvDjuy0)
 > -   [Orders of magnitude (numbers)](https://en.wikipedia.org/wiki/Orders_of_magnitude_(numbers))
+> -   [Admiral Grace Hopper Explains the Nanosecond - YouTube](https://www.youtube.com/watch?v=9eyFDBPk4Yw)
 
 
 ## Decimal Separator {#decimal-separator}
@@ -35,7 +36,7 @@ One thing that ate my head initially was that some people use `.` [as decimal se
 
 ## bandwidth, latency and throughput {#bandwidth-latency-and-throughput}
 
-Layman explanation don't () me; You live in Guwahati and wish to send `200TiB` of pirated ebooks to your friend in Delhi, out of may options here are two:
+Layman explanation don't ?? (????) me; You live in Guwahati and wish to send `200TiB` of pirated ebooks to your friend in Delhi, out of may options here are two:
 
 -   Send it via mailpost (`High Bandwidth`, `High Latency`)
 -   Send it via IP Network/Internet (`Low Bandwidth`, `Low Latency`)
@@ -226,3 +227,8 @@ An **order of magnitude** is an approximate [position on a **logarithmic scale.*
 -   Laptop can count to 2 billion in 1 second.
 -   So locks are expensive. This is second order reason why [parallel]({{< relref "20221126204257-concurrency.md" >}}) is able to do shit faster.
 -   When we hit Amdahl's law, need to check how split up the problem into spaces that don't require synchronization/serialisation.
+
+
+## Other napkin links {#other-napkin-links}
+
+-   [Neurotechnology Numbers Worth Knowing](https://milan.cvitkovic.net/writing/neurotechnology_numbers_worth_knowing/)

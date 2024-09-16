@@ -64,6 +64,8 @@ tags
 
 -  YOLO! (?)
 
+    -   <https://roboflow.github.io/model-leaderboard/>
+
     > Lot of crazy politics. anyone is coming up with anything. The newer version doesn't mean the newer version of the same thing. superr confusing. Original author left the chat long back cuz ethical reasons
     >
     > "The YOLOv5, YOLOv6, and YOLOv7 teams all say their versions are faster and more accurate than the rest, and for what it's worth, the teams for v4 and v7 overlap, and the implementation for v7 is based on v5. At the end of the day, the only benchmarks that really matter to us are ones using our data and hardware"
@@ -242,6 +244,7 @@ tags
     -   Use the CNN model to do fast inference in production
 -   Basically using foundation models to train fine-tuned models. The foundation model acts as an automatic labeling tool, then you can use that model to get your dataset.
 -   <https://github.com/autodistill/autodistill> allows to do exactly this.
+-   see <https://www.youtube.com/@Roboflow/videos>
 
 
 ### Segmentation {#segmentation}
@@ -273,3 +276,13 @@ tags
 
 -   ImageNet
 -   COCO
+
+
+## OpenCV {#opencv}
+
+-   <https://archive.ph/2024.07.23-031436/https://scottsexton.co/post/opencv_wild_kingdom/>
+
+
+## Resources {#resources}
+
+-   <https://x.com/simonw/status/1828113518610047386>

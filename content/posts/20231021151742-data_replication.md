@@ -5,7 +5,12 @@ draft = false
 +++
 
 tags
-: [Scaling Databases]({{< relref "20230608143206-scaling_databases.md" >}}), [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Concurrency Consistency Models]({{< relref "20231113121413-concurrency_consistency_models.md" >}})
+: [Scaling Databases]({{< relref "20230608143206-scaling_databases.md" >}}), [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Concurrency Consistency Models]({{< relref "20231113121413-concurrency_consistency_models.md" >}}), [Raft]({{< relref "20240912140206-raft.md" >}}), [crdt]({{< relref "20230607045339-crdt.md" >}})
+
+OG Blogpost:
+
+-   [Data Replication Design Spectrum](https://transactional.blog/blog/2024-data-replication-design-spectrum#Hermes)
+-   [Constraining writers in distributed systems](https://shachaf.net/w/constraining-writers-in-distributed-systems)
 
 
 ## FAQ {#faq}
@@ -17,7 +22,15 @@ tags
 -   Fault tolerance
 
 
+### How does [Consensus Protocols]({{< relref "20231118205116-consensus_protocols.md" >}}) relate to [Data Replication]({{< relref "20231021151742-data_replication.md" >}})? {#how-does-consensus-protocols--20231118205116-consensus-protocols-dot-md--relate-to-data-replication--20231021151742-data-replication-dot-md}
+
+-   There are replication architecture which use the concept of leader or there's need of consensus, we need it then.
+-   [When Does Consistency Require Coordination? | Peter Bailis](http://www.bailis.org/blog/when-does-consistency-require-coordination/)
+
+
 ### Retries and Idempotency {#retries-and-idempotency}
+
+See [Data Delivery]({{< relref "20240722202632-data_delivery.md" >}})
 
 -   `At-most-once`: Send request, don't retry, update may not happen
 -   `At-least-once`: Retry request until `acknowledged`, may repeat update
@@ -37,16 +50,6 @@ tags
 -   When we actually don't delete something
 -   But instead just mark it as deleted
 -   Can be GC'ed later
-
-
-## Replication Types {#replication-types}
-
-
-### Based on "How" {#based-on-how}
-
--   Sync
--   Async
--   [Consensus Protocols]({{< relref "20231118205116-consensus_protocols.md" >}})
 
 
 ## Failure Modes {#failure-modes}
@@ -71,32 +74,6 @@ tags
     ![](/ox-hugo/20231021151742-data_replication-2048671749.png)
 
 
-## Architecture Types {#architecture-types}
-
-
-### Leader-Follower {#leader-follower}
-
-
-#### Single Leader {#single-leader}
-
--   Distinct Leader: Master or Primary
--   Followers: Read replicas, slaves, secondaries, participants
--   Flow
-    -   Read through followers
-    -   Write through leaders
--   Replication
-    -   Sync: Blocking
-    -   Async: Non-blocing
-    -   Semi-Sync : Sometime sync/sometimes async
--   Issues
-    -   With async, the new leader might not have the latest writes
-
-
-### Leaderless {#leaderless}
-
--   See [Consensus Protocols]({{< relref "20231118205116-consensus_protocols.md" >}})
-
-
 ## Handling writes in Replicated Systems {#handling-writes-in-replicated-systems}
 
 {{< figure src="/ox-hugo/20231021151742-data_replication-2052247902.png" >}}
@@ -115,51 +92,109 @@ tags
 -   Uses Vector [Clocks]({{< relref "20231119003900-clocks.md" >}}) (partial order)
 
 
-## <span class="org-todo todo TODO">TODO</span> Types {#types}
+## Types &amp; Protocols {#types-and-protocols}
 
-NOTE: Many of these could be different names for same thing
-
-
-### WAL file archiving {#wal-file-archiving}
-
-
-### Full table replication {#full-table-replication}
-
-Full table replication copies all existing, new, and updated data from the primary database to the target, or even to every site in your distributed system.
+> Context(as how I understand and try to fit in my mind):
+>
+> -   Types/methods: Uses cases and variants of replications, "types of replication" becomes what that replication allows
+> -   Protocol: Underlying idea that can be used to implement the different "types of replication"
 
 
-### Key based (incremental) replication {#key-based--incremental--replication}
+### Replication types/methods {#replication-types-methods}
 
-Key-based incremental replication identifies updated and new data using a replication key column in the primary database and only updates data in the replica databases which has changed since the last update. This key is typically a timestamp, datestamp, or an integer.
+> -   These are mostly in context of database and transactional replication but can be applied to any distributed system
+> -   NOTE: Also see [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) on the replication section.
+> -   NOTE: There are other terminologies such as active-active etc.
+>     I am avoiding them as I don't really want to get all that in my head rn.
+>     I am born to strike stones and create fire.
 
+| Context          | Name                                                                                                | Other names                                     | What?                                                                                                                                       |
+|------------------|-----------------------------------------------------------------------------------------------------|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| Database related | Logical                                                                                             |                                                 | PG specific, but logically replicate parts of the data                                                                                      |
+|                  | Streaming                                                                                           | Physical                                        | When we want to stream the changes to replica/standby (In PG, its based on WAL streaming)                                                   |
+|                  | Snapshot                                                                                            |                                                 |                                                                                                                                             |
+|                  | Log based                                                                                           |                                                 | Eg. In case of [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}), WAL based replication, (Streaming replication/WAL archival etc) |
+|                  |                                                                                                     |                                                 |                                                                                                                                             |
+| Transactions     | Synchronous                                                                                         |                                                 | Slow, there should be no lag in data                                                                                                        |
+|                  | Asynchronous                                                                                        |                                                 | Fast, there will be some lag in data                                                                                                        |
+|                  | Semi-Synchronous                                                                                    |                                                 | In case of too many replicas, we selectively do sync for some to ensure some consistency and speed                                          |
+|                  |                                                                                                     |                                                 |                                                                                                                                             |
+| Architecture     | [Leader-Follower](https://arpitbhayani.me/blogs/master-replica-replication/) (single writer/leader) | primary-backup, primary-replica, master-replica | Eg. [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) streaming replication                                                       |
+|                  | Leader-Follower (multi writer/leader)                                                               |                                                 | Eg. CockroachDB(fake multi-writer, write is propagated to the leader)                                                                       |
+|                  | [Multi Master](https://arpitbhayani.me/blogs/replication-formats) (true multi writer)               | multi-primary                                   | Every node is able to `accept and DO` the write. (There are some arch where we have RO replicas etc)                                        |
+|                  | [Leaderless](https://arpitbhayani.me/blogs/leaderless-replication)                                  |                                                 |                                                                                                                                             |
 
-### Log based (incremental) replication {#log-based--incremental--replication}
-
-Log-based incremental replication copies data based on the database binary log file, which provides information on changes to the primary database such as inserts, updates, and deletes.
-
-
-### Logical replication {#logical-replication}
-
-
-### Trigger based replication {#trigger-based-replication}
-
-
-### Real time replication {#real-time-replication}
-
-
-### Streaming replication {#streaming-replication}
-
-
-### Multi master replication {#multi-master-replication}
-
--   More often than not, when people think they "need" multi-master they actually don't.
--   the application needs to be written for such a setup
-
-
-### Master-Master replication {#master-master-replication}
+Following are some notes on types that I am little familiar with.
 
 
-### active-active replication {#active-active-replication}
+#### Leader-Follower {#leader-follower}
+
+> -   These can be used to lower load on primary/leader and also can be used as a failover mechanism
+> -   It's much easier to achieve consistency with Leader-Follower setup than to use a "true multi master setup"
+
+<!--list-separator-->
+
+-  Single writer
+
+<!--list-separator-->
+
+-  Multi writer (multiple writers accept, but only leader writes)
+
+    Not all servers accept writes, they proxy them to the leader.
+    <https://www.reddit.com/r/PostgreSQL/comments/14g0vls/framework_for_achieving_postgresql_multimaster/>
+
+
+#### Multi Master {#multi-master}
+
+> -   More often than not, when people think they "need" multi-master they actually don't.
+> -   Additionally: the application needs to be written for such a setup.
+> -   People don't seem to understand that almost no platform is automatically compatible with MM out of the box. You have to account for sequence allocation, conflict management, cumulative data types, read/write race conditions (PACELC), session / server affinity, and far more besides. I
+
+Any replica can process a request and distribute a new state.
+
+<!--list-separator-->
+
+-  Main challenges
+
+    -   `conflict prevention` and `conflict resolution`
+    -   Synchronous(eager): Conflict prevention
+    -   Async(lazy): Conflict resolution
+
+<!--list-separator-->
+
+-  Ways to implement
+
+    There are diff protocols to solve this
+
+    -   Usually needs some form of distributed concurrency control must be used, such as a distributed lock manager.
+    -   virtual synchrony model can be used aswell, chain replication etc. (See "Replication Protocols" in this page)
+
+
+### Replication protocols {#replication-protocols}
+
+> -   Now databases are also distributed systems but I wanted to separate out systems which need to replication beyond "database" needs, hence this distinction in types.
+> -   [Types of Replication - SQL Server | Microsoft Learn](https://learn.microsoft.com/en-us/sql/relational-databases/replication/types-of-replication?view=sql-server-ver16) (Reading this I realized the names are very loosly held, don't go by names, this is similar to [Design Patterns]({{< relref "20221125204047-design_patterns.md" >}}))
+> -   [Data Replication Design Spectrum](https://transactional.blog/blog/2024-data-replication-design-spectrum) 🌟
+
+| Name                           | What? | Incremental | Example |
+|--------------------------------|-------|-------------|---------|
+| Streaming/Physical             |       |             |         |
+| Broadcast based                |       |             |         |
+| Chain based                    |       |             |         |
+| Re-configuration based         |       |             |         |
+| State Machine Replication(SMR) |       |             |         |
+| Virtual Synchrony              |       |             |         |
+| Hermes                         |       |             |         |
+
+
+#### Notes on some replication protocols {#notes-on-some-replication-protocols}
+
+<!--list-separator-->
+
+-  Viewstamped Replication Protocol
+
+    -   Q: This is consensus protocol or replication protocol?
+    -   See [Consensus Protocols]({{< relref "20231118205116-consensus_protocols.md" >}})
 
 
 ## TO Read {#to-read}
@@ -167,26 +202,4 @@ Log-based incremental replication copies data based on the database binary log f
 -   Chain replication: <https://www.cs.princeton.edu/courses/archive/fall16/cos418/docs/L13-strong-cap.pdf>
 -   I believe MongoDB has moved to a RAFT based algorithm in their new replication protocol, CockroachDB uses a variation on it. It and PAXOS are the two of the most common distributed consensus approaches I believe.
 -   DDIA : Chapter 5 &amp; 7
--   [Replication, Clustering, and Connection Pooling - PostgreSQL wiki](https://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection_Pooling)
--   [PostgreSQL: Documentation: 16: Chapter 27. High Availability, Load Balancing,...](https://www.postgresql.org/docs/current/high-availability.html)
--   <https://en.wikipedia.org/wiki/Replication_(computing)>
--   <https://arpitbhayani.me/blogs/multi-master-replication/>
--   <https://arpitbhayani.me/blogs/master-replica-replication/>
--   <https://www.reddit.com/r/SQLServer/comments/brqhfc/is_transactional_replication_the_right_approach/>
--   <https://www.reddit.com/r/dataengineering/comments/130ls2m/how_does_your_company_handle_replication_and_cdc/>
 -   <https://debezium.io/>
--   <https://docs.google.com/spreadsheets/d/1DwobnPHZCCAYCcgR3u62-XFRwWQbbTXeurYo2-2rR0A/edit#gid=0>
--   <https://www.reddit.com/r/PostgreSQL/comments/9fjeoe/postgresql_tutorial_getting_started_with/>
--   <https://redis.com/blog/what-is-data-replication/>
--   <https://www.keboola.com/blog/database-replication-techniques>
--   <https://learn.microsoft.com/en-us/sql/relational-databases/replication/types-of-replication?view=sql-server-ver16>
--   <https://github.com/neuroforgede/pg_auto_failover_ansible>
--   <https://github.com/hapostgres/pg_auto_failover>
--   <https://www.2ndquadrant.com/en/blog/logical-replication-postgresql-10/>
--   <https://www.citusdata.com/blog/2018/02/21/three-approaches-to-postgresql-replication/>
--   <https://www.reddit.com/r/PostgreSQL/comments/10qn58p/logical_replication_in_postgresql/>
--   <https://medium.com/@piyushbhangale1995/logical-replication-in-postgresql-c448e4b3eb95>
--   <https://www.reddit.com/r/PostgreSQL/comments/14g0vls/framework_for_achieving_postgresql_multimaster/>
--   <https://medium.com/@atakanserbes/understanding-database-replication-a-practical-overview-dbe23344acc7>
--   <https://www.enterprisedb.com/>
--   [Follower Reads](https://martinfowler.com/articles/patterns-of-distributed-systems/follower-reads.html)

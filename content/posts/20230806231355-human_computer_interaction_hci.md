@@ -76,6 +76,7 @@ tags
 ### Reactive databases {#reactive-databases}
 
 -   [Building Personal Software with Reactive Databases (PhD defense at MIT) - YouTube](https://www.youtube.com/watch?v=CPKsS3SJU4o)
+-   See [Local First Software (LoFi)]({{< relref "20230915141853-local_first_software.md" >}})
 
 
 ### Explanatory Explanations / [Creative Programming]({{< relref "20230326125239-creative_programming.md" >}}) {#explanatory-explanations-creative-programming--20230326125239-creative-programming-dot-md}
@@ -152,6 +153,11 @@ tags
 -   [yoheinakajima/instagraph](https://github.com/yoheinakajima/instagraph#features-)
 
 
+### Visual programming {#visual-programming}
+
+-   [Pipes: A spiritual successor to Yahoo Pipes | Hacker News](https://news.ycombinator.com/item?id=40841980)
+
+
 ### Notations {#notations}
 
 -   [The Origins of the Generic Mapping Tools | Hacker News](https://news.ycombinator.com/item?id=39786124)
@@ -174,6 +180,8 @@ tags
 
 -   See [Data Visualization]({{< relref "20230504114958-data_visualization.md" >}})
 -   ["Supporting Data Journalism through Compilers for Visual Inputs" by Parker Zi...](https://www.youtube.com/watch?v=MQnVmEw6ISQ)
+    -   [Journalism in the Digital Age | Hacker News](https://news.ycombinator.com/item?id=40033533)
+    -   [AI for Data Journalism: demonstrating what we can do with this stuff | Hacker News](https://news.ycombinator.com/item?id=40111784)
 
 
 ### End user development/programming {#end-user-development-programming}
@@ -184,6 +192,14 @@ tags
     -   [cartokit](https://twitter.com/parker_ziegler/status/1718998694748713463): Style maps (See [Geography]({{< relref "20221109130937-geography.md" >}}))
 -   Voice directed programming
     -   [Cursorless is alien magic from the future - Xe Iaso](https://xeiaso.net/notes/cursorless-alien-magic/)
+
+
+## X-programming {#x-programming}
+
+-   [Creative Programming]({{< relref "20230326125239-creative_programming.md" >}})
+-   Flow based programming
+-   [What is Table-Oriented Programming? | Lobsters](https://lobste.rs/s/pijs3w/what_is_table_oriented_programming)
+-   [Functional Programming]({{< relref "20221125204135-functional_programming.md" >}})
 
 
 ## Resources {#resources}

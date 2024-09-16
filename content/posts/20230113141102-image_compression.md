@@ -129,6 +129,11 @@ These are image formats used in medical imaging to store and transmit medical im
 -   Newer alternative is EPS?
 
 
+## Media Metadata {#media-metadata}
+
+{{< figure src="/ox-hugo/20230113141102-image_compression-760330970.png" >}}
+
+
 ## Resources {#resources}
 
 

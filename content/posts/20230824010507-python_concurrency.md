@@ -357,6 +357,15 @@ print("yoyo")
 
 <!--list-separator-->
 
+-  Waiting
+
+    -   as_completed vs `wait`
+        -   Use `as_completed()` to get results for tasks as they complete.
+            -   `as_completed()` function does NOT let you process tasks in the order that they were submitted to the thread pool. For that use `map`
+        -   Use `wait()` to wait for one or all tasks to complete.
+
+<!--list-separator-->
+
 -  Error handling
 
     ```python
@@ -369,25 +378,31 @@ print("yoyo")
     # TODO: In the ideal case, len(done) will be 1, but if in any case, wait
     #       itself is called after the fist exception len(done) will not be 1
     done, _ = futures.wait(worker_updates, return_when=futures.FIRST_EXCEPTION)
-    if len(done) == 1:
-        maybe_exception = done.pop()
-        if maybe_exception.exception():
-            # shutdown pool and can all futures
-            # NOTE: We don't need to separately use cancel() here
-            executor.shutdown(wait=True, cancel_futures=True)
-            # NOTE: Cancelling non-running jobs is enough for our usecase,
-            #       running workers will run till completion or not. we don't
-            #       have to use threading.Event to write custom logic to stop
-            #       already running jobs when this exception occurs based on how
-            #       our jobs tables are structured.
-            # NOTE: We could however do it just so that we don't un-nessarily
-            #       push to s3 but it'll need our code to handle a threadsafe
-            #       event variable now and do not want to do that atm
+    # if len(done) == 1:
+    #     maybe_exception = done.pop()
+    #     if maybe_exception.exception():
+    #         # shutdown pool and can all futures
+    #         # NOTE: We don't need to separately use cancel() here
+    #         executor.shutdown(wait=True, cancel_futures=True)
+    #         # NOTE: Cancelling non-running jobs is enough for our usecase,
+    #         #       running workers will run till completion or not. we don't
+    #         #       have to use threading.Event to write custom logic to stop
+    #         #       already running jobs when this exception occurs based on how
+    #         #       our jobs tables are structured.
+    #         # NOTE: We could however do it just so that we don't un-nessarily
+    #         #       push to s3 but it'll need our code to handle a threadsafe
+    #         #       event variable now and do not want to do that atm
 
-            # re-raise exception so that whatever's executing the process is
-            # notified of it. For some reason calling result() was not raisnig
-            # the error as expected
-            raise maybe_exception.exception()
+    #         # re-raise exception so that whatever's executing the process is
+    #         # notified of it. For some reason calling result() was not raisnig
+    #         # the error as expected
+    #         raise maybe_exception.exception()
+    # NOTE: we can do the len(done) == 1 thing, but by the we might have other exception in the list by the time that returns. So we could have something like the following as-well.
+    for task in done:
+        if task.exception():
+            executor.shutdown(wait=True, cancel_futures=True)
+            L.error("ocr", ad_id=worker_updates[task])
+            raise task.exception()
     ```
 
 <!--list-separator-->
@@ -416,3 +431,117 @@ print("yoyo")
 ## Reading links {#reading-links}
 
 -   [500 Lines or LessA Web Crawler With asyncio Coroutines](https://aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html)
+
+
+## Signal Handling, and Threads in Python {#signal-handling-and-threads-in-python}
+
+
+### Meta info {#meta-info}
+
+-   The handling of signals is different for os to os
+-   A Python signal handler does not get executed inside the low-level (C) signal handler.
+-   Python signal handlers are `always executed in the main Python thread` of the main interpreter, even if the signal was received in another thread.
+    -   This means that signals can’t be used as a means of inter-thread communication. You can use the synchronization primitives from the threading module instead.
+    -   Only the main thread of the main interpreter is allowed to set a new signal handler.
+-   Things are never super safe: Most notably, a KeyboardInterrupt may appear at any point during execution. Most Python code, including the standard library, cannot be made robust against this, and so a KeyboardInterrupt (or any other exception resulting from a signal handler) may on rare occasions put the program in an unexpected state.
+
+
+### writing Signal handlers {#writing-signal-handlers}
+
+
+#### sys.exit vs os._exit {#sys-dot-exit-vs-os-dot-exit}
+
+-   `sys.exit` vs `os._exit`: `sys.exit` only throws an exception and aborts the current thread rather than the whole process.
+    -   `os._exit` is usually bad, no finally blocks, bufferi/o ops may not be complete etc.
+
+
+#### Default signal handlers (see `SIG_DFL`) {#default-signal-handlers--see-sig-dfl}
+
+<!--list-separator-->
+
+-  SIGINT
+
+    -   `SIGINT` is translated into a `KeyboardInterrupt` exception if the parent process has not changed it.
+    -   from: <https://blog.miguelgrinberg.com/post/how-to-kill-a-python-thread>
+    -   Instead of using a signal handler, in many cases we could also catch and do something with the `KeyboardInterrupt` exception but it depends on the scenario.
+        -   Also `except Exception:` doesn't catch `KeyboardInterrupt`
+
+<!--list-separator-->
+
+-  SIGTERM
+
+    -   python does not register a handler for the SIGTERM signal.
+    -   That means that the system will take the default action. On linux, the default action (according to the signal man page) for a SIGTERM is to terminate the process.
+
+<!--list-separator-->
+
+-  SIGKILL
+
+
+### Python [Threads]({{< relref "20221101173032-threads.md" >}}) and [Signals]({{< relref "20221101173527-ipc.md#signals" >}}) {#python-threads--20221101173032-threads-dot-md--and-signals--20221101173527-ipc-dot-md}
+
+
+#### Handling Ctrl+C {#handling-ctrl-plus-c}
+
+> "In the above run, I pressed Ctrl-C when the application reached the 7th iteration. At this point the main thread of the application raised the KeyboardInterrupt exception and wanted to exit, but the background thread did not comply and kept running. At the 13th iteration I pressed Ctrl-C a second time, and this time the application did exit"
+
+My current preference is like the following if using ThreadPoolExecutor:
+
+```python
+# in the main thread
+def exit_thread(executor):
+   L.info("shutting down. waiting for in-flight threads to complete")
+   # NOTE: wait=False returns immediately but running thread runs till completion
+   # NOTE: there's some undefined(bug?) with ThreadPoolExecutor.submit
+   #       when submitting 21M items. Signal handler using
+   #       executor.shutdown goes into some kind of a lock. But its
+   #       works as-expected once items are submitted. And
+   #       SIGTERM/SIGKILL etc will always work as expected.
+   executor.shutdown(wait=False, cancel_futures=True)
+   # reset the handler so that normal handling continues so that we don't get the log everytime we hit ctrl+c
+   signal.signal(signal.SIGINT, signal.getsignal(signal.SIGINT))
+   sys.exit(0) # exiting main thread, if worker thread raises, it'll not be caught
+
+
+signal.signal(signal.SIGINT, lambda s, f: exit_thread(executor))
+```
+
+
+#### How to kill a running python thread? {#how-to-kill-a-running-python-thread}
+
+-   You can't.
+-   In case of `features`, if we use `cancel`, "If the call is currently being executed or finished running and cannot be cancelled then the method will return `False`" (see [this](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.cancel))
+-   References
+    -   [How to exit ThreadPoolExecutor with statement immediately when a future is running](https://stackoverflow.com/questions/75310731/how-to-exit-threadpoolexecutor-with-statement-immediately-when-a-future-is-runni)
+    -   [Making it simpler to gracefully exit threads](https://discuss.python.org/t/making-it-simpler-to-gracefully-exit-threads/34019/4)
+    -   [How kill a Thread?](https://discuss.python.org/t/how-kill-a-thread/42959/3)
+
+
+#### Case of ThreadPoolExecutor {#case-of-threadpoolexecutor}
+
+-   `ThreadPoolExecutor` is super nice but it's not suitable for long running tasks.
+    -   All threads enqueued to ThreadPoolExecutor will be joined before the interpreter can exit.
+    -   So in-essence, these are more akin to `non-daemon` threads.
+
+
+#### What are the workarounds if I can't kill a thread? {#what-are-the-workarounds-if-i-can-t-kill-a-thread}
+
+<!--list-separator-->
+
+-  Thread where main thing is a core loop
+
+    -   Use `Event` to signal further processing and `return`
+        -   [How To Stop Running Tasks in the ThreadPoolExecutor in Python](https://superfastpython.com/threadpoolexecutor-stop-tasks/)
+
+<!--list-separator-->
+
+-  Thread where main thing is a NOT core loop (Eg. long running I/O operation)
+
+    -   Two Ctrl+C: "The wait mechanism that Python uses during exit has a provision to abort when a second interrupt signal is received. This is why a second Ctrl-C ends the process immediately." (could not find a proper source)
+    -   Handle SIGINT and `os._exit`
+    -   set `daemon=True`, this will kill the thread if main thread gets an interrup but no cleanup will be done!
+
+
+### Resources for later {#resources-for-later}
+
+-   [Signal handling in a multithreaded socket server | Redowan's Reflections](https://rednafi.com/python/multithreaded_socket_server_signal_handling/)

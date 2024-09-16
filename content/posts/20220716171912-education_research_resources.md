@@ -236,6 +236,7 @@ Lot of Open-X
 -   [Open Data Day, 2021. The Open Data journey. - Apoorv Anand](https://behindbars.netlify.app/docs/open-data-day-2021/)
 -   [Open Scholarship Knowledge Base | OER Commons](https://www.oercommons.org/hubs/OSKB)
 -   [OSF](https://osf.io/)
+-   <https://rri-tools.eu/about-rri>
 -   [Center for Open Science](https://www.cos.io/)
 -   [Center for Open Science](https://www.cos.io/)
 -   [Welcome to Open Library | Open Library](https://openlibrary.org/)

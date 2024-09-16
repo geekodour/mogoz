@@ -39,6 +39,7 @@ tags
 
 ### Embeddings vs Tokens {#embeddings-vs-tokens}
 
+-   See [Embeddings]({{< relref "20240916155700-embeddings.md" >}})
 -   [The Illustrated Word2vec - A Gentle Intro to Word Embeddings in Machine Learning - YouTube](https://www.youtube.com/watch?v=ISPId9Lhc1g)
 -   Tokens
     -   These are inputs
@@ -72,6 +73,7 @@ tags
 -   Autoencoder LLMs are efficient for encoding (“understanding”) NL
 -   Autoregressive LLMs can encode and generate NL, but may be slower
 -   Discussion on encoder-decoder: [A BERT for laptops, from scratch | Hacker News](https://news.ycombinator.com/item?id=37425130)
+    -   [What happened to BERT &amp; T5? On Transformer Encoders, PrefixLM and Denoising Objectives — Yi Tay](https://www.yitay.net/blog/model-architecture-blogpost-encoders-prefixlm-denoising)
 
 
 ### LLM Implementations/Architectures {#llm-implementations-architectures}
@@ -114,7 +116,7 @@ Generally LLMs are trained on 1 eval (epoch)
 ## RLHF {#rlhf}
 
 -   This is the secret sauce in all new LLMs
--   Reinforcement learning from human feedback
+-   [Reinforcement Learning]({{< relref "20240701105002-reinforcement_learning.md" >}}) from human feedback
 
 
 ## GPT in production {#gpt-in-production}

@@ -71,7 +71,7 @@ You've tried all performance optimizations, nothing seems to meet your needs. It
 -   It's a concept related to distributed systems(different machines) and uses the ideas of database partitioning in dist sys setting.
 -   Because this results in smaller tables it'll most likely improve performance etc(at the db layer atleast).
 -   Vitess(MySQL) and [Citus](https://www.citusdata.com/)([PostgreSQL]({{< relref "20221102123302-postgresql.md" >}})) can help you shard v/s sharding manually.
--   You also have databases and services that [do sharding](https://research.google/pubs/pub39966/) for you (Eg.[cockroachDB](https://www.cockroachlabs.com/), planetscale, dynamo, cassandra, yugabytedb etc.)
+-   You also have databases and services that [do sharding](https://research.google/pubs/pub39966/) for you (Eg.[cockroachDB](https://www.cockroachlabs.com/), planetscale, dynamo, cassandra, yugabytedb, spanner etc.)
 
 
 ### What it involves? {#what-it-involves}

@@ -17,6 +17,7 @@ Also see:  [Idea Monkeysphere | titles do not matter](https://geekodour.org/docs
     -   [Nick Land-Meltdown](http://www.ccru.net/swarm1/1_melt.htm)
     -   [Cybernetic Culture Research Unit - Wikipedia](https://en.wikipedia.org/wiki/Cybernetic_Culture_Research_Unit)
 -   Cartography
+-   [Etymology](https://www.etymonline.com/)/etiology
 -   [Representing Time and Date]({{< relref "20231019125530-representing_time_and_date.md" >}})
 
 

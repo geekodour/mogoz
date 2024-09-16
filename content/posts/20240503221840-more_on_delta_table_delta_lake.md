@@ -18,7 +18,17 @@ Every table in a Delta Lake is a batch and streaming sink.
 
 ### What's the [Consistency Model]({{< relref "20231113121413-concurrency_consistency_models.md" >}}) ? {#what-s-the-consistency-model--20231113121413-concurrency-consistency-models-dot-md}
 
-Serializable
+{{< figure src="/ox-hugo/20240503221840-more_on_delta_table_delta_lake-1687335546.png" >}}
+
+-   Serializable
+-   Basically acquire a shared singular lock on the table.
+-   The Delta Lake protocol expressly relies on "atomic primitives of the underlying filesystem to ensure concurrent writers do not overwrite each others entries."
+-   [Understanding Delta Lake's consistency model — Jack Vanlightly](https://jack-vanlightly.com/analyses/2024/4/29/understanding-delta-lakes-consistency-model)
+-   [Concurrency limitations for Delta Lake on AWS](https://www.buoyantdata.com/blog/2023-11-27-concurrency-limitations-with-deltalake-on-aws.html)
+-   [Transactions - Delta Lake Documentation](https://delta-io.github.io/delta-rs/how-delta-lake-works/delta-lake-acid-transactions/#what-are-transactions)
+-   `s3 x dynamodb`
+    -   we need dynamodb for managing the locking logic, but individual delta tables don't need individual dynamodb. i.e one dynamodb table is enough for multiple buckets/multiple delta tables.
+    -   Keys are: range_key="fileName" and hash_key="tablePath"
 
 
 ### Delta Lake and Streaming {#delta-lake-and-streaming}

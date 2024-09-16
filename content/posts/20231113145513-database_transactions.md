@@ -120,3 +120,9 @@ This is done differently for different DBs, following is [PostgreSQL]({{< relref
 -   It operates differently comparerd to ACID but achieves similar things at business levels applied correctly
 -   [Long-running transaction - Wikipedia](https://en.wikipedia.org/wiki/Long-running_transaction)
 -   [Pattern: Saga](https://microservices.io/patterns/data/saga.html)
+
+
+## Resources {#resources}
+
+-   [Postgres sequences can commit out-of-order](https://blog.sequinstream.com/postgres-sequences-can-commit-out-of-order/)
+-   [Rediscovering Transaction Processing From History and First Principles](https://tigerbeetle.com/blog/2024-07-23-rediscovering-transaction-processing-from-history-and-first-principles)

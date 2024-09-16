@@ -87,6 +87,11 @@ Even when things are not federated, by the nature what these things are we can a
 -   <https://github.com/Cameri/smtp-nostr-gateway>
 
 
+### Semantic Web {#semantic-web}
+
+-   [The semantic web is now widely adopted | Hacker News](https://news.ycombinator.com/item?id=41307011)
+
+
 ### Fidverse {#fidverse}
 
 -   [Where is all of the fediverse? | Lobsters](https://lobste.rs/s/kzl90v/where_is_all_fediverse)
@@ -167,6 +172,8 @@ Even when things are not federated, by the nature what these things are we can a
 #### Learn more {#learn-more}
 
 -   [Reclaiming the Web with a Personal Reader](https://olano.dev/2023-12-12-reclaiming-the-web-with-a-personal-reader/)
+-   [MIME, RSS, and existential torment | Lobsters](https://lobste.rs/s/jahu16/mime_rss_existential_torment)
+    -   [From RSS to My Kindle | Hacker News](https://news.ycombinator.com/item?id=40773125)
 -   [Use RSS for privacy and efficiency {rsapkf/www}](https://rsapkf.org/weblog/q2z)
 -   [RSS can be used to distribute all sorts of information | Hacker News](https://news.ycombinator.com/item?id=38343385)
 -   [What RSS Gets Right](https://www.charlieharrington.com/unexpected-useless-and-urgent)
@@ -185,7 +192,9 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Tools {#tools}
 
+-   [Show HN: Full Text, Full Archive RSS Feeds for Any Blog | Hacker News](https://news.ycombinator.com/item?id=41425085)
 -   [Zoomer Tries RSS: In Praise of Yarr - tudor’s website](https://tudorr.ro/blog/zoomer-tries-rss/)
+-   [GitHub Trending RSS](https://mshibanami.github.io/GitHubTrendingRSS/)
 -   [GitHub - RSS-Bridge/rss-bridge: The RSS feed for websites missing it](https://github.com/RSS-Bridge/rss-bridge)
 -   [GitHub - DIYgod/RSSHub: 🍰 Everything is RSSible](https://github.com/DIYgod/RSSHub)
 -   [GitHub - umputun/rss2twitter: publish rss updates to twitter](https://github.com/umputun/rss2twitter)
@@ -250,7 +259,9 @@ Even when things are not federated, by the nature what these things are we can a
 
 ### Billion other things {#billion-other-things}
 
+-   [pwr - paced web reader | Lobsters](https://lobste.rs/s/4mnch6/pwr_paced_web_reader)
 -   <https://github.com/mwmbl/mwmbl> (See [Information Retrieval]({{< relref "20231123014416-information_retrieval.md" >}}))
+-   [Rediscovering the Small Web - Neustadt.fr](https://neustadt.fr/essays/the-small-web/)
 -   [Dripline: Check the specs: final thoughts on p2p options | Hypha Worker Co-operative](https://hypha.coop/dripline/p2p-primer-part-4/)
 -   [The first messenger without user IDs | Hacker News](https://news.ycombinator.com/item?id=37105477)
 -   [A few notes on Veilid](https://thomask.sdf.org/blog/2023/08/15/a-few-notes-on-veilid.html)

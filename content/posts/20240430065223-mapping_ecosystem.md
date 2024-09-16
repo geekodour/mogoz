@@ -48,6 +48,7 @@ tags
 -   See
     -   [ ] [The Overture Maps Foundation: Marc Prioleau - MBM#43 - YouTube](https://www.youtube.com/watch?v=OSK4DlFePzk)
     -   [ ] [Overture Maps Foundation releases open map dataset | Hacker News](https://news.ycombinator.com/item?id=36879461)
+    -   [ ] [Overture Maps Foundation Releases Beta of Its First Open Map Dataset | Hacker News](https://news.ycombinator.com/item?id=40057322)
     -   [ ] [Overture's Global Geospatial Datasets](https://tech.marksblogg.com/overture-gis-data.html)
 
 

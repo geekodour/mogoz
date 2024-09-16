@@ -87,6 +87,23 @@ In the picture, changes to `hostname` in `UTS NS X` won't be visible to other `U
 Picture clearly shows that PIDs just don't get created inside the container, it'll have ancestors back to the initial namespace. But the parent will not be visiable from the child process using things like `getppid()`
 
 
+#### `htop` on host shows container processes (PID namespace)? {#htop-on-host-shows-container-processes--pid-namespace}
+
+> from the manpage
+>
+> A process is visible to other processes in its PID namespace, and
+> to the processes in each direct ancestor PID namespace going back
+> to the root PID namespace.  In this context, "visible" means that
+> one process can be the target of operations by another process
+> using system calls that specify a process ID.  Conversely, the
+> processes in a child PID namespace can't see processes in the
+> parent and further removed ancestor namespaces.
+
+-   This is expected, you [can hide them with Shift+O](https://github.com/htop-dev/htop/issues/1236) if you want
+-   [virtual machine - Docker Processes Shown on Host Process List - Stack Overflow](https://stackoverflow.com/questions/26659129/docker-processes-shown-on-host-process-list)
+-   But usually containers will run in their own pid namespace will not have visibility into the host. We can run it in host namespace by passing flags then it'll also see host processes inside the container etc.
+
+
 ### Network `CLONE_NEWNET` (2009) {#network-clone-newnet--2009}
 
 -   Useful for providing containers with their own virtual network and network device (`veth`)

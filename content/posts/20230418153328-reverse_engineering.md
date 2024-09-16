@@ -14,6 +14,7 @@ tags
 -   [CS107 Guide to x86-64](https://web.stanford.edu/class/cs107/guide/x86-64.html)
 -   [Unity Hacking 101: Hacking with Reflection](https://www.mayer.cool/writings/Unity-Hacking-101-Hacking-with-Reflection/)
 -   [Debugger Ghidra Class | Hacker News](https://news.ycombinator.com/item?id=36390357)
+-   [cmex, Getting Started in Reverse Engineering - DC615/DEF CON Nashville - YouTube](https://www.youtube.com/watch?v=1MotMBPX7tY)
 
 
 ## Ghidra alternatives/helpers {#ghidra-alternatives-helpers}

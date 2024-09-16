@@ -83,6 +83,11 @@ These are usually lightweight. And you can use things like tauri/electron to pac
 -   [gltfpack](https://meshoptimizer.org/gltf/) : gltfpack is a tool that can automatically optimize glTF files
 
 
+### Website Building {#website-building}
+
+-   [Slingcode](https://slingcode.net/) :  Slingcode is a personal computing platform in a single html file.
+
+
 ### Live programming {#live-programming}
 
 -   <https://strudel.cc/>

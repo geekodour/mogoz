@@ -61,6 +61,7 @@ This is what computers do anyway.
 -   [keith-turner/ecoji](https://github.com/keith-turner/ecoji)
 -   <https://goshify.tny.im/>
 -   <https://github.com/alcor/itty-bitty>
+-   [Writing an MP4 Muxer for Fun and Profit | Hacker News](https://news.ycombinator.com/item?id=40951187)
 
 
 ## Data serialization {#data-serialization}
@@ -170,6 +171,13 @@ Not strict def. but general idea.
     -   It'll say, hey, the next field coming up is a string, and it's 70 bytes long.
     -   Then the parser just like grabs the next 70 bytes
     -   Interprets them as a string in memory and is done.
+
+
+### Some Theory {#some-theory}
+
+-   [What are the prospects of process calculi and the actor model? : compsci](https://www.reddit.com/r/compsci/comments/mnps0y/what_are_the_prospects_of_process_calculi_and_the/)
+-   [A Theory of Composing Protocols (2023) | Hacker News](https://news.ycombinator.com/item?id=39954059)
+-   [Process calculus - Wikipedia](https://en.wikipedia.org/wiki/Process_calculus)
 
 
 ## RPC {#rpc}

@@ -85,7 +85,7 @@ Not all consistency models are directly comparable. Often, two models allow diff
 ### How to read this image? {#how-to-read-this-image}
 
 -   Think of the parent node as the combination of the nodes under it.
--   Eg. Strict Serializable = Serializable + Linearizable
+    -   Eg. Strict Serializable = Serializable + Linearizable
 -   We say that consistency model A implies model B if A is a subset of B. For example, linearizability implies sequential consistency because every history which is linearizable is also sequentially consistent.
 
 
@@ -171,6 +171,8 @@ These consistency models are enabled by `concurrency control` (CC). You can come
 <!--list-separator-->
 
 -  S3 Consistency
+
+    See [Object Store (eg. S3)]({{< relref "20240630172513-object_store_eg_s3.md" >}})
 
 <!--list-separator-->
 

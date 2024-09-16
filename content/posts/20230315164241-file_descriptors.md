@@ -22,6 +22,17 @@ tags
 -   file offset == location for next `read()` / `write()`
 
 
+### How to set? how is this related to ulimit nofile? {#how-to-set-how-is-this-related-to-ulimit-nofile}
+
+-   See [How to Increase Number of Open Files Limit in Linux](https://www.tecmint.com/increase-set-open-file-limits-in-linux/)
+-   set
+    -   system wide
+        -   `cat /proc/sys/fs/file-max`
+        -   `sysctl -w fs.file-max=500000` (/etc/sysctl.conf)
+    -   ulimit
+        -   See [ulimits]({{< relref "20230225145310-ulimits.md" >}})
+
+
 ## Intro {#intro}
 
 <div class="warning small-text">

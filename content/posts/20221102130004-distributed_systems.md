@@ -5,12 +5,28 @@ draft = false
 +++
 
 tags
-: [System Design]({{< relref "20230113141133-system_design.md" >}}), [Systems]({{< relref "20221101150250-systems.md" >}}), [Inter Process Communication]({{< relref "20221101173527-ipc.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Concurrency]({{< relref "20221126204257-concurrency.md" >}}), [CALM]({{< relref "20230909165220-calm.md" >}})
+: [System Design]({{< relref "20230113141133-system_design.md" >}}), [Systems]({{< relref "20221101150250-systems.md" >}}), [Inter Process Communication]({{< relref "20221101173527-ipc.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Concurrency]({{< relref "20221126204257-concurrency.md" >}}), [CALM]({{< relref "20230909165220-calm.md" >}}), [Clocks]({{< relref "20231119003900-clocks.md" >}})
 
 
 ## Important links {#important-links}
 
 -   [Foundational distributed systems papers](https://muratbuffalo.blogspot.com/2021/02/foundational-distributed-systems-papers.html?m=1) : O' double G
+
+
+## Theory {#theory}
+
+
+### Predicate Logic {#predicate-logic}
+
+See [Logic]({{< relref "20230925154135-logic.md" >}})
+
+-   safety properties (next, stable, invariant)
+-   liveness properties (transient, ensures, leads-to, variant functions).
+
+
+### Formal tooling {#formal-tooling}
+
+See [Formal Methods]({{< relref "20230403235716-formal_methods.md" >}})
 
 
 ## What/Intro {#what-intro}
@@ -25,12 +41,23 @@ Use of the distribution provided by distributed system
 -   Can be used to [provide fault tolerance and high-availability](https://news.ycombinator.com/item?id=32540234)
 
 
-## Meta {#meta}
+## FAQ {#faq}
 
 
-### Eventual Consistency {#eventual-consistency}
+### What Eventual Consistency? {#what-eventual-consistency}
 
 See [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >}})
+
+
+### How to Design Distributed Systems? {#how-to-design-distributed-systems}
+
+-   A correct distributed program achieves (nontrivial) distributed property `X`
+-   Some tricky questions before we start coding:
+    -   Is `X` even attainable?
+        -   Cheapest protocol that gets me X?
+    -   Can I use something existing, or do I invent a new one
+    -   How should i implement it?
+-   We depend on the different entities participating in the distributed system on having some local **knowledge**
 
 
 ## Thinking frameworks {#thinking-frameworks}
@@ -123,11 +150,58 @@ See [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >
     -   Something unpredictable: Need to represent uncertainty (i.e. nondeterminism in ordering and failure)
 
 
-## Synchronization {#synchronization}
+## Impossibility Results {#impossibility-results}
+
+> We can check the `Impossibility Results` for each of the different dist sys problems. Eg. CAP theorem considers the coordinating attack model for the atomic storage problem and shows that with arbitrarily unreliable channels, you cannot solve the atomic storage problem either.
+
+-   Example via 2PC: [Two-phase commit and beyond](https://muratbuffalo.blogspot.com/2018/12/2-phase-commit-and-beyond.html)
 
 
-### 2PC {#2pc}
+### Results {#results}
 
+
+#### coordinated attack {#coordinated-attack}
+
+-   [Two Generals' Problem - Wikipedia](https://en.wikipedia.org/wiki/Two_Generals'_Problem)
+-   The coordinating attack result says that if the communication channels can drop messages you cannot solve distributed consensus using a deterministic protocol in finite rounds.
+
+
+#### FLP impossibility results {#flp-impossibility-results}
+
+-   [Paper summary: Perspectives on the CAP theorem](https://muratbuffalo.blogspot.com/2015/02/paper-summary-perspectives-on-cap.html)
+-   Assume reliable channel, or eventually for a sufficient period reliable channels.
+-   Under an asynchronous model, you cannot solve distributed consensus using a deterministic protocol in finite rounds, in the presence of a single crash failure.
+
+
+### Solutions to impossibility results {#solutions-to-impossibility-results}
+
+> These allow us to circumvent (not to beat) these impossibility results
+
+
+#### consensus {#consensus}
+
+-   See [Consensus Protocols]({{< relref "20231118205116-consensus_protocols.md" >}})
+
+
+#### fault-tolerance {#fault-tolerance}
+
+
+## Time and Clocks {#time-and-clocks}
+
+See [Clocks]({{< relref "20231119003900-clocks.md" >}})
+
+
+## Problems in Distributed Systems {#problems-in-distributed-systems}
+
+
+### Synchronization {#synchronization}
+
+See [Database Transactions]({{< relref "20231113145513-database_transactions.md" >}}), see [Synchronization]({{< relref "20240816134029-synchronization.md" >}})
+
+
+#### 2PC {#2pc}
+
+-   See [Two Phase Locking (2PL) &amp; Two Phase Commit (2PC)]({{< relref "20231116010456-two_phase_locking_2pl.md" >}})
 -   Leader writes a durable transaction record indicating a cross-shard transaction.
 -   Participants write a permanent record of their willingness to commit and notify the leader.
 -   The leader commits the transaction by updating the durable transaction record after receiving all responses.
@@ -136,9 +210,59 @@ See [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >
     -   They delete the staged state if the leader aborts the transaction.
 
 
-## Replication {#replication}
+#### Real time sync {#real-time-sync}
+
+-   See [Local First Software (LoFi)]({{< relref "20230915141853-local_first_software.md" >}})
+
+
+### atomic storage problem {#atomic-storage-problem}
+
+-   CAP tries to solve this
+
+
+### Replication {#replication}
 
 -   See [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
+
+
+### Consensus {#consensus}
+
+See [Consensus Protocols]({{< relref "20231118205116-consensus_protocols.md" >}})
+
+
+### Distributed Snapshots {#distributed-snapshots}
+
+> Distributed snapshots are trying to do as little work as possible to get a consistent view of the distributed computation, without forcing the heavy cost of consensus on it. For example, node A is sending a message to node B, we don't care if we capture in:
+>
+> -   1: A before it sends the message, B before it receives the message
+> -   2: A after it has sent the message, the message, and B before it receives the message
+> -   3: A after it has sent the message, B after it has received the message
+>
+> No matter which of those states we restore, the computation will continue correctly.
+
+-   [Distributed Snapshots: Chandy-Lamport protocol](https://blog.fponzi.me/2024-05-30-distributed-snapshots.html)
+-   [Distributed Snapshots: Determining Global States of Distributed Systems | the morning paper](https://blog.acolyer.org/2015/04/22/distributed-snapshots-determining-global-states-of-distributed-systems/)
+
+
+### Distributed Locks {#distributed-locks}
+
+-   See [Database Locks]({{< relref "20231114211916-database_locks.md" >}})
+-   [How to do distributed locking — Martin Kleppmann’s blog](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html)
+-   Purpose: Ensure that among several nodes that might try to do the same piece of work, only one actually does it (at least only one at a time).
+
+
+#### Resources {#resources}
+
+-   [A robust distributed locking algorithm based on Google Cloud Storage – Joyful Bikeshedding](https://www.joyfulbikeshedding.com/blog/2021-05-19-robust-distributed-locking-algorithm-based-on-google-cloud-storage.html)
+-   [Leader Election with S3 Conditional Writes | Hacker News](https://news.ycombinator.com/item?id=41357123)
+-   [distributed-lock-google-cloud-storage-ruby/README.md at main · FooBarWidget/distributed-lock-google-cloud-storage-ruby · GitHub](https://github.com/FooBarWidget/distributed-lock-google-cloud-storage-ruby/blob/main/README.md)
+-   [Reddit - Dive into anything](https://www.reddit.com/r/golang/comments/t52d4f/gmutex_a_global_mutex_using_google_cloud_storage/)
+-   [Distributed Locks with Redis (2014) | Hacker News](https://news.ycombinator.com/item?id=41292477)
+
+
+### Service Discovery and Peer to Peer communication {#service-discovery-and-peer-to-peer-communication}
+
+-   See [peer-to-peer]({{< relref "20221101184751-peer_to_peer.md" >}})
 
 
 ## Notes from LK class {#notes-from-lk-class}
@@ -171,14 +295,3 @@ See [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >
             -   Issue with timeouts is that it will not work well when the message causes a side effect. Eg. increment some counter
         -   Predict Max delay
             -   Eg. from M1-&gt;M2 =2d+r (if d is time for M1-M2 and r is processing time)
-
-
-## Designing Distributed Systems {#designing-distributed-systems}
-
--   A correct distributed program achieves (nontrivial) distributed property `X`
--   Some tricky questions before we start coding:
-    -   Is X even attainable?
-        -   Cheapest protocol that gets me X?
-    -   Can I use something existing, or do I invent a new one
-    -   How should | implement it?
--   We depend on the different entities participating in the distributed system on having some local **knowledge**

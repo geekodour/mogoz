@@ -99,3 +99,4 @@ See [LLVM]({{< relref "20231101205118-llvm.md" >}})
 ## Links {#links}
 
 -   [One Div Zero: A Brief, Incomplete, and Mostly Wrong History of Programming Languages](https://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html)
+-   [Where does software innovation happen? A zoomable map](https://pldb.io/blog/whereInnovation.html)

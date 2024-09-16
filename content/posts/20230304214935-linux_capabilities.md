@@ -50,3 +50,5 @@ Capabilities for a process can be seen at `/proc/PIC/status`
 ## Resources {#resources}
 
 -   [Understanding Linux Capabilities](https://tbhaxor.com/understanding-linux-capabilities/)
+-   [Escaping Docker Containers Using Linux Capabilities | TryHackMe The Docker Rodeo - YouTube](https://www.youtube.com/watch?v=vr7Q5xuX814)
+-   [Prevent Privilege Escalation from Container Breakout via UserNS Remapping](https://tbhaxor.com/prevent-container-breakout-privilege-escalation-via-userns-remap/)

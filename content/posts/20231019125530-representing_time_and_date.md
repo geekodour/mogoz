@@ -15,8 +15,28 @@ There's something called metric time
 
 ## Resources {#resources}
 
+
+## Different ways to show {#different-ways-to-show}
+
+
+### Calendar {#calendar}
+
+-   [We Need to Talk About the State of Calendar Software on Desktop | Lobsters](https://lobste.rs/s/fex5ji/we_need_talk_about_state_calendar)
 -   [This is what the year actually looks like (2018) | Hacker News](https://news.ycombinator.com/item?id=37926239)
 -   [Deciyear Calendar | Hacker News](https://news.ycombinator.com/item?id=38639415)
+-   [the human calendar®: about](https://humancalendar.com/about)
+-   [Show HN: KittyCal – minimalist PWA calendar app for couples | Hacker News](https://news.ycombinator.com/item?id=41153712)
+-   WhenFS
+-   [The Calendar of Sound of Hermeto Pascoal (2020) [pdf] | Hacker News](https://news.ycombinator.com/item?id=41338159)
+-   [Holocene calendar - Wikipedia](https://en.wikipedia.org/wiki/Holocene_calendar)
+
+
+### Clock {#clock}
+
+-   [Author Clock: a novel way to tell time | Hacker News](https://news.ycombinator.com/item?id=40644960)
+-   [Linear Clock | John Whittington's Blog](https://engineer.john-whittington.co.uk/electronics/fabrication/mechanical/clock/2021/06/16/linear-clock.html)
+-   [Lenticular Clock | Hacker News](https://news.ycombinator.com/item?id=41293929)
+-   <https://www.humanclock.com/>
 
 
 ## Date, Time and Timezone {#date-time-and-timezone}
@@ -62,6 +82,7 @@ There's something called metric time
 ### Resources {#resources}
 
 -   [ ] [ISO 8601: the better date format | Blog | Kirby Kevinson](https://kirby.kevinson.org/blog/iso-8601-the-better-date-format/)
+-   [ ] [Timezone-naive datetimes are one of the most dangerous objects in Python | Hacker News](https://news.ycombinator.com/item?id=40977293)
 -   [ ] [Designing a REST API: Unix time vs ISO-8601](https://nickb.dev/blog/designing-a-rest-api-unix-time-vs-iso-8601/)
 -   [ ] [Time on Unix](https://venam.nixers.net/blog/unix/2020/05/02/time-on-unix.html)
 -   [ ] [Time is an illusion, Unix time doubly so](https://www.netmeister.org/blog/epoch.html)

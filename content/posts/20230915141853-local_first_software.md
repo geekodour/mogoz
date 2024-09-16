@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Human Computer Interaction ( HCI )]({{< relref "20230806231355-human_computer_interaction_hci.md" >}}), [peer-to-peer]({{< relref "20221101184751-peer_to_peer.md" >}}), [Alternative Internet]({{< relref "20230507105348-alternative_internet.md" >}})
+: [Human Computer Interaction ( HCI )]({{< relref "20230806231355-human_computer_interaction_hci.md" >}}), [peer-to-peer]({{< relref "20221101184751-peer_to_peer.md" >}}), [Alternative Internet]({{< relref "20230507105348-alternative_internet.md" >}}), [WebAssembly]({{< relref "20230510200213-webassembly.md" >}}),  [Synchronization]({{< relref "20240816134029-synchronization.md" >}})
 
 I like how Kyle Mathews [describes local first software](https://bricolage.io/some-notes-on-local-first-development/), most of this doc is extracting things out of his blogpost:
 
@@ -18,10 +18,12 @@ I like how Kyle Mathews [describes local first software](https://bricolage.io/so
 -   nice ecosystem review: [GitHub - arn4v/offline-first: A list of projects in the offline-first storage, sync &amp; realtime collaboration/multiplayer space.​](https://github.com/arn4v/offline-first)
 
 
-## Related Ideas {#related-ideas}
+## Related/Main Ideas {#related-main-ideas}
 
 
 ### Sync Engines {#sync-engines}
+
+See [Synchronization]({{< relref "20240816134029-synchronization.md" >}})
 
 -   Robust database-grade syncing technology to ensure that data is consistent and up-to-date.
 -   To fully replace client-server APIs, sync engines need
@@ -40,9 +42,11 @@ I like how Kyle Mathews [describes local first software](https://bricolage.io/so
 -   See [crdt]({{< relref "20230607045339-crdt.md" >}})
 
 
-### Distributed state machine {#distributed-state-machine}
+### Distributed state machine / Replicated state machine (RSM) / State machine replication {#distributed-state-machine-replicated-state-machine--rsm--state-machine-replication}
 
+-   [State machine replication - Wikipedia](https://en.wikipedia.org/wiki/State_machine_replication)
 -   See [Signals and Threads | State Machine Replication, and Why You Should Care](https://signalsandthreads.com/state-machine-replication-and-why-you-should-care/)
+-   This is a variant of Paxos (?)
 -   Towards "Handle writes that need an authoritative server"
 -   By emulating API request/response patterns through: A distributed state machine running on a replicated object.
 -   i.e we write interactions w external services in a way so that requests/responses have the same multiplayer, offline, real-time sync properties as the rest of the app.
@@ -115,25 +119,49 @@ From [Why SQLite? Why Now? 🐇 - Tantamanlands](https://tantaman.com/2022-08-23
 Write to your database while offline. I can write to mine while offline. We can then both come online and merge our databases together, without conflict. See [Data Replication]({{< relref "20231021151742-data_replication.md" >}}). Also see [Riffle Systems](https://riffle.systems/)
 
 
-#### Postgres-SQlite {#postgres-sqlite}
+#### Example databases {#example-databases}
 
-Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replicate to a client side db such as [sqlite]({{< relref "20230702184501-sqlite.md" >}})
+<!--list-separator-->
 
--   [ElectricSQL](https://electric-sql.com/) (write back,  partial replication)
--   [powersync](https://www.powersync.co/) (write back,  partial replication)
-    -   PowerSync supports syncing from multiple databases.
--   [sqledge](https://news.ycombinator.com/item?id=37063238) (readonly? from the creators of [ably](https://ably.com/spaces))
+-  Postgres-SQlite
+
+    Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replicate to a client side db such as [sqlite]({{< relref "20230702184501-sqlite.md" >}})
+
+    -   [ElectricSQL](https://electric-sql.com/) (write back,  partial replication)
+    -   [powersync](https://www.powersync.co/) (write back,  partial replication)
+        -   PowerSync supports syncing from multiple databases.
+    -   [sqledge](https://news.ycombinator.com/item?id=37063238) (readonly? from the creators of [ably](https://ably.com/spaces))
+
+<!--list-separator-->
+
+-  sqlite - sqlite
+
+    -   [cr-sqlite](https://github.com/vlcn-io/cr-sqlite)
+        -   [Trying out cr-sqlite on macOS | Simon Willison’s TILs](https://til.simonwillison.net/sqlite/cr-sqlite-macos)
+    -   <https://github.com/orbitinghail/sqlsync>
+        -   Only supports full db sync (no partial replication)
+        -   Sync engine is simpler
+        -   Provides a custom storage layer to SQLite that keeps everything in sync.
+    -   [Mycelial](https://www.mycelial.com/platform)
+
+<!--list-separator-->
+
+-  Others
+
+    -   [Evolu](https://www.evolu.dev/docs) seems to use SQLite on top of OPFS
+    -   [Triplit](https://news.ycombinator.com/item?id=40788648) uses IndexedDB
 
 
-#### sqlite - sqlite {#sqlite-sqlite}
+#### [Synchronization]({{< relref "20240816134029-synchronization.md" >}}) with [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) {#synchronization--20240816134029-synchronization-dot-md--with-postgresql--20221102123302-postgresql-dot-md}
 
--   [cr-sqlite](https://github.com/vlcn-io/cr-sqlite)
-    -   [Trying out cr-sqlite on macOS | Simon Willison’s TILs](https://til.simonwillison.net/sqlite/cr-sqlite-macos)
--   <https://github.com/orbitinghail/sqlsync>
-    -   Only supports full db sync (no partial replication)
-    -   Sync engine is simpler
-    -   Provides a custom storage layer to SQLite that keeps everything in sync.
--   [Mycelial](https://www.mycelial.com/platform)
+-   [Postgres sequences can commit out-of-order](https://blog.sequinstream.com/postgres-sequences-can-commit-out-of-order/)
+    -   Don't these wrap around after 2 billion transactions? How do you handle that?
+        -   xmin does, the snapshot one is u64, so you are good.
+
+
+#### Schema Evolution {#schema-evolution}
+
+-   [Project Cambria: Translate your data with lenses](https://www.inkandswitch.com/cambria/)
 
 
 ### Examples / Uncategorized {#examples-uncategorized}
@@ -141,6 +169,9 @@ Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replica
 These are basically approaches that i've yet to go through and categorize further
 
 -   [ServerFree Architecture: run the "backend code" and the DB (SQLite) in the browser | Lobsters](https://lobste.rs/s/yn7pbi/serverfree_architecture_run_backend)
+-   [What Happens When You Put a Database in Your Browser?](https://motherduck.com/blog/olap-database-in-browser/)
+-   [Resilient Sync for Local First | Hacker News](https://news.ycombinator.com/item?id=40772955) 🌟
+    -   Similar to [Delta Lake]({{< relref "20240503221840-more_on_delta_table_delta_lake.md" >}})'s [consistency model]({{< relref "20231113121413-concurrency_consistency_models.md" >}})
 
 
 ## War stories {#war-stories}
@@ -164,5 +195,6 @@ These are basically approaches that i've yet to go through and categorize furthe
 -   [Local-First Web Development](https://localfirstweb.dev/)
 -   [Alternatives - ElectricSQL](https://archive.is/dAfxh)
 -   [pazguille/offline-first](https://github.com/pazguille/offline-first)
+-   [Cloud File API (#83) · Issues · xdg / xdg-specs · GitLab](https://gitlab.freedesktop.org/xdg/xdg-specs/-/issues/83)
 -   <https://braid.org/> (wg)
     -   See <https://braid.org/meeting-2>

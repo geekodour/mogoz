@@ -82,8 +82,19 @@ tags
 -   [Federation Architecture Overview - Bluesky](https://blueskyweb.xyz/blog/5-5-2023-federation-architecture) (2023)
 -   [A Self-Authenticating Social Protocol - Bluesky](https://blueskyweb.xyz/blog/3-6-2022-a-self-authenticating-social-protocol) (2022)
 -   [FAQ | AT Protocol](https://atproto.com/guides/faq)
+-   2024
+    -   <https://newsletter.pragmaticengineer.com/p/bluesky>
+    -   <https://jazco.dev/2024/04/15/in-memory-graphs/>
+    -   <https://jazco.dev/2024/04/20/roaring-bitmaps/>
+-   [ATProto for distributed systems engineers - AT Protocol](https://atproto.com/articles/atproto-for-distsys-engineers)
+
+
+### IRC {#irc}
+
+-   [Discord vs IRC Rough Notes | Lobsters](https://lobste.rs/s/l7u1j4/discord_vs_irc_rough_notes)
 
 
 ## Resources {#resources}
 
 -   [Beyond Mastodon and Bluesky: Toward a Protocol-Agnostic Federation | Lobsters](https://lobste.rs/s/6ck6of/beyond_mastodon_bluesky_toward_protocol)
+-   [Ask HN: Can decentralized social networks scale? | Hacker News](https://news.ycombinator.com/item?id=40773027)

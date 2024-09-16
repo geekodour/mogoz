@@ -156,7 +156,8 @@ Point of data pipeline is to generate/maintain data assets (Tables/Files/ML mode
 
 ## Data Warehouse and Data Lake {#data-warehouse-and-data-lake}
 
-{{< figure src="/ox-hugo/20230405003455-data_engineering-1415605235.png" >}}
+See [Data systems built on Object Store]({{< relref "20240816033216-data_systems_built_on_object_store.md" >}})
+![](/ox-hugo/20230405003455-data_engineering-1415605235.png)
 
 
 ### Data warehouse (Analytics, Structured Data) {#data-warehouse--analytics-structured-data}
@@ -450,7 +451,15 @@ More on [Polars]({{< relref "20240510084554-polars.md" >}})
     -   [GitHub - TobikoData/sqlmesh](https://github.com/TobikoData/sqlmesh) : Better alternative to DBT??
 
 
-## Processing Types {#processing-types}
+### Anomaly detection {#anomaly-detection}
+
+-   <https://github.com/Desbordante/desbordante-core>
+-   Great expectation etc
+
+
+## Processing/Ingestion Types {#processing-ingestion-types}
+
+> While batch/stream processing and batch/stream ingestion are two completely different things, this section talks all of it in general.
 
 
 ### Batch processing {#batch-processing}
@@ -461,34 +470,30 @@ More on [Polars]({{< relref "20240510084554-polars.md" >}})
 
 ### Stream processing {#stream-processing}
 
+See [Stream Processing/Ingestion Patterns]({{< relref "20240901014444-stream_processing_ingestion_patterns.md" >}})
+
 -   **Streaming use cases are defined by the consumption SLA of the data, not the production.** 🌟
 -   This can mean different things for different people, eg. for some ingestion pipeline, streaming might just means anything ingesting more often than every ten minutes.
-
-
-#### Architecture examples {#architecture-examples}
-
--   [Lambda](https://en.wikipedia.org/wiki/Lambda_architecture): Here we merge real-time and historical data together
-    -   [How to create near real-time models with just dbt + SQL - Archive - dbt Community Forum](https://discourse.getdbt.com/t/how-to-create-near-real-time-models-with-just-dbt-sql/1457)
--   [Kappa](https://pradeepl.com/blog/kappa-architecture/): If you don’t need a lot of historical data, and only need streaming data.
-
-
-#### Streaming Databases {#streaming-databases}
-
--   [Apache Flink and RisingWave](https://risingwave.com/blog/the-preview-of-stream-processing-performance-report-apache-flink-and-risingwave-comparison/)
--   [RisingWave, the Rust-Written Open-Source Streaming Database Released Version 1.1](https://www.reddit.com/r/rust/comments/15xd03y/risingwave_the_rustwritten_opensource_streaming/)
--   [Rethinking Stream Processing and Streaming Databases](https://www.reddit.com/r/apachekafka/comments/10x684l/rethinking_stream_processing_and_streaming/) (Good background)
 
 
 ### Update patterns {#update-patterns}
 
 See <https://docs.delta.io/2.0.2/delta-update.html#-write-change-data-into-a-delta-table>
-See [Batch Processing Patterns]({{< relref "20240606113829-batch_processing_patterns.md" >}})
 
 
 #### CDC {#cdc}
 
+-   See [CDC ( Change Data Capture )]({{< relref "20240901210923-cdc_change_data_capture.md" >}})
+-   See [Event Sourcing]({{< relref "20230406185222-event_sourcing.md" >}})
+
 
 #### SCD Type2 {#scd-type2}
+
+
+### Problems / Challenges {#problems-challenges}
+
+-   De-duplication
+-   Schema drift, column type change in source
 
 
 ## Related Topics {#related-topics}
@@ -548,6 +553,7 @@ See [Information Retrieval]({{< relref "20231123014416-information_retrieval.md"
 
 ## Links {#links}
 
--   [Ask HN: Upskilling as a Data Engineer | Hacker News](https://news.ycombinator.com/item?id=34147090)
 -   [Wide Column Store NoSQL vs SQL Data Modeling - YouTube](https://www.youtube.com/watch?v=bTEfRmdBq7I&t=457s)
 -   [Scalable Efficient Big Data Pipeline Architecture – Machine Learning for Developers](https://www.ml4devs.com/articles/scalable-efficient-big-data-analytics-machine-learning-pipeline-architecture-on-cloud/)
+-   <https://pandera.readthedocs.io/en/stable/> (similar to great expectations)
+-   [Postgres Materialized Views from Parquet in S3 with Zero ETL | Lobsters](https://lobste.rs/s/xmgy3x/postgres_materialized_views_from)

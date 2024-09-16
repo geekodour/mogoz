@@ -9,6 +9,8 @@ tags
 
     {{< figure src="/ox-hugo/20231118205116-consensus_protocols-1001622362.png" >}}
 
+> "making sure participants come to the same conclusion about something and nobody has the wrong answer"
+
 
 ## FAQ {#faq}
 
@@ -16,20 +18,47 @@ tags
 ### Partial Quorum {#partial-quorum}
 
 
-## Paxos {#paxos}
+## Approaches {#approaches}
+
+
+### Paxos {#paxos}
 
 {{< figure src="/ox-hugo/20221102130004-distributed_systems-866307772.png" >}}
 
 
-## Raft {#raft}
+#### Variants {#variants}
+
+<!--list-separator-->
+
+-  Replicated State Machine (RSM)
+
+<!--list-separator-->
+
+-  chain replication type advanced atomic storage protocols
 
 
-### Leader selection {#leader-selection}
+### Raft {#raft}
 
--   The protocol doesn't require a quorum (majority) for a leader election vote to pass, it can function on 2 servers.
--   When the 3rd one returns, it will see it's raft log is out of date and will synchronise back up and start working again. During that phase it will not make itself a candidate for leader election
+See [Raft]({{< relref "20240912140206-raft.md" >}})
 
 
-## Resources {#resources}
+### Viewstamped Replication Protocol {#viewstamped-replication-protocol}
 
--   [When Does Consistency Require Coordination? | Peter Bailis](http://www.bailis.org/blog/when-does-consistency-require-coordination/)
+
+#### VR vs Raft {#vr-vs-raft}
+
+-   Viewstamped Replication relies on [Message Passing]({{< relref "20230404153903-message_passing.md" >}}), while RAFT relies on RPC
+-   "VSR is also described in terms of message passing, whereas Raft took VSR’s original message passing and coupled it to RPC—shutting out things like multipath routing and leaving the logical networking protocol misaligned to the underlying physical network fault model." - Joran
+-   Comparing the 2012 VSR and 2014 Raft papers, they are remarkably similar.
+-   VSR better in prod than raft (opinion)
+    -   It’s all the little things. All the quality, clear thinking and crisp terminology coming from Liskov, Oki and Cowling.
+    -   Oki’s VSR was literally the first to pioneer consensus in ‘88, so it’s well aged, and the ‘12 revision again by Liskov and Cowling is a great vintage!
+
+
+#### Resources {#resources}
+
+-   [Paper: VR Revisited - An analysis with TLA+ — Jack Vanlightly](https://jack-vanlightly.com/analyses/2022/12/20/vr-revisited-an-analysis-with-tlaplus)
+-   [Viewstamped Replication explained](https://blog.brunobonacci.com/2018/07/15/viewstamped-replication-explained/)
+-   <https://github.com/tigerbeetle/viewstamped-replication-made-famous>
+-   [Implementing Viewstamped Replication protocol – Distributed Computing Musings](https://distributed-computing-musings.com/2023/10/implementing-viewstamped-replication-protocol/)
+-   [Paper #74. Viewstamped Replication Revisited - YouTube](https://www.youtube.com/watch?v=Wii1LX_ltIs)

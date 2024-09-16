@@ -93,13 +93,9 @@ A data structure used to maintain the state of each object for the allocator/col
 > ![](/ox-hugo/objheader.png) &gt; _On x86_32, W=4bytes, so 5 bytes of `malloc(5)` needs 3 bytes of padding, the object header then will take another +N bytes on top of that. So were're actually adding some overhead to whatever memory we request_
 
 
-### More info {#more-info}
+### Shared Memory Allocation (`shm_open`) {#shared-memory-allocation--shm-open}
 
--   [Memory management - Wikipedia](https://en.wikipedia.org/wiki/Memory_management#Implementations) (See implementations section)
--   [Dynamic Memory Allocation In SQLite](https://www.sqlite.org/malloc.html)
--   [Buddy memory allocation - Wikipedia](https://en.wikipedia.org/wiki/Buddy_memory_allocation)
--   [Awesome links and information about memory allocation](https://github.com/rain-1/awesome-allocators)
--   [Jane Street Tech Blog - Memory allocator showdown](https://blog.janestreet.com/memory-allocator-showdown/)
+See [Inter Process Communication]({{< relref "20221101173527-ipc.md" >}})
 
 
 ## Memory Fragmentation {#memory-fragmentation}
@@ -217,3 +213,22 @@ Waste of space by allocating more memory than what was requested by the user (wh
     -   Alternatively, you can load files via the boot loader and provide them to your kernel, or rely on UEFI to load them initially.
     -   This way you can easily implement all the cool features like userspace, scheduling, even SMP and swap, etc.
     -   Of course, there is no right and wrong. The most important things are to learn and to have fun.
+
+
+## Other resources {#other-resources}
+
+
+### Arena {#arena}
+
+-   <https://nullprogram.com/blog/2023/09/27/>
+-   <https://www.rfleury.com/p/untangling-lifetimes-the-arena-allocator>
+-   <https://www.rfleury.com/p/enter-the-arena-talk>
+
+
+### More info/Resources {#more-info-resources}
+
+-   [Memory management - Wikipedia](https://en.wikipedia.org/wiki/Memory_management#Implementations) (See implementations section)
+-   [Dynamic Memory Allocation In SQLite](https://www.sqlite.org/malloc.html)
+-   [Buddy memory allocation - Wikipedia](https://en.wikipedia.org/wiki/Buddy_memory_allocation)
+-   [Awesome links and information about memory allocation](https://github.com/rain-1/awesome-allocators)
+-   [Jane Street Tech Blog - Memory allocator showdown](https://blog.janestreet.com/memory-allocator-showdown/)

@@ -293,6 +293,7 @@ When you write a program in any language above direct machine code, you give sym
 
 -  Bindings
 
+    Also see [Language Bindings]({{< relref "20230928182025-language_bindings.md" >}})
     `STB_LOCAL`, `STB_GLOBAL`, `STB_WEAK`, `STB_LOOS`, `STB_HIOS`, `STB_LOPROC`, `STB_HIPROC`
 
     <!--list-separator-->

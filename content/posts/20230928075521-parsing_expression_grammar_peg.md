@@ -27,3 +27,5 @@ tags
 
 -   [PEG Parsing Series Overview](https://medium.com/@gvanrossum_83706/peg-parsing-series-de5d41b2ed60)
 -   [PEP 617 – New PEG parser for CPython | peps.python.org](https://peps.python.org/pep-0617/)
+-   [This is why you should never use parser combinators and PEG | Lobsters](https://lobste.rs/s/nybhsl/this_is_why_you_should_never_use_parser)
+    -   [Use context-free grammars instead of parser combinators and PEG | Hacker News](https://news.ycombinator.com/item?id=40566784)

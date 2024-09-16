@@ -86,6 +86,9 @@ You can decompose a "search engine" into multiple big components: `Gather, Searc
 -   Think Wordebut issue has more links
 -   [Structure of FTS5 Index in SQLite | Lobsters](https://lobste.rs/s/b3d1ba/structure_fts5_index_sqlite)
 -   [Why Full Text Search is Hard](https://transactional.blog/blog/2023-why-full-text-search-is-hard)
+-   [Full text search over Postgres: Elasticsearch vs. alternatives | Hacker News](https://news.ycombinator.com/item?id=41173288)
+-   [Meilisearch is too slow](https://blog.kerollmops.com/meilisearch-is-too-slow)
+-   [Postgres as a search engine](https://anyblockers.com/posts/postgres-as-a-search-engine)
 
 
 ## Resources {#resources}

@@ -63,7 +63,8 @@ Pie charts are very hard to use, maybe just use them when you have fewer categor
 
 -   AKA Whisker plots
 -   Helps us visualize shape of data
-    -   Normal distributon? Bell curve? Skewed? it can tell u that
+    -   Normal distribution? Bell curve? Skewed? it can tell u that
+-   [I’ve Stopped Using Box Plots. Should You? | Lobsters](https://lobste.rs/s/io4aui/i_ve_stopped_using_box_plots_should_you)
 
 
 ### Dot plots {#dot-plots}
@@ -126,3 +127,18 @@ Pie charts are very hard to use, maybe just use them when you have fewer categor
 ## Other links {#other-links}
 
 -   [How to pick more beautiful colors for your data visualizations (2020)](https://news.ycombinator.com/item?id=38482486)
+
+
+## Tools {#tools}
+
+
+### D3 {#d3}
+
+
+#### Learning resources {#learning-resources}
+
+-   <https://www.d3indepth.com/gettingstarted/>
+-   <https://www.reddit.com/r/sveltejs/comments/126b993/svelte_d3_guides/>
+-   <https://www.reddit.com/r/sveltejs/comments/17ieodt/introducing_layerchart/>
+-   <https://www.kyrandale.com/bespoke-charts-with-svelte-d3-and-layercake/>
+-   <https://reuters-graphics.github.io/example_svelte-graph-patterns/>

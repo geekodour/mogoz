@@ -77,6 +77,7 @@ There are opensource and prioperty Products
 -   Released 2018
 -   Headless
 -   User registration, login, password reset, social sign in(Client side OAuth2), profile management, 2FA, and more
+-   [Ory Kratos: Headless Authentication, Identity and User Management - Developer Friendly Blog](https://developer-friendly.blog/2024/05/20/ory-kratos-headless-authentication-identity-and-user-management/#identity-schema)
 
 
 #### Ory Hydra {#ory-hydra}
@@ -111,3 +112,9 @@ There are opensource and prioperty Products
 ### Authelia {#authelia}
 
 -   Authelia needs a LDAP or file backend with user credentials
+
+
+## Others {#others}
+
+-   <https://github.com/go-pkgz/auth>
+-   <https://github.com/Permify/permify>
