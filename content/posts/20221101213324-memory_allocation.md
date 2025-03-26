@@ -227,6 +227,7 @@ Waste of space by allocating more memory than what was requested by the user (wh
 
 ### More info/Resources {#more-info-resources}
 
+-   [Writing a simple pool allocator in C | Hacker News](https://news.ycombinator.com/item?id=42605848) 🌟
 -   [Memory management - Wikipedia](https://en.wikipedia.org/wiki/Memory_management#Implementations) (See implementations section)
 -   [Dynamic Memory Allocation In SQLite](https://www.sqlite.org/malloc.html)
 -   [Buddy memory allocation - Wikipedia](https://en.wikipedia.org/wiki/Buddy_memory_allocation)

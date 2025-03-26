@@ -276,3 +276,4 @@ See [PostgreSQL: Documentation: 16: 11.2. Index Types](https://www.postgresql.o
 ## Resources {#resources}
 
 -   [Understanding database Indexes in PostgreSQL](https://mastermind.dev/indexes-in-postgresql)
+-   [SQLite Index Visualization: Structure](https://mrsuh.com/articles/2024/sqlite-index-visualization-structure/)

@@ -8,6 +8,9 @@ tags
 : [HTTP]({{< relref "20230222161545-http.md" >}})
 
 
+[The Cursed Art of Streaming HTML – rinici.de](https://rinici.de/posts/streaming-html)
+
+
 ## FAQ {#faq}
 
 

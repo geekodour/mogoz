@@ -5,9 +5,15 @@ draft = false
 +++
 
 tags
-: [Two Phase Locking (2PL) &amp; Two Phase Commit (2PC)]({{< relref "20231116010456-two_phase_locking_2pl.md" >}}), [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Concurrency Consistency Models]({{< relref "20231113121413-concurrency_consistency_models.md" >}}), [Data Replication]({{< relref "20231021151742-data_replication.md" >}}), [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >}}), [Zookeeper]({{< relref "20221102125923-zookeeper.md" >}})
+: [Two Phase Locking (2PL) &amp; Two Phase Commit (2PC)]({{< relref "20231116010456-two_phase_locking_2pl.md" >}}), [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Concurrency Consistency Models]({{< relref "20231113121413-concurrency_consistency_models.md" >}}), [Data Replication]({{< relref "20231021151742-data_replication.md" >}}), [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >}}), [Zookeeper]({{< relref "20221102125923-zookeeper.md" >}}), [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
 
-    {{< figure src="/ox-hugo/20231118205116-consensus_protocols-1001622362.png" >}}
+
+OG Blogposts
+    -   <https://medium.com/@adamprout/categorizing-how-distributed-databases-utilize-consensus-algorithms-492c8ff9e916>  🌟
+    -   [Consensus Resources](https://eatonphil.com/consensus.html?s=35)
+    -   [Durability and the Art of Consensus by Joran Dirk Greef - YouTube](https://www.youtube.com/watch?v=tRgvaqpQPwE)
+
+{{< figure src="/ox-hugo/20231118205116-consensus_protocols-1001622362.png" >}}
 
 > "making sure participants come to the same conclusion about something and nobody has the wrong answer"
 
@@ -62,3 +68,11 @@ See [Raft]({{< relref "20240912140206-raft.md" >}})
 -   <https://github.com/tigerbeetle/viewstamped-replication-made-famous>
 -   [Implementing Viewstamped Replication protocol – Distributed Computing Musings](https://distributed-computing-musings.com/2023/10/implementing-viewstamped-replication-protocol/)
 -   [Paper #74. Viewstamped Replication Revisited - YouTube](https://www.youtube.com/watch?v=Wii1LX_ltIs)
+
+
+## Election {#election}
+
+
+### Links {#links}
+
+-   <https://github.com/kellabyte/holocron>

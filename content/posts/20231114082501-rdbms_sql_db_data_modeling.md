@@ -278,15 +278,24 @@ Here, in this example we have two entities `T` (thing) and `C` (category), both 
 ## Schema {#schema}
 
 
-### Logical schema/Interface {#logical-schema-interface}
+### Interface vs Implementation {#interface-vs-implementation}
+
+
+#### Logical schema/Interface {#logical-schema-interface}
 
 -   [Codd’s](https://en.wikipedia.org/wiki/Edgar_F._Codd) belief that queries should only be written to the interface, and never to the implementation.
 -   The logical schema is the set of tables and logical constraints (foreign keys, CHECK constraints, etc) on those tables.
 
 
-### Physical schema/Implementation {#physical-schema-implementation}
+#### Physical schema/Implementation {#physical-schema-implementation}
 
 -   Physical schema is the set of indexes provided for those tables.
+
+
+### Different schema types {#different-schema-types}
+
+-   [Schema crosswalk - Wikipedia](https://en.wikipedia.org/wiki/Schema_crosswalk)
+-   [Wikidata is a Giant Crosswalk File | Drew Breunig](https://www.dbreunig.com/2024/10/04/wikidata-is-a-giant-crosswalk-file.html)
 
 
 ## Other best practices {#other-best-practices}

@@ -158,9 +158,15 @@ tags
 -   [Pipes: A spiritual successor to Yahoo Pipes | Hacker News](https://news.ycombinator.com/item?id=40841980)
 
 
+### CLI Based {#cli-based}
+
+[Command Line Interface Guidelines](https://clig.dev/)
+
+
 ### Notations {#notations}
 
 -   [The Origins of the Generic Mapping Tools | Hacker News](https://news.ycombinator.com/item?id=39786124)
+-   [An Illustrated Guide to Maritime Signal Flags | Hacker News](https://news.ycombinator.com/item?id=41880709)
 -   [Representing Time and Date]({{< relref "20231019125530-representing_time_and_date.md" >}})
 -   [Notational Programming for Notebook Environments](https://dl.acm.org/doi/abs/10.1145/3526113.3545619)
 -   [Lindenmayer Systems | Hacker News](https://news.ycombinator.com/item?id=38024405)
@@ -169,6 +175,8 @@ tags
 -   [GitHub - prathyvsh/notation: Repo to track the evolution of notation in arts and sciences](https://github.com/prathyvsh/notation)
 -   [GitHub - k-qy/notation: Collection of quotes on notation design &amp; how it affects thought.](https://github.com/k-qy/notation)
 -   [GitHub - christianvoigt/argdown: a simple syntax for complex argumentation](https://github.com/christianvoigt/argdown)
+-   <https://willcrichton.net/notes/naming-conventions-that-need-to-die/>
+-   [The Language Construction Kit](https://www.zompist.com/kit.html)
 
 
 #### PAINT (Programming Abstractions and Interactive Notations, Tools, and Environments) {#paint--programming-abstractions-and-interactive-notations-tools-and-environments}
@@ -184,14 +192,33 @@ tags
     -   [AI for Data Journalism: demonstrating what we can do with this stuff | Hacker News](https://news.ycombinator.com/item?id=40111784)
 
 
+### Calm Technology {#calm-technology}
+
+-   [Calm technology - Wikipedia](https://en.wikipedia.org/wiki/Calm_technology)
+-   [Calm tech certification "rewards" less distracting tech | Hacker News](https://news.ycombinator.com/item?id=42780953)
+-   [Show HN: I made a app that uses NFC as a physical switch to block distractions | Hacker News](https://news.ycombinator.com/item?id=42782295)
+
+
 ### End user development/programming {#end-user-development-programming}
 
--   This is more of an idea, giving the ability to extend the system in someway. Eg. plugins etc. But also being able to programatically interact with it etc.
 -   [End-user development - Wikipedia](https://en.wikipedia.org/wiki/End-user_development)
+-   This is more of an idea, giving the ability to extend the system in someway. Eg. plugins etc. But also being able to programatically interact with it etc.
 -   output-directed programming environment
     -   [cartokit](https://twitter.com/parker_ziegler/status/1718998694748713463): Style maps (See [Geography]({{< relref "20221109130937-geography.md" >}}))
--   Voice directed programming
-    -   [Cursorless is alien magic from the future - Xe Iaso](https://xeiaso.net/notes/cursorless-alien-magic/)
+-   [Szymon Kaliski — Replit Agent](https://szymonkaliski.com/projects/replit-agent/?s=35)
+
+
+### Voice directed {#voice-directed}
+
+-   [Cursorless is alien magic from the future - Xe Iaso](https://xeiaso.net/notes/cursorless-alien-magic/)
+
+
+### Communal Computing {#communal-computing}
+
+See [offline tech/low-tech/small-web/small-data]({{< relref "20241227141055-offline_tech_low_tech_small_web_small_data.md" >}})
+
+-   gather people around play, connection, and creation
+-   <https://spencer.place/>
 
 
 ## X-programming {#x-programming}
@@ -234,3 +261,8 @@ tags
 
     -   [Alan Kay: Doing with Images Makes Symbols (Full Version) - YouTube](https://www.youtube.com/watch?v=p2LZLYcu_JY)
     -   [Lunch with Alan Kay | Future of Coding](https://futureofcoding.org/notes/alan-kay-lunch)
+
+
+### Others {#others}
+
+-   [It's time to make computing personal again | Hacker News](https://news.ycombinator.com/item?id=42763095)

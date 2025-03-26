@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Systems]({{< relref "20221101150250-systems.md" >}})
+: [Systems]({{< relref "20221101150250-systems.md" >}}), [FPGA]({{< relref "20241227083809-fpga.md" >}})
 
 Computer architecture is the combination of microarchitecture and instruction set architecture.
 

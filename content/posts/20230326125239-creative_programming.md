@@ -92,3 +92,10 @@ These are usually lightweight. And you can use things like tauri/electron to pac
 
 -   <https://strudel.cc/>
 -   <https://glicol.org/>
+
+
+## Explorable Explanations {#explorable-explanations}
+
+have a diff page
+
+-   <https://pudding.cool/2018/04/birthday-paradox/>

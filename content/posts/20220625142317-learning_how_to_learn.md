@@ -10,6 +10,9 @@ tags
 source
 : [I just finished the online Coursera course "Learning how to learn"](https://www.reddit.com/r/GetMotivated/comments/5950tm/text_i_just_finished_the_online_coursera_course/)
 
+
+## Summary from mooc {#summary-from-mooc}
+
 There's this popular course on coursera about learning how to learn, i found this nice summary of the whole thing on reddit. This document is the summary of the summary.
 
 working
@@ -63,6 +66,14 @@ Habits
 
 memory
 : -   Create meaningful groups and abbreviations.
+
+
+## Other notes {#other-notes}
+
+
+### Top down vs Bottom up {#top-down-vs-bottom-up}
+
+{{< figure src="/ox-hugo/20220625142317-learning_how_to_learn-776993863.png" >}}
 
 
 ## Resources {#resources}

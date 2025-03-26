@@ -11,6 +11,11 @@ tags
 ## Different Architectures {#different-architectures}
 
 
+## Building sync engine {#building-sync-engine}
+
+-   [Rearchitecting: Redis to SQLite | Wafris](https://wafris.org/blog/rearchitecting-for-sqlite)
+
+
 ## FAQ {#faq}
 
 
@@ -39,3 +44,4 @@ tags
 -   WebDAV
 -   <https://en.wikipedia.org/wiki/Session_Initiation_Protocol>
 -   [Easy file-sharing with WebDAV](https://scvalex.net/posts/70/)
+-   [Atomic Attributes in Local-First Sync – Adam Wulf](https://adamwulf.me/2022/04/atomic-attributes-in-local-first-sync/)

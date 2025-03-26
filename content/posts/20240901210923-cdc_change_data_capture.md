@@ -53,5 +53,14 @@ See [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
 -   <https://clickhouse.com/blog/clickhouse-postgresql-change-data-capture-cdc-part-2>
 -   [Show HN: Light implementation of Event Sourcing using PostgreSQL as event store | Hacker News](https://news.ycombinator.com/item?id=38084098)
     -   <https://github.com/supabase/pg_replicate> (nice)
--   <https://news.ycombinator.com/item?id=37610899>
--   <https://blog.peerdb.io/real-time-change-data-capture-from-postgres-16-read-replicas>
+
+
+## [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) CDC Tools {#postgresql--20221102123302-postgresql-dot-md--cdc-tools}
+
+-   [Ways to capture changes in Postgres | Hacker News](https://news.ycombinator.com/item?id=37610899)
+-   [Real-time Change Data Capture from Postgres 16 Read Replicas](https://blog.peerdb.io/real-time-change-data-capture-from-postgres-16-read-replicas)
+-   <https://github.com/xataio/pgstream>
+-   <https://github.com/pgflo/pg_flo>
+-   <https://github.com/redpanda-data/connect/pull/2917>
+-   <https://github.com/sequinstream/sequin>
+-   [Kuvasz-streamer: open-source CDC for Postgres for low latency replication | Hacker News](https://news.ycombinator.com/item?id=42582203)

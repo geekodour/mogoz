@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Caches]({{< relref "20221101214226-caches.md" >}}), [Database Transactions]({{< relref "20231113145513-database_transactions.md" >}})
+: [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Database]({{< relref "20221102123145-database.md" >}}), [Caches]({{< relref "20221101214226-caches.md" >}}), [Database Transactions]({{< relref "20231113145513-database_transactions.md" >}}), [RDBMS / SQL / DB Data Modeling]({{< relref "20231114082501-rdbms_sql_db_data_modeling.md" >}})
 
 {{< figure src="/ox-hugo/data_eng_landscape.jpg" >}}
 
@@ -328,9 +328,43 @@ More on [Polars]({{< relref "20240510084554-polars.md" >}})
 -   It works [nicely](https://duckdb.org/docs/guides/python/polars.html) with [DuckDB]({{< relref "20231123234702-duckdb.md" >}})
 
 
+#### DataFusion {#datafusion}
+
+> DataFusion and Polars are like two sides of the same Rust coin: DataFusion is built for distributed, SQL-based analytics at scale, serving as the backbone for data systems and enabling complex query execution across clusters. Polars, on the other hand, is laser-focused on blazing-fast, single-node data manipulation, offering a Python-like DataFrame API that feels intuitive for exploratory analysis and in-memory processing.
+
+
 #### Pandas {#pandas}
 
 -   Uses numpy as its data representation
+
+
+### Dagster {#dagster}
+
+
+#### Local agent {#local-agent}
+
+-   Whereever this agent is running, actual workload code would run in the same env
+-   There's Dagster OSS and Dagster+ (+ is the better offering and does not make use of the `workspace.yaml` file)
+
+
+#### Code location {#code-location}
+
+![](/ox-hugo/20230405003455-data_engineering-1652183394.png)
+It can be a local file, or container image etc
+
+<!--list-separator-->
+
+-  What?
+
+    -   Organization: Helps in organizing and managing the code that defines your data assets and pipelines
+    -   Exact entity: Reference to a specific Python module containing an instance of `Definitions`, which encapsulates your data assets, jobs, schedules, and sensors.
+    -   Environment: Includes the Python environment required to load and execute this module.
+
+
+#### Building the imageo {#building-the-imageo}
+
+We're not using this, we're building image in github actions
+![](/ox-hugo/20230405003455-data_engineering-1572515159.png)
 
 
 ## ETL {#etl}
@@ -494,6 +528,13 @@ See <https://docs.delta.io/2.0.2/delta-update.html#-write-change-data-into-a-del
 
 -   De-duplication
 -   Schema drift, column type change in source
+
+
+## Storage {#storage}
+
+See [Storage]({{< relref "20221101164723-storage.md" >}}), [Object Store (eg. S3)]({{< relref "20240630172513-object_store_eg_s3.md" >}})
+
+-   [How CERN serves 1EB of data via FUSE [video] | Hacker News](https://news.ycombinator.com/item?id=41715277)
 
 
 ## Related Topics {#related-topics}

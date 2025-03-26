@@ -19,9 +19,11 @@ There's something called metric time
 ## Different ways to show {#different-ways-to-show}
 
 
-### Calendar {#calendar}
+### Calendar/Date {#calendar-date}
 
 -   [We Need to Talk About the State of Calendar Software on Desktop | Lobsters](https://lobste.rs/s/fex5ji/we_need_talk_about_state_calendar)
+-   [Optimizing with Novel Calendrical Algorithms | Hacker News](https://news.ycombinator.com/item?id=42915723)
+-   [Lunase moon phase watch mechanism | Hacker News](https://news.ycombinator.com/item?id=42704472)
 -   [This is what the year actually looks like (2018) | Hacker News](https://news.ycombinator.com/item?id=37926239)
 -   [Deciyear Calendar | Hacker News](https://news.ycombinator.com/item?id=38639415)
 -   [the human calendar®: about](https://humancalendar.com/about)
@@ -31,12 +33,23 @@ There's something called metric time
 -   [Holocene calendar - Wikipedia](https://en.wikipedia.org/wiki/Holocene_calendar)
 
 
-### Clock {#clock}
+### Clock/Time {#clock-time}
 
+-   [GitHub - turingbirds/ping-clock](https://github.com/turingbirds/ping-clock)
+-   [Ian Mallett - Reference: Time Standards Page](https://geometrian.com/programming/reference/timestds/index.php)
 -   [Author Clock: a novel way to tell time | Hacker News](https://news.ycombinator.com/item?id=40644960)
+-   [All clocks are 30 seconds late | Hacker News](https://news.ycombinator.com/item?id=42612842)
 -   [Linear Clock | John Whittington's Blog](https://engineer.john-whittington.co.uk/electronics/fabrication/mechanical/clock/2021/06/16/linear-clock.html)
+-   [Elektročas HH3 – the most accurate pendulum clock on the planet | Hacker News](https://news.ycombinator.com/item?id=42556808)
+-   [Time Flies - Koen van Gilst](https://time-flies.koenvangilst.nl/)
+-   [Time as a Grid](https://joshleeb.com/posts/gridclock.html)
 -   [Lenticular Clock | Hacker News](https://news.ycombinator.com/item?id=41293929)
 -   <https://www.humanclock.com/>
+
+
+### Timezone {#timezone}
+
+-   [Exploring 120 years of timezones](https://blog.scottlogic.com/2021/09/14/120-years-timezone.html)
 
 
 ## Date, Time and Timezone {#date-time-and-timezone}
@@ -82,7 +95,9 @@ There's something called metric time
 ### Resources {#resources}
 
 -   [ ] [ISO 8601: the better date format | Blog | Kirby Kevinson](https://kirby.kevinson.org/blog/iso-8601-the-better-date-format/)
+-   [ ] [Storing times for human events](https://simonwillison.net/2024/Nov/27/storing-times-for-human-events/?s=35) 🌟
 -   [ ] [Timezone-naive datetimes are one of the most dangerous objects in Python | Hacker News](https://news.ycombinator.com/item?id=40977293)
+-   [ ] [What is a second? | Hacker News](https://news.ycombinator.com/item?id=42540792)
 -   [ ] [Designing a REST API: Unix time vs ISO-8601](https://nickb.dev/blog/designing-a-rest-api-unix-time-vs-iso-8601/)
 -   [ ] [Time on Unix](https://venam.nixers.net/blog/unix/2020/05/02/time-on-unix.html)
 -   [ ] [Time is an illusion, Unix time doubly so](https://www.netmeister.org/blog/epoch.html)

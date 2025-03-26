@@ -23,6 +23,12 @@ tags
 -   [What is an Invariant?](https://matklad.github.io/2023/10/06/what-is-an-invariant.html)
 
 
+### Abstractions {#abstractions}
+
+-   Abstractions should be discovered not created
+    -   In [Golang]({{< relref "20221101220915-golang.md" >}}), It means we shouldn’t start creating abstractions in our code if there is no immediate reason to do so. We shouldn’t design with interfaces but wait for a concrete need. Said differently, we should create an interface when we need it. not when we foresee that we could need it.
+
+
 ## Opinions {#opinions}
 
 

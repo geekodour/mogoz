@@ -9,7 +9,7 @@ tags
 
 OG Blogpost:
 
--   [Data Replication Design Spectrum](https://transactional.blog/blog/2024-data-replication-design-spectrum#Hermes)
+-   [Data Replication Design Spectrum](https://transactional.blog/blog/2024-data-replication-design-spectrum#Hermes) 🌟
 -   [Constraining writers in distributed systems](https://shachaf.net/w/constraining-writers-in-distributed-systems)
 
 
@@ -18,8 +18,11 @@ OG Blogpost:
 
 ### What does replication give? {#what-does-replication-give}
 
+The methodologies to attain this via data replication are different.
+
 -   Availability
--   Fault tolerance
+-   Fault tolerance (Durability)
+    -   Eg. We store progress state and make sure to replicate it so that in times of crash, we can easily restart from the last checkpoint.
 
 
 ### How does [Consensus Protocols]({{< relref "20231118205116-consensus_protocols.md" >}}) relate to [Data Replication]({{< relref "20231021151742-data_replication.md" >}})? {#how-does-consensus-protocols--20231118205116-consensus-protocols-dot-md--relate-to-data-replication--20231021151742-data-replication-dot-md}
@@ -131,6 +134,7 @@ Following are some notes on types that I am little familiar with.
 
 > -   These can be used to lower load on primary/leader and also can be used as a failover mechanism
 > -   It's much easier to achieve consistency with Leader-Follower setup than to use a "true multi master setup"
+> -   If you want there to be one single leader you cannot elect a leader without either `consensus` or `operator intervention`
 
 <!--list-separator-->
 
@@ -187,6 +191,11 @@ Any replica can process a request and distribute a new state.
 | Hermes                         |       |             |         |
 
 
+#### What are we taking about when we're talking about replication protocol? {#what-are-we-taking-about-when-we-re-talking-about-replication-protocol}
+
+-   `“whatever the simplest replication topology is”` + `“whatever the simplest membership maintenance algorithm is“`
+
+
 #### Notes on some replication protocols {#notes-on-some-replication-protocols}
 
 <!--list-separator-->
@@ -194,7 +203,20 @@ Any replica can process a request and distribute a new state.
 -  Viewstamped Replication Protocol
 
     -   Q: This is consensus protocol or replication protocol?
+    -   <https://github.com/tigerbeetle/tigerbeetle/blob/main/src/vsr/replica.zig>
     -   See [Consensus Protocols]({{< relref "20231118205116-consensus_protocols.md" >}})
+
+<!--list-separator-->
+
+-  Chain based
+
+    -   Chain replication is simple but it does also assume you have a consensus implementation so I sort of disqualify it from being the simplest
+
+<!--list-separator-->
+
+-  Human based
+
+    -   Old-school primary backup replication is probably the simplest, as your replication topology is dictated by a human operator
 
 
 ## TO Read {#to-read}
@@ -203,3 +225,4 @@ Any replica can process a request and distribute a new state.
 -   I believe MongoDB has moved to a RAFT based algorithm in their new replication protocol, CockroachDB uses a variation on it. It and PAXOS are the two of the most common distributed consensus approaches I believe.
 -   DDIA : Chapter 5 &amp; 7
 -   <https://debezium.io/>
+    -   <https://developer.confluent.io/courses/architecture/data-replication/?s=35>

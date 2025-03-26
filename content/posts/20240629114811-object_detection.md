@@ -5,7 +5,16 @@ draft = false
 +++
 
 tags
-: [Machine Learning]({{< relref "20230408190056-machine_learning.md" >}}), [NLP (Natural Language Processing)]({{< relref "20231123010516-nlp_natural_language_processing.md" >}})
+: [Machine Learning]({{< relref "20230408190056-machine_learning.md" >}}), [NLP (Natural Language Processing)]({{< relref "20231123010516-nlp_natural_language_processing.md" >}}), [OCR]({{< relref "20231106113255-ocr.md" >}})
+
+
+## Meta {#meta}
+
+
+### Datasets {#datasets}
+
+-   ImageNet
+-   COCO
 
 
 ## Vision tasks {#vision-tasks}
@@ -14,7 +23,7 @@ tags
 |-------------------------------------|--------------------------------------------------------------|
 | Object detection                    | Real time, non-realtime, rotated, captioning, classification |
 | Object tracking(video)              | Similar to object detection but with some additional checks  |
-| Segmentation                        |                                                              |
+| Segmentation                        | SAM2 etc.                                                    |
 | Contrastive Learning                |                                                              |
 | Distillation                        |                                                              |
 | VDU (Visual Document Understanding) | OCR, OCR-free                                                |
@@ -65,6 +74,7 @@ tags
 -  YOLO! (?)
 
     -   <https://roboflow.github.io/model-leaderboard/>
+    -   [Show HN: Using YOLO to Detect Office Chairs in 40M Hotel Photos | Hacker News](https://news.ycombinator.com/item?id=42779330)
 
     > Lot of crazy politics. anyone is coming up with anything. The newer version doesn't mean the newer version of the same thing. superr confusing. Original author left the chat long back cuz ethical reasons
     >
@@ -269,20 +279,39 @@ tags
         -   Some of the VLMs can do this as-well.
 
 
-## Meta {#meta}
-
-
-### Datasets {#datasets}
-
--   ImageNet
--   COCO
-
-
 ## OpenCV {#opencv}
 
 -   <https://archive.ph/2024.07.23-031436/https://scottsexton.co/post/opencv_wild_kingdom/>
 
 
-## Resources {#resources}
+## VLMs {#vlms}
 
--   <https://x.com/simonw/status/1828113518610047386>
+> Finetuning diffusion model(Image generation models) is different, see [StableDiffusion]({{< relref "20230719120753-stablediffusion.md" >}}) for that.
+
+| Name       | Desc |
+|------------|------|
+| QvQ        |      |
+| PaliGemma2 |      |
+| Moondream  |      |
+
+-   [Vision Language Models Explained](https://huggingface.co/blog/vlms) 🌟
+-   [Trying out QvQ – Qwen's new visual reasoning model | Hacker News](https://news.ycombinator.com/item?id=42505038)
+-   [PaliGemma 2: Powerful Vision-Language Models, Simple Fine-Tuning | Hacker News](https://news.ycombinator.com/item?id=42330491)
+    -   [How to Fine-tune PaliGemma 2](https://blog.roboflow.com/fine-tune-paligemma-2/)
+-   Fine-tune SmolVLM on Visual Question Answering using Consumer GPU with QLoRA
+    -   <https://github.com/huggingface/smollm/blob/main/finetuning%2FSmol_VLM_FT.ipynb>
+
+
+## Others {#others}
+
+-   Traffic
+    -   [Show HN: Open-sourced (road) traffic counting application | Hacker News](https://news.ycombinator.com/item?id=42301228)
+-   Bounding boxes
+    -   [Playing with Microsoft Florence 2](https://objectgraph.com/blog/playing-with-microsoft-florence-2/)
+    -   <https://x.com/simonw/status/1828113518610047386>
+
+
+### Resources {#resources}
+
+-   [Haystack EU 2024 - Jo Kristian Bergum:What You See Is What You Search: Vision Language Models &amp; PDFs - YouTube](https://www.youtube.com/watch?app=desktop&v=lURz8Tf3uQk&s=35)
+-   [Overengineering a way to know if people are in my university's CS lab | Hacker News](https://news.ycombinator.com/item?id=41907360)

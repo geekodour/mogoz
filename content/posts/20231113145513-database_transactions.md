@@ -77,6 +77,7 @@ This is done differently for different DBs, following is [PostgreSQL]({{< relref
 
 -   See [Distributed Systems]({{< relref "20221102130004-distributed_systems.md" >}}), [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
 -   See [Using Atomic Transactions to Power an Idempotent API](https://brandur.org/http-transactions#create-user)
+-   See [An illustrated proof of the CAP theorem (2018) | Hacker News](https://news.ycombinator.com/item?id=41772624)
 -   See [CAP]({{< relref "20221102130004-distributed_systems.md#cap" >}})
 -   This is `Atomicity v/s Partial Failures`
 -   `Transaction Protocol = Concurrency Control(CC) + Atomic Commit Protocol`

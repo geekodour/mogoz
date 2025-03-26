@@ -7,6 +7,8 @@ draft = false
 tags
 : [Systems]({{< relref "20221101150250-systems.md" >}})
 
+To read: <https://x.com/7etsuo/status/1840268043982909838> 🌟
+
 
 ## FAQ {#faq}
 
@@ -40,7 +42,10 @@ tags
 > FD is not related to an inode, except as such may be used internally by particular file-system driver.
 </div>
 
--   FD is an abstract indicator to access a file or other input/output resources.
+-   FD is an `abstract indicator` to access a `file` or `other input/output resources`.
+    -   It's 100% opaque +ve integers
+    -   Even  if its called "file" descriptor it can be indicator to something  which is not a file too (but in unix everything is a file makes it fuzzy)
+        -   Up to V7 UNIX (1973-1979[2,3]), the file description table could literally only reference a file on disk, UNIX domain/TCP/UDP sockets weren't introduced until 4.2BSD.
 -   It decouples a file path (more correctly, an inode) from a file object inside a process and the Linux kernel.
 -   Allows for opening the same file
     -   An arbitrary number of times
@@ -81,30 +86,28 @@ ino:    7
 ```
 
 
-## The system fd and per process fd table and inode {#the-system-fd-and-per-process-fd-table-and-inode}
+## <span class="org-todo todo TODO">TODO</span> The system fd and per process fd table and inode {#the-system-fd-and-per-process-fd-table-and-inode}
 
-{{< figure src="/ox-hugo/20230315164241-file_descriptors-652314626.png" >}}
+![](/ox-hugo/20230315164241-file_descriptors-652314626.png)
+![](/ox-hugo/20230315164241-file_descriptors-695953361.png)
 
-|                             | Global Table | Per Process Table |
-|-----------------------------|--------------|-------------------|
-| Operation Flag(`O_CLOEXEC`) |              | Private           |
-| Ref. to Global Table        |              | Private           |
-| File offset                 | Shared       |                   |
-| Access Mode(rw)             | Shared       |                   |
-| Ref. to inode               | Shared       |                   |
-
-{{< figure src="/ox-hugo/20230315164241-file_descriptors-695953361.png" >}}
+> Related [syscalls]({{< relref "20230330194208-syscalls.md" >}}): `dup, dup2, dup3, fcntl` (also allows us to specify certain fd number)
 
 
 ### The tables {#the-tables}
 
+| Name             | Level       | Other Names                                          |
+|------------------|-------------|------------------------------------------------------|
+| descriptor table | per process | Per process table                                    |
+| file table       | system wide | Open FD(OFD) table, Global FD table, System FD table |
+| v-node table     | system wide | inode table                                          |
+
 
 #### Open FD table (OFD table) {#open-fd-table--ofd-table}
 
--   AKA Global FD table, System FD table
--   It's an abstract thing, no actual entity in the kernel.
+> It's an abstract thing, no actual entity in the kernel.
+
 -   Each entry stores `status` and `position` of the fd.
--   [Threads]({{< relref "20221101173032-threads.md" >}}) have `task_struct`, it points to `files_struct` which points to `file` struct. `file` contains [flags, position, inode](https://elixir.bootlin.com/linux/v5.18.10/source/include/linux/fs.h#L932) etc.
 
 
 #### Per process FD table {#per-process-fd-table}
@@ -115,13 +118,28 @@ This is a tangible thing
 -   Multiple processes w their own FDs referring to the same OFD. (`man 2 fork`)
     -   If parent and child now start writing to the fd, the kernel will handle the synchronization
 -   Multiple processes w their own FDs referring to distinct OFD, but OFD points to same inode. (`man 2 open` by both processes)
--   Related syscalls: `dup, dup2, dup3, fcntl` (also allows us to specify certain fd number)
 
 
-### Shared and Private {#shared-and-private}
+### <span class="org-todo todo TODO">TODO</span> Shared and Private {#shared-and-private}
+
+| Properties/Attributes       | Global Table | Per Process Table |
+|-----------------------------|--------------|-------------------|
+| Operation Flag(`O_CLOEXEC`) |              | Private           |
+| Ref. to Global Table        |              | Private           |
+| File offset                 | Shared       | Private (mapped)  |
+| Access Mode(rw)             | Shared       | Private(mapped)   |
+| Ref. to inode               | Shared       |                   |
 
 -   Some properties are stored in the OFD and some in per process
 -   If we change property of a FD from one process, and its shared, changes will reflect in other.
+
+
+## FD Internals {#fd-internals}
+
+-   [Threads]({{< relref "20221101173032-threads.md" >}}) have `task_struct`, it points to `files_struct` which points to `file` struct. `file` contains [flags, position, inode](https://elixir.bootlin.com/linux/v5.18.10/source/include/linux/fs.h#L932) etc.
+
+
+## Usage of FD {#usage-of-fd}
 
 
 ### Creating FD {#creating-fd}

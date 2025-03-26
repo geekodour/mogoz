@@ -73,6 +73,7 @@ See [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >
 
 {{< figure src="/ox-hugo/20221102130004-distributed_systems-21358776.png" >}}
 
+-   See [An illustrated proof of the CAP theorem (2018) | Hacker News](https://news.ycombinator.com/item?id=41772624)
 -   Systems can do 2 of the 3, Eg. Abandon C(onsistency) but maintain (A)vailability and (P)artition tolerance.
 -   When talking about CAP we have to make a difference between
     -   The original CAP Conjecture
@@ -184,6 +185,15 @@ See [Eventual Consistency]({{< relref "20231117135755-eventual_consistency.md" >
 
 
 #### fault-tolerance {#fault-tolerance}
+
+-   <https://en.wikipedia.org/wiki/Self-stabilization>
+-   [Gray failure: the Achilles’ heel of cloud-scale systems | the morning paper](https://blog.acolyer.org/2017/06/15/gray-failure-the-achilles-heel-of-cloud-scale-systems/)
+
+<!--list-separator-->
+
+-  Retries
+
+    -   [Good Retry, Bad Retry | Hacker News](https://news.ycombinator.com/item?id=41755805)
 
 
 ## Time and Clocks {#time-and-clocks}

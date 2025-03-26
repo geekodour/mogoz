@@ -232,3 +232,6 @@ An **order of magnitude** is an approximate [position on a **logarithmic scale.*
 ## Other napkin links {#other-napkin-links}
 
 -   [Neurotechnology Numbers Worth Knowing](https://milan.cvitkovic.net/writing/neurotechnology_numbers_worth_knowing/)
+-   [Units of Information](https://en.wikipedia.org/wiki/Units_of_information)
+-   [nat (unit)](https://en.wikipedia.org/wiki/Nat_(unit))
+-   [Minimum message length](https://en.wikipedia.org/wiki/Minimum_message_length)

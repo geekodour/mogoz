@@ -62,12 +62,20 @@ Means different things
 -   If you connect to some port which is listening, you don't consume the remote port. (In case of [Web Server]({{< relref "20230310200327-web_server.md" >}}) there's additional things that happen)
     -   It remains open for others and also for you.
     -   Each connection you make, makes a `4-tuple` combination and when you make a connection to `sever_ip:80`
-        -   connection1: `your_local_ip:random_port1`
-        -   connection2: `your_local_ip:random_port2`
+        -   connection1: `your_local_ip:random_port1` &lt;=&gt; `server_ip:80`
+        -   connection2: `your_local_ip:random_port2` &lt;=&gt; `server_ip:80`
         -   See this in action w `ss -tpn`
 
 
 ### TCP and UDP {#tcp-and-udp}
+
+> To learn TCP, read the RFCs to understand the design, then dive into the Linux
+> kernel’s TCP code. Build your own TCP stream replay tool (around 1,000 lines of
+> code), and within a year, you'll be ahead of 99.99% of people in this field.
+>
+> wangbin579
+>
+> <https://github.com/session-replay-tools/tcpcopy>
 
 See [TCP&amp;UDP]({{< relref "20231206115227-tcp_udp.md" >}})
 
@@ -177,3 +185,9 @@ See [TCP&amp;UDP]({{< relref "20231206115227-tcp_udp.md" >}})
 
 -   <https://github.com/ValveSoftware/GameNetworkingSockets>
 -   [networkprotocol/netcode](https://github.com/networkprotocol/netcode)
+
+
+## Links {#links}
+
+-   [Quake 3 Source Code Review: Network Model (2012) | Hacker News](https://news.ycombinator.com/item?id=42218532)
+-   [The trouble with struct sockaddr's fake flexible array [LWN.net]​](https://lwn.net/Articles/997094/)

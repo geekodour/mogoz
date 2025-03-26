@@ -110,6 +110,7 @@ From [Why SQLite? Why Now? 🐇 - Tantamanlands](https://tantaman.com/2022-08-23
 -   OSS
     -   Yjs, [Automerge](https://automerge.org/)(updated!)
         -   Automerge: Add a few lines of code to your react app, and you get sync across devices + local persistence!
+        -   [Learn Yjs Interactively | Hacker News](https://news.ycombinator.com/item?id=42731582)
     -   [jazz](https://jazz.tools/) (Replicated data structure)
 -   Services: Liveblocks, Partykit, Triplit, Ditto etc.
 
@@ -128,6 +129,7 @@ Write to your database while offline. I can write to mine while offline. We can 
     Write to [PostgreSQL]({{< relref "20221102123302-postgresql.md" >}}) and replicate to a client side db such as [sqlite]({{< relref "20230702184501-sqlite.md" >}})
 
     -   [ElectricSQL](https://electric-sql.com/) (write back,  partial replication)
+        -   [Electric (Postgres sync engine) beta release | Hacker News](https://news.ycombinator.com/item?id=42383136)
     -   [powersync](https://www.powersync.co/) (write back,  partial replication)
         -   PowerSync supports syncing from multiple databases.
     -   [sqledge](https://news.ycombinator.com/item?id=37063238) (readonly? from the creators of [ably](https://ably.com/spaces))

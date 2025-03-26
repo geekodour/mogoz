@@ -153,6 +153,8 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Links {#links}
 
+-   <https://www.jeremykun.com/2024/10/30/how-this-blog-does-indieweb/>
+-   [Greenwich: an experiment in collaborative links | Hacker News](https://news.ycombinator.com/item?id=41670140)
 -   [Let's make the indie web easier | Hacker News](https://news.ycombinator.com/item?id=38935286)
 -   [Make the indie web easier | Lobsters](https://lobste.rs/s/rqqqx6/make_indie_web_easier)
 -   [Standardizing the Social Web • Aaron Parecki](https://aaronparecki.com/2016/06/22/1/osbridge)
@@ -172,6 +174,7 @@ Even when things are not federated, by the nature what these things are we can a
 #### Learn more {#learn-more}
 
 -   [Reclaiming the Web with a Personal Reader](https://olano.dev/2023-12-12-reclaiming-the-web-with-a-personal-reader/)
+-   [I ditched the algorithm for RSS | Hacker News](https://news.ycombinator.com/item?id=42724284)
 -   [MIME, RSS, and existential torment | Lobsters](https://lobste.rs/s/jahu16/mime_rss_existential_torment)
     -   [From RSS to My Kindle | Hacker News](https://news.ycombinator.com/item?id=40773125)
 -   [Use RSS for privacy and efficiency {rsapkf/www}](https://rsapkf.org/weblog/q2z)
@@ -192,6 +195,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Tools {#tools}
 
+-   [Do you have any suggestions on RSS readers? | Hacker News](https://news.ycombinator.com/item?id=42223196)
 -   [Show HN: Full Text, Full Archive RSS Feeds for Any Blog | Hacker News](https://news.ycombinator.com/item?id=41425085)
 -   [Zoomer Tries RSS: In Praise of Yarr - tudor’s website](https://tudorr.ro/blog/zoomer-tries-rss/)
 -   [GitHub Trending RSS](https://mshibanami.github.io/GitHubTrendingRSS/)
@@ -230,6 +234,7 @@ Even when things are not federated, by the nature what these things are we can a
 #### Gopher {#gopher}
 
 -   [Gopherspace in the Year 2020](https://cheapskatesguide.org/articles/gopherspace.html)
+-   [The Internet Gopher from Minnesota | Hacker News](https://news.ycombinator.com/item?id=42106368)
 -   [Building a legacy search engine for a legacy protocol](https://blog.benjojo.co.uk/post/building-a-search-engine-for-gopher)
 -   [Bombadillo](https://rawtext.club/~sloum/bombadillo.html)
 -   [Gopher Protocol (2020) | Hacker News](https://news.ycombinator.com/item?id=33447060)
@@ -245,10 +250,9 @@ Even when things are not federated, by the nature what these things are we can a
 -   [Fetching ActivityPub Feeds using WebFinger](https://www.gkbrk.com/2018/06/fetching-activitypub-feeds/)
 
 
-### Offline &amp; Low-tech web {#offline-and-low-tech-web}
+### Offline &amp; Low-tech web &amp; small web &amp; small data {#offline-and-low-tech-web-and-small-web-and-small-data}
 
--   <https://github.com/Antharia/awesome-lowtech>
--   [Kristall Small Internet Browser - Kristall Small-Internet Browser](https://kristall.random-projects.net/)
+See [offline tech/low-tech/small-web/small-data]({{< relref "20241227141055-offline_tech_low_tech_small_web_small_data.md" >}})
 
 
 ### Darkweb {#darkweb}
@@ -260,8 +264,8 @@ Even when things are not federated, by the nature what these things are we can a
 ### Billion other things {#billion-other-things}
 
 -   [pwr - paced web reader | Lobsters](https://lobste.rs/s/4mnch6/pwr_paced_web_reader)
+-   [Engineers don't make public squares. People do](https://cpf.sh/blog/2025/01/25/engineers-dont-make-public-squares-people-do)
 -   <https://github.com/mwmbl/mwmbl> (See [Information Retrieval]({{< relref "20231123014416-information_retrieval.md" >}}))
--   [Rediscovering the Small Web - Neustadt.fr](https://neustadt.fr/essays/the-small-web/)
 -   [Dripline: Check the specs: final thoughts on p2p options | Hypha Worker Co-operative](https://hypha.coop/dripline/p2p-primer-part-4/)
 -   [The first messenger without user IDs | Hacker News](https://news.ycombinator.com/item?id=37105477)
 -   [A few notes on Veilid](https://thomask.sdf.org/blog/2023/08/15/a-few-notes-on-veilid.html)
@@ -270,6 +274,5 @@ Even when things are not federated, by the nature what these things are we can a
 -   [Client-side proxies – a better way to individualise the Internet? (2000) | Hacker News](https://news.ycombinator.com/item?id=36824165)
 -   [Remembering Molly, one of the greats - The History of the Web](https://thehistoryoftheweb.com/remembering-molly-one-of-the-greats/)
 -   <https://hyperlink.academy/>
--   [The Small Website Discoverability Crisis (2021) | Hacker News](https://news.ycombinator.com/item?id=38276951)
 -   [The problem with federated web apps | Lobsters](https://lobste.rs/s/w2m7pr/problem_with_federated_web_apps)
 -   [Browsing the Eastern Side of the Personal Web | Hacker News](https://news.ycombinator.com/item?id=38534153)

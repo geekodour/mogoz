@@ -78,6 +78,10 @@ tags
 -   Primarily the base for Bluesky
 -   A network that aims to enables global long-term public conversations at scale.
 -   [How Does BlueSky Work?](https://steveklabnik.com/writing/how-does-bluesky-work)
+-   <https://alice.bsky.sh/post/3laega7icmi2q>
+-   [Jetstream: Shrinking the AT Proto Firehose by &gt;99% · Jaz's Blog](https://jazco.dev/2024/09/24/jetstream/)
+-   <https://newsletter.pragmaticengineer.com/p/bluesky?s=35>
+-   [A conceptual model of ATProto and ActivityPub – The Fediverse Report](https://fediversereport.com/a-conceptual-model-of-atproto-and-activitypub/)
 -   [First impressions of Bluesky's AT Protocol](https://educatedguesswork.org/posts/atproto-firstlook/)
 -   [Federation Architecture Overview - Bluesky](https://blueskyweb.xyz/blog/5-5-2023-federation-architecture) (2023)
 -   [A Self-Authenticating Social Protocol - Bluesky](https://blueskyweb.xyz/blog/3-6-2022-a-self-authenticating-social-protocol) (2022)

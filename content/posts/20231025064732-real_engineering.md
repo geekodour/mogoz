@@ -15,4 +15,6 @@ Following are some topics that are not something I come acrosss as a gene swe bu
 
 ## Kalman Filters {#kalman-filters}
 
+-   [Kalman Filter Tutorial | Hacker News](https://news.ycombinator.com/item?id=42751690)
+    -   To truly understand the Kalman Filter, you need to study Least Squares (aka linear regression), then recursive Least Squares, then the Information Filter (which is a different formulation of the KF). Then you'll realize the KF is just recursive Least Squares reformulated in a way to prioritize efficiency in the update step.
 -   [Kalman Filter Tutorial](https://www.kalmanfilter.net/default.aspx)

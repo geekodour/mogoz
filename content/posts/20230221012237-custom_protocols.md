@@ -140,6 +140,7 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 > -   [custom binary protocol library implementation](http://www.andrescottwilson.com/yet-another-custom-binary-protocol-library-implementation/)
 > -   [Visual Programming with Elixir: Learning to Write Binary Parsers](https://hansonkd.medium.com/building-beautiful-binary-parsers-in-elixir-1bd7f865bf17)
 > -   Bare Metal Programming Series 7.1 - YouTube]]
+> -   [A Simple Serialization System | rxi](https://rxi.github.io/a_simple_serialization_system.html)
 </div>
 
 -   When we design a `protocol`, we need to design a `protocol handler`
@@ -151,6 +152,7 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 
 -   Will always be more space efficient than text protocols.
 -   Examples: RTP, TCP, IP, TLS, SSH, MQTT.
+-   RITP: [Reliable Immutable Transfer Protocol — binarycat](https://paper.wf/binarycat/reliable-immutable-transfer-protocol)
 
 
 ### Text protocols {#text-protocols}
