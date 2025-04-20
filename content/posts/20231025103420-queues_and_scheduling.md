@@ -196,8 +196,4 @@ See [Nomad]({{< relref "20240407004157-nomad.md" >}}), see [Kubernetes]({{< relr
     -   [Sunsetting Nomad - Fresh Produce - Fly.io](https://community.fly.io/t/sunsetting-nomad/15389)
     -   [The Party Must Go on - Resume Pods After Spot Instance Shut Down - Muvaffak Onuş, QA Wolf - YouTube](https://www.youtube.com/watch?v=c2MbSM9-7Xs)
 -   [If You Wish to Truly Understand Frappe's Scheduler, You Must First Invent the Universe | Lobsters](https://lobste.rs/s/i3ox7c/if_you_wish_truly_understand_frappe_s)
-
-
-## Others {#others}
-
 -   [Auto-WLM: machine learning enhanced workload management in Amazon Redshift](https://muratbuffalo.blogspot.com/2024/10/auto-wlm-machine-learning-enhanced.html)

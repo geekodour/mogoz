@@ -43,14 +43,10 @@ See [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
 ## Resources to come back later {#resources-to-come-back-later}
 
 -   [Change Data Capture (CDC) Tools should be database specialized not generalized | Hacker News](https://news.ycombinator.com/item?id=41304830)
+-   <https://clickhouse.com/blog/clickhouse-postgresql-change-data-capture-cdc-part-2>
 -   <https://en.wikipedia.org/wiki/Change_data_capture>
 -   <https://github.com/tikal-fuseday/delta-architecture>
 -   <https://www.decodable.co/connectors/postgres-cdc>
--   <https://medium.com/@howdyservices9/real-time-replication-from-postgres-to-delta-lake-using-debezium-kafka-connect-spark-structured-626dc7f1e3e1>
--   <https://medium.com/@dinesh.reddy_80040/building-a-robust-cdc-pipeline-mysql-to-delta-lake-via-debezium-kafka-pyspark-streaming-and-ba9264591d86>
--   <https://medium.com/israeli-tech-radar/streaming-data-changes-to-a-data-lake-with-debezium-and-delta-lake-pipeline-299821053dc3>
--   <https://debezium.io/>
--   <https://clickhouse.com/blog/clickhouse-postgresql-change-data-capture-cdc-part-2>
 -   [Show HN: Light implementation of Event Sourcing using PostgreSQL as event store | Hacker News](https://news.ycombinator.com/item?id=38084098)
     -   <https://github.com/supabase/pg_replicate> (nice)
 
@@ -59,6 +55,7 @@ See [Data Replication]({{< relref "20231021151742-data_replication.md" >}})
 
 -   [Ways to capture changes in Postgres | Hacker News](https://news.ycombinator.com/item?id=37610899)
 -   [Real-time Change Data Capture from Postgres 16 Read Replicas](https://blog.peerdb.io/real-time-change-data-capture-from-postgres-16-read-replicas)
+-   [Reliably replicating data between Postgres and ClickHouse | Hacker News](https://news.ycombinator.com/item?id=43111294) and [Clickhouse]({{< relref "20240901192322-clickhouse.md" >}})
 -   <https://github.com/xataio/pgstream>
 -   <https://github.com/pgflo/pg_flo>
 -   <https://github.com/redpanda-data/connect/pull/2917>

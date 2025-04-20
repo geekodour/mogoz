@@ -65,12 +65,16 @@ tags
     -   Tinkerability, accessibility, low cost, easy to make mistakes — fun
 
 
-### Malleable software {#malleable-software}
+### Malleable software / Personal software {#malleable-software-personal-software}
 
 -   Tweet from Geoffrey Litt
     -   Software environments that mold to user needs, not the other way around
     -   Ingredients may include: enriching documents w/ behavior [a la Potluck](https://www.inkandswitch.com/potluck/), LLMs for code editing, local-first as an enabling foundation...
     -   What if, instead of making an app for you, an [LLM could make you an **app construction kit**?](https://twitter.com/geoffreylitt/status/1682427305442902016)
+-   More links
+    -   [Ask HN: Tools you have made for yourself? | Hacker News](https://news.ycombinator.com/item?id=42908350)
+    -   [Unexpected Benefits of Building Your Own Tools | Lobsters](https://lobste.rs/s/ockgcp/unexpected_benefits_building_your_own)
+    -   [Personal Software Is Becoming A Trend](https://xuanwo.io/links/2025/02/personal-software-is-becoming-a-trend/)
 
 
 ### Reactive databases {#reactive-databases}

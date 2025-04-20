@@ -99,13 +99,6 @@ You can decompose a "search engine" into multiple big components: `Gather, Searc
 ## <span class="org-todo todo TODO">TODO</span> Full Text Search (FTS) {#full-text-search--fts}
 
 -   [ParadeDB](https://www.paradedb.com/blog/block_storage_part_one)
--   [Understanding the BM25 full text search algorithm | Evan Schwartz](https://emschwartz.me/understanding-the-bm25-full-text-search-algorithm/)
--   [Structure of FTS5 Index in SQLite | Lobsters](https://lobste.rs/s/b3d1ba/structure_fts5_index_sqlite)
--   [Why Full Text Search is Hard](https://transactional.blog/blog/2023-why-full-text-search-is-hard)
--   [Full text search over Postgres: Elasticsearch vs. alternatives | Hacker News](https://news.ycombinator.com/item?id=41173288)
--   [Meilisearch is too slow](https://blog.kerollmops.com/meilisearch-is-too-slow)
--   [Postgres as a search engine](https://anyblockers.com/posts/postgres-as-a-search-engine)
--   [Hybrid full-text search and vector search with SQLite | Alex Garcia's Blog](https://alexgarcia.xyz/blog/2024/sqlite-vec-hybrid-search/index.html)
 
 
 ### Postgres {#postgres}
@@ -131,3 +124,5 @@ workaround for manual debugging/checks etc. We can use this:
 -   [Supercharge vector search with ColBERT rerank in PostgreSQL | Hacker News](https://news.ycombinator.com/item?id=42809990)
     -   [An experiment of adding recommendation engine to your app using pgvector search | Hacker News](https://news.ycombinator.com/item?id=42804406)
 -   [How do we evaluate vector-based code retrieval? – Voyage AI](https://blog.voyageai.com/2024/12/04/code-retrieval-eval/) 🌟
+-   [Hard problems that reduce to document ranking | Hacker News](https://news.ycombinator.com/item?id=43174910)
+-   [Improving recommendation systems and search in the age of LLMs | Hacker News](https://news.ycombinator.com/item?id=43450732)

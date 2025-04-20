@@ -208,6 +208,33 @@ See [Data systems built on Object Store]({{< relref "20240816033216-data_systems
     -   Iceberg
 
 
+## Integration Tools {#integration-tools}
+
+-   Zapier &amp; N8N mostly focus on internal integrations.
+    -   For example, connecting your own Hubspot account with your own Google sheets account.
+    -   iPaaS : <https://blog.n8n.io/ipaas-vendors/>
+-   Nango &amp; Merge focus on product integrations.
+    -   E.g. Connecting your customer's HubSpot account to your own SaaS product.
+    -   <https://www.nango.dev/blog/finding-the-best-unified-api>, <https://www.merge.dev/>, <https://unified.to/>
+    -   The nango idea
+
+        > When the unified data model covers the objects &amp; data you need, it makes you faster.
+        >
+        > But it also inherently limits the data you can access from the external APIs: A unified API only makes sense for the objects &amp; data that are available in all, or most, of the APIs it abstracts. This subset can be surprisingly small (e.g. CRMs all have their different flavor and different data models).
+        >
+        > If you need something other than what the unified model provides, you'll essentially end up building the integration yourself again, working around the platform.
+        >
+        > This can be problematic if your (future) customers want an integration that the unified API doesn't support. It also doesn't work well if your customers expect deep integrations with some key APIs: E.g., Workday is the #1 HRIS in Enterprise, Salesforce for CRM, Netsuite in accounting, etc.
+        > If 70% of your customers are on Salesforce(/Workday/HubSpot/Netsuite/etc.), you probably need an excellent Salesforce integration that covers Salesforce-specific features.
+        >
+        > This is why we took a different approach with Nango:
+        >
+        > Instead of pre-building entire integrations, we focused on building a great developer experience to build integrations.
+        >
+        > We pre-build the infrastructure you need to work with the APIs: (O)Auth, retries, webhooks handling, data caching, de-duplication, etc.
+        > You get full control over the integration (business logic, data model) without learning the intricacies of each API.
+
+
 ## Technologies {#technologies}
 
 
@@ -489,6 +516,7 @@ We're not using this, we're building image in github actions
 
 -   <https://github.com/Desbordante/desbordante-core>
 -   Great expectation etc
+-   See [Time Series / Anomaly Detection / Tabular Data]({{< relref "20250322100511-time_series_anomaly_detection.md" >}})
 
 
 ## Processing/Ingestion Types {#processing-ingestion-types}

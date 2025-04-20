@@ -24,6 +24,21 @@ OG Blogposts
 ### Partial Quorum {#partial-quorum}
 
 
+### Consensus is NOT for [Scaling]({{< relref "20230608143206-scaling_databases.md" >}}) {#consensus-is-not-for-scaling--20230608143206-scaling-databases-dot-md}
+
+> The way that horizontally scaling databases like Cockroach or Yugabyte or Spanner work is by sharding the data, transparent to the client. Within each shard data is replicated with a dedicated distributed consensus cluster.
+>
+> So, yes, distributed consensus can be a part of horizontal scaling. But again what distributed `consensus primarily solves is high availability via replication` while remaining linearizable.
+>
+> This is not a trivial point to make. etcd, consul, and rqlite are examples of databases that do not do sharding, only replication, via a single Raft cluster that replicates all data for the entire system.
+>
+> For these databases there is no horizontal scaling. If they support "horizontal scaling", they support this by doing non-linearizable (stale) reads. Writes remain a challenge.
+
+-   consensus is not for scaling
+-   consensus impedes scaling
+-   [An intuition for distributed consensus in OLTP systems | notes.eatonphil.com](https://notes.eatonphil.com/2024-02-08-an-intuition-for-distributed-consensus-in-oltp-systems.html)
+
+
 ## Approaches {#approaches}
 
 
@@ -37,6 +52,8 @@ OG Blogposts
 <!--list-separator-->
 
 -  Replicated State Machine (RSM)
+
+    See [Local First Software (LoFi)]({{< relref "20230915141853-local_first_software.md" >}})
 
 <!--list-separator-->
 

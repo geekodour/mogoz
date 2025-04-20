@@ -15,6 +15,8 @@ There's something called metric time
 
 ## Resources {#resources}
 
+-   [Show HN: Time Portal – Get dropped into history, guess where you landed | Hacker News](https://news.ycombinator.com/item?id=43347306)
+
 
 ## Different ways to show {#different-ways-to-show}
 
@@ -23,6 +25,7 @@ There's something called metric time
 
 -   [We Need to Talk About the State of Calendar Software on Desktop | Lobsters](https://lobste.rs/s/fex5ji/we_need_talk_about_state_calendar)
 -   [Optimizing with Novel Calendrical Algorithms | Hacker News](https://news.ycombinator.com/item?id=42915723)
+-   [Calendar.txt | Hacker News](https://news.ycombinator.com/item?id=43160226)
 -   [Lunase moon phase watch mechanism | Hacker News](https://news.ycombinator.com/item?id=42704472)
 -   [This is what the year actually looks like (2018) | Hacker News](https://news.ycombinator.com/item?id=37926239)
 -   [Deciyear Calendar | Hacker News](https://news.ycombinator.com/item?id=38639415)
@@ -38,6 +41,7 @@ There's something called metric time
 -   [GitHub - turingbirds/ping-clock](https://github.com/turingbirds/ping-clock)
 -   [Ian Mallett - Reference: Time Standards Page](https://geometrian.com/programming/reference/timestds/index.php)
 -   [Author Clock: a novel way to tell time | Hacker News](https://news.ycombinator.com/item?id=40644960)
+-   [I made maps that show time instead of space - YouTube](https://www.youtube.com/watch?v=rC2VQ-oyDG0)
 -   [All clocks are 30 seconds late | Hacker News](https://news.ycombinator.com/item?id=42612842)
 -   [Linear Clock | John Whittington's Blog](https://engineer.john-whittington.co.uk/electronics/fabrication/mechanical/clock/2021/06/16/linear-clock.html)
 -   [Elektročas HH3 – the most accurate pendulum clock on the planet | Hacker News](https://news.ycombinator.com/item?id=42556808)

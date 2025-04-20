@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [Batch Processing Patterns]({{< relref "20240606113829-batch_processing_patterns.md" >}})
+: [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [Batch Processing Patterns]({{< relref "20240606113829-batch_processing_patterns.md" >}}), [Kafka]({{< relref "20230210012126-kafka.md" >}})
 
 
 ## FAQ {#faq}
@@ -584,4 +584,5 @@ See [Data Delivery]({{< relref "20240722202632-data_delivery.md" >}})
 
 ## Resources {#resources}
 
+-   [GitHub - turbolytics/sql-flow: DuckDB for streaming data](https://github.com/turbolytics/sql-flow)
 -   <https://web.archive.org/web/20230509174541/https://docs.google.com/spreadsheets/d/1DwobnPHZCCAYCcgR3u62-XFRwWQbbTXeurYo2-2rR0A/edit#gid=0>

@@ -224,5 +224,4 @@ Any replica can process a request and distribute a new state.
 -   Chain replication: <https://www.cs.princeton.edu/courses/archive/fall16/cos418/docs/L13-strong-cap.pdf>
 -   I believe MongoDB has moved to a RAFT based algorithm in their new replication protocol, CockroachDB uses a variation on it. It and PAXOS are the two of the most common distributed consensus approaches I believe.
 -   DDIA : Chapter 5 &amp; 7
--   <https://debezium.io/>
-    -   <https://developer.confluent.io/courses/architecture/data-replication/?s=35>
+-   <https://developer.confluent.io/courses/architecture/data-replication/?s=35>

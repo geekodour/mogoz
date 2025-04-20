@@ -207,6 +207,8 @@ tags
             -   Create the image embedding with the image encoder
             -   Multiply it with each text embedding to get the similarity of the texts and the images.
             -   The one with the highest similarity is your predicted class.
+        -   See [Image Compression]({{< relref "20230113141102-image_compression.md" >}}) for ideas around perceptual hashing.
+            -   [Image replacement in Canva designs using reverse image search - Canva Engineering Blog](https://www.canva.dev/blog/engineering/image-replacement-in-canva-designs-using-reverse-image-search/)
 
 <!--list-separator-->
 
@@ -302,8 +304,15 @@ tags
     -   <https://github.com/huggingface/smollm/blob/main/finetuning%2FSmol_VLM_FT.ipynb>
 
 
+## 3D {#3d}
+
+<https://news.ycombinator.com/item?id=43589989>
+<https://github.com/VAST-AI-Research/TripoSG>
+
+
 ## Others {#others}
 
+-   [It's easier than ever to de-censor videos | Hacker News](https://news.ycombinator.com/item?id=43695701)
 -   Traffic
     -   [Show HN: Open-sourced (road) traffic counting application | Hacker News](https://news.ycombinator.com/item?id=42301228)
 -   Bounding boxes

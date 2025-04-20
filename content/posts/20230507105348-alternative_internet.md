@@ -153,6 +153,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Links {#links}
 
+-   [The indieweb doesn't need to “take off” | Hacker News](https://news.ycombinator.com/item?id=43431068)
 -   <https://www.jeremykun.com/2024/10/30/how-this-blog-does-indieweb/>
 -   [Greenwich: an experiment in collaborative links | Hacker News](https://news.ycombinator.com/item?id=41670140)
 -   [Let's make the indie web easier | Hacker News](https://news.ycombinator.com/item?id=38935286)
@@ -173,6 +174,7 @@ Even when things are not federated, by the nature what these things are we can a
 
 #### Learn more {#learn-more}
 
+-   [A sysadmin's rant about feed readers and crawlers (2022) | Hacker News](https://news.ycombinator.com/item?id=43265399)
 -   [Reclaiming the Web with a Personal Reader](https://olano.dev/2023-12-12-reclaiming-the-web-with-a-personal-reader/)
 -   [I ditched the algorithm for RSS | Hacker News](https://news.ycombinator.com/item?id=42724284)
 -   [MIME, RSS, and existential torment | Lobsters](https://lobste.rs/s/jahu16/mime_rss_existential_torment)
@@ -264,6 +266,7 @@ See [offline tech/low-tech/small-web/small-data]({{< relref "20241227141055-offl
 ### Billion other things {#billion-other-things}
 
 -   [pwr - paced web reader | Lobsters](https://lobste.rs/s/4mnch6/pwr_paced_web_reader)
+-   [What is wrong with the architecture of the Internet? | Lobsters](https://lobste.rs/s/adk7dp/what_is_wrong_with_architecture_internet)
 -   [Engineers don't make public squares. People do](https://cpf.sh/blog/2025/01/25/engineers-dont-make-public-squares-people-do)
 -   <https://github.com/mwmbl/mwmbl> (See [Information Retrieval]({{< relref "20231123014416-information_retrieval.md" >}}))
 -   [Dripline: Check the specs: final thoughts on p2p options | Hypha Worker Co-operative](https://hypha.coop/dripline/p2p-primer-part-4/)

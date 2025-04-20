@@ -99,3 +99,10 @@ These are usually lightweight. And you can use things like tauri/electron to pac
 have a diff page
 
 -   <https://pudding.cool/2018/04/birthday-paradox/>
+
+
+## Links {#links}
+
+-   [GitHub - shiffman/ML-for-Creative-Coding: Machine Learning for Creative Coding ITP Spring 2025 Syllabus](https://github.com/shiffman/ML-for-Creative-Coding)  🌟
+-   [Mountains, Cliffs, and Caves: A Guide to Using Perlin Noise for Procedural Gen | Hacker News](https://news.ycombinator.com/item?id=43257506)
+-   [Ask HN: Who are your favorite photography and generative coding artists? | Hacker News](https://news.ycombinator.com/item?id=43149242)

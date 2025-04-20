@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Machine Learning]({{< relref "20230408190056-machine_learning.md" >}}), [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [Open Source LLMs]({{< relref "20230719050449-open_source_llms.md" >}})
+: [Machine Learning]({{< relref "20230408190056-machine_learning.md" >}}), [Data Engineering]({{< relref "20230405003455-data_engineering.md" >}}), [Open Source LLMs]({{< relref "20230719050449-open_source_llms.md" >}}), [Information Retrieval]({{< relref "20231123014416-information_retrieval.md" >}}), [Information Theory/Knowledge]({{< relref "20221101222235-information_theory.md" >}})
 
 
 ## NLP Tasks {#nlp-tasks}

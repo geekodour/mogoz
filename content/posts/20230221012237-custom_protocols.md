@@ -36,6 +36,62 @@ tags
 -   <https://rachelbythebay.com/w/2023/09/19/badlib/>
 
 
+### Relationship between `encoding`, `serialization`, `formats` and `protocols` {#relationship-between-encoding-serialization-formats-and-protocols}
+
+> **In essence:** You _encode_ data elements, arrange them according to a _format_ to represent a structure, and exchange messages containing this formatted data according to the rules of a _protocol_.
+
+
+#### 1. Encoding {#1-dot-encoding}
+
+-   **What it is:** The most fundamental layer. Encoding is the process of transforming data from one representation to another. It's about _how_ individual pieces of data (like numbers, characters, or raw bytes) are represented.
+-   **Purpose:** Can be for efficiency (`variable-length integers`), compatibility (binary-to-text like `Base64`), or fundamental representation (how a CPU stores numbers like `Little Endian` vs. `Big Endian`, how text characters are represented as bytes like `UTF-8`).
+-   **Examples from the text:**
+    -   **Little Endian vs. Big Endian:** How the bytes of a multi-byte number are ordered in memory. Little Endian helps CPUs extend numbers easily (e.g., `11 22 33 44` becomes `11 22 33 44 00 00 00 00`).
+    -   **Variable-length encoding:** Schemes where smaller numbers use fewer bytes than larger numbers (used in `Protocol Buffers`, Go's `binary` package).
+    -   **Binary-to-text encoding (e.g., `Base64`):** Representing arbitrary binary data using only printable characters, often for transmission through systems designed for text.
+    -   **Text-to-binary encoding:** How text characters (like in a string) are represented as sequences of bytes (e.g., ASCII, UTF-8). This is fundamental computer operation.
+-   **Key Idea:** Transformation of representation, often at a low level or for specific constraints.
+
+
+#### 2. Format (Data Serialization Format) {#2-dot-format--data-serialization-format}
+
+-   **What it is:** A defined structure or set of rules for organizing and arranging data (which has been encoded) into a coherent message or file. It specifies _how_ different data elements (numbers, strings, lists, objects/structs) are laid out sequentially.
+-   **Purpose:** To take complex data structures from application memory and turn them into a sequence of bytes (or characters) suitable for storage (files) or transmission (networks), and allow them to be reconstructed later (deserialization).
+-   **Examples from the text:**
+    -   **Binary Formats:** `BSON`, `MessagePack`, `Protocol Buffers` (Protobuf), `Thrift`, `Avro`, `Parquet`, `CBOR`. These use compact binary encodings for data types and structure.
+    -   **Text Formats:** `JSON` (mentioned implicitly via BSON comparison), `XML`, `YAML`, `Markdown`, `.txt`. These use human-readable characters to represent data and structure.
+-   **Relationship to Encoding:** A format _uses_ specific encodings for its constituent parts (e.g., `Protobuf` uses variable-length encoding for integers, UTF-8 for strings, and specific byte markers for structure). The format defines the _overall grammar_ of the serialized data.
+-   **Key Idea:** Structure and rules for laying out serialized data.
+
+
+#### 3. Protocol {#3-dot-protocol}
+
+-   **What it is:** A set of rules and conventions governing the _communication_ and _interaction_ between systems. It defines the sequence of messages, their meaning, expected actions, error handling, and how a conversation proceeds.
+-   **Purpose:** To enable different systems (or components) to exchange information and coordinate actions reliably and predictably over a network or other communication channel.
+-   **Examples from the text:**
+    -   **Text Protocols:** `HTTP`, `SMTP`, `SIP`. These primarily use text-based commands and structures for control messages, even if they transfer binary payloads. They are often designed to be somewhat human-readable.
+    -   **Binary Protocols:** `TCP`, `IP`, `TLS`, `SSH`, `MQTT`, `RTP`. These use binary structures for their messages for efficiency and compactness.
+    -   **gRPC:** Described as an RPC _framework_ that acts like a protocol. It defines how remote procedures are called, including aspects like streaming, cancellation, and uses `HTTP/2` (an underlying protocol) for transport and `Protocol Buffers` (a format) for data.
+-   **Relationship to Format:** A protocol often _uses_ a specific data format to structure the payload (the actual data being sent) within its messages. For instance, `HTTP` (protocol) often carries payloads formatted as `HTML`, `JSON`, or `XML` (formats). `gRPC` (protocol/framework) mandates `Protocol Buffers` (format).
+-   **Distinction from Format:** The protocol is about the _entire interaction_ – the handshake, request/response sequence, headers, status codes, error handling, session management – whereas the format is just about the _structure of the data payload_ itself. The text notes a protocol isn't primarily about how _binary blobs_ are encoded, but whether the _interaction logic_ is text-oriented or binary-oriented.
+-   **Key Idea:** Rules of engagement for communication between systems.
+
+
+#### Mapping it Out {#mapping-it-out}
+
+-   **Foundation:** **Encoding** is the most basic concept – how individual data items are represented.
+-   **Structure:** **Formats** build on encodings to define how structured data (like objects or records) is laid out sequentially. **Serialization** is the _process_ of encoding data structures into a specific format.
+-   **Interaction:** **Protocols** define the rules for exchanging messages between systems. These messages often contain data structured according to a specific **format**.
+
+
+#### Overlaps {#overlaps}
+
+1.  **Serialization:** As the text states, "Serialization is a specific instance of encoding." It specifically refers to encoding data structures into a format for storage/transmission. So, it sits between the general concept of encoding and the resulting format.
+2.  **RPC Frameworks (like `gRPC`):** These often blend protocol and format concepts. `gRPC` _is_ a protocol in the sense that it defines rules for remote calls, streaming, etc., but it _relies on_ another protocol (`HTTP/2`) for transport and _mandates_ a specific format (`Protocol Buffers`) for the data.
+3.  **Binary vs. Text Protocols:** The distinction isn't always absolute. A "text protocol" like `HTTP` can carry raw binary data (like an image) in its body. The "text" part refers more to the control messages (headers, methods, status lines) being human-readable strings, whereas binary protocols use byte fields for these. Parsing text protocols often involves state machines looking for delimiters, while binary protocols often read fixed-size fields or length-prefixed data.
+4.  **File Formats:** These often use data serialization formats as their building blocks (e.g., Apache `Parquet` uses `Thrift` structures). The file format standard might add extra layers like metadata, magic numbers, indexing structures, etc., beyond what the basic serialization format defines.
+
+
 ## Encoding {#encoding}
 
 Serialization is a specific instance of encoding. How serialization relates to the term "encoding" is slightly vague.
@@ -82,13 +138,8 @@ Data serialization refers to the process of translating data structures or objec
 
 <div class="warning small-text">
 
-> How to
+> Tools
 >
-> -   [Designing File Formats](https://www.fadden.com/tech/file-formats.html)
-> -   [Binary formats and protocols: LTV is better than TLV | Lobsters](https://lobste.rs/s/lfbey9/binary_formats_protocols_ltv_is_better)
-> -   [Visual Programming with Elixir: Learning to Write Binary Parsers](https://hansonkd.medium.com/building-beautiful-binary-parsers-in-elixir-1bd7f865bf17)
-> -   [Zip – How not to design a file format (2021)](https://news.ycombinator.com/item?id=37897444)
-> -   [carlmjohnson/lich: A port of Wolf Rentzsch's Lich binary file format](https://github.com/carlmjohnson/lich)
 > -   [binary_io](https://ryan-rsm-mckenzie.github.io/binary_io/) : Not a data serialization library but a library to help write binary formats
 > -   [bincode](https://github.com/bincode-org/bincode)
 </div>
@@ -132,16 +183,6 @@ These can be binary or plaintext. They can have different tradeoffs like, fixed 
 
 
 ## Protocols {#protocols}
-
-<div class="warning small-text">
-
-> How to
->
-> -   [custom binary protocol library implementation](http://www.andrescottwilson.com/yet-another-custom-binary-protocol-library-implementation/)
-> -   [Visual Programming with Elixir: Learning to Write Binary Parsers](https://hansonkd.medium.com/building-beautiful-binary-parsers-in-elixir-1bd7f865bf17)
-> -   Bare Metal Programming Series 7.1 - YouTube]]
-> -   [A Simple Serialization System | rxi](https://rxi.github.io/a_simple_serialization_system.html)
-</div>
 
 -   When we design a `protocol`, we need to design a `protocol handler`
 -   Is **not** about how binary blobs are encoded. (They're always binary for networking)
