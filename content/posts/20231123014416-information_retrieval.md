@@ -7,8 +7,10 @@ draft = false
 tags
 : [Information Theory]({{< relref "20221101222235-information_theory.md" >}}), [NLP (Natural Language Processing)]({{< relref "20231123010516-nlp_natural_language_processing.md" >}}), [Machine Learning]({{< relref "20230408190056-machine_learning.md" >}}), [Embeddings]({{< relref "20240916155700-embeddings.md" >}})
 
+![](/ox-hugo/irsearchcanva.png)
+![](/ox-hugo/shapes at 25-05-24 20.14.10.png)
 
-See [GitHub - kuutsav/information-retrieval: Neural information retrieval / semantic-search / Bi-Encoders](https://github.com/kuutsav/information-retrieval)
+-   See [GitHub - kuutsav/information-retrieval: Neural information retrieval / semantic-search / Bi-Encoders](https://github.com/kuutsav/information-retrieval)
 
 
 ## Theory {#theory}

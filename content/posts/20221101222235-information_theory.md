@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Representing Time and Date]({{< relref "20231019125530-representing_time_and_date.md" >}}), [Understanding Scales]({{< relref "20221102101248-understanding_scales.md" >}})
+: [Representing Time and Date]({{< relref "20231019125530-representing_time_and_date.md" >}}), [Understanding Scales]({{< relref "20221102101248-understanding_scales.md" >}}), [Information Retrieval]({{< relref "20231123014416-information_retrieval.md" >}})
 
 
 ## Knowledge {#knowledge}

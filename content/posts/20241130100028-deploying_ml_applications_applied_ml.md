@@ -5,7 +5,43 @@ draft = false
 +++
 
 tags
-: [Machine Learning]({{< relref "20230408190056-machine_learning.md" >}}), [Modern AI Stack]({{< relref "20230326092427-modern_ai_stack.md" >}}), [Open Source LLMs (Transformers)]({{< relref "20230719050449-open_source_llms.md" >}}), [Infrastructure]({{< relref "20221101183735-infrastructure.md" >}})
+: [Machine Learning]({{< relref "20230408190056-machine_learning.md" >}}), [Modern AI Stack]({{< relref "20230326092427-modern_ai_stack.md" >}}), [Open Source LLMs (Transformers)]({{< relref "20230719050449-open_source_llms.md" >}}), [Infrastructure]({{< relref "20221101183735-infrastructure.md" >}}), [Modal Labs Serverless GPU]({{< relref "20250518154735-modal_labs_serverless_gpu.md" >}})
+
+
+## Benchmarks/Leaderboards {#benchmarks-leaderboards}
+
+
+### OCR {#ocr}
+
+
+### [Embeddings]({{< relref "20240916155700-embeddings.md" >}}) {#embeddings--20240916155700-embeddings-dot-md}
+
+-   <https://huggingface.co/spaces/TIGER-Lab/MMEB-Leaderboard>
+-   <https://huggingface.co/spaces/vidore/vidore-leaderboard>
+-   <https://huggingface.co/spaces/mteb/leaderboard> 🌟
+
+
+### STT / ASR {#stt-asr}
+
+See [STT (Speech 2 Text)]({{< relref "20250520140552-stt_speech_2_text.md" >}})
+
+-   <https://huggingface.co/spaces/hf-audio/open_asr_leaderboard>
+-   <https://voicewriter.io/speech-recognition-leaderboard>
+
+
+### TTS {#tts}
+
+
+## Providers {#providers}
+
+
+### GPU {#gpu}
+
+
+### OSS Model {#oss-model}
+
+-   <https://www.together.ai/models/r1-1776>
+-   <https://www.anyscale.com/>
 
 
 ## The pipeline {#the-pipeline}
@@ -384,6 +420,9 @@ See [Open Source LLMs (Transformers)]({{< relref "20230719050449-open_source_llm
 -   train: <https://huggingface.co/autotrain>
 
 > "The technical parts are less common and specialized, like understanding the hyperparameters and all that, but I don't think that is the main problem. Most people don't understand how to build a good dataset or how to evaluate their finetune after training. Some parts of this are solid rules like always use a separate validation set, but the task dependent parts are harder to teach. It's a different problem every time." someone on hn
+
+-   LLM RL fine tuning for Agents: <https://openpipe.ai/>
+-   <https://medium.com/pinterest-engineering/last-mile-data-processing-with-ray-629affbf34ff>
 
 
 ## Ecosystem {#ecosystem}

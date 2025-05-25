@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Security]({{< relref "20221101184454-security.md" >}}), [Authentication]({{< relref "20230301191046-authentication.md" >}})
+: [Security]({{< relref "20221101184454-security.md" >}}), [Authentication]({{< relref "20230301191046-authentication.md" >}}), [Authorization]({{< relref "20230301205620-authorization.md" >}})
 
 
 ## Two parts {#two-parts}
@@ -29,19 +29,21 @@ To cover all your bases, you need 2 identity providers. Any modern identity prov
 
 There are opensource and prioperty Products
 
-| Name          | Remark | Released |
-|---------------|--------|----------|
-| Keycloak      |        | 2014     |
-| Authentik     |        |          |
-| Authelia      |        |          |
-| Ory           |        | 2016     |
-| Okta          |        |          |
-| AWS Cognito   |        |          |
-| Auth0         |        |          |
-| Clerk         |        |          |
-| Firebase Auth |        |          |
-| Supabase Auth |        |          |
-| Supertokens   |        | 2019     |
+| Name          | Type               | Remark                                                                                                   | Released/Founded |
+|---------------|--------------------|----------------------------------------------------------------------------------------------------------|------------------|
+| Keycloak      | Open Source        | Mature open-source IAM solution, Java-based, highly customizable.                                        | 2014             |
+| Authentik     | Open Source        | Modern open-source Identity Provider (IdP), focuses on flexibility and integrations.                     | ~2020            |
+| Authelia      | Open Source        | Open-source authentication and authorization server, often paired with reverse proxies for SSO.          | ~2019            |
+| Ory Kratos    | Open Source        | API-first, headless identity &amp; user management system, part of the Ory ecosystem.                    | 2016             |
+| Casdoor       | Open Source        | UI-first open-source IAM/SSO platform supporting various protocols.                                      | ~2020/2021       |
+| Supertokens   | Open Source / SaaS | Open-source authentication, often noted for session management, offers a hosted service too.             | 2019             |
+| Zitadel       | Open Source / SaaS | Cloud-native open-source identity platform built in Go, focuses on multi-tenancy and B2B.                | ~2019/2020       |
+| Okta          | SaaS (IDaaS)       | Major enterprise-grade cloud Identity and Access Management (IAM) service.                               | 2009 (Founded)   |
+| Auth0         | SaaS (IDaaS)       | Developer-focused identity platform, known for ease of implementation, acquired by Okta.                 | 2013 (Founded)   |
+| Clerk         | SaaS (IDaaS)       | Developer-focused authentication &amp; user management, strong frontend component library (React, etc.). | ~2021            |
+| Firebase Auth | BaaS Feature       | Part of Google's Firebase platform, provides backend authentication services for apps.                   | ~2016            |
+| Supabase Auth | BaaS Feature       | Authentication component of Supabase (open-source Firebase alternative), built on PostgreSQL.            | ~2020            |
+| AWS Cognito   | Cloud Service      | AWS identity service for web/mobile apps, offering user pools and federated identities.                  | 2014             |
 
 
 ### Keycloak {#keycloak}
@@ -68,6 +70,8 @@ There are opensource and prioperty Products
 
 ### Ory {#ory}
 
+{{< figure src="/ox-hugo/SCR-20250426-ntlh.png" >}}
+
 -   Has both selfhosted and SaaS based(Ory Network)
 -   Not [super mature](https://www.ory.sh/docs/ecosystem/versioning)
 
@@ -89,8 +93,34 @@ There are opensource and prioperty Products
 
 #### Oathkeeper {#oathkeeper}
 
--   2017
--   Access control for API endpoints
+-   2017 : Access control for API endpoints
+
+<!--list-separator-->
+
+-  Can be run in 2 modes
+
+    <!--list-separator-->
+
+    -  Reverse Proxy Mode
+
+        -   Acts as a gatekeeper, intercepting client traffic before upstream services.
+        -   Applies access rules (authentication, authorization, mutation).
+        -   Forwards allowed requests upstream.
+        -   Rejects denied requests with an error.
+        -   Functions as the Policy Enforcement Point (PEP).
+
+    <!--list-separator-->
+
+    -  Decision API Mode (Policy Decision Point)
+
+        -   Exposes a decision API (e.g., `/decisions`) queried by an external proxy/gateway.
+        -   External proxy sends request details to Oathkeeper for evaluation.
+        -   Oathkeeper evaluates rules and returns an allow/deny decision.
+        -   External proxy enforces the decision (forwards or blocks).
+        -   Oathkeeper acts as the Policy Decision Point (PDP).
+        -   Allows integration with existing infrastructure (which acts as the PEP).
+        -   Reverse Proxy: Caddy like usecase but does the auth for you
+        -   Decision API:
 
 
 #### Keto {#keto}

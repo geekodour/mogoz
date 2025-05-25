@@ -262,7 +262,6 @@ Used by MPNet
 ### AutoEncoders (Understanding) {#autoencoders--understanding}
 
 Usecase: semantic textual similarity (STS), Classification
-
 Also see [Embeddings]({{< relref "20240916155700-embeddings.md" >}})
 
 
@@ -336,6 +335,7 @@ Also see [Embeddings]({{< relref "20240916155700-embeddings.md" >}})
     -   <https://github.com/UKPLab/sentence-transformers>
     -   <https://huggingface.co/sentence-transformers>
     -   <https://www.sbert.net/docs/sentence_transformer/pretrained_models.html>
+    -   <https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2> (commonly used)
     -   [Sentence Transformers: Meanings in Disguise | Pinecone](https://www.pinecone.io/learn/series/nlp/sentence-embeddings/)
 
 <!--list-separator-->
@@ -402,6 +402,13 @@ Also see [Embeddings]({{< relref "20240916155700-embeddings.md" >}})
     -   <https://x.com/antoine_chaffin/status/1869847734930550922>
     -   [A Replacement for BERT | Hacker News](https://news.ycombinator.com/item?id=42463315)
     -   <https://x.com/jeremyphoward/status/1869786023963832509>
+    -   Using modernbert for embedding
+        -   <https://huggingface.co/nomic-ai/modernbert-embed-base>
+        -   <https://huggingface.co/lightonai/modernbert-embed-large>
+    -   Not Multilingual yet
+        -   <https://huggingface.co/answerdotai/ModernBERT-base/discussions/60>
+        -   <https://jina.ai/news/what-should-we-learn-from-modernbert/>
+        -   <https://news.ycombinator.com/item?id=42468712>
 
 
 #### FAQ {#faq}
@@ -490,6 +497,7 @@ Also see [Embeddings]({{< relref "20240916155700-embeddings.md" >}})
 
     -   It's a way to adapt embedding models (independently of if they have multiple representations like M3) to specific domains.
     -   To use M3+instructor embedding, you then need to re-train and include the instruction prefixes of instructor into M3
+    -   [intfloat/multilingual-e5-large-instruct · Hugging Face](https://huggingface.co/intfloat/multilingual-e5-large-instruct) (Other instructir embedding models)
 
 
 ### AutoRegressive (Generative) {#autoregressive--generative}

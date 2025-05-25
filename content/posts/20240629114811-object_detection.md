@@ -52,6 +52,8 @@ tags
 |              | 2 stage | Detectron-2                                        |                                                                                        | Apache license, Fast-RCNN                |
 |              |         | EfficientNetV2                                     | classification                                                                         |                                          |
 
+-   See [Image Compression]({{< relref "20230113141102-image_compression.md" >}}) for ideas around perceptual hashing.
+
 
 #### Theory {#theory}
 
@@ -138,112 +140,28 @@ tags
     -   ResNet?
 
 
-#### Transformer {#transformer}
+#### Transformer (Vision Encoder, ViT) {#transformer--vision-encoder-vit}
 
+See [VLM(Vision Language Models)]({{< relref "20250524115020-vlm_vision_language_models.md" >}})
+
+> -   Main pupose: extract visual features into [embeddings]({{< relref "20240916155700-embeddings.md" >}})
 > -   ViT splits the input images into visual tokens
 >     -   divides an image into fixed-size patches
 >     -   correctly embeds each of them
 >     -   includes positional embedding as an input to the transformer encoder
 
-<!--list-separator-->
+{{< figure src="/ox-hugo/20240629114811-object_detection-1041645406.png" >}}
 
--  Vision Encoder (Transformer)
-
-    {{< figure src="/ox-hugo/20240629114811-object_detection-1041645406.png" >}}
-
-    -   The OG here is [ViT](https://huggingface.co/docs/transformers/en/model_doc/vit)(Google Brain team)
-        -   Downstream variants include: BEiT, DeiT, Swin, CSWIn(better than Swin), MAE, DINO(Improved DETR)
-        -   Prior work before ViT was [DETR](https://huggingface.co/docs/transformers/en/model_doc/detr)
-    -   Has outperformed CNN models in certain cases
-        -   ViT models outperform the current SOTA CNNs by almost x4 in terms of computational efficiency and accuracy.
-    -   What we can do
-        -   Ask what a image is about i.e `Input(Image) = Output(Text)`
-        -   Return us a set of images given a text. i.e `Input(Text) = Output(Image(s))`
-    -   Examples of implementation: CLIP, GDINO
-        -   ViT is what CLIP uses. In other words, CLIP is possible because of ViT.
-        -   [GroundingDINO(GDINO)](https://github.com/IDEA-Research/GroundingDINO) uses [DINO](https://github.com/IDEA-Research/DINO)
-            -   [Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal LLMs - YouTube](https://www.youtube.com/watch?v=Iy9xClK65Bs&t=277s) (combining DINO+CLIP for better results)
-
-    <!--list-separator-->
-
-    -  Architecture of ViT
-
-        -   [this blogpost](https://viso.ai/deep-learning/vision-transformer-vit/) has simple explanation of the architecture
-
-    <!--list-separator-->
-
-    -  Architecture of CLIP/GDINO
-
-        {{< figure src="/ox-hugo/20240629114811-object_detection-2059429889.png" >}}
-
-        -   Components
-            -   `Text backbone`: Eg. BERT/ OpenAI Embeddings
-            -   `Image backbone`: SWIN/ViT etc.
-        -   Steps
-            1.  Feature encoder: Fuse text and image into one using self attention mechanism
-                ![](/ox-hugo/20240629114811-object_detection-2076247559.png)
-            2.  Enhance encoding: Combines text and image
-                ![](/ox-hugo/20240629114811-object_detection-1751393539.png)
-            3.  Language guided selection (Dont understand)
-                ![](/ox-hugo/20240629114811-object_detection-1202662291.png)
-            4.  Cross-Modality Decoder (Dont understand)
-                ![](/ox-hugo/20240629114811-object_detection-1603844632.png)
-                ![](/ox-hugo/20240629114811-object_detection-690406912.png)
-            5.  Calculate loss
-                ![](/ox-hugo/20240629114811-object_detection-1472729532.png)
-                -   Contrastive loss: Compare text and visual features
-                -   DETR loss: Bounding box, detect object of interest
-        -   More stuff
-            -   [natural language processing - Why does CLIP use a decoder-only transformer for encoding text?](https://ai.stackexchange.com/questions/39073/why-does-clip-use-a-decoder-only-transformer-for-encoding-text)
-
-    <!--list-separator-->
-
-    -  Similarity search
-
-        -   With such models we can look for similarity between the text and the image embedding
-            -   Because the inner product is a similarity metric
-        -   Process
-            -   Create a bunch of prompts out of your classes (e.g. “A photo of a Dog”) and run them through the text encoder to get an embedding.
-            -   Create the image embedding with the image encoder
-            -   Multiply it with each text embedding to get the similarity of the texts and the images.
-            -   The one with the highest similarity is your predicted class.
-        -   See [Image Compression]({{< relref "20230113141102-image_compression.md" >}}) for ideas around perceptual hashing.
-            -   [Image replacement in Canva designs using reverse image search - Canva Engineering Blog](https://www.canva.dev/blog/engineering/image-replacement-in-canva-designs-using-reverse-image-search/)
-
-<!--list-separator-->
-
--  VLM(Vision Language Model)
-
-    -   MOONDREAM EXAMPLE PROMPT ENG: <https://gist.github.com/geekodour/e9bb4c0c35957cabdb2dc3618be1f4e1>
-    -   These are technically a special usecase of using vision encoder with [LLMs]({{< relref "20230719050449-open_source_llms.md" >}})
-    -   Capabilities keep [improving/differ](https://blog.roboflow.com/gpt-4-vision-alternatives/)
-        ![](/ox-hugo/20240629114811-object_detection-1241859690.png)
-    -   Examples: LLaVa, moondream2 etc.
-    -   Example project using LVM to do captioning: [jiayev/GPT4V-Image-Captioner](https://github.com/jiayev/GPT4V-Image-Captioner)
-    -   See <https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Evaluation>
-
-    <!--list-separator-->
-
-    -  Architecture of VLM
-
-        -   Components
-            -   `visual encoder`
-                -   VLMs need a visual encoder such as CLIP(ViT), this can be used in
-                -   Plugging ViT into task-specific fine-tuning
-                -   Combining ViT with V&amp;L pre-training and transferring to downstream tasks
-                -   So the visual understanding of VLM will only be as good as the ViT.
-                -   In other words, when you attach a "decoder only LLM" to a `vision encoder` such as CLIP, you get a VLM.
-            -   `LLM`
-                -   Then VLM also depend on some LLM
-        -   Example
-            -   eg. moondream depends on Phi1.5(LLM) and SigLIP(visual encoder like CLIP) etc.
-
-    <!--list-separator-->
-
-    -  Fine turning VLM
-
-        -   Eg. moondream does not support OCR ootb, but we can finetune it to support OCR. But results also depends on the LLM used. Eg. From a reddit comment: "However would not recommend moondream for ocr due to it’s PHI tokenizer not splitting digits into separate tokens. It struggles to pick up sequential digits reliably. For example: 222 is likely to become 22 due to this issue."
-        -   <https://github.com/BradyFU/Woodpecker> (correction)
+-   The OG here is [ViT](https://huggingface.co/docs/transformers/en/model_doc/vit)(Google Brain team)
+    -   Downstream variants include: BEiT, DeiT, Swin, CSWIn(better than Swin), MAE, DINO(Improved DETR)
+    -   Prior work before ViT was [DETR](https://huggingface.co/docs/transformers/en/model_doc/detr)
+-   Has outperformed CNN models in certain cases
+    -   ViT models outperform the current SOTA CNNs by almost x4 in terms of computational efficiency and accuracy.
+-   Examples of implementation: CLIP, GDINO
+    -   ViT is what CLIP uses. In other words, CLIP is possible because of ViT.
+    -   [GroundingDINO(GDINO)](https://github.com/IDEA-Research/GroundingDINO) uses [DINO](https://github.com/IDEA-Research/DINO)
+        -   [Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal LLMs - YouTube](https://www.youtube.com/watch?v=Iy9xClK65Bs&t=277s) (combining DINO+CLIP for better results)
+-   [this blogpost](https://viso.ai/deep-learning/vision-transformer-vit/) has simple explanation of the architecture
 
 
 #### Combining Transformer based + CNN based {#combining-transformer-based-plus-cnn-based}
@@ -288,20 +206,7 @@ tags
 
 ## VLMs {#vlms}
 
-> Finetuning diffusion model(Image generation models) is different, see [StableDiffusion]({{< relref "20230719120753-stablediffusion.md" >}}) for that.
-
-| Name       | Desc |
-|------------|------|
-| QvQ        |      |
-| PaliGemma2 |      |
-| Moondream  |      |
-
--   [Vision Language Models Explained](https://huggingface.co/blog/vlms) 🌟
--   [Trying out QvQ – Qwen's new visual reasoning model | Hacker News](https://news.ycombinator.com/item?id=42505038)
--   [PaliGemma 2: Powerful Vision-Language Models, Simple Fine-Tuning | Hacker News](https://news.ycombinator.com/item?id=42330491)
-    -   [How to Fine-tune PaliGemma 2](https://blog.roboflow.com/fine-tune-paligemma-2/)
--   Fine-tune SmolVLM on Visual Question Answering using Consumer GPU with QLoRA
-    -   <https://github.com/huggingface/smollm/blob/main/finetuning%2FSmol_VLM_FT.ipynb>
+See [VLM(Vision Language Models)]({{< relref "20250524115020-vlm_vision_language_models.md" >}})
 
 
 ## 3D {#3d}

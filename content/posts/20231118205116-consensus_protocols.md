@@ -26,17 +26,27 @@ OG Blogposts
 
 ### Consensus is NOT for [Scaling]({{< relref "20230608143206-scaling_databases.md" >}}) {#consensus-is-not-for-scaling--20230608143206-scaling-databases-dot-md}
 
-> The way that horizontally scaling databases like Cockroach or Yugabyte or Spanner work is by sharding the data, transparent to the client. Within each shard data is replicated with a dedicated distributed consensus cluster.
->
-> So, yes, distributed consensus can be a part of horizontal scaling. But again what distributed `consensus primarily solves is high availability via replication` while remaining linearizable.
->
-> This is not a trivial point to make. etcd, consul, and rqlite are examples of databases that do not do sharding, only replication, via a single Raft cluster that replicates all data for the entire system.
->
-> For these databases there is no horizontal scaling. If they support "horizontal scaling", they support this by doing non-linearizable (stale) reads. Writes remain a challenge.
+> -   consensus is not for scaling
+> -   consensus impedes scaling
+> -   [An intuition for distributed consensus in OLTP systems | notes.eatonphil.com](https://notes.eatonphil.com/2024-02-08-an-intuition-for-distributed-consensus-in-oltp-systems.html)
 
--   consensus is not for scaling
--   consensus impedes scaling
--   [An intuition for distributed consensus in OLTP systems | notes.eatonphil.com](https://notes.eatonphil.com/2024-02-08-an-intuition-for-distributed-consensus-in-oltp-systems.html)
+-   Consensus protocols like RAFT primarily solve high availability with strong consistency guarantees (linearizability), not horizontal scaling. Their main purpose is to ensure that a system remains available and consistent even when some nodes fail.
+-   Consensus actually impedes scaling due to several factors:
+    -   The requirement for majority agreement creates coordination overhead
+    -   Adding more nodes to a consensus group increases the likelihood of slow network responses
+    -   The centralized leadership model (in protocols like RAFT) creates a bottleneck for writes
+-   True horizontal scaling requires sharding, where:
+    -   Data is partitioned across multiple independent consensus groups
+    -   Each shard has its own consensus cluster for that subset of data
+    -   This allows the system to distribute load while maintaining consistency within each shard
+
+Systems make different trade-offs:
+
+-   Systems like etcd, Consul focus on strong consistency via a single consensus group but don't scale horizontally for writes
+-   Some systems support "horizontal scaling" for reads by allowing stale (non-linearizable) reads
+-   Truly horizontally scalable systems like Cockroach, Spanner use consensus within shards but distribute data across many shards
+
+> The fundamental tension is clear: consensus `provides the critical property of linearizable consistency` with `high availability`, but this comes at the cost of scalability. System designers must carefully consider their requirements when choosing between strong consistency and horizontal scalability.
 
 
 ## Approaches {#approaches}

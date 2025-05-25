@@ -298,6 +298,46 @@ Here, in this example we have two entities `T` (thing) and `C` (category), both 
 -   [Wikidata is a Giant Crosswalk File | Drew Breunig](https://www.dbreunig.com/2024/10/04/wikidata-is-a-giant-crosswalk-file.html)
 
 
+## General suggestions {#general-suggestions}
+
+
+### Anchor {#anchor}
+
+-   Represents a core entity in the data model.
+
+
+### Attributes {#attributes}
+
+-   Descriptive name-value pairs for anchors.
+-   Referred to as "questions".
+-   Do not contain IDs (no foreign keys inside attributes).
+
+
+### Links {#links}
+
+-   Represent relationships: Anchor × Anchor.
+-   Include cardinality:
+    -   1:N
+    -   M:N
+    -   N:1
+    -   1:1
+
+
+### Identity vs Identifying Attributes {#identity-vs-identifying-attributes}
+
+
+#### Identity (internal DB) {#identity--internal-db}
+
+-   What the database uses as the internal reference.
+-   One per entity per data source.
+
+
+#### Identifying (external Identifier) {#identifying--external-identifier}
+
+-   Any attribute that can be used to refer to the entity externally.
+-   For an external system, the identifying attribute there is treated as its identity attribute.
+
+
 ## Other best practices {#other-best-practices}
 
 -   Maybe don't name tables with keywords like `users` etc.

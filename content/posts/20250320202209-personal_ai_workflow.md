@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Doing Research]({{< relref "20230419134645-doing_research.md" >}}), [Open Source LLMs (Transformers)]({{< relref "20230719050449-open_source_llms.md" >}}), [Deploying ML applications (applied ML)]({{< relref "20241130100028-deploying_ml_applications_applied_ml.md" >}}), [MCP]({{< relref "20250417045256-mcp.md" >}})
+: [Doing Research]({{< relref "20230419134645-doing_research.md" >}}), [Open Source LLMs (Transformers)]({{< relref "20230719050449-open_source_llms.md" >}}), [Deploying ML applications (applied ML)]({{< relref "20241130100028-deploying_ml_applications_applied_ml.md" >}}), [MCP]({{< relref "20250417045256-mcp.md" >}}), [AI Agents]({{< relref "20250417184115-ai_agents.md" >}})
 
 
 ## Usecases {#usecases}
@@ -163,89 +163,9 @@ Want to dramatically speed up your product development cycle? This guide shows y
 > ****Result:**** You receive actionable feedback on your designs that can be immediately implemented, creating a faster feedback loop.
 
 
-### Stating a New project {#stating-a-new-project}
+### Coding {#coding}
 
-
-#### Step 1: Idea Honing Prompt {#step-1-idea-honing-prompt}
-
-```nil
-Ask me one question at a time so we can develop a thorough, step-by-step spec for this idea. Each question should build on my previous answers, and our end goal is to have a detailed specification I can hand off to a developer. Let's do this iteratively and dig into every relevant detail. Remember, only one question at a time.
-
-Here's the idea:
-
-<IDEA>
-```
-
-<!--list-separator-->
-
--  Final Spec Compilation Prompt
-
-    ```nil
-    Now that we've wrapped up the brainstorming process, can you compile our findings into a comprehensive, developer-ready specification? Include all relevant requirements, architecture choices, data handling details, error handling strategies, and a testing plan so a developer can immediately begin implementation.
-    ```
-
-
-#### Step 2: Planning Prompts {#step-2-planning-prompts}
-
-<!--list-separator-->
-
--  TDD Planning Prompt
-
-    ```nil
-    Draft a detailed, step-by-step blueprint for building this project. Then, once you have a solid plan, break it down into small, iterative chunks that build on each other. Look at these chunks and then go another round to break it into small steps. Review the results and make sure that the steps are small enough to be implemented safely with strong testing, but big enough to move the project forward. Iterate until you feel that the steps are right sized for this project.
-
-    From here you should have the foundation to provide a series of prompts for a code-generation LLM that will implement each step in a test-driven manner. Prioritize best practices, incremental progress, and early testing, ensuring no big jumps in complexity at any stage. Make sure that each prompt builds on the previous prompts, and ends with wiring things together. There should be no hanging or orphaned code that isn't integrated into a previous step.
-
-    Make sure and separate each prompt section. Use markdown. Each prompt should be tagged as text using code tags. The goal is to output prompts, but context, etc is important as well.
-
-    <SPEC>
-    ```
-
-<!--list-separator-->
-
--  Non-TDD Planning Prompt
-
-    ```nil
-    Draft a detailed, step-by-step blueprint for building this project. Then, once you have a solid plan, break it down into small, iterative chunks that build on each other. Look at these chunks and then go another round to break it into small steps. review the results and make sure that the steps are small enough to be implemented safely, but big enough to move the project forward. Iterate until you feel that the steps are right sized for this project.
-
-    From here you should have the foundation to provide a series of prompts for a code-generation LLM that will implement each step. Prioritize best practices, and incremental progress, ensuring no big jumps in complexity at any stage. Make sure that each prompt builds on the previous prompts, and ends with wiring things together. There should be no hanging or orphaned code that isn't integrated into a previous step.
-
-    Make sure and separate each prompt section. Use markdown. Each prompt should be tagged as text using code tags. The goal is to output prompts, but context, etc is important as well.
-
-    <SPEC>
-    ```
-
-<!--list-separator-->
-
--  Todo List Generation Prompt
-
-    ```nil
-    Can you make a `todo.md` that I can use as a checklist? Be thorough.
-    ```
-
-
-### Non-Greenfield/Legacy Code Prompts {#non-greenfield-legacy-code-prompts}
-
-
-#### Code Review Prompt {#code-review-prompt}
-
-```nil
-You are a senior developer. Your job is to do a thorough code review of this code. You should write it up and output markdown. Include line numbers, and contextual info. Your code review will be passed to another teammate, so be thorough. Think deeply before writing the code review. Review every part, and don't hallucinate.
-```
-
-
-#### GitHub Issue Generation Prompt {#github-issue-generation-prompt}
-
-```nil
-You are a senior developer. Your job is to review this code, and write out the top issues that you see with the code. It could be bugs, design choices, or code cleanliness issues. You should be specific, and be very good. Do Not Hallucinate. Think quietly to yourself, then act - write the issues. The issues will be given to a developer to executed on, so they should be in a format that is compatible with github issues
-```
-
-
-#### Missing Tests Prompt {#missing-tests-prompt}
-
-```nil
-You are a senior developer. Your job is to review this code, and write out a list of missing test cases, and code tests that should exist. You should be specific, and be very good. Do Not Hallucinate. Think quietly to yourself, then act - write the issues. The issues will be given to a developer to executed on, so they should be in a format that is compatible with github issues
-```
+see beflow
 
 
 ### Historical Research Ideas {#historical-research-ideas}
@@ -387,21 +307,163 @@ Remember: The goal is to reach a conclusion, but to explore thoroughly and let c
 whereever you have &lt;br&gt;•, replace that with a new row in that table. don't stuff multiple points into one cell if you have muliple points just create new rows
 
 
+## Coding Assistants {#coding-assistants}
+
+> -   I am using emacs as my default text editor, while I can integrate AI into it. I rather not at the moment and keep it vanilla. I've tried it before the experience is not super polished and things are I get FOMO from other more modern text editors.
+> -   For AI coding
+>     -   Zed : We're skipping using zed. emacs+vscode atm.
+>     -   VSCode + Cline
+
+
+### Meta ideas {#meta-ideas}
+
+
+#### System prompt {#system-prompt}
+
+-   <https://github.com/cline/cline/blob/main/src/core/prompts/system.ts>
+
+
+#### Contexts (Persistent) {#contexts--persistent}
+
+-   `NEEDED` to maintain understanding ****across**** sessions.
+-   These are for AI, not for human
+
+<!--list-separator-->
+
+-  Types
+
+    1.  `Context about context`
+        -   Info about where AI should find "contexts"(for AI) in the first place.
+        -   General place to look for documentation: Eg. "All API documentation is available in our internal Notion workspace under 'Engineering &gt; API Reference'. For component usage examples, refer to our Storybook instance at <https://storybook.internal.company.com>"
+    2.  `Evergreen/Project Specific`
+        1.  Living set of document(s) describing overall architecture, approach etc.
+        2.  Useful for long running projects. (Eg. `techContext.md` and `systemPatterns.md`)
+    3.  `Task Specific`
+        -   Created for specific implementation tasks(requirements, constraints, decisions)
+    4.  `Knowledge Transfer`
+        -   When working with AI assistant it can probably do a lot of things
+        -   Often useful to have the AI write/document all of what it did in markdown
+        -   Once it is in markdown we can refer back to it in downstream tasks etc.
+        -   Eg. "Cline, summarize what we did in the last user dashboard task. I want to capture the main features and outstanding issues. Save this to cline_docs/user-dashboard-summary.md."
+    5.  `Project convention & tool usage`
+        -   "All components must include Jest tests with at least 85% coverage. Run tests using npm run test:coverage before submitting any pull request."
+        -   "Use React Query for data fetching and state management. Avoid Redux unless specifically required for complex global state. For styling, use Tailwind CSS with our custom theme configuration found in src/styles/theme.js."
+        -   "For database operations, use the Postgres MCP server with credentials stored in 1Password under 'Development &gt; Database'. For deployments, use the AWS MCP server which requires the deployment role from IAM. Refer to docs/mcp-setup.md for configuration instructions."
+        -   "Name all React components using PascalCase and all helper functions using camelCase. Place components in the src/components directory organized by feature, not by type. Always use TypeScript interfaces for prop definitions."
+    6.  `Rules`
+        -   These are sort of all over the place in all the previously mentioned types of contexts
+        -   But this is clearly marked as "rule" and something that ought to be followed.
+        -   These are to be created everytime you want to intervene the AI in some way, best part, Let the AI create these rules. Eg. [huntley](https://ghuntley.com/stdlib/) mentions how he let the AI create a cursor rule that mentions not to create bazel stuff again.
+
+<!--list-separator-->
+
+-  Convention &amp; Maintenance
+
+    > -   Basic: Keep them updated, keep them versioned, removed outdated context.
+    > -   Different tools have different conventions, I am focusing on cline and aider. mostly cline.
+
+    <!--list-separator-->
+
+    -  geekodour's convention
+
+        -   Just like I always have an `.infra` repo, i'll have a `/docs/for_ai` repo
+        -   Anything I want which is sort of docs and I want to pullup to llm context remains here. (eg. llmtxt, project specific instructions etc)
+        -   I can "pull these into context" by
+            -   `@` (referencing)
+            -   Inform the purpose of these files via another file in `.clinerules` (how I use memory bank)
+            -   Copying the files directly into `.clinerules` on case-by-case basis (eg. I want to work only on frontend and have only frontend related things in context while working on a monorepo)
+
+    <!--list-separator-->
+
+    -  Project Specific
+
+        -   `.clinerules` is a file but now they support it as a directory aswell. Whatever is inside that directory automatically gets injected after the system prompt.
+            -   Use `@` to reference files or folders.
+        -   Maintain a `ai-rules-bank`, copy things over to `.cursorules` when we want to **activate** them.
+            -   This can be useful in a mono-repo setup, suppose you want to only focus things on frontend, or only focus on backend etc.
+            -   This also allows you to gitignore `.cursorules` directory and version control the bank instead.
+        -   Use `.clineignore` to let it ignore certain files/directories completely. Better than telling this in prompts. Also helps with security.
+        -   `cline memory bank`
+
+    <!--list-separator-->
+
+    -  Memory
+
+        > "Its effectiveness depends entirely on maintaining clear, accurate documentation and confirming context preservation in every interaction."
+
+        -   Cline has something called "memory-bank": [Cline Memory Bank | Cline](https://docs.cline.bot/improving-your-prompting-skills/cline-memory-bank)
+        -   It's a set of files with certain structure. We can improve the structure ofcourse but it's better if it's automatically being updated by the AI.
+            -   It's not necessary to include these files in `.clinerules` but rather we should have something in `.clinerules` that tells cline to use the memory bank the way it supposed to be used.
+        -   Update the Memory Bank after significant milestones or changes in direction. Cline will sometimes automatically update the memory bank aswell.
+        -   MAIN COMMANDS:
+            -   `"follow your custom instructions"` / `"refresh your memory"` : tells Cline to read the Memory Bank files and continue where you left off (use this at the start of tasks)
+            -   `"initialize memory bank"` - Use when starting a new project
+            -   `"update memory bank"` - Triggers a full documentation review and update during a task
+
+    <!--list-separator-->
+
+    -  User specific
+
+        -   Client has "custom prompt" that gets injected to the system prompt
+
+    <!--list-separator-->
+
+    -  Prompting tips
+
+        -   <https://github.com/nickbaumann98/cline_docs/tree/main/prompting/custom%20instructions%20library>
+        -   <https://docs.cline.bot/improving-your-prompting-skills/prompting>
+        -   [Building Advanced Software with Cline: A Structured Approach - Cline Blog](https://cline.bot/blog/building-advanced-software-with-cline-a-structured-approach)
+
+
+### Workflow: Stating a New project/feature {#workflow-stating-a-new-project-feature}
+
+> -   A lengthy discussion about requirements and listing the requirements out in numbered bullet points so that I can cite the specific requirement when something needs changing or if something goes wrong.
+> -   Asking cursor to write the requirements to a file, that I can reinject back in to the context window if required.
+> -   Attaching the @file and @file-test into the context. Specifically instructing Cursor to "inspect and describe the file"
+> -   Asking the agent to
+>     -   implement the "XYZ" requirement
+>     -   author tests
+>     -   Add documentation.
+> -   Run builds and tests after each change.
+> -   Perform a git commit (via a configured rule) if everything went alright.
+
+
+### Workflow: Non-Greenfield/Legacy Code feature {#workflow-non-greenfield-legacy-code-feature}
+
+
+#### Code Review Prompt {#code-review-prompt}
+
+````nil
+You are a senior developer. Your job is to do a thorough code review of this code. You should write it up and output markdown. Include line numbers, and contextual info. Your code review will be passed to another teammate, so be thorough. Think deeply before writing the code review. Review every part, and don't hallucinate.
+````
+
+
+#### GitHub Issue Generation Prompt {#github-issue-generation-prompt}
+
+````nil
+You are a senior developer. Your job is to review this code, and write out the top issues that you see with the code. It could be bugs, design choices, or code cleanliness issues. You should be specific, and be very good. Do Not Hallucinate. Think quietly to yourself, then act - write the issues. The issues will be given to a developer to executed on, so they should be in a format that is compatible with github issues
+````
+
+
+#### Missing Tests Prompt {#missing-tests-prompt}
+
+````nil
+You are a senior developer. Your job is to review this code, and write out a list of missing test cases, and code tests that should exist. You should be specific, and be very good. Do Not Hallucinate. Think quietly to yourself, then act - write the issues. The issues will be given to a developer to executed on, so they should be in a format that is compatible with github issues
+````
+
+
+### Resources {#resources}
+
+-   [From Design doc to code: the Groundhog AI coding assistant (and new Cursor vibecoding meta)](https://ghuntley.com/specs/)
+-   [You are using Cursor AI incorrectly...](https://ghuntley.com/stdlib/)
+
+
 ## Agents, Coding Assistants &amp; MCP {#agents-coding-assistants-and-mcp}
 
 
 ### Personal Agents {#personal-agents}
 
 > See [Deploying ML applications (applied ML)]({{< relref "20241130100028-deploying_ml_applications_applied_ml.md" >}}) agent section for more info
-
-
-### Coding Assistants {#coding-assistants}
-
--   I am using emacs as my default text editor, while I can integrate AI into it. I rather not at the moment and keep it vanilla. I've tried it before the experience is not super polished and things are I get FOMO from other more modern text editors.
--   For AI coding
-    -   Zed : We're skipping using zed. emacs+vscode atm.
-    -   VSCode + Cline
-        -   TODO: <https://ghuntley.com/stdlib/?s=35>
 
 
 ### MCP {#mcp}

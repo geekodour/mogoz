@@ -204,15 +204,20 @@ See [Time Series / Anomaly Detection]({{< relref "20250322100511-time_series_ano
 
     -   [Generate audiobooks from E-books with Kokoro-82M | Hacker News](https://news.ycombinator.com/item?id=42708773)
 
+<!--list-separator-->
 
-#### STT {#stt}
+-  Dia
 
 <!--list-separator-->
 
--  Whisper
+-  Sasame
 
-    -   <https://github.com/guillaumekln/faster-whisper>
-    -   [Singlish-Whisper: Finetuning ASR for Singapore's Unique English | Jensen Low](https://www.jensenlwt.com/blog/singlish-whisper-finetuning-asr-for-singapore-unique-english) (Custom language fine tuning)
+    -   <https://huggingface.co/sesame/csm-1b>
+
+
+#### STT {#stt}
+
+See [STT (Speech 2 Text)]({{< relref "20250520140552-stt_speech_2_text.md" >}})
 
 
 ### Scientific Computing {#scientific-computing}
